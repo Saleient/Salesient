@@ -1,0 +1,1 @@
+ALTER TABLE "file_upload" ADD COLUMN "integration_logo" text;

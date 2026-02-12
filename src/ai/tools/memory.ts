@@ -1,0 +1,44 @@
+import { supermemoryTools } from "@supermemory/tools/ai-sdk";
+import type { Tool } from "ai";
+import { serverEnv } from "@/env";
+
+export function createMemoryTools(userId: string) {
+  console.log("Creating memory tools for user:", userId);
+  return supermemoryTools(serverEnv.SUPERMEMORY_API_KEY, {
+    containerTags: [userId],
+  });
+}
+
+export type SearchMemoryTool = Tool<
+  {
+    informationToGet: string;
+  },
+  | {
+      success: boolean;
+      results: any[];
+      count: number;
+      error?: undefined;
+    }
+  | {
+      success: boolean;
+      error: string;
+      results?: undefined;
+      count?: undefined;
+    }
+>;
+
+export type AddMemoryTool = Tool<
+  {
+    memory: string;
+  },
+  | {
+      success: boolean;
+      memory: any;
+      error?: undefined;
+    }
+  | {
+      success: boolean;
+      error: string;
+      memory?: undefined;
+    }
+>;

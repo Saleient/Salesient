@@ -1,0 +1,1 @@
+ALTER TABLE "nango_integrations" ADD COLUMN "is_connected" boolean DEFAULT true NOT NULL;

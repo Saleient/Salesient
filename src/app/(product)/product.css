@@ -1,0 +1,186 @@
+/* Light Mode */
+.light {
+  --background: #fcfcfc;
+  --foreground: rgb(17, 17, 17);
+  --card: #f7f7f7;
+  --card-foreground: rgb(17, 17, 17);
+  --popover: #fcfcfc;
+  --popover-foreground: rgb(17, 17, 17);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: rgb(17, 17, 17);
+  --secondary: rgb(229, 229, 229);
+  --secondary-foreground: rgb(17, 17, 17);
+  --muted: rgb(229, 229, 229);
+  --muted-foreground: rgb(113, 113, 122);
+  --accent: #f7f7f7;
+  --accent-foreground: rgb(39, 39, 42);
+  --destructive: rgb(239, 68, 68);
+  --destructive-foreground: #fcfcfc;
+  --border: rgb(229, 229, 229);
+  --input: rgb(244, 244, 245);
+  --ring: rgb(24, 24, 27);
+  --chart-1: oklch(0.81 0.1 252);
+  --chart-2: oklch(0.62 0.19 260);
+  --chart-3: oklch(0.55 0.22 263);
+  --chart-4: oklch(0.49 0.22 264);
+  --chart-5: oklch(0.42 0.18 266);
+  --sidebar: #fcfcfc;
+  --sidebar-foreground: rgb(17, 17, 17);
+  --sidebar-primary: rgb(17, 17, 17);
+  --sidebar-primary-foreground: #fcfcfc;
+  --sidebar-accent: rgb(229, 229, 229);
+  --sidebar-accent-foreground: rgb(17, 17, 17);
+  --sidebar-border: rgb(229, 229, 229);
+  --sidebar-ring: rgb(24, 24, 27);
+}
+
+/* Dark Mode - Keep existing dark mode as is */
+.dark {
+  --background: rgb(27, 27, 27);
+  --foreground: #f5f5f5;
+  --card: rgb(17, 17, 17);
+  --card-foreground: #f5f5f5;
+  --popover: oklch(0.269 0 0);
+  --popover-foreground: #f5f5f5;
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: rgb(17, 17, 17);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: #f5f5f5;
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.371 0 0);
+  --accent-foreground: #f5f5f5;
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: #f5f5f5;
+  --border: oklch(0.275 0 0);
+  --input: oklch(0.325 0 0);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.81 0.1 252);
+  --chart-2: oklch(0.62 0.19 260);
+  --chart-3: oklch(0.55 0.22 263);
+  --chart-4: oklch(0.49 0.22 264);
+  --chart-5: oklch(0.42 0.18 266);
+  --sidebar: rgb(17, 17, 17);
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: #f5f5f5;
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: oklch(0.275 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+  --radius: 0.625rem;
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+  --shadow-lg:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-xl:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+  --rainbow: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.6) 0%,
+    rgba(255, 127, 0, 0.6) 16%,
+    rgba(255, 255, 0, 0.6) 33%,
+    rgba(0, 255, 0, 0.6) 50%,
+    rgba(0, 0, 255, 0.6) 66%,
+    rgba(75, 0, 130, 0.6) 83%,
+    rgba(143, 0, 255, 0.6) 100%
+  );
+
+  --radial-black: radial-gradient(#1a1b1c 0%, #151515 100%);
+
+  font-family: Geist, sans-serif;
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1; /* fix for Chrome */
+  font-size: 14px;
+}
+
+/* Light mode specific overrides */
+.light body {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  color: var(--foreground);
+}
+
+/* Dark mode specific overrides */
+.dark body {
+  background: radial-gradient(70% 70% at 50% 50%, #1a1b1c 0%, #151515 100%);
+  color: var(--foreground);
+}
+
+/* Glass input styling for light mode */
+.light .glass-input {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.9)
+  );
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.light .glass-input:focus {
+  outline: none;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 0 0 4px rgba(17, 17, 17, 0.05);
+  border-color: rgba(17, 17, 17, 0.2);
+}
+
+/* Glass input styling for dark mode */
+.dark .glass-input {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(2, 6, 23, 0.6);
+}
+
+.dark .glass-input:focus {
+  outline: none;
+  box-shadow:
+    0 8px 32px rgba(2, 6, 23, 0.7),
+    0 0 0 4px rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Custom scrollbar for light mode */
+.light div.custom-scrollbar::-webkit-scrollbar {
+  width: 1px !important;
+}
+
+.light div.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.3) !important;
+  border-radius: 9999px !important;
+}
+
+.light div.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+/* Custom scrollbar for dark mode */
+.dark div.custom-scrollbar::-webkit-scrollbar {
+  width: 1px !important;
+}
+
+.dark div.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border-radius: 9999px !important;
+}
+
+.dark div.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent !important;
+}

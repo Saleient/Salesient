@@ -1,0 +1,832 @@
+"use client";
+import type { UIMessage } from "ai";
+import { ClipboardCopy, Plus } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
+import { useStickToBottomContext } from "use-stick-to-bottom";
+import { Action } from "@/components/ai-elements/actions";
+import {
+  Conversation,
+  ConversationContent,
+  ConversationScrollButton,
+} from "@/components/ai-elements/conversation";
+import {
+  Reasoning,
+  ReasoningContent,
+  ReasoningTrigger,
+} from "@/components/ai-elements/reasoning";
+import { Response } from "@/components/ai-elements/response";
+import { Shimmer } from "@/components/ai-elements/shimmer";
+import {
+  Tool,
+  ToolContent,
+  ToolHeader,
+  ToolInput,
+  ToolOutput,
+} from "@/components/ai-elements/tool";
+import { UserInputRequest } from "@/components/ai-elements/user-input-request";
+import { Button } from "@/components/ui/button";
+import { SidebarTrigger } from "@/components/ui/sidebar";
+import { Skeleton } from "@/components/ui/skeleton";
+import {
+  type Message,
+  type ToolCall,
+  useStreamingChat,
+} from "@/hooks/useStreamingChat"; // Custom hook
+import { addMessageToChat, createNewChat } from "@/queries/chat";
+import ChatInput, { type ChatInputHandle } from "./ChatInput";
+import MessageAttachments from "./message-attachments";
+import type { ProjectFileItem } from "./SearchPanel";
+import { SearchSources } from "./SearchSources";
+
+const promptsDict: Record<string, string[]> = {
+  "Proposals & Pitches": [
+    "Summarize the key value propositions in our Q2 proposal",
+    "What pricing did we offer in the Acme Corp pitch?",
+    "Compare the benefits section across all proposals",
+  ],
+  "Contracts & Legal": [
+    "Draft a standard NDA for client onboarding",
+    "Summarize key risks in our current contracts",
+    "What clauses are missing in the vendor contract?",
+  ],
+  "Playbooks & Training": [
+    "Generate onboarding steps for new sales reps",
+    "Summarize the playbook for enterprise accounts",
+    "List the best practices for closing deals",
+  ],
+};
+
+type TextPart = { type: "text"; text: string };
+type ToolInvocationPart = {
+  type: "tool-invocation";
+  toolInvocation: {
+    toolCallId: string;
+    toolName: string;
+    args: unknown;
+    state: string;
+    result?: unknown;
+  };
+};
+type Field = {
+  name: string;
+  label: string;
+  type?: string;
+  required?: boolean;
+  placeholder?: string;
+};
+
+function convertUIMessagesToMessages(uiMessages: UIMessage[]): Message[] {
+  return uiMessages.map((m, _index) => {
+    const parts = m.parts as (
+      | TextPart
+      | ToolInvocationPart
+      | { type: string; text?: string }
+    )[];
+
+    const textParts = parts
+      .filter((p): p is TextPart => p.type === "text")
+      .map((p) => p.text)
+      .join("");
+
+    const reasoningParts = parts
+      .filter((p) => p.type === "reasoning" && typeof p.text === "string")
+      .map((p) => (p as { text: string }).text)
+      .join("");
+
+    // Handle both tool-invocation format and separate tool-call/tool-result formats
+    const toolInvocationParts = parts.filter(
+      (p): p is ToolInvocationPart => p.type === "tool-invocation"
+    );
+
+    const toolCallParts = parts.filter((p): p is any => p.type === "tool-call");
+
+    const toolResultParts = parts.filter(
+      (p): p is any => p.type === "tool-result"
+    );
+
+    // Process tool-invocation format
+    const toolPartsFromInvocations = toolInvocationParts.map((p) => {
+      const inv = p.toolInvocation;
+
+      return {
+        id: inv.toolCallId,
+        name: inv.toolName,
+        args: inv.args,
+        state: inv.state === "result" ? "result" : "running",
+        result: inv.result,
+      } as ToolCall;
+    });
+
+    // Process separate tool-call and tool-result format
+    const toolPartsFromSeparate: ToolCall[] = [];
+
+    // First, collect all tool calls
+    for (const callPart of toolCallParts) {
+      // Find corresponding result
+      const resultPart = toolResultParts.find(
+        (r) => r.toolCallId === callPart.toolCallId
+      );
+
+      toolPartsFromSeparate.push({
+        id: callPart.toolCallId,
+        name: callPart.toolName,
+        args: callPart.args,
+        state: resultPart ? "result" : "running",
+        result: resultPart?.output,
+      } as ToolCall);
+    }
+
+    // Also check for standalone tool results (from separate messages)
+    for (const resultPart of toolResultParts) {
+      // Only add if not already processed with a call
+      const alreadyProcessed = toolPartsFromSeparate.some(
+        (tc) => tc.id === resultPart.toolCallId
+      );
+
+      if (!alreadyProcessed) {
+        toolPartsFromSeparate.push({
+          id: resultPart.toolCallId,
+          name: resultPart.toolName,
+          args: {},
+          state: "result",
+          result: resultPart.output,
+        } as ToolCall);
+      }
+    }
+
+    const toolParts = [...toolPartsFromInvocations, ...toolPartsFromSeparate];
+
+    const convertedMessage = {
+      id: m.id,
+      role: m.role as "user" | "assistant" | "tool",
+      content: textParts,
+      // Hide tool calls in production environment
+      toolCalls:
+        process.env.NODE_ENV === "production"
+          ? undefined
+          : toolParts.length > 0
+            ? toolParts
+            : undefined,
+      attachments: (m as { attachments?: unknown[] }).attachments,
+      reasoning: reasoningParts || undefined,
+    };
+
+    return convertedMessage;
+  });
+}
+
+type PersonalizedPrompt = {
+  title: string;
+  prompt: string;
+  category?: string;
+};
+
+export default function ChatSection({
+  chatId,
+  initialMessages,
+}: {
+  chatId?: string;
+  initialMessages?: UIMessage[];
+}) {
+  const router = useRouter();
+  // Removed URL trigger mechanism; auto start now based solely on messages state.
+  const [input, setInput] = useState("");
+  const [activeChatId, setActiveChatId] = useState<string | null>(
+    chatId || null
+  );
+  const autoTriggeredRef = useRef(false);
+  const justCreatedChatRef = useRef(false);
+  const justSentMessageRef = useRef(false);
+  const chatInputRef = useRef<ChatInputHandle>(null);
+  const [personalizedPrompts, setPersonalizedPrompts] = useState<
+    PersonalizedPrompt[]
+  >([]);
+  const [greeting, setGreeting] = useState("How can I assist you?");
+  const [isLoadingPrompts, setIsLoadingPrompts] = useState(true);
+  const [thinkingText, setThinkingText] = useState("Thinking...");
+
+  const thinkingSynonyms = [
+    "Thinking...",
+    "Processing...",
+    "Analyzing...",
+    "Generating...",
+    "Working...",
+  ];
+
+  const {
+    messages,
+    setMessages,
+    sendMessage,
+    isLoading,
+    streamingContent,
+    streamingToolCalls,
+    streamingReasoning,
+    startFromExistingLastUserMessage,
+  } = useStreamingChat({
+    initialMessages: initialMessages
+      ? convertUIMessagesToMessages(initialMessages)
+      : [],
+    api: "/api/chat",
+  });
+
+  const [_selectedCategory, _setSelectedCategory] = useState<
+    keyof typeof promptsDict
+  >(Object.keys(promptsDict)[0] as keyof typeof promptsDict);
+
+  // Fetch personalized prompts on mount
+  useEffect(() => {
+    async function fetchPrompts() {
+      try {
+        const response = await fetch("/api/prompts");
+        if (response.ok) {
+          const data = await response.json();
+
+          // Use default prompts if no personalized prompts exist
+          const defaultPrompts: PersonalizedPrompt[] = Object.entries(
+            promptsDict
+          ).flatMap(([category, prompts]) =>
+            prompts.map((prompt) => ({
+              title: prompt,
+              prompt,
+              category,
+            }))
+          );
+
+          if (data.prompts && data.prompts.length > 0) {
+            setPersonalizedPrompts(data.prompts);
+          } else {
+            setPersonalizedPrompts(defaultPrompts);
+          }
+
+          if (data.greeting) {
+            setGreeting(data.greeting);
+          }
+        } else {
+          // Use default prompts on error
+          const defaultPrompts: PersonalizedPrompt[] = Object.entries(
+            promptsDict
+          ).flatMap(([category, prompts]) =>
+            prompts.map((prompt) => ({
+              title: prompt,
+              prompt,
+              category,
+            }))
+          );
+          setPersonalizedPrompts(defaultPrompts);
+        }
+      } catch (error) {
+        console.error("Error fetching prompts:", error);
+        // Use default prompts on error
+        const defaultPrompts: PersonalizedPrompt[] = Object.entries(
+          promptsDict
+        ).flatMap(([category, prompts]) =>
+          prompts.map((prompt) => ({
+            title: prompt,
+            prompt,
+            category,
+          }))
+        );
+        setPersonalizedPrompts(defaultPrompts);
+      } finally {
+        setIsLoadingPrompts(false);
+      }
+    }
+    fetchPrompts();
+  }, []);
+
+  // Cycle through thinking synonyms
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setThinkingText((prev) => {
+        const currentIndex = thinkingSynonyms.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % thinkingSynonyms.length;
+        return thinkingSynonyms[nextIndex];
+      });
+    }, 1500); // Change every 1.5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const copyMessage = (text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        toast.success("Copied to clipboard");
+      })
+      .catch((err) => {
+        console.error("Failed to copy text:", err);
+        toast.error("Failed to copy");
+      });
+  };
+
+  const handleSendMessage = async (
+    text: string,
+    attachmentItems: ProjectFileItem[] = []
+  ) => {
+    const value = text.trim();
+    if (!value && attachmentItems.length === 0) {
+      return;
+    }
+
+    // For now, don't process file attachments - just use metadata
+    // TODO: Implement file blob fetching and conversion to data URLs
+    const files: File[] = [];
+
+    if (!activeChatId) {
+      try {
+        const newChat = await createNewChat();
+        if (!newChat?.id) {
+          toast.error("Failed to create chat");
+          return;
+        }
+        // Do NOT set activeChatId or messages here.
+        // This prevents the current component from triggering the AI response
+        // before the navigation to the new page happens.
+        // The new page will load the chat and trigger the response via its own useEffect.
+
+        // Save user message to DB with metadata FIRST
+        await addMessageToChat({
+          chatId: newChat.id,
+          role: "user",
+          parts: [{ type: "text", text: value }],
+          attachments: attachmentItems,
+        });
+
+        // Navigate to the new chat page.
+        router.push(`/dashboard/chat/${newChat.id}`);
+
+        // Clear attachments after successful send
+        chatInputRef.current?.clearAttachments();
+      } catch (err) {
+        console.error("Error creating chat:", err);
+        toast.error("Failed to create chat");
+      }
+      return;
+    }
+
+    // Existing chat
+    try {
+      // Save user message to DB with metadata FIRST
+      await addMessageToChat({
+        chatId: activeChatId,
+        role: "user",
+        parts: [{ type: "text", text: value }],
+        attachments: attachmentItems,
+      });
+
+      // Send to API via hook with actual file blobs
+      sendMessage(value, files, activeChatId);
+
+      justSentMessageRef.current = true;
+
+      // Clear attachments after successful send
+      chatInputRef.current?.clearAttachments();
+    } catch (err) {
+      console.error("Error adding message:", err);
+      toast.error("Failed to send message");
+    }
+  };
+
+  useEffect(() => {
+    // Auto trigger when there's exactly one user message and no assistant reply yet.
+    if (autoTriggeredRef.current) {
+      return;
+    }
+    if (justSentMessageRef.current) {
+      justSentMessageRef.current = false;
+      return;
+    }
+    if (!activeChatId) {
+      return;
+    }
+    if (!messages || messages.length !== 1) {
+      return;
+    }
+    const onlyMsg = messages[0];
+    if (onlyMsg.role !== "user") {
+      return;
+    }
+
+    // If chat was just created we already invoked sendMessage; skip duplicate streaming.
+    if (justCreatedChatRef.current) {
+      justCreatedChatRef.current = false;
+      autoTriggeredRef.current = true;
+      return;
+    }
+
+    // Trigger assistant response using existing user message without re-adding it.
+    startFromExistingLastUserMessage(activeChatId);
+    autoTriggeredRef.current = true;
+  }, [activeChatId, messages, startFromExistingLastUserMessage]);
+
+  return (
+    <div className="relative flex h-screen flex-col overflow-clip rounded-2xl bg-background md:h-[97vh]">
+      <div className="absolute top-0 z-10 flex w-full items-center justify-between bg-transparent px-8 py-6">
+        <div className="flex items-center gap-3">
+          <SidebarTrigger />
+        </div>
+        <Link href="/dashboard">
+          <Button
+            className="gap-2 transition-colors hover:bg-secondary/80 dark:hover:bg-secondary/60"
+            variant="secondary"
+          >
+            <Plus className="h-4 w-4" /> New Chat
+          </Button>
+        </Link>
+      </div>
+
+      <Conversation className="flex-1 overflow-hidden bg-background pt-20 md:pb-6 dark:bg-background">
+        <ConversationScrollButton className="-translate-x-1/2 sticky top-[85%] bottom-auto left-1/2 z-20 bg-accent hover:bg-accent/90" />
+        {messages.length === 0 && !input.trim() ? (
+          <div className="mx-auto flex h-full max-w-5xl flex-col items-start justify-center bg-background px-4 text-center sm:px-5 dark:bg-background">
+            <h1 className="mb-4 font-semibold text-2xl text-foreground sm:mb-6 sm:text-3xl md:text-4xl dark:text-foreground">
+              {greeting}
+            </h1>
+            {!isLoadingPrompts && personalizedPrompts.length > 0 && (
+              <div className="flex w-full max-w-xl flex-col gap-2 pt-3 text-muted-foreground *:rounded-2xl *:border-border *:border-b *:py-2 *:text-foreground *:text-sm sm:gap-3 sm:pt-4 sm:*:py-3 sm:*:text-lg">
+                {personalizedPrompts.slice(0, 6).map((promptItem, idx) => (
+                  <Button
+                    className="h-auto justify-start px-2 text-left transition-colors hover:bg-accent hover:text-accent-foreground sm:px-4 dark:hover:bg-accent/80"
+                    key={`${promptItem.title}-${idx}`}
+                    onClick={() => {
+                      setInput(promptItem.prompt);
+                    }}
+                    variant="ghost"
+                  >
+                    {promptItem.title}
+                  </Button>
+                ))}
+              </div>
+            )}
+            {isLoadingPrompts && (
+              <div className="flex w-full max-w-xl flex-col gap-2 pt-3 sm:gap-3 sm:pt-4">
+                {[1, 2, 3].map((i) => (
+                  <Skeleton className="h-12 w-full rounded-2xl" key={i} />
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <ChatMessages
+            copyMessage={copyMessage}
+            isLoading={isLoading}
+            messages={messages}
+            onSend={(text) => handleSendMessage(text)}
+            streamingContent={streamingContent}
+            // Hide streaming tool calls in production
+            streamingReasoning={streamingReasoning}
+            streamingToolCalls={
+              process.env.NODE_ENV === "production" ? [] : streamingToolCalls
+            }
+            thinkingText={thinkingText}
+          />
+        )}
+      </Conversation>
+
+      <div className="relative">
+        <ChatInput
+          handleSend={(e, attachments) => {
+            e.preventDefault();
+            if (!input.trim() && (!attachments || attachments.length === 0)) {
+              return;
+            }
+            handleSendMessage(input, attachments);
+            setInput("");
+          }}
+          input={input}
+          isLoading={isLoading}
+          ref={chatInputRef}
+          setInput={setInput}
+        />
+      </div>
+    </div>
+  );
+}
+
+function renderToolCall(
+  toolCall: ToolCall,
+  i: number,
+  messageId: string,
+  onSend: (text: string) => void
+) {
+  const isRunning = toolCall.state === "running";
+
+  // Check for REQUEST_USER_INPUT tool
+  if (toolCall.name === "REQUEST_USER_INPUT") {
+    // Use input (arguments) to get fields
+    const input = toolCall.args as unknown as {
+      authConfigId?: string;
+      fields?: Field[];
+      logoUrl?: string;
+      provider?: string;
+    };
+    if (input?.fields) {
+      return (
+        <UserInputRequest
+          authConfigId={input.authConfigId}
+          fields={input.fields}
+          key={`${messageId}-tool-${i}`}
+          logoUrl={input.logoUrl}
+          onSubmit={(values) => {
+            const text =
+              `Here are the details for ${input.provider}:\n` +
+              Object.entries(values)
+                .map(([k, v]) => `${k}: ${v}`)
+                .join("\n");
+            onSend(text);
+          }}
+          provider={input.provider || ""}
+        />
+      );
+    }
+  }
+
+  // Fallback for legacy user_input_request in result
+  if (
+    toolCall.state === "result" &&
+    toolCall.result &&
+    typeof toolCall.result === "object" &&
+    (toolCall.result as unknown as { type?: string }).type ===
+      "user_input_request"
+  ) {
+    const request = toolCall.result as unknown as {
+      authConfigId?: string;
+      fields?: Field[];
+      logoUrl?: string;
+      provider?: string;
+    };
+    return (
+      <UserInputRequest
+        authConfigId={request.authConfigId}
+        fields={request.fields || []}
+        key={`${messageId}-tool-${i}`}
+        logoUrl={request.logoUrl}
+        onSubmit={(values) => {
+          const text =
+            `Here are the details for ${request.provider}:\n` +
+            Object.entries(values)
+              .map(([k, v]) => `${k}: ${v}`)
+              .join("\n");
+          onSend(text);
+        }}
+        provider={request.provider || ""}
+      />
+    );
+  }
+
+  // Only show other tool UI in development
+  if (process.env.NODE_ENV === "production") {
+    return null;
+  }
+
+  return (
+    <Tool className="my-2" defaultOpen={false} key={`${messageId}-tool-${i}`}>
+      <ToolHeader
+        state={
+          toolCall.state === "running" ? "input-streaming" : "output-available"
+        }
+        title={isRunning ? <Shimmer>{toolCall.name}</Shimmer> : toolCall.name}
+        type="tool-call"
+      />
+      <ToolContent>
+        <ToolInput input={toolCall.args} />
+        {toolCall.result && (
+          <ToolOutput errorText={undefined} output={toolCall.result} />
+        )}
+      </ToolContent>
+    </Tool>
+  );
+}
+
+type ChatMessagesProps = {
+  messages: Message[];
+  isLoading: boolean;
+  streamingContent: string;
+  streamingToolCalls: ToolCall[];
+  streamingReasoning: string;
+  copyMessage: (text: string) => void;
+  onSend: (text: string) => void;
+  thinkingText: string;
+};
+
+function ChatMessages(props: ChatMessagesProps) {
+  const {
+    messages,
+    isLoading,
+    streamingContent,
+    streamingToolCalls,
+    streamingReasoning,
+    copyMessage,
+    onSend,
+    thinkingText,
+  } = props;
+  const { scrollToBottom } = useStickToBottomContext();
+
+  useEffect(() => {
+    const lastMessage = messages.at(-1);
+    if (lastMessage?.role === "user") {
+      scrollToBottom();
+    }
+  }, [messages, scrollToBottom]);
+
+  // Combine messages with streaming content
+  const allMessages = [...messages];
+  if (
+    isLoading &&
+    (streamingContent || streamingToolCalls.length > 0 || streamingReasoning)
+  ) {
+    allMessages.push({
+      id: "streaming-message",
+      role: "assistant",
+      content: streamingContent,
+      toolCalls: streamingToolCalls,
+      reasoning: streamingReasoning || undefined,
+    });
+  } else if (
+    isLoading &&
+    allMessages.length > 0 &&
+    allMessages.at(-1)?.role === "user"
+  ) {
+    // Show loading spinner if we are loading but no content yet
+    allMessages.push({
+      id: "loading-message",
+      role: "assistant",
+      content: "",
+      toolCalls: [],
+    });
+  }
+
+  return (
+    <ConversationContent className="mx-auto max-w-5xl">
+      {allMessages.map((message, index) => {
+        // Determine if this is a tool-related message
+        const isToolMessage =
+          message.role === "tool" ||
+          (message.toolCalls && message.toolCalls.length > 0);
+
+        // Determine spacing based on message type and previous message
+        const prevMessage = index > 0 ? allMessages[index - 1] : null;
+        const prevIsToolMessage =
+          prevMessage &&
+          (prevMessage.role === "tool" ||
+            (prevMessage.toolCalls && prevMessage.toolCalls.length > 0));
+
+        // Use smaller spacing for tool messages, especially when consecutive
+        let spacingClass = "mt-14"; // Default spacing
+        if (isToolMessage && prevIsToolMessage) {
+          spacingClass = "mt-4"; // Small spacing between consecutive tool messages
+        } else if (isToolMessage || prevIsToolMessage) {
+          spacingClass = "mt-6"; // Medium spacing when transitioning to/from tools
+        }
+
+        return (
+          <div
+            className={`flex text-lg ${
+              message.role === "user" ? "justify-end" : "justify-start"
+            } ${index > 0 ? spacingClass : ""}`}
+            key={message.id}
+          >
+            <div
+              className={`relative flex flex-row ${
+                message.role === "user"
+                  ? "w-full justify-end md:max-w-[75%]"
+                  : "w-full justify-start"
+              }`}
+            >
+              <div
+                className={`wrap-break-word max-w-full overflow-hidden rounded-2xl px-4 py-3 transition-colors ${
+                  message.role === "user"
+                    ? "border border-border bg-card text-foreground dark:bg-muted/80 dark:text-foreground"
+                    : "bg-transparent text-foreground dark:text-foreground"
+                }`}
+              >
+                {message.role === "user" ? (
+                  <>
+                    <MessageAttachments
+                      attachments={message.attachments || []}
+                    />
+                    <div>{message.content}</div>
+                  </>
+                ) : (
+                  <>
+                    {/* Reasoning (Thinking) UI */}
+                    {(message.reasoning ||
+                      (message.id === "streaming-message" &&
+                        streamingReasoning)) && (
+                      <Reasoning
+                        defaultOpen={false}
+                        isStreaming={
+                          message.id === "streaming-message" && isLoading
+                        }
+                      >
+                        <ReasoningTrigger />
+                        <ReasoningContent>
+                          {message.id === "streaming-message"
+                            ? streamingReasoning
+                            : message.reasoning || ""}
+                        </ReasoningContent>
+                      </Reasoning>
+                    )}
+
+                    {/* Search Sources - Always show firesearch results */}
+                    {message.toolCalls &&
+                      message.toolCalls.length > 0 &&
+                      message.toolCalls.some(
+                        (tc) =>
+                          tc.name === "firesearch" && tc.state === "result"
+                      ) && (
+                        <div className="mb-4">
+                          {message.toolCalls
+                            .filter(
+                              (tc) =>
+                                tc.name === "firesearch" &&
+                                tc.state === "result"
+                            )
+                            .map((toolCall, i) => {
+                              const result = toolCall.result as {
+                                query?: string;
+                                results?: Array<{
+                                  url: string;
+                                  title: string;
+                                  description: string;
+                                  image?: string;
+                                  favicon?: string;
+                                  author?: string;
+                                  publishedDate?: string;
+                                }>;
+                              };
+
+                              if (result.results && result.results.length > 0) {
+                                return (
+                                  <SearchSources
+                                    key={`${message.id}-search-${i}`}
+                                    query={result.query}
+                                    sources={result.results}
+                                  />
+                                );
+                              }
+                              return null;
+                            })}
+                        </div>
+                      )}
+
+                    {/* Other Tool Calls - Only show in development */}
+                    {process.env.NODE_ENV !== "production" &&
+                      message.toolCalls &&
+                      message.toolCalls.length > 0 && (
+                        <div className="mb-4 space-y-2">
+                          {message.toolCalls
+                            .filter((tc) => tc.name !== "firesearch")
+                            .map((toolCall, i) =>
+                              renderToolCall(toolCall, i, message.id, onSend)
+                            )}
+                        </div>
+                      )}
+
+                    {/* Text Content */}
+                    {message.content && <Response>{message.content}</Response>}
+
+                    {/* Loading Indicator if empty content and no tools */}
+                    {message.id === "loading-message" &&
+                      !message.content &&
+                      (!message.toolCalls ||
+                        message.toolCalls.length === 0) && (
+                        <div className="flex min-w-60 flex-col gap-2">
+                          <Shimmer className="font-medium text-sm">
+                            {thinkingText}
+                          </Shimmer>
+                          <div className="space-y-2 pt-1">
+                            <Skeleton className="h-4 w-[90%]" />
+                            <Skeleton className="h-4 w-[75%]" />
+                            <Skeleton className="h-4 w-[50%]" />
+                          </div>
+                        </div>
+                      )}
+                  </>
+                )}
+              </div>
+              {/* Only show copy button for completed messages with content, not during streaming or loading */}
+              {message.id !== "streaming-message" &&
+                message.id !== "loading-message" &&
+                message.content &&
+                message.content.trim() && (
+                  <Action
+                    className={`-bottom-10 absolute h-6 w-6 p-0 ${
+                      message.role === "user" ? "right-1" : "left-1"
+                    }`}
+                    onClick={() => copyMessage(message.content)}
+                    tooltip="Copy to clipboard"
+                  >
+                    <ClipboardCopy className="h-4 w-4 opacity-60" />
+                  </Action>
+                )}
+            </div>
+          </div>
+        );
+      })}
+    </ConversationContent>
+  );
+}
