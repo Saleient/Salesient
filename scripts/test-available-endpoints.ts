@@ -200,7 +200,7 @@ async function testFileProcessing() {
   separator();
   log("📄 Testing PDF File Processing...", colors.cyan);
   try {
-    const pdfPath = path.join(process.cwd(), "elitenotes ml doc.pdf");
+    const pdfPath = path.join(process.cwd(), "salesorbit ml doc.pdf");
     if (!fs.existsSync(pdfPath)) {
       log(`⚠️  PDF file not found at: ${pdfPath}`, colors.yellow);
       log("   Skipping PDF processing test", colors.yellow);
@@ -210,7 +210,7 @@ async function testFileProcessing() {
     log(`   Reading PDF: ${path.basename(pdfPath)}...`, colors.yellow);
     const pdfBuffer = fs.readFileSync(pdfPath);
     const blob = new Blob([pdfBuffer], { type: "application/pdf" });
-    const file = new File([blob], "elitenotes ml doc.pdf", { 
+    const file = new File([blob], "salesorbit ml doc.pdf", { 
       type: "application/pdf" 
     });
     log(`   Processing PDF (${(pdfBuffer.length / 1024).toFixed(2)} KB)...`, colors.yellow);

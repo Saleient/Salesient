@@ -196,7 +196,7 @@ export default function AuthPage() {
           {/* Header */}
           <div className="space-y-3">
             <h2 className="font-semibold text-3xl tracking-tight">
-              {isNewUser ? "Welcome!" : "Welcome to EliteNotes"}
+              {isNewUser ? "Welcome!" : "Welcome to SalesOrbit"}
             </h2>
             <p className="text-muted-foreground">
               {magicLinkSent && "Check your email for the magic link"}

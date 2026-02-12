@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Header Section */}
           <div className="mb-12">
             <h2 className="font-semibold text-2xl text-foreground">
-              EliteNotes
+              SalesOrbit
             </h2>
           </div>
 
@@ -71,12 +71,12 @@ export default function Footer() {
                     </span>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="transition-colors hover:text-foreground"
-                      href="https://cal.com/sahilgulati41/15min"
+                      href="/contact"
                     >
                       Contact Support
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -139,12 +139,12 @@ export default function Footer() {
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="transition-colors hover:text-foreground"
-                    href="https://cal.com/sahilgulati41/15min"
+                    href="/contact"
                   >
                     Contact Support
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -176,10 +176,10 @@ export default function Footer() {
 
         {/* Footer Image */}
         <Image
-          alt="EliteNotes"
+          alt="SalesOrbit"
           className="h-full w-full pt-16 md:pt-32"
           height={60}
-          src="/elitenotes.svg"
+          src="/salesorbit.svg"
           width={200}
         />
       </footer>

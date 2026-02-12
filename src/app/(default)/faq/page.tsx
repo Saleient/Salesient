@@ -1,20 +1,19 @@
 "use client";
 
-import Cal, { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ContactForm from "@/components/contact-form";
 
 export default function FAQPage() {
   const faqs = [
     {
       question: "How is this different from other AI tools who chat with PDF?",
       answer:
-        "Unlike basic PDF chat tools, Elitenotes connects with your entire sales stack — CRMs, cloud storage, and communication tools — giving you a unified AI assistant that understands context across all your documents and data, not just single files.",
+        "Unlike basic PDF chat tools, SalesOrbit connects with your entire sales stack — CRMs, cloud storage, and communication tools — giving you a unified AI assistant that understands context across all your documents and data, not just single files.",
     },
     {
       question: "What all integrations I will have to chat with my documents?",
@@ -24,12 +23,12 @@ export default function FAQPage() {
     {
       question: "Who is this best suited for?",
       answer:
-        "Elitenotes is built for B2B sales teams — including consultants, sales operations, and revenue leaders in SaaS, consulting, and service-driven enterprises — who want to save time and make faster, data-backed decisions.",
+        "SalesOrbit is built for B2B sales teams — including consultants, sales operations, and revenue leaders in SaaS, consulting, and service-driven enterprises — who want to save time and make faster, data-backed decisions.",
     },
     {
-      question: "What all types of sales documents elitenotes can handle?",
+      question: "What all types of sales documents SalesOrbit can handle?",
       answer:
-        "From proposals, contracts, and pricing sheets to CRM exports, meeting notes, call transcripts, and sales playbooks — Elitenotes supports both structured and unstructured sales documents, making it your single source of truth.",
+        "From proposals, contracts, and pricing sheets to CRM exports, meeting notes, call transcripts, and sales playbooks — SalesOrbit supports both structured and unstructured sales documents, making it your single source of truth.",
     },
     {
       question: "Why would I share my sales data on your platform?",
@@ -37,13 +36,6 @@ export default function FAQPage() {
         "Your data security is our top priority. Our custom RAG system ensures documents are ingested, indexed, and retrieved securely, with enterprise-grade encryption (for enterprise plans only) and strict access controls preventing leakage or misuse of your information.",
     },
   ];
-
-  useEffect(() => {
-    (async () => {
-      const cal = await getCalApi({ namespace: "15min" });
-      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
-    })();
-  }, []);
 
   return (
     <div className="min-h-screen bg-background px-6 pt-40 pb-16 text-foreground md:px-6 md:py-24">
@@ -91,20 +83,17 @@ export default function FAQPage() {
         className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-12 md:flex-row"
         id="contact"
       >
-        <h2 className="mb-4 text-5xl md:text-7xl">Let&apos;s Talk!</h2>
+        <div className="md:w-[40%]">
+          <h2 className="mb-4 text-5xl md:text-7xl">Let&apos;s Talk!</h2>
+          <p className="text-gray-400 text-lg">
+            Have questions or need support? Fill out the form and we&apos;ll get back to you as soon as possible.
+          </p>
+        </div>
 
-        {/* Cal.com Embed */}
+        {/* Contact Form */}
         <div className="w-full flex-1">
-          <div className="w-full rounded-2xl border-0 bg-transparent">
-            <div className="w-full">
-              <div className="min-h-[600px] w-full overflow-hidden rounded-2xl">
-                <Cal
-                  calLink="sahilgulati41/15min"
-                  config={{ layout: "month_view" }}
-                  namespace="15min"
-                />
-              </div>
-            </div>
+          <div className="w-full rounded-2xl border border-white/10 bg-background/50 p-8">
+            <ContactForm />
           </div>
         </div>
       </section>

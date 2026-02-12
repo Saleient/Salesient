@@ -191,7 +191,7 @@ export const apps = {
       appName: "Perplexityai",
       description:
         "Perplexity AI provides conversational AI models for generating human-like text responses",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//perplexity.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//perplexity.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "perplexityai",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -204,7 +204,7 @@ export const apps = {
       meta: {
         description:
           "Perplexity AI provides conversational AI models for generating human-like text responses",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//perplexity.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//perplexity.jpeg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -1091,7 +1091,7 @@ export const apps = {
       appName: "Mem0",
       description:
         "Mem0 assists with AI-driven note-taking, knowledge recall, and productivity tools, allowing users to organize, search, and generate content from stored information",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//mem0.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//mem0.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mem0",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -1107,7 +1107,7 @@ export const apps = {
       meta: {
         description:
           "Mem0 assists with AI-driven note-taking, knowledge recall, and productivity tools, allowing users to organize, search, and generate content from stored information",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//mem0.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//mem0.png",
         toolsCount: 43,
         totalInstallCount: 0,
       },
@@ -1492,7 +1492,7 @@ export const apps = {
       appName: "Borneo",
       description:
         "Borneo is a data security and privacy platform designed for sensitive data discovery and remediation.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/borneo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/borneo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "borneo",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -1505,7 +1505,7 @@ export const apps = {
       meta: {
         description:
           "Borneo is a data security and privacy platform designed for sensitive data discovery and remediation.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/borneo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/borneo.jpeg",
         toolsCount: 154,
         totalInstallCount: 0,
       },
@@ -1860,7 +1860,7 @@ export const apps = {
       appName: "Pipedrive",
       description:
         "Pipedrive is a sales management tool built around pipeline visualization, lead tracking, activity reminders, and automation to keep deals progressing",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pipedrive.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pipedrive.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pipedrive",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -1873,7 +1873,7 @@ export const apps = {
       meta: {
         description:
           "Pipedrive is a sales management tool built around pipeline visualization, lead tracking, activity reminders, and automation to keep deals progressing",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pipedrive.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pipedrive.svg",
         toolsCount: 278,
         totalInstallCount: 0,
       },
@@ -1883,7 +1883,7 @@ export const apps = {
       appName: "Bamboohr",
       description:
         "BambooHR is an American technology company that provides human resources software as a service.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//bamboohr.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//bamboohr.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bamboohr",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -1896,7 +1896,7 @@ export const apps = {
       meta: {
         description:
           "BambooHR is an American technology company that provides human resources software as a service.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//bamboohr.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//bamboohr.svg",
         toolsCount: 43,
         totalInstallCount: 0,
       },
@@ -1906,7 +1906,7 @@ export const apps = {
       appName: "Whatsapp",
       description:
         "Enables interaction with customers through the WhatsApp Business API for messaging and automation. Only supports WhatsApp Business accounts, not WhatsApp Personal accounts.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/whatsapp-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/whatsapp-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "whatsapp",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -1919,7 +1919,7 @@ export const apps = {
       meta: {
         description:
           "Enables interaction with customers through the WhatsApp Business API for messaging and automation. Only supports WhatsApp Business accounts, not WhatsApp Personal accounts.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/whatsapp-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/whatsapp-logo.png",
         toolsCount: 19,
         totalInstallCount: 0,
       },
@@ -1956,7 +1956,7 @@ export const apps = {
       appName: "Zendesk",
       description:
         "Zendesk provides customer support software with ticketing, live chat, and knowledge base features, enabling efficient helpdesk operations and customer engagement",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zendesk.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zendesk.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zendesk",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -1969,7 +1969,7 @@ export const apps = {
       meta: {
         description:
           "Zendesk provides customer support software with ticketing, live chat, and knowledge base features, enabling efficient helpdesk operations and customer engagement",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zendesk.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zendesk.svg",
         toolsCount: 16,
         totalInstallCount: 0,
       },
@@ -1979,7 +1979,7 @@ export const apps = {
       appName: "Googlephotos",
       description:
         "Google Photos is a cloud-based photo storage and organization service offering automatic backups, AI-assisted search, and shared albums for personal and collaborative media management",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/Google_Photos.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/Google_Photos.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "googlephotos",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -1992,7 +1992,7 @@ export const apps = {
       meta: {
         description:
           "Google Photos is a cloud-based photo storage and organization service offering automatic backups, AI-assisted search, and shared albums for personal and collaborative media management",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/Google_Photos.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/Google_Photos.png",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -2002,7 +2002,7 @@ export const apps = {
       appName: "Lmnt",
       description:
         "LMNT focuses on voice and audio manipulation, possibly leveraging AI to generate or transform sound for various creative and technical use cases",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/lmnt_logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/lmnt_logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "lmnt",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2015,7 +2015,7 @@ export const apps = {
       meta: {
         description:
           "LMNT focuses on voice and audio manipulation, possibly leveraging AI to generate or transform sound for various creative and technical use cases",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/lmnt_logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/lmnt_logo.jpeg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -2024,7 +2024,7 @@ export const apps = {
       id: "metaads",
       appName: "Metaads",
       description: "Meta Ads API",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/meta-icon.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/meta-icon.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "metaads",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2036,7 +2036,7 @@ export const apps = {
       authSchems: ["OAUTH2", "API_KEY"],
       meta: {
         description: "Meta Ads API",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/meta-icon.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/meta-icon.svg",
         toolsCount: 16,
         totalInstallCount: 0,
       },
@@ -2046,7 +2046,7 @@ export const apps = {
       appName: "Zenrows",
       description:
         "ZenRows is a web scraping API allowing developers to bypass CAPTCHAs and blocks, gather structured data from dynamic websites, and quickly integrate results into applications",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zenrows.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zenrows.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zenrows",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2059,7 +2059,7 @@ export const apps = {
       meta: {
         description:
           "ZenRows is a web scraping API allowing developers to bypass CAPTCHAs and blocks, gather structured data from dynamic websites, and quickly integrate results into applications",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zenrows.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zenrows.jpeg",
         toolsCount: 16,
         totalInstallCount: 0,
       },
@@ -2069,7 +2069,7 @@ export const apps = {
       appName: "Google Super",
       description:
         "Google Super App combines all Google services including Drive, Calendar, Gmail, Sheets, Analytics, Ads, and more, providing a unified platform for seamless integration and management of your digital life.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "googlesuper",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2089,7 +2089,7 @@ export const apps = {
       meta: {
         description:
           "Google Super App combines all Google services including Drive, Calendar, Gmail, Sheets, Analytics, Ads, and more, providing a unified platform for seamless integration and management of your digital life.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google.svg",
         toolsCount: 253,
         totalInstallCount: 0,
       },
@@ -2099,7 +2099,7 @@ export const apps = {
       appName: "Yousearch",
       description:
         "YouSearch is a search engine or search tool that enables users to find relevant information, possibly with enhanced filtering or privacy-focused features",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//you.webp",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//you.webp",
       status: "NEEDS-ADMIN",
       toolkitSlug: "yousearch",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2112,7 +2112,7 @@ export const apps = {
       meta: {
         description:
           "YouSearch is a search engine or search tool that enables users to find relevant information, possibly with enhanced filtering or privacy-focused features",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//you.webp",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//you.webp",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -2121,7 +2121,7 @@ export const apps = {
       id: "linkup",
       appName: "Linkup",
       description: "Search the Web for Relevant Results (RAG Use Case)",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/linkup.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/linkup.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "linkup",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2133,7 +2133,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "Search the Web for Relevant Results (RAG Use Case)",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/linkup.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/linkup.jpeg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -2142,7 +2142,7 @@ export const apps = {
       id: "listennotes",
       appName: "Listennotes",
       description: "The best podcast search engine.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/listennotes.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/listennotes.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "listennotes",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2154,7 +2154,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "The best podcast search engine.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/listennotes.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/listennotes.png",
         toolsCount: 26,
         totalInstallCount: 0,
       },
@@ -2164,7 +2164,7 @@ export const apps = {
       appName: "Typefully",
       description:
         "Typefully is a platform for creating and managing AI-powered content",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/typefully.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/typefully.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "typefully",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2177,7 +2177,7 @@ export const apps = {
       meta: {
         description:
           "Typefully is a platform for creating and managing AI-powered content",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/typefully.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/typefully.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -2187,7 +2187,7 @@ export const apps = {
       appName: "Bolna",
       description:
         "Create conversational voice agents using Bolna AI to enhance interactions, streamline operations and automate support.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bolna-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bolna-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bolna",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2200,7 +2200,7 @@ export const apps = {
       meta: {
         description:
           "Create conversational voice agents using Bolna AI to enhance interactions, streamline operations and automate support.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bolna-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bolna-logo.png",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -2210,7 +2210,7 @@ export const apps = {
       appName: "Rocketlane",
       description:
         "Collaborative customer onboarding and implementation platform for professional services teams.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rocketlane-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rocketlane-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "rocketlane",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2228,7 +2228,7 @@ export const apps = {
       meta: {
         description:
           "Collaborative customer onboarding and implementation platform for professional services teams.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rocketlane-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rocketlane-logo.jpeg",
         toolsCount: 33,
         totalInstallCount: 0,
       },
@@ -2237,7 +2237,7 @@ export const apps = {
       id: "bill",
       appName: "Bill",
       description: "Integration with Bill.com API",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bill.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bill.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bill",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2249,7 +2249,7 @@ export const apps = {
       authSchems: ["BILLCOM_AUTH"],
       meta: {
         description: "Integration with Bill.com API",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bill.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bill.jpeg",
         toolsCount: 221,
         totalInstallCount: 0,
       },
@@ -2259,7 +2259,7 @@ export const apps = {
       appName: "Zoom",
       description:
         "Zoom is a video conferencing and online meeting platform featuring breakout rooms, screen sharing, and integrations with various enterprise tools",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zoom.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zoom.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zoom",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2272,7 +2272,7 @@ export const apps = {
       meta: {
         description:
           "Zoom is a video conferencing and online meeting platform featuring breakout rooms, screen sharing, and integrations with various enterprise tools",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zoom.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zoom.svg",
         toolsCount: 17,
         totalInstallCount: 0,
       },
@@ -2282,7 +2282,7 @@ export const apps = {
       appName: "Onepage",
       description:
         "API for enriching user and company data, providing endpoints for token validation and generic search.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/onepage.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/onepage.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "onepage",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2298,7 +2298,7 @@ export const apps = {
       meta: {
         description:
           "API for enriching user and company data, providing endpoints for token validation and generic search.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/onepage.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/onepage.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -2308,7 +2308,7 @@ export const apps = {
       appName: "Retellai",
       description:
         "RetellAI captures calls and transcripts, enabling businesses to analyze conversations, extract insights, and enhance customer interactions in one centralized platform",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/retellai.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/retellai.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "retellai",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2321,7 +2321,7 @@ export const apps = {
       meta: {
         description:
           "RetellAI captures calls and transcripts, enabling businesses to analyze conversations, extract insights, and enhance customer interactions in one centralized platform",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/retellai.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/retellai.jpeg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -2331,7 +2331,7 @@ export const apps = {
       appName: "Servicenow",
       description:
         "Servicenow provides IT Service Management Transform service management to boost productivity and maximize ROI",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/servicenow.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/servicenow.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "servicenow",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2344,7 +2344,7 @@ export const apps = {
       meta: {
         description:
           "Servicenow provides IT Service Management Transform service management to boost productivity and maximize ROI",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/servicenow.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/servicenow.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -2354,7 +2354,7 @@ export const apps = {
       appName: "Google Ads",
       description:
         "Google Ads, is an online advertising platform developed by Google, where advertisers bid to display brief advertisements, service offerings, product listings, and videos to web users.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/googleads.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/googleads.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "googleads",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2367,7 +2367,7 @@ export const apps = {
       meta: {
         description:
           "Google Ads, is an online advertising platform developed by Google, where advertisers bid to display brief advertisements, service offerings, product listings, and videos to web users.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/googleads.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/googleads.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -2400,7 +2400,7 @@ export const apps = {
       appName: "Toneden",
       description:
         "ToneDen automates social media campaigns, advertising, and landing pages, particularly for music promoters and event organizers looking to boost audience reach",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//toneden-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//toneden-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "toneden",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2413,7 +2413,7 @@ export const apps = {
       meta: {
         description:
           "ToneDen automates social media campaigns, advertising, and landing pages, particularly for music promoters and event organizers looking to boost audience reach",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//toneden-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//toneden-logo.jpeg",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -2423,7 +2423,7 @@ export const apps = {
       appName: "Rafflys",
       description:
         "Rafflys hosts giveaways and contests, enabling brands to engage audiences, grow social reach, and reward participants with automated selection processes",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//rafflys.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//rafflys.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "rafflys",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2436,7 +2436,7 @@ export const apps = {
       meta: {
         description:
           "Rafflys hosts giveaways and contests, enabling brands to engage audiences, grow social reach, and reward participants with automated selection processes",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//rafflys.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//rafflys.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -2469,7 +2469,7 @@ export const apps = {
       appName: "Fomo",
       description:
         "Fomo is a social proof marketing platform that displays real-time user activity notifications on websites to build trust and increase conversions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fomo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fomo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "fomo",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2482,7 +2482,7 @@ export const apps = {
       meta: {
         description:
           "Fomo is a social proof marketing platform that displays real-time user activity notifications on websites to build trust and increase conversions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fomo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fomo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -2492,7 +2492,7 @@ export const apps = {
       appName: "Bannerbear",
       description:
         "Bannerbear offers an automated image and video generation API, allowing businesses to create graphics, social media visuals, and marketing collateral with customizable templates at scale",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//bannerbear-logo.jpg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//bannerbear-logo.jpg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bannerbear",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2505,7 +2505,7 @@ export const apps = {
       meta: {
         description:
           "Bannerbear offers an automated image and video generation API, allowing businesses to create graphics, social media visuals, and marketing collateral with customizable templates at scale",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//bannerbear-logo.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//bannerbear-logo.jpg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -2564,7 +2564,7 @@ export const apps = {
       appName: "Mocean",
       description:
         "Mocean enables SMS, voice, and verification services, integrating messaging capabilities into applications for multifactor authentication or customer engagement",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//mocean-api.jpg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//mocean-api.jpg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mocean",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2577,7 +2577,7 @@ export const apps = {
       meta: {
         description:
           "Mocean enables SMS, voice, and verification services, integrating messaging capabilities into applications for multifactor authentication or customer engagement",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//mocean-api.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//mocean-api.jpg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -2610,7 +2610,7 @@ export const apps = {
       appName: "Appdrag",
       description:
         "AppDrag is a cloud-based platform for building websites, APIs, and databases with drag-and-drop tools, code editing, and integrated hosting to accelerate development workflows and iteration",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/appdrag.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/appdrag.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "appdrag",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2623,7 +2623,7 @@ export const apps = {
       meta: {
         description:
           "AppDrag is a cloud-based platform for building websites, APIs, and databases with drag-and-drop tools, code editing, and integrated hosting to accelerate development workflows and iteration",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/appdrag.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/appdrag.svg",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -2633,7 +2633,7 @@ export const apps = {
       appName: "Metatextai",
       description:
         "Metatext AI specializes in natural language processing and text generation, helping organizations automate writing tasks, sentiment analysis, or content moderation",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//metatextai.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//metatextai.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "metatextai",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2646,7 +2646,7 @@ export const apps = {
       meta: {
         description:
           "Metatext AI specializes in natural language processing and text generation, helping organizations automate writing tasks, sentiment analysis, or content moderation",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//metatextai.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//metatextai.jpeg",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -2684,7 +2684,7 @@ export const apps = {
       appName: "Mailerlite",
       description:
         "MailerLite is an email marketing service that offers tools for creating and managing email campaigns, automating workflows, and building landing pages.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mailerlite-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mailerlite-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mailerlite",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2701,7 +2701,7 @@ export const apps = {
       meta: {
         description:
           "MailerLite is an email marketing service that offers tools for creating and managing email campaigns, automating workflows, and building landing pages.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mailerlite-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mailerlite-logo.jpeg",
         toolsCount: 38,
         totalInstallCount: 0,
       },
@@ -2734,7 +2734,7 @@ export const apps = {
       appName: "Close",
       description:
         "Close is a CRM platform designed to help businesses manage and streamline their sales processes, including calling, email automation, and predictive dialers.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/close-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/close-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "close",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2747,7 +2747,7 @@ export const apps = {
       meta: {
         description:
           "Close is a CRM platform designed to help businesses manage and streamline their sales processes, including calling, email automation, and predictive dialers.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/close-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/close-logo.jpeg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -2757,7 +2757,7 @@ export const apps = {
       appName: "Docmosis",
       description:
         "Docmosis generates PDF and Word documents from templates, letting developers merge data fields to produce reports, invoices, or letters quickly",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//docmosis.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//docmosis.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "docmosis",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2770,7 +2770,7 @@ export const apps = {
       meta: {
         description:
           "Docmosis generates PDF and Word documents from templates, letting developers merge data fields to produce reports, invoices, or letters quickly",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//docmosis.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//docmosis.jpeg",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -2780,7 +2780,7 @@ export const apps = {
       appName: "Ably",
       description:
         "Ably is a real-time messaging platform helping developers build live features, including chat and data synchronization, with global scalability and robust reliability for modern applications",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ably.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ably.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ably",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2793,7 +2793,7 @@ export const apps = {
       meta: {
         description:
           "Ably is a real-time messaging platform helping developers build live features, including chat and data synchronization, with global scalability and robust reliability for modern applications",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ably.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ably.svg",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -2803,7 +2803,7 @@ export const apps = {
       appName: "More trees",
       description:
         "More Trees is a sustainability-focused platform planting trees on behalf of individuals or businesses aiming to offset carbon footprints and support reforestation",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//more-trees.jpg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//more-trees.jpg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "more_trees",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2816,7 +2816,7 @@ export const apps = {
       meta: {
         description:
           "More Trees is a sustainability-focused platform planting trees on behalf of individuals or businesses aiming to offset carbon footprints and support reforestation",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//more-trees.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//more-trees.jpg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -2826,7 +2826,7 @@ export const apps = {
       appName: "Netsuite",
       description:
         "NetSuite by Oracle is a cloud-based ERP suite that combines accounting, CRM, e-commerce, and inventory management for comprehensive business oversight",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//netsuite.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//netsuite.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "netsuite",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2839,7 +2839,7 @@ export const apps = {
       meta: {
         description:
           "NetSuite by Oracle is a cloud-based ERP suite that combines accounting, CRM, e-commerce, and inventory management for comprehensive business oversight",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//netsuite.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//netsuite.svg",
         toolsCount: 91,
         totalInstallCount: 0,
       },
@@ -2849,7 +2849,7 @@ export const apps = {
       appName: "Moz",
       description:
         "Moz is an SEO software suite providing keyword research, site audits, rank tracking, and competitive insights to boost organic search visibility",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moz.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moz.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "moz",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2862,7 +2862,7 @@ export const apps = {
       meta: {
         description:
           "Moz is an SEO software suite providing keyword research, site audits, rank tracking, and competitive insights to boost organic search visibility",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moz.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moz.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -2893,7 +2893,7 @@ export const apps = {
       appName: "Apaleo",
       description:
         "Apaleo is a cloud-based property management platform handling reservations, billing, and daily operations for hospitality businesses",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/apaleo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/apaleo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "apaleo",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2906,7 +2906,7 @@ export const apps = {
       meta: {
         description:
           "Apaleo is a cloud-based property management platform handling reservations, billing, and daily operations for hospitality businesses",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/apaleo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/apaleo.png",
         toolsCount: 29,
         totalInstallCount: 0,
       },
@@ -2939,7 +2939,7 @@ export const apps = {
       appName: "Zoho books",
       description:
         "Zoho Books handles accounting, invoicing, and expense tracking, offering real-time collaboration and integrations within the Zoho ecosystem",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zoho_books",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2952,7 +2952,7 @@ export const apps = {
       meta: {
         description:
           "Zoho Books handles accounting, invoicing, and expense tracking, offering real-time collaboration and integrations within the Zoho ecosystem",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
         toolsCount: 48,
         totalInstallCount: 0,
       },
@@ -2962,7 +2962,7 @@ export const apps = {
       appName: "Zoho inventory",
       description:
         "Zoho Inventory helps businesses track stock, manage orders, and sync inventory across multiple sales channels, streamlining supply chain operations",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zoho_inventory",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -2975,7 +2975,7 @@ export const apps = {
       meta: {
         description:
           "Zoho Inventory helps businesses track stock, manage orders, and sync inventory across multiple sales channels, streamlining supply chain operations",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
         toolsCount: 20,
         totalInstallCount: 0,
       },
@@ -3008,7 +3008,7 @@ export const apps = {
       appName: "Tinypng",
       description:
         "TinyPNG uses smart lossy compression techniques to reduce the file size of your WebP, JPEG, and PNG files.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tinypng-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tinypng-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "tinypng",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3021,7 +3021,7 @@ export const apps = {
       meta: {
         description:
           "TinyPNG uses smart lossy compression techniques to reduce the file size of your WebP, JPEG, and PNG files.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tinypng-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tinypng-logo.jpeg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -3031,7 +3031,7 @@ export const apps = {
       appName: "Mopinion",
       description:
         "Mopinion captures user feedback across websites and apps, providing insights, analytics, and reporting to optimize user experiences and drive conversions",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mopinion.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mopinion.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mopinion",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3044,7 +3044,7 @@ export const apps = {
       meta: {
         description:
           "Mopinion captures user feedback across websites and apps, providing insights, analytics, and reporting to optimize user experiences and drive conversions",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mopinion.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mopinion.jpeg",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -3054,7 +3054,7 @@ export const apps = {
       appName: "Crustdata",
       description:
         "CrustData is an AI-powered data intelligence platform that provides real-time company and people data via APIs and webhooks, empowering B2B sales teams, AI SDRs, and investors to act on live signals",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/crustdata.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/crustdata.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "crustdata",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3067,7 +3067,7 @@ export const apps = {
       meta: {
         description:
           "CrustData is an AI-powered data intelligence platform that provides real-time company and people data via APIs and webhooks, empowering B2B sales teams, AI SDRs, and investors to act on live signals",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/crustdata.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/crustdata.png",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -3077,7 +3077,7 @@ export const apps = {
       appName: "Webex",
       description:
         "Webex is a Cisco-powered video conferencing and collaboration platform offering online meetings, webinars, screen sharing, and team messaging",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/webex.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/webex.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "webex",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3090,7 +3090,7 @@ export const apps = {
       meta: {
         description:
           "Webex is a Cisco-powered video conferencing and collaboration platform offering online meetings, webinars, screen sharing, and team messaging",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/webex.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/webex.png",
         toolsCount: 28,
         totalInstallCount: 0,
       },
@@ -3123,7 +3123,7 @@ export const apps = {
       appName: "Canva",
       description:
         "Canva offers a drag-and-drop design suite for creating social media graphics, presentations, and marketing materials with prebuilt templates and a vast element library",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/canva.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/canva.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "canva",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3136,7 +3136,7 @@ export const apps = {
       meta: {
         description:
           "Canva offers a drag-and-drop design suite for creating social media graphics, presentations, and marketing materials with prebuilt templates and a vast element library",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/canva.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/canva.jpeg",
         toolsCount: 37,
         totalInstallCount: 0,
       },
@@ -3146,7 +3146,7 @@ export const apps = {
       appName: "Digicert",
       description:
         "DigiCert is a leading provider of high-assurance TLS/SSL, PKI, IoT, and signing solutions, enabling secure digital interactions worldwide.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/digicert-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/digicert-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "digicert",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3163,7 +3163,7 @@ export const apps = {
       meta: {
         description:
           "DigiCert is a leading provider of high-assurance TLS/SSL, PKI, IoT, and signing solutions, enabling secure digital interactions worldwide.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/digicert-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/digicert-logo.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -3173,7 +3173,7 @@ export const apps = {
       appName: "Dailybot",
       description:
         "DailyBot simplifies team collaboration and tasks with chat-based standups, reminders, polls, and integrations, streamlining workflow automation in popular messaging platforms",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//dailybot.jpg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//dailybot.jpg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "dailybot",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3186,7 +3186,7 @@ export const apps = {
       meta: {
         description:
           "DailyBot simplifies team collaboration and tasks with chat-based standups, reminders, polls, and integrations, streamlining workflow automation in popular messaging platforms",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//dailybot.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//dailybot.jpg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -3196,7 +3196,7 @@ export const apps = {
       appName: "Linkhut",
       description:
         "LinkHut manages bookmarked links in a minimalistic, shareable interface, helping teams organize URLs and track references in one place",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/linkhut.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/linkhut.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "linkhut",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3209,7 +3209,7 @@ export const apps = {
       meta: {
         description:
           "LinkHut manages bookmarked links in a minimalistic, shareable interface, helping teams organize URLs and track references in one place",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/linkhut.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/linkhut.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -3219,7 +3219,7 @@ export const apps = {
       appName: "Dropbox sign",
       description:
         "Dropbox Sign (formerly HelloSign) offers electronic signature and document workflow solutions, simplifying how businesses collect legally binding signatures online",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//hellosign-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//hellosign-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "dropbox_sign",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3232,7 +3232,7 @@ export const apps = {
       meta: {
         description:
           "Dropbox Sign (formerly HelloSign) offers electronic signature and document workflow solutions, simplifying how businesses collect legally binding signatures online",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//hellosign-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//hellosign-logo.png",
         toolsCount: 31,
         totalInstallCount: 0,
       },
@@ -3242,7 +3242,7 @@ export const apps = {
       appName: "Timely",
       description:
         "Timely is an automatic time-tracking platform capturing activity across applications, calendars, and devices, creating detailed timesheets for billing or productivity insights",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/timely.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/timely.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "timely",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3255,7 +3255,7 @@ export const apps = {
       meta: {
         description:
           "Timely is an automatic time-tracking platform capturing activity across applications, calendars, and devices, creating detailed timesheets for billing or productivity insights",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/timely.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/timely.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -3265,7 +3265,7 @@ export const apps = {
       appName: "Box",
       description:
         "Cloud content management and file sharing service for businesses.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/box.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/box.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "box",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3278,7 +3278,7 @@ export const apps = {
       meta: {
         description:
           "Cloud content management and file sharing service for businesses.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/box.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/box.svg",
         toolsCount: 273,
         totalInstallCount: 0,
       },
@@ -3288,7 +3288,7 @@ export const apps = {
       appName: "Smugmug",
       description:
         "SmugMug is a platform for photographers to showcase, share, and sell their photos and videos.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/smugmug-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/smugmug-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "smugmug",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3301,7 +3301,7 @@ export const apps = {
       meta: {
         description:
           "SmugMug is a platform for photographers to showcase, share, and sell their photos and videos.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/smugmug-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/smugmug-logo.jpeg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -3311,7 +3311,7 @@ export const apps = {
       appName: "Productboard",
       description:
         "Productboard is a product management platform that gathers feedback, prioritizes features, and aligns roadmaps based on customer insights and strategic goals",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//productboard.jpg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//productboard.jpg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "productboard",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3324,7 +3324,7 @@ export const apps = {
       meta: {
         description:
           "Productboard is a product management platform that gathers feedback, prioritizes features, and aligns roadmaps based on customer insights and strategic goals",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//productboard.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//productboard.jpg",
         toolsCount: 46,
         totalInstallCount: 0,
       },
@@ -3334,7 +3334,7 @@ export const apps = {
       appName: "Blackbaud",
       description:
         "Blackbaud offers cloud-based software for nonprofits, schools, and healthcare institutions, supporting fundraising, financial management, and donor engagement in mission-driven organizations",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//blackbaud.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//blackbaud.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "blackbaud",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3347,7 +3347,7 @@ export const apps = {
       meta: {
         description:
           "Blackbaud offers cloud-based software for nonprofits, schools, and healthcare institutions, supporting fundraising, financial management, and donor engagement in mission-driven organizations",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//blackbaud.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//blackbaud.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -3380,7 +3380,7 @@ export const apps = {
       appName: "Amcards",
       description:
         "AMCards enables users to create personalized greeting cards, automate mailing campaigns, strengthen customer relationships using a convenient online platform for individualized connections",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//amcards.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//amcards.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "amcards",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3393,7 +3393,7 @@ export const apps = {
       meta: {
         description:
           "AMCards enables users to create personalized greeting cards, automate mailing campaigns, strengthen customer relationships using a convenient online platform for individualized connections",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//amcards.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//amcards.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -3403,7 +3403,7 @@ export const apps = {
       appName: "Simplesat",
       description:
         "Simplesat captures customer feedback and CSAT scores through surveys, integrating directly with helpdesk systems for real-time performance insights",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//simplesat.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//simplesat.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "simplesat",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3416,7 +3416,7 @@ export const apps = {
       meta: {
         description:
           "Simplesat captures customer feedback and CSAT scores through surveys, integrating directly with helpdesk systems for real-time performance insights",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//simplesat.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//simplesat.jpeg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -3449,7 +3449,7 @@ export const apps = {
       appName: "Hackerrank work",
       description:
         "HackerRank Work enables coding interviews and technical assessments, providing developers with challenges and real-time collaboration for data-driven hiring decisions",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hackerrank.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hackerrank.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "hackerrank_work",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3462,7 +3462,7 @@ export const apps = {
       meta: {
         description:
           "HackerRank Work enables coding interviews and technical assessments, providing developers with challenges and real-time collaboration for data-driven hiring decisions",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hackerrank.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hackerrank.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -3495,7 +3495,7 @@ export const apps = {
       appName: "Process street",
       description:
         "Process Street supports creating and running checklists, SOPs, and workflows, helping teams automate recurring processes and track compliance",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//process-street-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//process-street-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "process_street",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3508,7 +3508,7 @@ export const apps = {
       meta: {
         description:
           "Process Street supports creating and running checklists, SOPs, and workflows, helping teams automate recurring processes and track compliance",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//process-street-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//process-street-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -3541,7 +3541,7 @@ export const apps = {
       appName: "Chatwork",
       description:
         "Chatwork is a team communication platform featuring group chats, file sharing, and task management, aiming to enhance collaboration and productivity for businesses",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//chatwork-logo.jpg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//chatwork-logo.jpg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "chatwork",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3554,7 +3554,7 @@ export const apps = {
       meta: {
         description:
           "Chatwork is a team communication platform featuring group chats, file sharing, and task management, aiming to enhance collaboration and productivity for businesses",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//chatwork-logo.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//chatwork-logo.jpg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -3564,7 +3564,7 @@ export const apps = {
       appName: "Klipfolio",
       description:
         "Klipfolio is a cloud-based business intelligence platform that enables users to create and share real-time dashboards and reports.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/klipfolio-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/klipfolio-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "klipfolio",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3581,7 +3581,7 @@ export const apps = {
       meta: {
         description:
           "Klipfolio is a cloud-based business intelligence platform that enables users to create and share real-time dashboards and reports.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/klipfolio-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/klipfolio-logo.jpeg",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -3591,7 +3591,7 @@ export const apps = {
       appName: "Demio",
       description:
         "Demio is a webinar software for marketers, offering live and automated sessions, audience engagement tools, and analytics to optimize lead generation",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//demio-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//demio-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "demio",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3604,7 +3604,7 @@ export const apps = {
       meta: {
         description:
           "Demio is a webinar software for marketers, offering live and automated sessions, audience engagement tools, and analytics to optimize lead generation",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//demio-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//demio-logo.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -3637,7 +3637,7 @@ export const apps = {
       appName: "D2lbrightspace",
       description:
         "D2L Brightspace is a learning management system that provides a comprehensive suite of tools for educators to create, manage, and deliver online courses and learning experiences.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/d2lbrightspace.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/d2lbrightspace.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "d2lbrightspace",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3650,7 +3650,7 @@ export const apps = {
       meta: {
         description:
           "D2L Brightspace is a learning management system that provides a comprehensive suite of tools for educators to create, manage, and deliver online courses and learning experiences.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/d2lbrightspace.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/d2lbrightspace.png",
         toolsCount: 45,
         totalInstallCount: 0,
       },
@@ -3660,7 +3660,7 @@ export const apps = {
       appName: "Blackboard",
       description:
         "Anthology Adopt powered by Pendo allows institutions to gain insights on Blackboard Learn usage and take action through in-app messages, digital walkthrough guides, and tooltips.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/Blackboard.jpg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/Blackboard.jpg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "blackboard",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3673,7 +3673,7 @@ export const apps = {
       meta: {
         description:
           "Anthology Adopt powered by Pendo allows institutions to gain insights on Blackboard Learn usage and take action through in-app messages, digital walkthrough guides, and tooltips.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/Blackboard.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/Blackboard.jpg",
         toolsCount: 314,
         totalInstallCount: 0,
       },
@@ -3683,7 +3683,7 @@ export const apps = {
       appName: "Lever",
       description:
         "Lever is an applicant tracking system combining sourcing, CRM functionalities, and analytics, helping companies scale recruiting efforts with a collaborative approach",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//lever.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//lever.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "lever",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3696,7 +3696,7 @@ export const apps = {
       meta: {
         description:
           "Lever is an applicant tracking system combining sourcing, CRM functionalities, and analytics, helping companies scale recruiting efforts with a collaborative approach",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//lever.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//lever.png",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -3706,7 +3706,7 @@ export const apps = {
       appName: "Zoho bigin",
       description:
         "Zoho Bigin is a simplified CRM solution from Zoho tailored for small businesses, focusing on pipeline tracking and relationship management",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zoho_bigin",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3719,7 +3719,7 @@ export const apps = {
       meta: {
         description:
           "Zoho Bigin is a simplified CRM solution from Zoho tailored for small businesses, focusing on pipeline tracking and relationship management",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -3752,7 +3752,7 @@ export const apps = {
       appName: "Workiom",
       description:
         "Workiom allows businesses to create custom workflows, integrate apps, and automate processes, reducing manual overhead and streamlining operations",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//workiom.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//workiom.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "workiom",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3765,7 +3765,7 @@ export const apps = {
       meta: {
         description:
           "Workiom allows businesses to create custom workflows, integrate apps, and automate processes, reducing manual overhead and streamlining operations",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//workiom.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//workiom.jpeg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -3798,7 +3798,7 @@ export const apps = {
       appName: "Google Analytics",
       description:
         "Google Analytics tracks and reports website traffic, user behavior, and conversion data, enabling marketers to optimize online performance and customer journeys",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/googleanalytics.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/googleanalytics.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "google_analytics",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3811,7 +3811,7 @@ export const apps = {
       meta: {
         description:
           "Google Analytics tracks and reports website traffic, user behavior, and conversion data, enabling marketers to optimize online performance and customer journeys",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/googleanalytics.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/googleanalytics.png",
         toolsCount: 25,
         totalInstallCount: 0,
       },
@@ -3821,7 +3821,7 @@ export const apps = {
       appName: "Todoist",
       description:
         "Todoist is a task management tool allowing users to create to-do lists, set deadlines, and collaborate on projects with reminders and cross-platform syncing",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/todoist.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/todoist.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "todoist",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3834,7 +3834,7 @@ export const apps = {
       meta: {
         description:
           "Todoist is a task management tool allowing users to create to-do lists, set deadlines, and collaborate on projects with reminders and cross-platform syncing",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/todoist.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/todoist.svg",
         toolsCount: 30,
         totalInstallCount: 0,
       },
@@ -3844,7 +3844,7 @@ export const apps = {
       appName: "Ashby",
       description:
         "Ashby delivers an applicant tracking system for modern teams, offering features like job postings, candidate management, and data-driven hiring insights to streamline the recruitment process",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ashby.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ashby.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ashby",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3857,7 +3857,7 @@ export const apps = {
       meta: {
         description:
           "Ashby delivers an applicant tracking system for modern teams, offering features like job postings, candidate management, and data-driven hiring insights to streamline the recruitment process",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ashby.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ashby.svg",
         toolsCount: 59,
         totalInstallCount: 0,
       },
@@ -3867,7 +3867,7 @@ export const apps = {
       appName: "Datarobot",
       description:
         "DataRobot is a machine learning platform that automates model building, deployment, and monitoring, enabling organizations to derive predictive insights from large datasets",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//datarobot.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//datarobot.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "datarobot",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3880,7 +3880,7 @@ export const apps = {
       meta: {
         description:
           "DataRobot is a machine learning platform that automates model building, deployment, and monitoring, enabling organizations to derive predictive insights from large datasets",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//datarobot.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//datarobot.png",
         toolsCount: 55,
         totalInstallCount: 0,
       },
@@ -3890,7 +3890,7 @@ export const apps = {
       appName: "Ngrok",
       description:
         "Ngrok creates secure tunnels to locally hosted applications, enabling developers to share and test webhooks or services without configuring complex network settings",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//ngrok-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//ngrok-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ngrok",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3903,7 +3903,7 @@ export const apps = {
       meta: {
         description:
           "Ngrok creates secure tunnels to locally hosted applications, enabling developers to share and test webhooks or services without configuring complex network settings",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//ngrok-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//ngrok-logo.jpeg",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -3913,7 +3913,7 @@ export const apps = {
       appName: "Square",
       description:
         "Square provides payment processing, POS systems, invoicing, and e-commerce tools, enabling sellers to accept card payments and manage their business",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//squareup.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//squareup.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "square",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3926,7 +3926,7 @@ export const apps = {
       meta: {
         description:
           "Square provides payment processing, POS systems, invoicing, and e-commerce tools, enabling sellers to accept card payments and manage their business",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//squareup.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//squareup.svg",
         toolsCount: 26,
         totalInstallCount: 0,
       },
@@ -3936,7 +3936,7 @@ export const apps = {
       appName: "Yandex",
       description:
         "Yandex is a Russian internet services provider offering search, email, navigation, and other web-based solutions, often referred to as “Russia’s Google”",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//yandex.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//yandex.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "yandex",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3949,7 +3949,7 @@ export const apps = {
       meta: {
         description:
           "Yandex is a Russian internet services provider offering search, email, navigation, and other web-based solutions, often referred to as “Russia’s Google”",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//yandex.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//yandex.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -3959,7 +3959,7 @@ export const apps = {
       appName: "Baserow",
       description:
         "Baserow is an open-source database tool that lets teams build no-code data applications, collaborate on records, and integrate with other services for data management",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//baserow-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//baserow-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "baserow",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3972,7 +3972,7 @@ export const apps = {
       meta: {
         description:
           "Baserow is an open-source database tool that lets teams build no-code data applications, collaborate on records, and integrate with other services for data management",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//baserow-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//baserow-logo.jpeg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -3982,7 +3982,7 @@ export const apps = {
       appName: "Dialpad",
       description:
         "Dialpad is a cloud-based business phone system and contact center platform that enables voice, video, messages and meetings across your existing devices",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dialpad.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dialpad.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "dialpad",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -3995,7 +3995,7 @@ export const apps = {
       meta: {
         description:
           "Dialpad is a cloud-based business phone system and contact center platform that enables voice, video, messages and meetings across your existing devices",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dialpad.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dialpad.png",
         toolsCount: 192,
         totalInstallCount: 0,
       },
@@ -4005,7 +4005,7 @@ export const apps = {
       appName: "Formsite",
       description:
         "Formsite helps users create online forms and surveys with drag-and-drop tools, secure data capture, and integrations to simplify workflows",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//formsite.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//formsite.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "formsite",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4018,7 +4018,7 @@ export const apps = {
       meta: {
         description:
           "Formsite helps users create online forms and surveys with drag-and-drop tools, secure data capture, and integrations to simplify workflows",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//formsite.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//formsite.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -4028,7 +4028,7 @@ export const apps = {
       appName: "Ynab",
       description:
         "YNAB (You Need A Budget) is a budgeting tool helping users track expenses, plan finances, and gain control over spending to reduce debt",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//ynab.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//ynab.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ynab",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4041,7 +4041,7 @@ export const apps = {
       meta: {
         description:
           "YNAB (You Need A Budget) is a budgeting tool helping users track expenses, plan finances, and gain control over spending to reduce debt",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//ynab.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//ynab.svg",
         toolsCount: 27,
         totalInstallCount: 0,
       },
@@ -4051,7 +4051,7 @@ export const apps = {
       appName: "Kommo",
       description:
         "Kommo CRM is a platform for managing customer relationships, sales pipelines, and business processes.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kommo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kommo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "kommo",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4064,7 +4064,7 @@ export const apps = {
       meta: {
         description:
           "Kommo CRM is a platform for managing customer relationships, sales pipelines, and business processes.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kommo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kommo.png",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -4074,7 +4074,7 @@ export const apps = {
       appName: "Tisane",
       description:
         "Tisane API is a natural language processing tool that detects problematic content, extracts topics, and performs aspect-based sentiment analysis across 27 languages.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tisane-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tisane-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "tisane",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4091,7 +4091,7 @@ export const apps = {
       meta: {
         description:
           "Tisane API is a natural language processing tool that detects problematic content, extracts topics, and performs aspect-based sentiment analysis across 27 languages.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tisane-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tisane-logo.jpeg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -4101,7 +4101,7 @@ export const apps = {
       appName: "Coinmarketcal",
       description:
         "CoinMarketCal is a community-driven crypto calendar, highlighting upcoming events, announcements, and releases, helping traders and enthusiasts track market-impacting developments in the cryptocurrency space",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//coinmarketcal.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//coinmarketcal.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "coinmarketcal",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4114,7 +4114,7 @@ export const apps = {
       meta: {
         description:
           "CoinMarketCal is a community-driven crypto calendar, highlighting upcoming events, announcements, and releases, helping traders and enthusiasts track market-impacting developments in the cryptocurrency space",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//coinmarketcal.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//coinmarketcal.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -4124,7 +4124,7 @@ export const apps = {
       appName: "Browseai",
       description:
         "Browse.ai allows you to turn any website into an API using its advanced web automation and data extraction tools, enabling easy monitoring and data retrieval from websites.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/browseai.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/browseai.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "browseai",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4137,7 +4137,7 @@ export const apps = {
       meta: {
         description:
           "Browse.ai allows you to turn any website into an API using its advanced web automation and data extraction tools, enabling easy monitoring and data retrieval from websites.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/browseai.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/browseai.svg",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -4147,7 +4147,7 @@ export const apps = {
       appName: "Maintainx",
       description:
         "MaintainX is a cloud-based computerized maintenance management system (CMMS) that helps organizations centralize maintenance data, communication, and workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/maintainx-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/maintainx-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "maintainx",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4164,7 +4164,7 @@ export const apps = {
       meta: {
         description:
           "MaintainX is a cloud-based computerized maintenance management system (CMMS) that helps organizations centralize maintenance data, communication, and workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/maintainx-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/maintainx-logo.jpeg",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -4174,7 +4174,7 @@ export const apps = {
       appName: "Tinyurl",
       description:
         "TinyURL shortens lengthy URLs, generating concise links for easier sharing and managing, often used in social media and marketing campaigns",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//tinyurl-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//tinyurl-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "tinyurl",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4187,7 +4187,7 @@ export const apps = {
       meta: {
         description:
           "TinyURL shortens lengthy URLs, generating concise links for easier sharing and managing, often used in social media and marketing campaigns",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//tinyurl-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//tinyurl-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -4220,7 +4220,7 @@ export const apps = {
       appName: "Ncscale",
       description:
         "NCScale offers analytics and data management capabilities, potentially helping companies consolidate, process, and visualize information from multiple sources",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//ncscale.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//ncscale.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ncscale",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4233,7 +4233,7 @@ export const apps = {
       meta: {
         description:
           "NCScale offers analytics and data management capabilities, potentially helping companies consolidate, process, and visualize information from multiple sources",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//ncscale.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//ncscale.jpeg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -4243,7 +4243,7 @@ export const apps = {
       appName: "Timecamp",
       description:
         "TimeCamp is a time tracking solution designed to help businesses of all sizes track time for projects to maximize their profits.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/timecamp-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/timecamp-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "timecamp",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4256,7 +4256,7 @@ export const apps = {
       meta: {
         description:
           "TimeCamp is a time tracking solution designed to help businesses of all sizes track time for projects to maximize their profits.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/timecamp-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/timecamp-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -4266,7 +4266,7 @@ export const apps = {
       appName: "Piggy",
       description:
         "Piggy offers cashback and loyalty program integrations for online stores, letting users earn points or discounts and encouraging repeat purchases",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//piggy.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//piggy.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "piggy",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4279,7 +4279,7 @@ export const apps = {
       meta: {
         description:
           "Piggy offers cashback and loyalty program integrations for online stores, letting users earn points or discounts and encouraging repeat purchases",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//piggy.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//piggy.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -4289,7 +4289,7 @@ export const apps = {
       appName: "Alchemy",
       description:
         "Alchemy is a blockchain development platform that provides powerful APIs and developer tools for building and scaling Ethereum applications",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//tapformio.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//tapformio.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "alchemy",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4302,7 +4302,7 @@ export const apps = {
       meta: {
         description:
           "Alchemy is a blockchain development platform that provides powerful APIs and developer tools for building and scaling Ethereum applications",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//tapformio.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//tapformio.png",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -4335,7 +4335,7 @@ export const apps = {
       appName: "Foursquare",
       description:
         "Search for places and place recommendations from the Foursquare Places database",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/foursquare.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/foursquare.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "foursquare",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4348,7 +4348,7 @@ export const apps = {
       meta: {
         description:
           "Search for places and place recommendations from the Foursquare Places database",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/foursquare.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/foursquare.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -4381,7 +4381,7 @@ export const apps = {
       appName: "Humanloop",
       description:
         "Humanloop helps developers build and refine AI applications, offering user feedback loops, model training, and data annotation to iterate on language model performance",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//humanloop.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//humanloop.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "humanloop",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4394,7 +4394,7 @@ export const apps = {
       meta: {
         description:
           "Humanloop helps developers build and refine AI applications, offering user feedback loops, model training, and data annotation to iterate on language model performance",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//humanloop.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//humanloop.jpeg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -4404,7 +4404,7 @@ export const apps = {
       appName: "Zoominfo",
       description:
         "AgencyZoom is for the P&C insurance agent that's looking to increase sales, boost retention and analyze agency & producer performance.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/zoominfo_round5_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/zoominfo_round5_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zoominfo",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4417,7 +4417,7 @@ export const apps = {
       meta: {
         description:
           "AgencyZoom is for the P&C insurance agent that's looking to increase sales, boost retention and analyze agency & producer performance.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/zoominfo_round5_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/zoominfo_round5_20250722.png",
         toolsCount: 17,
         totalInstallCount: 0,
       },
@@ -4427,7 +4427,7 @@ export const apps = {
       appName: "Gong",
       description:
         "Gong is a platform for video meetings, call recording, and team collaboration.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gong.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gong.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "gong",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4447,7 +4447,7 @@ export const apps = {
       meta: {
         description:
           "Gong is a platform for video meetings, call recording, and team collaboration.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gong.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gong.png",
         toolsCount: 53,
         totalInstallCount: 0,
       },
@@ -4457,7 +4457,7 @@ export const apps = {
       appName: "Placekey",
       description:
         "Placekey standardizes location data by assigning unique IDs to physical addresses, simplifying address matching and enabling data sharing across platforms",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//placekey.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//placekey.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "placekey",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4470,7 +4470,7 @@ export const apps = {
       meta: {
         description:
           "Placekey standardizes location data by assigning unique IDs to physical addresses, simplifying address matching and enabling data sharing across platforms",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//placekey.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//placekey.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -4480,7 +4480,7 @@ export const apps = {
       appName: "Datagma",
       description:
         "Datagma delivers data intelligence and analytics, assisting companies in discovering market insights, tracking competitive metrics, and strategizing growth opportunities",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//datagma-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//datagma-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "datagma",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4493,7 +4493,7 @@ export const apps = {
       meta: {
         description:
           "Datagma delivers data intelligence and analytics, assisting companies in discovering market insights, tracking competitive metrics, and strategizing growth opportunities",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//datagma-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//datagma-logo.jpeg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -4503,7 +4503,7 @@ export const apps = {
       appName: "Servicem8",
       description:
         "ServiceM8 helps field service businesses schedule jobs, send quotes, and manage invoices, offering staff mobile apps and real-time job status tracking",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/servicem8.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/servicem8.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "servicem8",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4516,7 +4516,7 @@ export const apps = {
       meta: {
         description:
           "ServiceM8 helps field service businesses schedule jobs, send quotes, and manage invoices, offering staff mobile apps and real-time job status tracking",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/servicem8.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/servicem8.svg",
         toolsCount: 28,
         totalInstallCount: 0,
       },
@@ -4526,7 +4526,7 @@ export const apps = {
       appName: "Textrazor",
       description:
         "TextRazor is a natural language processing API that extracts meaning, entities, and relationships from text, powering advanced content analysis and sentiment detection",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/textrazor.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/textrazor.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "textrazor",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4539,7 +4539,7 @@ export const apps = {
       meta: {
         description:
           "TextRazor is a natural language processing API that extracts meaning, entities, and relationships from text, powering advanced content analysis and sentiment detection",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/textrazor.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/textrazor.svg",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -4549,7 +4549,7 @@ export const apps = {
       appName: "Bubble",
       description:
         "Bubble is a visual programming language and a PaaS developed by Bubble Group.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//bubble-logo.jpg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//bubble-logo.jpg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bubble",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4562,7 +4562,7 @@ export const apps = {
       meta: {
         description:
           "Bubble is a visual programming language and a PaaS developed by Bubble Group.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//bubble-logo.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//bubble-logo.jpg",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -4572,7 +4572,7 @@ export const apps = {
       appName: "Chmeetings",
       description:
         "ChMeetings is a church management solution assisting with event planning, member engagement, donations tracking, and volunteer coordination for faith-based organizations",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/chmeetings.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/chmeetings.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "chmeetings",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4585,7 +4585,7 @@ export const apps = {
       meta: {
         description:
           "ChMeetings is a church management solution assisting with event planning, member engagement, donations tracking, and volunteer coordination for faith-based organizations",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/chmeetings.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/chmeetings.svg",
         toolsCount: 29,
         totalInstallCount: 0,
       },
@@ -4618,7 +4618,7 @@ export const apps = {
       appName: "Harvest",
       description:
         "Harvest is a time-tracking and invoicing tool designed for teams and freelancers, helping them log billable hours, manage projects, and streamline payments",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/harvest.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/harvest.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "harvest",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4631,7 +4631,7 @@ export const apps = {
       meta: {
         description:
           "Harvest is a time-tracking and invoicing tool designed for teams and freelancers, helping them log billable hours, manage projects, and streamline payments",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/harvest.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/harvest.png",
         toolsCount: 58,
         totalInstallCount: 0,
       },
@@ -4641,7 +4641,7 @@ export const apps = {
       appName: "Wakatime",
       description:
         "WakaTime offers automatic time tracking for developers, integrating with code editors and delivering dashboards on coding activity, project progress, and productivity",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//wakatime.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//wakatime.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "wakatime",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4654,7 +4654,7 @@ export const apps = {
       meta: {
         description:
           "WakaTime offers automatic time tracking for developers, integrating with code editors and delivering dashboards on coding activity, project progress, and productivity",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//wakatime.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//wakatime.svg",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -4664,7 +4664,7 @@ export const apps = {
       appName: "Xero",
       description:
         "Xero is a cloud-based accounting software for small businesses, providing invoicing, bank reconciliation, bookkeeping, and financial reporting in real time",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//xero.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//xero.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "xero",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4677,7 +4677,7 @@ export const apps = {
       meta: {
         description:
           "Xero is a cloud-based accounting software for small businesses, providing invoicing, bank reconciliation, bookkeeping, and financial reporting in real time",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//xero.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//xero.svg",
         toolsCount: 40,
         totalInstallCount: 0,
       },
@@ -4687,7 +4687,7 @@ export const apps = {
       appName: "Active campaign",
       description:
         "ActiveCampaign is a marketing automation and CRM platform enabling businesses to manage email campaigns, sales pipelines, and customer segmentation to boost engagement and drive growth",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//activecampaign.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//activecampaign.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "active_campaign",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4704,7 +4704,7 @@ export const apps = {
       meta: {
         description:
           "ActiveCampaign is a marketing automation and CRM platform enabling businesses to manage email campaigns, sales pipelines, and customer segmentation to boost engagement and drive growth",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//activecampaign.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//activecampaign.png",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -4714,7 +4714,7 @@ export const apps = {
       appName: "Zoho mail",
       description:
         "Zoho Mail is a secure and ad-free email hosting platform with collaboration tools, calendar integration, and extensive administrative controls",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zoho_mail",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4727,7 +4727,7 @@ export const apps = {
       meta: {
         description:
           "Zoho Mail is a secure and ad-free email hosting platform with collaboration tools, calendar integration, and extensive administrative controls",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -4737,7 +4737,7 @@ export const apps = {
       appName: "Mural",
       description:
         "Mural is a digital whiteboard platform enabling distributed teams to visually brainstorm, map ideas, and collaborate in real time with sticky notes and diagrams",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mural.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mural.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mural",
       createdAt: "2025-11-22T20:42:33.163Z",
@@ -4750,7 +4750,7 @@ export const apps = {
       meta: {
         description:
           "Mural is a digital whiteboard platform enabling distributed teams to visually brainstorm, map ideas, and collaborate in real time with sticky notes and diagrams",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mural.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mural.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -4760,7 +4760,7 @@ export const apps = {
       appName: "Brex",
       description:
         "Brex provides corporate credit cards, spend management, and financial tools tailored for startups and tech businesses to optimize cash flow, accounting, and growth",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//brex-staging-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//brex-staging-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "brex",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -4773,7 +4773,7 @@ export const apps = {
       meta: {
         description:
           "Brex provides corporate credit cards, spend management, and financial tools tailored for startups and tech businesses to optimize cash flow, accounting, and growth",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//brex-staging-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//brex-staging-logo.png",
         toolsCount: 36,
         totalInstallCount: 0,
       },
@@ -4833,7 +4833,7 @@ export const apps = {
       appName: "Beeminder",
       description:
         "Beeminder is an online goal-tracking service that uses financial incentives—pledge money on your objectives and forfeit it if you don’t keep up—to help you achieve your goals.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/beeminder-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/beeminder-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "beeminder",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -4846,7 +4846,7 @@ export const apps = {
       meta: {
         description:
           "Beeminder is an online goal-tracking service that uses financial incentives—pledge money on your objectives and forfeit it if you don’t keep up—to help you achieve your goals.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/beeminder-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/beeminder-logo.jpeg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -4856,7 +4856,7 @@ export const apps = {
       appName: "Rocket reach",
       description:
         "RocketReach locates and verifies professional contact details, helping sales and recruiters reach leads and candidates more efficiently",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//rocketreach.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//rocketreach.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "rocket_reach",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -4869,7 +4869,7 @@ export const apps = {
       meta: {
         description:
           "RocketReach locates and verifies professional contact details, helping sales and recruiters reach leads and candidates more efficiently",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//rocketreach.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//rocketreach.png",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -4879,7 +4879,7 @@ export const apps = {
       appName: "Interzoid",
       description:
         "Interzoid offers APIs for data matching, verification, and enrichment, allowing developers to improve data quality and integrate real-time insights into applications",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//interzoid.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//interzoid.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "interzoid",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -4892,7 +4892,7 @@ export const apps = {
       meta: {
         description:
           "Interzoid offers APIs for data matching, verification, and enrichment, allowing developers to improve data quality and integrate real-time insights into applications",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//interzoid.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//interzoid.jpeg",
         toolsCount: 30,
         totalInstallCount: 0,
       },
@@ -4902,7 +4902,7 @@ export const apps = {
       appName: "Exist",
       description:
         "Exist is a personal analytics app that combines data from various services to help users understand and improve their lives.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/exist-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/exist-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "exist",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -4915,7 +4915,7 @@ export const apps = {
       meta: {
         description:
           "Exist is a personal analytics app that combines data from various services to help users understand and improve their lives.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/exist-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/exist-logo.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -4948,7 +4948,7 @@ export const apps = {
       appName: "Zoho invoice",
       description:
         "Zoho Invoice simplifies billing, recurring payments, and expense management, helping freelancers and small businesses send professional invoices",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zoho_invoice",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -4961,7 +4961,7 @@ export const apps = {
       meta: {
         description:
           "Zoho Invoice simplifies billing, recurring payments, and expense management, helping freelancers and small businesses send professional invoices",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//zoho.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//zoho.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -4971,7 +4971,7 @@ export const apps = {
       appName: "Stack exchange",
       description:
         "Stack Exchange is a network of Q&A communities where users ask questions, share knowledge, and collaborate on topics like coding, math, and more",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/stackexchange.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/stackexchange.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "stack_exchange",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -4984,7 +4984,7 @@ export const apps = {
       meta: {
         description:
           "Stack Exchange is a network of Q&A communities where users ask questions, share knowledge, and collaborate on topics like coding, math, and more",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/stackexchange.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/stackexchange.png",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -4994,7 +4994,7 @@ export const apps = {
       appName: "Botbaba",
       description:
         "Botbaba provides APIs for building and managing chatbots, including conversational AI and messaging integrations.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//botbaba.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//botbaba.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "botbaba",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5007,7 +5007,7 @@ export const apps = {
       meta: {
         description:
           "Botbaba provides APIs for building and managing chatbots, including conversational AI and messaging integrations.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//botbaba.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//botbaba.png",
         toolsCount: 39,
         totalInstallCount: 0,
       },
@@ -5017,7 +5017,7 @@ export const apps = {
       appName: "Datadog",
       description:
         "Datadog offers monitoring, observability, and security for cloud-scale applications, unifying metrics, logs, and traces to help teams detect issues and optimize performance",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//datadog-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//datadog-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "datadog",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5030,7 +5030,7 @@ export const apps = {
       meta: {
         description:
           "Datadog offers monitoring, observability, and security for cloud-scale applications, unifying metrics, logs, and traces to help teams detect issues and optimize performance",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//datadog-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//datadog-logo.png",
         toolsCount: 42,
         totalInstallCount: 0,
       },
@@ -5040,7 +5040,7 @@ export const apps = {
       appName: "Waboxapp",
       description:
         "Waboxapp integrates WhatsApp messaging into CRM systems, allowing businesses to centralize customer communications for sales and support",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//waboxapp-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//waboxapp-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "waboxapp",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5053,7 +5053,7 @@ export const apps = {
       meta: {
         description:
           "Waboxapp integrates WhatsApp messaging into CRM systems, allowing businesses to centralize customer communications for sales and support",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//waboxapp-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//waboxapp-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -5063,7 +5063,7 @@ export const apps = {
       appName: "Echtpost",
       description:
         "EchtPost facilitates secure digital communication, encryption, and data privacy, providing a reliable channel for sending confidential documents and messages",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/echtpost.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/echtpost.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "echtpost",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5076,7 +5076,7 @@ export const apps = {
       meta: {
         description:
           "EchtPost facilitates secure digital communication, encryption, and data privacy, providing a reliable channel for sending confidential documents and messages",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/echtpost.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/echtpost.svg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -5086,7 +5086,7 @@ export const apps = {
       appName: " 21risk",
       description:
         "21RISK is a web application that simplifies working with checklists, audits, and actions, facilitating compliance and risk management processes.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/_21risk-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/_21risk-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "_21risk",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5099,7 +5099,7 @@ export const apps = {
       meta: {
         description:
           "21RISK is a web application that simplifies working with checklists, audits, and actions, facilitating compliance and risk management processes.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/_21risk-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/_21risk-logo.png",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -5109,7 +5109,7 @@ export const apps = {
       appName: " 2chat",
       description:
         "2Chat provides a programmable API for integrating WhatsApp and other text channels, enabling developers to send and receive messages, manage groups, and automate workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/_2chat_fixed_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/_2chat_fixed_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "_2chat",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5122,7 +5122,7 @@ export const apps = {
       meta: {
         description:
           "2Chat provides a programmable API for integrating WhatsApp and other text channels, enabling developers to send and receive messages, manage groups, and automate workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/_2chat_fixed_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/_2chat_fixed_20250722.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -5132,7 +5132,7 @@ export const apps = {
       appName: "Abstract",
       description:
         "Abstract API provides a suite of APIs for developers to automate various tasks, including data validation, enrichment, and more.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/abstract_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/abstract_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "abstract",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5145,7 +5145,7 @@ export const apps = {
       meta: {
         description:
           "Abstract API provides a suite of APIs for developers to automate various tasks, including data validation, enrichment, and more.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/abstract_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/abstract_mega_20250722.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -5178,7 +5178,7 @@ export const apps = {
       appName: "Abyssale",
       description:
         "Abyssale is a creative automation platform that enables users to generate images, videos, GIFs, PDFs, and HTML5 content programmatically, streamlining visual content production.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/abyssale_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/abyssale_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "abyssale",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5195,7 +5195,7 @@ export const apps = {
       meta: {
         description:
           "Abyssale is a creative automation platform that enables users to generate images, videos, GIFs, PDFs, and HTML5 content programmatically, streamlining visual content production.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/abyssale_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/abyssale_mega_20250722.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -5205,7 +5205,7 @@ export const apps = {
       appName: "Accredible certificates",
       description:
         "Accredible Certificates is a platform that enables organizations to create, manage, and distribute digital certificates, open badges, and blockchain credentials.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/accredible_certificates_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/accredible_certificates_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "accredible_certificates",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5218,7 +5218,7 @@ export const apps = {
       meta: {
         description:
           "Accredible Certificates is a platform that enables organizations to create, manage, and distribute digital certificates, open badges, and blockchain credentials.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/accredible_certificates_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/accredible_certificates_round3_20250722.png",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -5228,7 +5228,7 @@ export const apps = {
       appName: "Addresszen",
       description:
         "AddressZen provides address autocomplete and verification services, offering real-time address suggestions and validation to ensure accurate and deliverable addresses.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/addresszen-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/addresszen-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "addresszen",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5245,7 +5245,7 @@ export const apps = {
       meta: {
         description:
           "AddressZen provides address autocomplete and verification services, offering real-time address suggestions and validation to ensure accurate and deliverable addresses.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/addresszen-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/addresszen-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -5255,7 +5255,7 @@ export const apps = {
       appName: "Adrapid",
       description:
         "Adrapid is a tool designed for efficient creation of digital marketing visuals, including banners, images, videos, and HTML5 content, utilizing reusable templates and offering automation through a REST API.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/adrapid-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/adrapid-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "adrapid",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5268,7 +5268,7 @@ export const apps = {
       meta: {
         description:
           "Adrapid is a tool designed for efficient creation of digital marketing visuals, including banners, images, videos, and HTML5 content, utilizing reusable templates and offering automation through a REST API.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/adrapid-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/adrapid-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -5278,7 +5278,7 @@ export const apps = {
       appName: "Adyntel",
       description:
         "Adyntel provides an API to retrieve LinkedIn ads for a given company by inputting the company's domain or LinkedIn Page ID.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/adyntel_round5_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/adyntel_round5_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "adyntel",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5291,7 +5291,7 @@ export const apps = {
       meta: {
         description:
           "Adyntel provides an API to retrieve LinkedIn ads for a given company by inputting the company's domain or LinkedIn Page ID.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/adyntel_round5_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/adyntel_round5_20250722.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -5301,7 +5301,7 @@ export const apps = {
       appName: "Aeroleads",
       description:
         "AeroLeads is a B2B lead generation platform that helps users find business emails and phone numbers of prospects.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/aeroleads-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/aeroleads-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "aeroleads",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5314,7 +5314,7 @@ export const apps = {
       meta: {
         description:
           "AeroLeads is a B2B lead generation platform that helps users find business emails and phone numbers of prospects.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/aeroleads-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/aeroleads-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -5324,7 +5324,7 @@ export const apps = {
       appName: "Affinda",
       description:
         "Affinda provides an AI-powered document processing platform that automates data extraction from various document types.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/affinda_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/affinda_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "affinda",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5341,7 +5341,7 @@ export const apps = {
       meta: {
         description:
           "Affinda provides an AI-powered document processing platform that automates data extraction from various document types.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/affinda_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/affinda_mega_20250722.png",
         toolsCount: 39,
         totalInstallCount: 0,
       },
@@ -5374,7 +5374,7 @@ export const apps = {
       appName: "Agentql",
       description:
         "AgentQL is a suite of tools designed to connect AI agents to the web, enabling web interaction and structured data extraction through a specialized query language.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/agentql-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/agentql-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "agentql",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5387,7 +5387,7 @@ export const apps = {
       meta: {
         description:
           "AgentQL is a suite of tools designed to connect AI agents to the web, enabling web interaction and structured data extraction through a specialized query language.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/agentql-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/agentql-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -5397,7 +5397,7 @@ export const apps = {
       appName: "Agenty",
       description:
         "Agenty is a web scraping and automation platform that enables users to extract data, monitor changes, and automate browser tasks without coding.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/agenty-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/agenty-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "agenty",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5410,7 +5410,7 @@ export const apps = {
       meta: {
         description:
           "Agenty is a web scraping and automation platform that enables users to extract data, monitor changes, and automate browser tasks without coding.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/agenty-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/agenty-logo.png",
         toolsCount: 40,
         totalInstallCount: 0,
       },
@@ -5420,7 +5420,7 @@ export const apps = {
       appName: "Agiled",
       description:
         "Agiled is an all-in-one business management platform designed to streamline operations such as CRM, project management, finance, and more.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/agiled-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/agiled-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "agiled",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5438,7 +5438,7 @@ export const apps = {
       meta: {
         description:
           "Agiled is an all-in-one business management platform designed to streamline operations such as CRM, project management, finance, and more.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/agiled-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/agiled-logo.png",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -5448,7 +5448,7 @@ export const apps = {
       appName: "Agility cms",
       description:
         "Agility CMS is a headless content management system that allows developers to build and manage digital experiences across various platforms.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/agility_cms_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/agility_cms_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "agility_cms",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5461,7 +5461,7 @@ export const apps = {
       meta: {
         description:
           "Agility CMS is a headless content management system that allows developers to build and manage digital experiences across various platforms.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/agility_cms_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/agility_cms_mega_20250722.png",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -5471,7 +5471,7 @@ export const apps = {
       appName: "Ai ml api",
       description:
         "AI/ML API provides a suite of AI models and solutions for various tasks, including text generation, image processing, and more.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ai_ml_api_fixed_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ai_ml_api_fixed_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ai_ml_api",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5488,7 +5488,7 @@ export const apps = {
       meta: {
         description:
           "AI/ML API provides a suite of AI models and solutions for various tasks, including text generation, image processing, and more.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ai_ml_api_fixed_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ai_ml_api_fixed_20250722.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -5498,7 +5498,7 @@ export const apps = {
       appName: "Aivoov",
       description:
         "AiVOOV is an AI-driven text-to-speech platform that converts written text into natural-sounding voiceovers, offering over 1,000 voices across 150+ languages.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/aivoov_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/aivoov_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "aivoov",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5511,7 +5511,7 @@ export const apps = {
       meta: {
         description:
           "AiVOOV is an AI-driven text-to-speech platform that converts written text into natural-sounding voiceovers, offering over 1,000 voices across 150+ languages.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/aivoov_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/aivoov_round2_20250722.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -5521,7 +5521,7 @@ export const apps = {
       appName: "Algodocs",
       description:
         "AlgoDocs is an AI-powered platform that automates data extraction from business documents, offering fast, secure, and accurate processing without the need for templates or training.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/algodocs_fixed_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/algodocs_fixed_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "algodocs",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5534,7 +5534,7 @@ export const apps = {
       meta: {
         description:
           "AlgoDocs is an AI-powered platform that automates data extraction from business documents, offering fast, secure, and accurate processing without the need for templates or training.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/algodocs_fixed_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/algodocs_fixed_20250722.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -5567,7 +5567,7 @@ export const apps = {
       appName: "All images ai",
       description:
         "All-Images.ai provides AI-powered image generation, retrieval, and management services, enabling developers to create and manage images through advanced AI capabilities.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/all_images_ai-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/all_images_ai-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "all_images_ai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5580,7 +5580,7 @@ export const apps = {
       meta: {
         description:
           "All-Images.ai provides AI-powered image generation, retrieval, and management services, enabling developers to create and manage images through advanced AI capabilities.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/all_images_ai-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/all_images_ai-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -5613,7 +5613,7 @@ export const apps = {
       appName: "Alttext ai",
       description:
         "AltText.ai is a service that automatically generates alt text for images, enhancing accessibility and SEO.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/alttext_ai-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/alttext_ai-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "alttext_ai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5626,7 +5626,7 @@ export const apps = {
       meta: {
         description:
           "AltText.ai is a service that automatically generates alt text for images, enhancing accessibility and SEO.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/alttext_ai-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/alttext_ai-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -5636,7 +5636,7 @@ export const apps = {
       appName: "Amara",
       description:
         "Amara is an online platform that enables users to create, edit, and manage subtitles and captions for videos, facilitating accessibility and multilingual content.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/amara_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/amara_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "amara",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5649,7 +5649,7 @@ export const apps = {
       meta: {
         description:
           "Amara is an online platform that enables users to create, edit, and manage subtitles and captions for videos, facilitating accessibility and multilingual content.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/amara_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/amara_round2_20250722.png",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -5659,7 +5659,7 @@ export const apps = {
       appName: "Ambee",
       description:
         "Ambee provides real-time, hyperlocal environmental data through APIs, offering insights into air quality, weather, pollen, and more.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ambee_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ambee_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ambee",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5672,7 +5672,7 @@ export const apps = {
       meta: {
         description:
           "Ambee provides real-time, hyperlocal environmental data through APIs, offering insights into air quality, weather, pollen, and more.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ambee_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ambee_round3_20250722.png",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -5682,7 +5682,7 @@ export const apps = {
       appName: "Ambient weather",
       description:
         "Ambient Weather provides personal weather stations and an API for accessing real-time and historical weather data.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ambient_weather_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ambient_weather_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ambient_weather",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5695,7 +5695,7 @@ export const apps = {
       meta: {
         description:
           "Ambient Weather provides personal weather stations and an API for accessing real-time and historical weather data.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ambient_weather_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ambient_weather_round3_20250722.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -5732,7 +5732,7 @@ export const apps = {
       appName: "Anonyflow",
       description:
         "AnonyFlow offers a simple and powerful service for encryption-based data anonymization and community sharing, enabling GDPR, CCPA, and HIPAA data privacy protection compliance.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/anonyflow-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/anonyflow-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "anonyflow",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5745,7 +5745,7 @@ export const apps = {
       meta: {
         description:
           "AnonyFlow offers a simple and powerful service for encryption-based data anonymization and community sharing, enabling GDPR, CCPA, and HIPAA data privacy protection compliance.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/anonyflow-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/anonyflow-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -5801,7 +5801,7 @@ export const apps = {
       appName: "Api labz",
       description:
         "API Labz offers a comprehensive suite of AI-driven APIs and tools designed to streamline workflows, automate tasks, and build innovative applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/api_labz-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/api_labz-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "api_labz",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5814,7 +5814,7 @@ export const apps = {
       meta: {
         description:
           "API Labz offers a comprehensive suite of AI-driven APIs and tools designed to streamline workflows, automate tasks, and build innovative applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/api_labz-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/api_labz-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -5824,7 +5824,7 @@ export const apps = {
       appName: "Api ninjas",
       description:
         "API Ninjas offers over 120 unique APIs across various categories, enabling developers to build real applications with real data.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/api_ninjas_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/api_ninjas_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "api_ninjas",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5837,7 +5837,7 @@ export const apps = {
       meta: {
         description:
           "API Ninjas offers over 120 unique APIs across various categories, enabling developers to build real applications with real data.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/api_ninjas_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/api_ninjas_round3_20250722.png",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -5847,7 +5847,7 @@ export const apps = {
       appName: "Api sports",
       description:
         "API-Sports provides comprehensive sports data APIs covering over 2,000 competitions with more than 15 years of historical data, offering real-time updates and easy integration for developers.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/api_sports-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/api_sports-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "api_sports",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5860,7 +5860,7 @@ export const apps = {
       meta: {
         description:
           "API-Sports provides comprehensive sports data APIs covering over 2,000 competitions with more than 15 years of historical data, offering real-time updates and easy integration for developers.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/api_sports-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/api_sports-logo.png",
         toolsCount: 31,
         totalInstallCount: 0,
       },
@@ -5870,7 +5870,7 @@ export const apps = {
       appName: "Api2pdf",
       description:
         "Api2Pdf is a REST API that enables developers to generate PDFs from HTML, URLs, and various document formats using engines like wkhtmltopdf, Headless Chrome, and LibreOffice.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/api2pdf_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/api2pdf_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "api2pdf",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5883,7 +5883,7 @@ export const apps = {
       meta: {
         description:
           "Api2Pdf is a REST API that enables developers to generate PDFs from HTML, URLs, and various document formats using engines like wkhtmltopdf, Headless Chrome, and LibreOffice.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/api2pdf_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/api2pdf_round3_20250722.png",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -5939,7 +5939,7 @@ export const apps = {
       appName: "Apilio",
       description:
         "Apilio is a home automation platform that enables users to connect and control smart devices from various brands, offering flexible automation through complex conditions, time constraints, and integrations with services like IFTTT and Tuya.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/apilio-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/apilio-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "apilio",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5952,7 +5952,7 @@ export const apps = {
       meta: {
         description:
           "Apilio is a home automation platform that enables users to connect and control smart devices from various brands, offering flexible automation through complex conditions, time constraints, and integrations with services like IFTTT and Tuya.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/apilio-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/apilio-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -5962,7 +5962,7 @@ export const apps = {
       appName: "Apipie ai",
       description:
         "APIpie.ai is an AI super aggregator providing a unified API to access a vast array of AI models from leading providers, enabling cost-effective and latency-optimized solutions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/apipie_ai-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/apipie_ai-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "apipie_ai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5975,7 +5975,7 @@ export const apps = {
       meta: {
         description:
           "APIpie.ai is an AI super aggregator providing a unified API to access a vast array of AI models from leading providers, enabling cost-effective and latency-optimized solutions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/apipie_ai-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/apipie_ai-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -5985,7 +5985,7 @@ export const apps = {
       appName: "Apitemplate io",
       description:
         "APITemplate.io provides APIs for generating PDFs and images from reusable templates using JSON data.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/apitemplate_io_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/apitemplate_io_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "apitemplate_io",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -5998,7 +5998,7 @@ export const apps = {
       meta: {
         description:
           "APITemplate.io provides APIs for generating PDFs and images from reusable templates using JSON data.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/apitemplate_io_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/apitemplate_io_mega_20250722.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -6008,7 +6008,7 @@ export const apps = {
       appName: "Apiverve",
       description:
         "APIVerve offers a comprehensive suite of APIs designed to simplify integration processes, providing developers with scalable and reliable solutions for various applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/apiverve-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/apiverve-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "apiverve",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6021,7 +6021,7 @@ export const apps = {
       meta: {
         description:
           "APIVerve offers a comprehensive suite of APIs designed to simplify integration processes, providing developers with scalable and reliable solutions for various applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/apiverve-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/apiverve-logo.png",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -6031,7 +6031,7 @@ export const apps = {
       appName: "Appcircle",
       description:
         "Appcircle is an enterprise-grade mobile CI/CD platform that enables developers to build, test, and publish mobile applications efficiently, offering both cloud-based and self-hosted deployment options.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/appcircle_symbol_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/appcircle_symbol_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "appcircle",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6049,7 +6049,7 @@ export const apps = {
       meta: {
         description:
           "Appcircle is an enterprise-grade mobile CI/CD platform that enables developers to build, test, and publish mobile applications efficiently, offering both cloud-based and self-hosted deployment options.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/appcircle_symbol_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/appcircle_symbol_20250722.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -6082,7 +6082,7 @@ export const apps = {
       appName: "Aryn",
       description:
         "Aryn is an AI-powered platform for document parsing, data extraction, and analytics, enabling users to process and query unstructured documents at scale.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/aryn-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/aryn-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "aryn",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6095,7 +6095,7 @@ export const apps = {
       meta: {
         description:
           "Aryn is an AI-powered platform for document parsing, data extraction, and analytics, enabling users to process and query unstructured documents at scale.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/aryn-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/aryn-logo.png",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -6105,7 +6105,7 @@ export const apps = {
       appName: "Ascora",
       description:
         "Ascora is a cloud-based field service management software designed to streamline operations for service-based businesses, offering features such as job scheduling, invoicing, customer management, and mobile access.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ascora.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ascora.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ascora",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6123,7 +6123,7 @@ export const apps = {
       meta: {
         description:
           "Ascora is a cloud-based field service management software designed to streamline operations for service-based businesses, offering features such as job scheduling, invoicing, customer management, and mobile access.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ascora.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ascora.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -6156,7 +6156,7 @@ export const apps = {
       appName: "Astica ai",
       description:
         "astica ai offers a suite of cognitive intelligence APIs, including computer vision, natural language processing, and voice synthesis, enabling developers to integrate advanced AI capabilities into their applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/astica_ai-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/astica_ai-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "astica_ai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6173,7 +6173,7 @@ export const apps = {
       meta: {
         description:
           "astica ai offers a suite of cognitive intelligence APIs, including computer vision, natural language processing, and voice synthesis, enabling developers to integrate advanced AI capabilities into their applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/astica_ai-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/astica_ai-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -6183,7 +6183,7 @@ export const apps = {
       appName: "Async interview",
       description:
         "Async Interview is an on-demand video interview platform that streamlines the hiring process by allowing candidates to respond to pre-recorded questions at their convenience, enabling employers to review responses asynchronously.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/async_interview-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/async_interview-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "async_interview",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6196,7 +6196,7 @@ export const apps = {
       meta: {
         description:
           "Async Interview is an on-demand video interview platform that streamlines the hiring process by allowing candidates to respond to pre-recorded questions at their convenience, enabling employers to review responses asynchronously.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/async_interview-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/async_interview-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -6206,7 +6206,7 @@ export const apps = {
       appName: "Autobound",
       description:
         "Autobound provides AI-driven sales engagement solutions, offering personalized content generation and actionable insights to enhance sales outreach.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/autobound-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/autobound-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "autobound",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6223,7 +6223,7 @@ export const apps = {
       meta: {
         description:
           "Autobound provides AI-driven sales engagement solutions, offering personalized content generation and actionable insights to enhance sales outreach.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/autobound-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/autobound-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -6233,7 +6233,7 @@ export const apps = {
       appName: "Autom",
       description:
         "Autom is a service that delivers lightning-fast search engine results page (SERP) outcomes for Google, Bing, and Brave, offering developers rapid access to search data with minimal latency.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/autom.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/autom.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "autom",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6246,7 +6246,7 @@ export const apps = {
       meta: {
         description:
           "Autom is a service that delivers lightning-fast search engine results page (SERP) outcomes for Google, Bing, and Brave, offering developers rapid access to search data with minimal latency.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/autom.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/autom.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -6256,7 +6256,7 @@ export const apps = {
       appName: "Ayrshare",
       description:
         "Ayrshare provides a Social Media API that enables developers to programmatically manage and automate social media posts, analytics, and interactions across multiple platforms.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ayrshare_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ayrshare_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ayrshare",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6269,7 +6269,7 @@ export const apps = {
       meta: {
         description:
           "Ayrshare provides a Social Media API that enables developers to programmatically manage and automate social media posts, analytics, and interactions across multiple platforms.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/ayrshare_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/ayrshare_mega_20250722.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -6279,7 +6279,7 @@ export const apps = {
       appName: "Backendless",
       description:
         "Backendless is a comprehensive backend-as-a-service (BaaS) platform providing scalable backend functionality for mobile and web applications, including user authentication, data persistence, file storage, and custom API services.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/backendless_fixed_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/backendless_fixed_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "backendless",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6297,7 +6297,7 @@ export const apps = {
       meta: {
         description:
           "Backendless is a comprehensive backend-as-a-service (BaaS) platform providing scalable backend functionality for mobile and web applications, including user authentication, data persistence, file storage, and custom API services.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/backendless_fixed_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/backendless_fixed_20250722.png",
         toolsCount: 31,
         totalInstallCount: 0,
       },
@@ -6307,7 +6307,7 @@ export const apps = {
       appName: "Bart",
       description:
         "BART (Bay Area Rapid Transit) provides public transportation services in the San Francisco Bay Area.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bart-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bart-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bart",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6320,7 +6320,7 @@ export const apps = {
       meta: {
         description:
           "BART (Bay Area Rapid Transit) provides public transportation services in the San Francisco Bay Area.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bart-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bart-logo.jpeg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -6330,7 +6330,7 @@ export const apps = {
       appName: "Baselinker",
       description:
         "BaseLinker is a comprehensive e-commerce management platform that integrates with various marketplaces, online stores, carriers, and accounting systems to streamline order processing, inventory management, and sales automation.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/baselinker-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/baselinker-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "baselinker",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6343,7 +6343,7 @@ export const apps = {
       meta: {
         description:
           "BaseLinker is a comprehensive e-commerce management platform that integrates with various marketplaces, online stores, carriers, and accounting systems to streamline order processing, inventory management, and sales automation.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/baselinker-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/baselinker-logo.png",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -6353,7 +6353,7 @@ export const apps = {
       appName: "Basin",
       description:
         "Basin is a no-code form backend that enables users to set up powerful, reliable forms quickly without writing server-side code.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/basin-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/basin-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "basin",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6366,7 +6366,7 @@ export const apps = {
       meta: {
         description:
           "Basin is a no-code form backend that enables users to set up powerful, reliable forms quickly without writing server-side code.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/basin-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/basin-logo.png",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -6376,7 +6376,7 @@ export const apps = {
       appName: "Beaconchain",
       description:
         "Beaconchain is a platform providing real-time data and analytics for the Ethereum 2.0 Beacon Chain, offering insights into validators, blocks, and network performance.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/beaconchain-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/beaconchain-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "beaconchain",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6389,7 +6389,7 @@ export const apps = {
       meta: {
         description:
           "Beaconchain is a platform providing real-time data and analytics for the Ethereum 2.0 Beacon Chain, offering insights into validators, blocks, and network performance.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/beaconchain-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/beaconchain-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -6399,7 +6399,7 @@ export const apps = {
       appName: "Beaconstac",
       description:
         "Beaconstac provides a platform for creating and managing QR codes and beacons, enabling businesses to engage customers through proximity marketing and track analytics.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/beaconstac_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/beaconstac_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "beaconstac",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6412,7 +6412,7 @@ export const apps = {
       meta: {
         description:
           "Beaconstac provides a platform for creating and managing QR codes and beacons, enabling businesses to engage customers through proximity marketing and track analytics.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/beaconstac_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/beaconstac_round2_20250722.png",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -6422,7 +6422,7 @@ export const apps = {
       appName: "Beamer",
       description:
         "Beamer is a platform that enables companies to announce news, updates, and features directly within their applications or websites, enhancing user engagement and communication.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/beamer_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/beamer_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "beamer",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6439,7 +6439,7 @@ export const apps = {
       meta: {
         description:
           "Beamer is a platform that enables companies to announce news, updates, and features directly within their applications or websites, enhancing user engagement and communication.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/beamer_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/beamer_round3_20250722.png",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -6449,7 +6449,7 @@ export const apps = {
       appName: "Benchmark email",
       description:
         "Benchmark Email is a comprehensive email marketing platform offering tools for creating, sending, and analyzing email campaigns.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/benchmark_email-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/benchmark_email-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "benchmark_email",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6462,7 +6462,7 @@ export const apps = {
       meta: {
         description:
           "Benchmark Email is a comprehensive email marketing platform offering tools for creating, sending, and analyzing email campaigns.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/benchmark_email-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/benchmark_email-logo.jpeg",
         toolsCount: 36,
         totalInstallCount: 0,
       },
@@ -6472,7 +6472,7 @@ export const apps = {
       appName: "Benzinga",
       description:
         "Benzinga provides real-time financial news and data APIs, offering comprehensive coverage of market-moving information for developers and financial professionals.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/benzinga-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/benzinga-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "benzinga",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6485,7 +6485,7 @@ export const apps = {
       meta: {
         description:
           "Benzinga provides real-time financial news and data APIs, offering comprehensive coverage of market-moving information for developers and financial professionals.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/benzinga-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/benzinga-logo.png",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -6518,7 +6518,7 @@ export const apps = {
       appName: "Better proposals",
       description:
         "Better Proposals is a web-based proposal creation tool that enables users to send professionally designed proposals.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/better_proposals-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/better_proposals-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "better_proposals",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6531,7 +6531,7 @@ export const apps = {
       meta: {
         description:
           "Better Proposals is a web-based proposal creation tool that enables users to send professionally designed proposals.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/better_proposals-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/better_proposals-logo.png",
         toolsCount: 22,
         totalInstallCount: 0,
       },
@@ -6541,7 +6541,7 @@ export const apps = {
       appName: "Better stack",
       description:
         "Better Stack provides monitoring, logging, and incident management solutions to help teams ensure the reliability and performance of their applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/better_stack_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/better_stack_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "better_stack",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6554,7 +6554,7 @@ export const apps = {
       meta: {
         description:
           "Better Stack provides monitoring, logging, and incident management solutions to help teams ensure the reliability and performance of their applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/better_stack_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/better_stack_mega_20250722.png",
         toolsCount: 26,
         totalInstallCount: 0,
       },
@@ -6564,7 +6564,7 @@ export const apps = {
       appName: "Bidsketch",
       description:
         "Bidsketch is a proposal software that helps businesses create professional proposals quickly and efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bidsketch-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bidsketch-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bidsketch",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6577,7 +6577,7 @@ export const apps = {
       meta: {
         description:
           "Bidsketch is a proposal software that helps businesses create professional proposals quickly and efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bidsketch-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bidsketch-logo.png",
         toolsCount: 35,
         totalInstallCount: 0,
       },
@@ -6587,7 +6587,7 @@ export const apps = {
       appName: "Big data cloud",
       description:
         "BigDataCloud offers a suite of APIs providing geolocation, reverse geocoding, and data validation services.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/big_data_cloud_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/big_data_cloud_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "big_data_cloud",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6600,7 +6600,7 @@ export const apps = {
       meta: {
         description:
           "BigDataCloud offers a suite of APIs providing geolocation, reverse geocoding, and data validation services.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/big_data_cloud_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/big_data_cloud_round2_20250722.png",
         toolsCount: 17,
         totalInstallCount: 0,
       },
@@ -6610,7 +6610,7 @@ export const apps = {
       appName: "Bigmailer",
       description:
         "BigMailer is an email marketing platform designed for managing multiple brands, offering features like white-labeling, automation, and integration with Amazon SES.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bigmailer-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bigmailer-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bigmailer",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6623,7 +6623,7 @@ export const apps = {
       meta: {
         description:
           "BigMailer is an email marketing platform designed for managing multiple brands, offering features like white-labeling, automation, and integration with Amazon SES.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bigmailer-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bigmailer-logo.jpeg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -6633,7 +6633,7 @@ export const apps = {
       appName: "Bigml",
       description:
         "BigML is a comprehensive machine learning platform that simplifies the creation and deployment of predictive models through an intuitive web interface and a REST API.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bigml-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bigml-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bigml",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6650,7 +6650,7 @@ export const apps = {
       meta: {
         description:
           "BigML is a comprehensive machine learning platform that simplifies the creation and deployment of predictive models through an intuitive web interface and a REST API.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bigml-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bigml-logo.jpeg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -6660,7 +6660,7 @@ export const apps = {
       appName: "Bigpicture io",
       description:
         "BigPicture.io provides APIs and datasets for accessing comprehensive company data, including information on over 20 million profiles, used in applications like fintech products, cybersecurity, market research, and sales & marketing tools.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bigpicture_io-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bigpicture_io-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bigpicture_io",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6673,7 +6673,7 @@ export const apps = {
       meta: {
         description:
           "BigPicture.io provides APIs and datasets for accessing comprehensive company data, including information on over 20 million profiles, used in applications like fintech products, cybersecurity, market research, and sales & marketing tools.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bigpicture_io-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bigpicture_io-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -6683,7 +6683,7 @@ export const apps = {
       appName: "Bitquery",
       description:
         "Bitquery provides historical and real-time indexed data for over 40 blockchains through GraphQL APIs, Websockets, SQL, and cloud providers.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bitquery_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bitquery_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bitquery",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6700,7 +6700,7 @@ export const apps = {
       meta: {
         description:
           "Bitquery provides historical and real-time indexed data for over 40 blockchains through GraphQL APIs, Websockets, SQL, and cloud providers.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bitquery_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bitquery_round2_20250722.png",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -6710,7 +6710,7 @@ export const apps = {
       appName: "Blazemeter",
       description:
         "BlazeMeter is a continuous testing platform that enables users to create, run, and analyze performance and functional tests for web and mobile applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/blazemeter-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/blazemeter-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "blazemeter",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6729,7 +6729,7 @@ export const apps = {
       meta: {
         description:
           "BlazeMeter is a continuous testing platform that enables users to create, run, and analyze performance and functional tests for web and mobile applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/blazemeter-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/blazemeter-logo.png",
         toolsCount: 20,
         totalInstallCount: 0,
       },
@@ -6739,7 +6739,7 @@ export const apps = {
       appName: "Blocknative",
       description:
         "Blocknative provides real-time mempool monitoring and transaction management tools for public blockchains.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/blocknative-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/blocknative-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "blocknative",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6752,7 +6752,7 @@ export const apps = {
       meta: {
         description:
           "Blocknative provides real-time mempool monitoring and transaction management tools for public blockchains.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/blocknative-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/blocknative-logo.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -6762,7 +6762,7 @@ export const apps = {
       appName: "Boloforms",
       description:
         "BoloForms is an eSignature platform designed for small businesses, offering unlimited signatures, templates, forms, and team members at a fixed price.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/boloforms-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/boloforms-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "boloforms",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6775,7 +6775,7 @@ export const apps = {
       meta: {
         description:
           "BoloForms is an eSignature platform designed for small businesses, offering unlimited signatures, templates, forms, and team members at a fixed price.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/boloforms-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/boloforms-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -6785,7 +6785,7 @@ export const apps = {
       appName: "Bolt iot",
       description:
         "Bolt IoT is an integrated platform that enables users to build IoT projects by connecting sensors and actuators to the internet, offering cloud-based control and monitoring capabilities.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bolt_iot_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bolt_iot_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bolt_iot",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6802,7 +6802,7 @@ export const apps = {
       meta: {
         description:
           "Bolt IoT is an integrated platform that enables users to build IoT projects by connecting sensors and actuators to the internet, offering cloud-based control and monitoring capabilities.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bolt_iot_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bolt_iot_round2_20250722.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -6811,7 +6811,7 @@ export const apps = {
       id: "bonsai",
       appName: "Bonsai",
       description: "Template description for bonsai",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bonsai.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bonsai.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bonsai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6823,7 +6823,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "Template description for bonsai",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bonsai.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bonsai.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -6833,7 +6833,7 @@ export const apps = {
       appName: "Bookingmood",
       description:
         "Bookingmood provides flexible, commission-free booking software for rental businesses of all sizes, enabling seamless integration with your website.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bookingmood-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bookingmood-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bookingmood",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6850,7 +6850,7 @@ export const apps = {
       meta: {
         description:
           "Bookingmood provides flexible, commission-free booking software for rental businesses of all sizes, enabling seamless integration with your website.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bookingmood-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bookingmood-logo.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -6860,7 +6860,7 @@ export const apps = {
       appName: "Booqable",
       description:
         "Booqable is a rental software platform that helps businesses manage inventory, bookings, and online reservations.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/booqable_fixed_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/booqable_fixed_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "booqable",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6877,7 +6877,7 @@ export const apps = {
       meta: {
         description:
           "Booqable is a rental software platform that helps businesses manage inventory, bookings, and online reservations.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/booqable_fixed_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/booqable_fixed_20250722.png",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -6887,7 +6887,7 @@ export const apps = {
       appName: "Botpress",
       description:
         "Botpress is an open-source platform for building, deploying, and managing chatbots.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/botpress-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/botpress-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "botpress",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6900,7 +6900,7 @@ export const apps = {
       meta: {
         description:
           "Botpress is an open-source platform for building, deploying, and managing chatbots.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/botpress-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/botpress-logo.svg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -6910,7 +6910,7 @@ export const apps = {
       appName: "Botsonic",
       description:
         "Botsonic is a no-code AI chatbot builder that enables users to create and integrate AI chatbots into their websites without any coding knowledge.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/botsonic_fixed_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/botsonic_fixed_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "botsonic",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6927,7 +6927,7 @@ export const apps = {
       meta: {
         description:
           "Botsonic is a no-code AI chatbot builder that enables users to create and integrate AI chatbots into their websites without any coding knowledge.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/botsonic_fixed_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/botsonic_fixed_20250722.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -6937,7 +6937,7 @@ export const apps = {
       appName: "Botstar",
       description:
         "BotStar is a comprehensive chatbot platform that enables businesses to design, develop, and train chatbots visually for Messenger and websites.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/botstar_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/botstar_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "botstar",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6950,7 +6950,7 @@ export const apps = {
       meta: {
         description:
           "BotStar is a comprehensive chatbot platform that enables businesses to design, develop, and train chatbots visually for Messenger and websites.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/botstar_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/botstar_mega_20250722.png",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -6960,7 +6960,7 @@ export const apps = {
       appName: "Bouncer",
       description:
         "Bouncer is an email verification and validation service that helps ensure email deliverability by verifying email addresses through real-time and batch processing APIs.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bouncer_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bouncer_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bouncer",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6973,7 +6973,7 @@ export const apps = {
       meta: {
         description:
           "Bouncer is an email verification and validation service that helps ensure email deliverability by verifying email addresses through real-time and batch processing APIs.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bouncer_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bouncer_round2_20250722.png",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -6983,7 +6983,7 @@ export const apps = {
       appName: "Boxhero",
       description:
         "BoxHero is a cloud-based inventory management solution designed for small to medium-sized businesses, offering real-time updates, barcode scanning, team collaboration, and analytics.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/boxhero-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/boxhero-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "boxhero",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -6996,7 +6996,7 @@ export const apps = {
       meta: {
         description:
           "BoxHero is a cloud-based inventory management solution designed for small to medium-sized businesses, offering real-time updates, barcode scanning, team collaboration, and analytics.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/boxhero-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/boxhero-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -7006,7 +7006,7 @@ export const apps = {
       appName: "Breeze",
       description:
         "Breeze is a project management software that helps teams plan, track, and collaborate on projects efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/breeze.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/breeze.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "breeze",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7019,7 +7019,7 @@ export const apps = {
       meta: {
         description:
           "Breeze is a project management software that helps teams plan, track, and collaborate on projects efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/breeze.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/breeze.png",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -7084,7 +7084,7 @@ export const apps = {
       appName: "Browserless",
       description:
         "Browserless is a service that provides headless browser automation, allowing users to run automations on their own sites with browser infrastructure.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/browserless-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/browserless-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "browserless",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7097,7 +7097,7 @@ export const apps = {
       meta: {
         description:
           "Browserless is a service that provides headless browser automation, allowing users to run automations on their own sites with browser infrastructure.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/browserless-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/browserless-logo.jpeg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -7107,7 +7107,7 @@ export const apps = {
       appName: "Btcpay server",
       description:
         "BTCPay Server is a free, open-source, self-hosted Bitcoin payment processor that enables merchants to accept Bitcoin payments without intermediaries.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/btcpay_server-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/btcpay_server-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "btcpay_server",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7120,7 +7120,7 @@ export const apps = {
       meta: {
         description:
           "BTCPay Server is a free, open-source, self-hosted Bitcoin payment processor that enables merchants to accept Bitcoin payments without intermediaries.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/btcpay_server-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/btcpay_server-logo.png",
         toolsCount: 17,
         totalInstallCount: 0,
       },
@@ -7129,7 +7129,7 @@ export const apps = {
       id: "bugbug",
       appName: "Bugbug",
       description: "Bugbug is a platform for testing and monitoring your code.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bugbug-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bugbug-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bugbug",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7142,7 +7142,7 @@ export const apps = {
       meta: {
         description:
           "Bugbug is a platform for testing and monitoring your code.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/bugbug-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/bugbug-logo.jpeg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -7152,7 +7152,7 @@ export const apps = {
       appName: "Bugherd",
       description:
         "BugHerd is a visual feedback and bug tracking tool for websites, allowing clients and teams to report issues directly on live sites.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bugherd_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bugherd_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bugherd",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7165,7 +7165,7 @@ export const apps = {
       meta: {
         description:
           "BugHerd is a visual feedback and bug tracking tool for websites, allowing clients and teams to report issues directly on live sites.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bugherd_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bugherd_mega_20250722.png",
         toolsCount: 25,
         totalInstallCount: 0,
       },
@@ -7198,7 +7198,7 @@ export const apps = {
       appName: "Buildkite",
       description:
         "Buildkite is a platform for running fast, secure, and scalable continuous integration pipelines on your own infrastructure.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/buildkite-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/buildkite-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "buildkite",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7211,7 +7211,7 @@ export const apps = {
       meta: {
         description:
           "Buildkite is a platform for running fast, secure, and scalable continuous integration pipelines on your own infrastructure.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/buildkite-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/buildkite-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -7221,7 +7221,7 @@ export const apps = {
       appName: "Builtwith",
       description:
         "BuiltWith is a web technology profiler that provides insights into the technologies used by websites, including analytics, hosting, and content management systems.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/builtwith-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/builtwith-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "builtwith",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7237,7 +7237,7 @@ export const apps = {
       meta: {
         description:
           "BuiltWith is a web technology profiler that provides insights into the technologies used by websites, including analytics, hosting, and content management systems.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/builtwith-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/builtwith-logo.png",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -7247,7 +7247,7 @@ export const apps = {
       appName: "Bunnycdn",
       description:
         "BunnyCDN is a powerful content delivery network (CDN) offering an API to manage and deliver content globally with ease.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bunnycdn_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bunnycdn_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "bunnycdn",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7260,7 +7260,7 @@ export const apps = {
       meta: {
         description:
           "BunnyCDN is a powerful content delivery network (CDN) offering an API to manage and deliver content globally with ease.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/bunnycdn_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/bunnycdn_mega_20250722.png",
         toolsCount: 20,
         totalInstallCount: 0,
       },
@@ -7270,7 +7270,7 @@ export const apps = {
       appName: "Byteforms",
       description:
         "All-in-one solution for form creation, submission management, and data integration.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/byteforms_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/byteforms_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "byteforms",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7283,7 +7283,7 @@ export const apps = {
       meta: {
         description:
           "All-in-one solution for form creation, submission management, and data integration.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/byteforms_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/byteforms_mega_20250722.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -7293,7 +7293,7 @@ export const apps = {
       appName: "Cabinpanda",
       description:
         "CabinPanda is a data collection platform that enables users to create and manage online forms, facilitating efficient data gathering and analysis.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cabinpanda-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cabinpanda-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cabinpanda",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7306,7 +7306,7 @@ export const apps = {
       meta: {
         description:
           "CabinPanda is a data collection platform that enables users to create and manage online forms, facilitating efficient data gathering and analysis.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cabinpanda-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cabinpanda-logo.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -7316,7 +7316,7 @@ export const apps = {
       appName: "Calendarhero",
       description:
         "CalendarHero is a versatile scheduling tool designed to streamline and simplify your calendar management. It integrates seamlessly with your existing calendars, allowing you to efficiently schedule, reschedule, and manage meetings with ease.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/calendarhero_fixed_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/calendarhero_fixed_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "calendarhero",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7329,7 +7329,7 @@ export const apps = {
       meta: {
         description:
           "CalendarHero is a versatile scheduling tool designed to streamline and simplify your calendar management. It integrates seamlessly with your existing calendars, allowing you to efficiently schedule, reschedule, and manage meetings with ease.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/calendarhero_fixed_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/calendarhero_fixed_20250722.png",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -7339,7 +7339,7 @@ export const apps = {
       appName: "Callerapi",
       description:
         "CallerAPI provides a white-label caller identification API that enhances customer trust, stops spam, fraud, and robocalls by offering branded caller ID solutions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/callerapi.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/callerapi.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "callerapi",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7356,7 +7356,7 @@ export const apps = {
       meta: {
         description:
           "CallerAPI provides a white-label caller identification API that enhances customer trust, stops spam, fraud, and robocalls by offering branded caller ID solutions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/callerapi.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/callerapi.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -7366,7 +7366,7 @@ export const apps = {
       appName: "Callingly",
       description:
         "Callingly is a lead response management software that automates immediate call and text follow-ups to new leads, integrating seamlessly with various CRMs and lead sources to enhance sales team responsiveness and conversion rates.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/callingly_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/callingly_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "callingly",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7383,7 +7383,7 @@ export const apps = {
       meta: {
         description:
           "Callingly is a lead response management software that automates immediate call and text follow-ups to new leads, integrating seamlessly with various CRMs and lead sources to enhance sales team responsiveness and conversion rates.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/callingly_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/callingly_round2_20250722.png",
         toolsCount: 27,
         totalInstallCount: 0,
       },
@@ -7393,7 +7393,7 @@ export const apps = {
       appName: "Callpage",
       description:
         "CallPage is a lead capture tool that enables businesses to connect with website visitors through immediate phone callbacks, enhancing lead generation and sales conversion rates.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/callpage-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/callpage-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "callpage",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7410,7 +7410,7 @@ export const apps = {
       meta: {
         description:
           "CallPage is a lead capture tool that enables businesses to connect with website visitors through immediate phone callbacks, enhancing lead generation and sales conversion rates.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/callpage-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/callpage-logo.png",
         toolsCount: 17,
         totalInstallCount: 0,
       },
@@ -7420,7 +7420,7 @@ export const apps = {
       appName: "Campaign cleaner",
       description:
         "Campaign Cleaner is a tool designed to optimize email campaigns by ensuring compatibility across email clients, improving deliverability, and enhancing overall performance.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/campaign_cleaner_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/campaign_cleaner_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "campaign_cleaner",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7433,7 +7433,7 @@ export const apps = {
       meta: {
         description:
           "Campaign Cleaner is a tool designed to optimize email campaigns by ensuring compatibility across email clients, improving deliverability, and enhancing overall performance.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/campaign_cleaner_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/campaign_cleaner_round2_20250722.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -7443,7 +7443,7 @@ export const apps = {
       appName: "Campayn",
       description:
         "Campayn is an email marketing platform that allows users to create, send, and manage email campaigns.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/campayn-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/campayn-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "campayn",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7456,7 +7456,7 @@ export const apps = {
       meta: {
         description:
           "Campayn is an email marketing platform that allows users to create, send, and manage email campaigns.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/campayn-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/campayn-logo.png",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -7466,7 +7466,7 @@ export const apps = {
       appName: "Canny",
       description:
         "Canny is a customer feedback management platform that helps teams collect, analyze, and prioritize user feedback to build better products.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/canny-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/canny-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "canny",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7483,7 +7483,7 @@ export const apps = {
       meta: {
         description:
           "Canny is a customer feedback management platform that helps teams collect, analyze, and prioritize user feedback to build better products.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/canny-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/canny-logo.png",
         toolsCount: 26,
         totalInstallCount: 0,
       },
@@ -7493,7 +7493,7 @@ export const apps = {
       appName: "Capsule crm",
       description:
         "Capsule CRM is a simple yet powerful CRM platform designed to help businesses manage customer relationships, sales pipelines, and tasks efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/capsule_crm-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/capsule_crm-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "capsule_crm",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7506,7 +7506,7 @@ export const apps = {
       meta: {
         description:
           "Capsule CRM is a simple yet powerful CRM platform designed to help businesses manage customer relationships, sales pipelines, and tasks efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/capsule_crm-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/capsule_crm-logo.png",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -7516,7 +7516,7 @@ export const apps = {
       appName: "Carbone",
       description:
         "Carbone is a fast and simple report generator that converts JSON data into various document formats such as PDF, DOCX, XLSX, ODT, and more, using templates.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/carbone_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/carbone_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "carbone",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7529,7 +7529,7 @@ export const apps = {
       meta: {
         description:
           "Carbone is a fast and simple report generator that converts JSON data into various document formats such as PDF, DOCX, XLSX, ODT, and more, using templates.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/carbone_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/carbone_round2_20250722.png",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -7539,7 +7539,7 @@ export const apps = {
       appName: "Cardly",
       description:
         "Cardly helps businesses create great engagement with customers by getting out of inboxes and into mailboxes.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cardly-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cardly-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cardly",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7552,7 +7552,7 @@ export const apps = {
       meta: {
         description:
           "Cardly helps businesses create great engagement with customers by getting out of inboxes and into mailboxes.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cardly-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cardly-logo.png",
         toolsCount: 20,
         totalInstallCount: 0,
       },
@@ -7585,7 +7585,7 @@ export const apps = {
       appName: "Cats",
       description:
         "An API providing access to a vast collection of cat images, breeds, and facts.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/cats_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/cats_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cats",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7598,7 +7598,7 @@ export const apps = {
       meta: {
         description:
           "An API providing access to a vast collection of cat images, breeds, and facts.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/cats_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/cats_mega_20250722.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -7608,7 +7608,7 @@ export const apps = {
       appName: "Cdr platform",
       description:
         "CDR Platform provides an API for purchasing carbon dioxide removal services.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/cdr_platform.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/cdr_platform.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cdr_platform",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7621,7 +7621,7 @@ export const apps = {
       meta: {
         description:
           "CDR Platform provides an API for purchasing carbon dioxide removal services.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/cdr_platform.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/cdr_platform.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -7631,7 +7631,7 @@ export const apps = {
       appName: "Census bureau",
       description:
         "The Census Bureau Data API provides developers with access to a wide range of statistical data collected by the U.S. Census Bureau, facilitating integration into applications and data visualizations.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/census_bureau-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/census_bureau-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "census_bureau",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7644,7 +7644,7 @@ export const apps = {
       meta: {
         description:
           "The Census Bureau Data API provides developers with access to a wide range of statistical data collected by the U.S. Census Bureau, facilitating integration into applications and data visualizations.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/census_bureau-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/census_bureau-logo.png",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -7654,7 +7654,7 @@ export const apps = {
       appName: "Centralstationcrm",
       description:
         "CentralStationCRM is an easy-to-use CRM software focusing on collaboration and long-term customer relationships.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/centralstationcrm_fixed_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/centralstationcrm_fixed_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "centralstationcrm",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7667,7 +7667,7 @@ export const apps = {
       meta: {
         description:
           "CentralStationCRM is an easy-to-use CRM software focusing on collaboration and long-term customer relationships.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/centralstationcrm_fixed_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/centralstationcrm_fixed_20250722.png",
         toolsCount: 43,
         totalInstallCount: 0,
       },
@@ -7677,7 +7677,7 @@ export const apps = {
       appName: "Certifier",
       description:
         "Certifier is a platform that enables organizations to create, manage, and issue digital certificates and credentials.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/certifier-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/certifier-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "certifier",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7694,7 +7694,7 @@ export const apps = {
       meta: {
         description:
           "Certifier is a platform that enables organizations to create, manage, and issue digital certificates and credentials.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/certifier-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/certifier-logo.jpeg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -7750,7 +7750,7 @@ export const apps = {
       appName: "Chatfai",
       description:
         "ChatFAI is an AI-powered platform that enables users to engage in interactive conversations with AI-generated versions of their favorite fictional characters from various media.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/chatfai-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/chatfai-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "chatfai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7763,7 +7763,7 @@ export const apps = {
       meta: {
         description:
           "ChatFAI is an AI-powered platform that enables users to engage in interactive conversations with AI-generated versions of their favorite fictional characters from various media.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/chatfai-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/chatfai-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -7773,7 +7773,7 @@ export const apps = {
       appName: "Cincopa",
       description:
         "Cincopa is a comprehensive media platform offering tools for uploading, managing, and customizing multimedia content, including videos, images, and audio, with robust APIs for seamless integration.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cincopa-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cincopa-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cincopa",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7790,7 +7790,7 @@ export const apps = {
       meta: {
         description:
           "Cincopa is a comprehensive media platform offering tools for uploading, managing, and customizing multimedia content, including videos, images, and audio, with robust APIs for seamless integration.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cincopa-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cincopa-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -7799,7 +7799,7 @@ export const apps = {
       id: "circleci",
       appName: "Circleci",
       description: "Template description for circleci",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/circleci-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/circleci-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "circleci",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7811,7 +7811,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "Template description for circleci",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/circleci-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/circleci-logo.png",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -7890,7 +7890,7 @@ export const apps = {
       appName: "Clickhouse",
       description:
         "ClickHouse is a fast open-source column-oriented database management system for real-time analytics and big data processing with SQL support",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/clickhouse-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/clickhouse-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "clickhouse",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7903,7 +7903,7 @@ export const apps = {
       meta: {
         description:
           "ClickHouse is a fast open-source column-oriented database management system for real-time analytics and big data processing with SQL support",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/clickhouse-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/clickhouse-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -7913,7 +7913,7 @@ export const apps = {
       appName: "Clickmeeting",
       description:
         "ClickMeeting is a cloud-based online meeting and webinar platform that enables businesses and individuals to host virtual meetings, webinars, and training sessions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/clickmeeting-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/clickmeeting-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "clickmeeting",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7926,7 +7926,7 @@ export const apps = {
       meta: {
         description:
           "ClickMeeting is a cloud-based online meeting and webinar platform that enables businesses and individuals to host virtual meetings, webinars, and training sessions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/clickmeeting-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/clickmeeting-logo.svg",
         toolsCount: 36,
         totalInstallCount: 0,
       },
@@ -7959,7 +7959,7 @@ export const apps = {
       appName: "Cloudcart",
       description:
         "CloudCart is an e-commerce platform that enables businesses to create and manage online stores efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cloudcart-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cloudcart-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cloudcart",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7972,7 +7972,7 @@ export const apps = {
       meta: {
         description:
           "CloudCart is an e-commerce platform that enables businesses to create and manage online stores efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cloudcart-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cloudcart-logo.svg",
         toolsCount: 34,
         totalInstallCount: 0,
       },
@@ -7982,7 +7982,7 @@ export const apps = {
       appName: "Cloudconvert",
       description:
         "CloudConvert is a file conversion service supporting over 200 formats, including audio, video, document, ebook, archive, image, spreadsheet, and presentation formats.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/cloudconvert_final_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/cloudconvert_final_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cloudconvert",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -7995,7 +7995,7 @@ export const apps = {
       meta: {
         description:
           "CloudConvert is a file conversion service supporting over 200 formats, including audio, video, document, ebook, archive, image, spreadsheet, and presentation formats.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/cloudconvert_final_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/cloudconvert_final_20250722.png",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -8054,7 +8054,7 @@ export const apps = {
       id: "cloudinary",
       appName: "Cloudinary",
       description: "Template description for cloudinary",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/cloudinary_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/cloudinary_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cloudinary",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8066,7 +8066,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "Template description for cloudinary",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/cloudinary_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/cloudinary_round3_20250722.png",
         toolsCount: 34,
         totalInstallCount: 0,
       },
@@ -8103,7 +8103,7 @@ export const apps = {
       appName: "Cloudpress",
       description:
         "Cloudpress enables exporting content from Google Docs and Notion to various Content Management Systems.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cloudpress-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cloudpress-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cloudpress",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8116,7 +8116,7 @@ export const apps = {
       meta: {
         description:
           "Cloudpress enables exporting content from Google Docs and Notion to various Content Management Systems.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cloudpress-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cloudpress-logo.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -8153,7 +8153,7 @@ export const apps = {
       appName: "Codacy",
       description:
         "Codacy is an automated code review tool that helps developers monitor code quality, track technical debt, and enforce coding standards across multiple programming languages.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/codacy-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/codacy-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "codacy",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8166,7 +8166,7 @@ export const apps = {
       meta: {
         description:
           "Codacy is an automated code review tool that helps developers monitor code quality, track technical debt, and enforce coding standards across multiple programming languages.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/codacy-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/codacy-logo.svg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -8272,7 +8272,7 @@ export const apps = {
       appName: "Connecteam",
       description:
         "Connecteam is a comprehensive workforce management platform designed to streamline operations, enhance communication, and improve HR processes for deskless teams.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/connecteam-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/connecteam-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "connecteam",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8289,7 +8289,7 @@ export const apps = {
       meta: {
         description:
           "Connecteam is a comprehensive workforce management platform designed to streamline operations, enhance communication, and improve HR processes for deskless teams.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/connecteam-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/connecteam-logo.jpeg",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -8299,7 +8299,7 @@ export const apps = {
       appName: "Contentful graphql",
       description:
         "The Contentful GraphQL Content API allows developers to query and deliver content using GraphQL, providing a flexible and efficient way to access content stored in Contentful.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/contentful_graphql-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/contentful_graphql-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "contentful_graphql",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8312,7 +8312,7 @@ export const apps = {
       meta: {
         description:
           "The Contentful GraphQL Content API allows developers to query and deliver content using GraphQL, providing a flexible and efficient way to access content stored in Contentful.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/contentful_graphql-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/contentful_graphql-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -8368,7 +8368,7 @@ export const apps = {
       appName: "Convertapi",
       description:
         "ConvertAPI is a file conversion service that allows developers to convert various file formats, such as documents, images, and spreadsheets, into different formats programmatically.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/convertapi_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/convertapi_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "convertapi",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8381,7 +8381,7 @@ export const apps = {
       meta: {
         description:
           "ConvertAPI is a file conversion service that allows developers to convert various file formats, such as documents, images, and spreadsheets, into different formats programmatically.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/convertapi_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/convertapi_round3_20250722.png",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -8414,7 +8414,7 @@ export const apps = {
       appName: "Convolo ai",
       description:
         "Convolo.ai is an AI-powered communications platform designed to enhance sales calls and improve conversion rates through rapid lead response and integration capabilities.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/convolo_ai-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/convolo_ai-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "convolo_ai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8427,7 +8427,7 @@ export const apps = {
       meta: {
         description:
           "Convolo.ai is an AI-powered communications platform designed to enhance sales calls and improve conversion rates through rapid lead response and integration capabilities.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/convolo_ai-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/convolo_ai-logo.svg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -8483,7 +8483,7 @@ export const apps = {
       appName: "Coupa",
       description:
         "Coupa provides a comprehensive business spend management platform with procurement, invoicing, and expense capabilities.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//coupa.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//coupa.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "coupa",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8496,7 +8496,7 @@ export const apps = {
       meta: {
         description:
           "Coupa provides a comprehensive business spend management platform with procurement, invoicing, and expense capabilities.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//coupa.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//coupa.png",
         toolsCount: 61,
         totalInstallCount: 0,
       },
@@ -8575,7 +8575,7 @@ export const apps = {
       appName: "Curated",
       description:
         "Curated is a platform that enables users to collect, curate, and publish newsletters, integrating with various services through its API.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/curated-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/curated-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "curated",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8588,7 +8588,7 @@ export const apps = {
       meta: {
         description:
           "Curated is a platform that enables users to collect, curate, and publish newsletters, integrating with various services through its API.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/curated-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/curated-logo.png",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -8621,7 +8621,7 @@ export const apps = {
       appName: "Customerio",
       description:
         "Customer.io is a customer engagement platform that enables businesses to send targeted messages to their customers through various channels, including email, SMS, and push notifications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/customerio-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/customerio-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "customerio",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8638,7 +8638,7 @@ export const apps = {
       meta: {
         description:
           "Customer.io is a customer engagement platform that enables businesses to send targeted messages to their customers through various channels, including email, SMS, and push notifications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/customerio-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/customerio-logo.svg",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -8694,7 +8694,7 @@ export const apps = {
       appName: "Cutt ly",
       description:
         "Cutt.ly is a URL shortening service that allows users to shorten, manage, and analyze URLs.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cutt_ly-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cutt_ly-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "cutt_ly",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8707,7 +8707,7 @@ export const apps = {
       meta: {
         description:
           "Cutt.ly is a URL shortening service that allows users to shorten, manage, and analyze URLs.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/cutt_ly-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/cutt_ly-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -8740,7 +8740,7 @@ export const apps = {
       appName: "Daffy",
       description:
         "Daffy is a modern platform for charitable giving, offering a donor-advised fund that allows users to set money aside, watch it grow tax-free, and donate to over 1.7 million charities in the U.S.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/daffy-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/daffy-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "daffy",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8753,7 +8753,7 @@ export const apps = {
       meta: {
         description:
           "Daffy is a modern platform for charitable giving, offering a donor-advised fund that allows users to set money aside, watch it grow tax-free, and donate to over 1.7 million charities in the U.S.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/daffy-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/daffy-logo.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -8763,7 +8763,7 @@ export const apps = {
       appName: "Deadline funnel",
       description:
         "Deadline Funnel provides tools to create authentic, personalized deadlines for marketing campaigns, enhancing urgency and conversions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/deadline_funnel_symbol_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/deadline_funnel_symbol_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "deadline_funnel",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8776,7 +8776,7 @@ export const apps = {
       meta: {
         description:
           "Deadline Funnel provides tools to create authentic, personalized deadlines for marketing campaigns, enhancing urgency and conversions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/deadline_funnel_symbol_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/deadline_funnel_symbol_20250722.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -8786,7 +8786,7 @@ export const apps = {
       appName: "Deepgram",
       description:
         "Deepgram provides AI-powered speech recognition and understanding services, offering APIs for real-time and pre-recorded audio transcription, text-to-speech, and audio intelligence.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/deepgram-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/deepgram-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "deepgram",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8799,7 +8799,7 @@ export const apps = {
       meta: {
         description:
           "Deepgram provides AI-powered speech recognition and understanding services, offering APIs for real-time and pre-recorded audio transcription, text-to-speech, and audio intelligence.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/deepgram-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/deepgram-logo.svg",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -8832,7 +8832,7 @@ export const apps = {
       appName: "Detrack",
       description:
         "Detrack is a delivery management software that offers real-time vehicle tracking, electronic proof of delivery, and automated customer notifications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/detrack-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/detrack-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "detrack",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8845,7 +8845,7 @@ export const apps = {
       meta: {
         description:
           "Detrack is a delivery management software that offers real-time vehicle tracking, electronic proof of delivery, and automated customer notifications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/detrack-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/detrack-logo.svg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -8901,7 +8901,7 @@ export const apps = {
       appName: "Diffbot",
       description:
         "Diffbot provides AI-powered tools to extract and structure data from web pages, transforming unstructured web content into structured, linked data.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/diffbot-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/diffbot-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "diffbot",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8918,7 +8918,7 @@ export const apps = {
       meta: {
         description:
           "Diffbot provides AI-powered tools to extract and structure data from web pages, transforming unstructured web content into structured, linked data.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/diffbot-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/diffbot-logo.svg",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -8928,7 +8928,7 @@ export const apps = {
       appName: "Digital ocean",
       description:
         "DigitalOcean is a cloud infrastructure provider offering scalable compute platforms with a user-friendly interface.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/digital_ocean-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/digital_ocean-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "digital_ocean",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -8945,7 +8945,7 @@ export const apps = {
       meta: {
         description:
           "DigitalOcean is a cloud infrastructure provider offering scalable compute platforms with a user-friendly interface.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/digital_ocean-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/digital_ocean-logo.svg",
         toolsCount: 49,
         totalInstallCount: 0,
       },
@@ -9051,7 +9051,7 @@ export const apps = {
       appName: "Docsbot ai",
       description:
         "DocsBot AI enables the creation of custom chatbots trained on your documentation, facilitating automated customer support and content generation.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/docsbot_ai-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/docsbot_ai-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "docsbot_ai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9068,7 +9068,7 @@ export const apps = {
       meta: {
         description:
           "DocsBot AI enables the creation of custom chatbots trained on your documentation, facilitating automated customer support and content generation.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/docsbot_ai-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/docsbot_ai-logo.svg",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -9078,7 +9078,7 @@ export const apps = {
       appName: "Docsumo",
       description:
         "Docsumo is an AI-powered document processing platform that automates data extraction and analysis from various document types.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/docsumo-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/docsumo-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "docsumo",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9091,7 +9091,7 @@ export const apps = {
       meta: {
         description:
           "Docsumo is an AI-powered document processing platform that automates data extraction and analysis from various document types.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/docsumo-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/docsumo-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -9146,7 +9146,7 @@ export const apps = {
       id: "documint",
       appName: "Documint",
       description: "Template description for documint",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/documint-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/documint-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "documint",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9158,7 +9158,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "Template description for documint",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/documint-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/documint-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -9168,7 +9168,7 @@ export const apps = {
       appName: "Docupilot",
       description:
         "Docupilot is a document automation tool that enables users to generate PDFs, DOCX files, contracts, invoices, and more by integrating with various online services.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/docupilot_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/docupilot_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "docupilot",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9185,7 +9185,7 @@ export const apps = {
       meta: {
         description:
           "Docupilot is a document automation tool that enables users to generate PDFs, DOCX files, contracts, invoices, and more by integrating with various online services.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/docupilot_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/docupilot_round2_20250722.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -9195,7 +9195,7 @@ export const apps = {
       appName: "Docupost",
       description:
         "DocuPost is a print and mail service that enables users to send digital files as physical letters and postcards via the U.S. Postal Service.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/docupost-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/docupost-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "docupost",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9208,7 +9208,7 @@ export const apps = {
       meta: {
         description:
           "DocuPost is a print and mail service that enables users to send digital files as physical letters and postcards via the U.S. Postal Service.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/docupost-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/docupost-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -9241,7 +9241,7 @@ export const apps = {
       appName: "Doppler marketing automation",
       description:
         "Doppler is a marketing automation platform that enables users to create, send, and analyze email campaigns, manage subscriber lists, and integrate with various tools to enhance marketing efforts.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/doppler_marketing_automation-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/doppler_marketing_automation-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "doppler_marketing_automation",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9254,7 +9254,7 @@ export const apps = {
       meta: {
         description:
           "Doppler is a marketing automation platform that enables users to create, send, and analyze email campaigns, manage subscriber lists, and integrate with various tools to enhance marketing efforts.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/doppler_marketing_automation-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/doppler_marketing_automation-logo.svg",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -9332,7 +9332,7 @@ export const apps = {
       id: "dpd2",
       appName: "Dpd2",
       description: "Template description for dpd2",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dpd2-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dpd2-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "dpd2",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9344,7 +9344,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "Template description for dpd2",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dpd2-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dpd2-logo.png",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -9354,7 +9354,7 @@ export const apps = {
       appName: "Draftable",
       description:
         "Draftable provides an enterprise-grade document comparison API that allows developers to compare popular document types such as PDFs, Word, and PowerPoint files.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/draftable-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/draftable-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "draftable",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9367,7 +9367,7 @@ export const apps = {
       meta: {
         description:
           "Draftable provides an enterprise-grade document comparison API that allows developers to compare popular document types such as PDFs, Word, and PowerPoint files.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/draftable-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/draftable-logo.svg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -9400,7 +9400,7 @@ export const apps = {
       appName: "Dripcel",
       description:
         "Dripcel is a cloud-based SMS marketing platform that leverages AI and machine learning to automate and optimize customer communication campaigns.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dripcel-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dripcel-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "dripcel",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9413,7 +9413,7 @@ export const apps = {
       meta: {
         description:
           "Dripcel is a cloud-based SMS marketing platform that leverages AI and machine learning to automate and optimize customer communication campaigns.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dripcel-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dripcel-logo.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -9446,7 +9446,7 @@ export const apps = {
       appName: "Dropcontact",
       description:
         "Dropcontact is a B2B email finder and data enrichment service that provides verified professional email addresses and enriches contact information.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dropcontact-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dropcontact-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "dropcontact",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9459,7 +9459,7 @@ export const apps = {
       meta: {
         description:
           "Dropcontact is a B2B email finder and data enrichment service that provides verified professional email addresses and enriches contact information.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dropcontact-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dropcontact-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -9469,7 +9469,7 @@ export const apps = {
       appName: "Dungeon fighter online",
       description:
         "Dungeon Fighter Online (DFO) is an arcade-style, side-scrolling action game with RPG elements, offering players a dynamic combat experience.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dungeon_fighter_online-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dungeon_fighter_online-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "dungeon_fighter_online",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9482,7 +9482,7 @@ export const apps = {
       meta: {
         description:
           "Dungeon Fighter Online (DFO) is an arcade-style, side-scrolling action game with RPG elements, offering players a dynamic combat experience.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/dungeon_fighter_online-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/dungeon_fighter_online-logo.png",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -9492,7 +9492,7 @@ export const apps = {
       appName: "Elasticsearch",
       description:
         "Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. It provides real-time search and analytics for all types of data.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/elasticsearch.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/elasticsearch.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "elasticsearch",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9505,7 +9505,7 @@ export const apps = {
       meta: {
         description:
           "Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. It provides real-time search and analytics for all types of data.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/elasticsearch.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/elasticsearch.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -9515,7 +9515,7 @@ export const apps = {
       appName: "Elorus",
       description:
         "Elorus is an online invoicing and time-tracking software designed for freelancers and small businesses to manage their finances and projects efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/elorus-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/elorus-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "elorus",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9528,7 +9528,7 @@ export const apps = {
       meta: {
         description:
           "Elorus is an online invoicing and time-tracking software designed for freelancers and small businesses to manage their finances and projects efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/elorus-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/elorus-logo.png",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -9538,7 +9538,7 @@ export const apps = {
       appName: "Emailable",
       description:
         "Emailable provides an email verification API that allows developers to integrate real-time email validation into their applications, ensuring the accuracy and deliverability of email addresses.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/emailable-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/emailable-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "emailable",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9551,7 +9551,7 @@ export const apps = {
       meta: {
         description:
           "Emailable provides an email verification API that allows developers to integrate real-time email validation into their applications, ensuring the accuracy and deliverability of email addresses.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/emailable-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/emailable-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -9584,7 +9584,7 @@ export const apps = {
       appName: "Emailoctopus",
       description:
         "EmailOctopus is an email marketing platform founded in 2015, offering affordable and intuitive solutions for individuals and businesses to connect with their subscribers.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/emailoctopus-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/emailoctopus-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "emailoctopus",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9597,7 +9597,7 @@ export const apps = {
       meta: {
         description:
           "EmailOctopus is an email marketing platform founded in 2015, offering affordable and intuitive solutions for individuals and businesses to connect with their subscribers.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/emailoctopus-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/emailoctopus-logo.png",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -9607,7 +9607,7 @@ export const apps = {
       appName: "Emelia",
       description:
         "Emelia is an all-in-one B2B prospecting tool offering features like cold-emailing, LinkedIn outreach, email warm-up, email finder, and LinkedIn Sales Navigator scraping.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/emelia-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/emelia-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "emelia",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9620,7 +9620,7 @@ export const apps = {
       meta: {
         description:
           "Emelia is an all-in-one B2B prospecting tool offering features like cold-emailing, LinkedIn outreach, email warm-up, email finder, and LinkedIn Sales Navigator scraping.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/emelia-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/emelia-logo.jpeg",
         toolsCount: 22,
         totalInstallCount: 0,
       },
@@ -9657,7 +9657,7 @@ export const apps = {
       appName: "Endorsal",
       description:
         "Endorsal automates the collection and display of customer testimonials and reviews, enhancing social proof for businesses.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/endorsal-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/endorsal-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "endorsal",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9674,7 +9674,7 @@ export const apps = {
       meta: {
         description:
           "Endorsal automates the collection and display of customer testimonials and reviews, enhancing social proof for businesses.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/endorsal-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/endorsal-logo.png",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -9684,7 +9684,7 @@ export const apps = {
       appName: "Enginemailer",
       description:
         "Enginemailer is an email marketing platform that enables businesses to manage contacts, design campaigns, and send personalized emails.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/enginemailer-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/enginemailer-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "enginemailer",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9697,7 +9697,7 @@ export const apps = {
       meta: {
         description:
           "Enginemailer is an email marketing platform that enables businesses to manage contacts, design campaigns, and send personalized emails.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/enginemailer-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/enginemailer-logo.svg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -9707,7 +9707,7 @@ export const apps = {
       appName: "Enigma",
       description:
         "Enigma provides comprehensive data on U.S. businesses, offering insights into their identity and financial health to support sales, marketing, risk assessment, and compliance processes.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/enigma-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/enigma-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "enigma",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9720,7 +9720,7 @@ export const apps = {
       meta: {
         description:
           "Enigma provides comprehensive data on U.S. businesses, offering insights into their identity and financial health to support sales, marketing, risk assessment, and compliance processes.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/enigma-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/enigma-logo.jpeg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -9730,7 +9730,7 @@ export const apps = {
       appName: "Eodhd apis",
       description:
         "EODHD APIs provide comprehensive financial data, including historical stock market data, live stock prices, fundamental data, and more, accessible via REST and WebSocket APIs.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/eodhd_apis-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/eodhd_apis-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "eodhd_apis",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9743,7 +9743,7 @@ export const apps = {
       meta: {
         description:
           "EODHD APIs provide comprehensive financial data, including historical stock market data, live stock prices, fundamental data, and more, accessible via REST and WebSocket APIs.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/eodhd_apis-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/eodhd_apis-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -9776,7 +9776,7 @@ export const apps = {
       appName: "Espocrm",
       description:
         "EspoCRM is an open-source web application that allows businesses to manage their customer relationships effectively.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/espocrm-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/espocrm-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "espocrm",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9793,7 +9793,7 @@ export const apps = {
       meta: {
         description:
           "EspoCRM is an open-source web application that allows businesses to manage their customer relationships effectively.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/espocrm-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/espocrm-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -9854,7 +9854,7 @@ export const apps = {
       appName: "Evenium",
       description:
         "Evenium is an all-in-one event management platform that simplifies the planning, execution, and analysis of professional events.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/evenium-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/evenium-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "evenium",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9867,7 +9867,7 @@ export const apps = {
       meta: {
         description:
           "Evenium is an all-in-one event management platform that simplifies the planning, execution, and analysis of professional events.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/evenium-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/evenium-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -9877,7 +9877,7 @@ export const apps = {
       appName: "Eventee",
       description:
         "Eventee is an intuitive mobile and web app that enhances attendee experience and engagement at in-person, virtual, or hybrid events.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/eventee-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/eventee-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "eventee",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9890,7 +9890,7 @@ export const apps = {
       meta: {
         description:
           "Eventee is an intuitive mobile and web app that enhances attendee experience and engagement at in-person, virtual, or hybrid events.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/eventee-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/eventee-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -9900,7 +9900,7 @@ export const apps = {
       appName: "Eventzilla",
       description:
         "Eventzilla is an event management platform that provides tools for creating, promoting, and managing events, including ticketing, registration, and attendee management.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/eventzilla-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/eventzilla-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "eventzilla",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9913,7 +9913,7 @@ export const apps = {
       meta: {
         description:
           "Eventzilla is an event management platform that provides tools for creating, promoting, and managing events, including ticketing, registration, and attendee management.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/eventzilla-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/eventzilla-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -9946,7 +9946,7 @@ export const apps = {
       appName: "Eversign",
       description:
         "Xodo Sign is a cloud-based digital signature solution that allows users to sign, send, and manage documents online.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/eversign-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/eversign-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "eversign",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9959,7 +9959,7 @@ export const apps = {
       meta: {
         description:
           "Xodo Sign is a cloud-based digital signature solution that allows users to sign, send, and manage documents online.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/eversign-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/eversign-logo.png",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -9969,7 +9969,7 @@ export const apps = {
       appName: "Excel",
       description:
         "Microsoft Excel is a powerful spreadsheet application for data analysis, calculations, and visualization, enabling users to organize and process data with formulas, charts, and pivot tables",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/Excel.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/Excel.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "excel",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -9982,7 +9982,7 @@ export const apps = {
       meta: {
         description:
           "Microsoft Excel is a powerful spreadsheet application for data analysis, calculations, and visualization, enabling users to organize and process data with formulas, charts, and pivot tables",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/Excel.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/Excel.png",
         toolsCount: 49,
         totalInstallCount: 0,
       },
@@ -9992,7 +9992,7 @@ export const apps = {
       appName: "Expofp",
       description:
         "ExpoFP provides free interactive floor plan software for expos and conferences.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/expofp_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/expofp_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "expofp",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10005,7 +10005,7 @@ export const apps = {
       meta: {
         description:
           "ExpoFP provides free interactive floor plan software for expos and conferences.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/expofp_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/expofp_round3_20250722.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -10015,7 +10015,7 @@ export const apps = {
       appName: "Extracta ai",
       description:
         "Extracta.ai is an AI-powered platform that automates data extraction from various document types, including PDFs, images, and text files, without requiring prior training.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/extracta_ai-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/extracta_ai-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "extracta_ai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10028,7 +10028,7 @@ export const apps = {
       meta: {
         description:
           "Extracta.ai is an AI-powered platform that automates data extraction from various document types, including PDFs, images, and text files, without requiring prior training.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/extracta_ai-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/extracta_ai-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -10084,7 +10084,7 @@ export const apps = {
       appName: "Felt",
       description:
         "Felt is a modern GIS platform that allows users to create, modify, and share interactive maps, integrating powerful mapping capabilities into various workflows and applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/felt-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/felt-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "felt",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10097,7 +10097,7 @@ export const apps = {
       meta: {
         description:
           "Felt is a modern GIS platform that allows users to create, modify, and share interactive maps, integrating powerful mapping capabilities into various workflows and applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/felt-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/felt-logo.svg",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -10130,7 +10130,7 @@ export const apps = {
       appName: "Fidel api",
       description:
         "Fidel API provides a developer-friendly, secure, and reliable API for businesses to link payment cards with mobile and web applications, enabling real-time transaction monitoring and event-based experiences.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fidel_api-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fidel_api-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "fidel_api",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10143,7 +10143,7 @@ export const apps = {
       meta: {
         description:
           "Fidel API provides a developer-friendly, secure, and reliable API for businesses to link payment cards with mobile and web applications, enabling real-time transaction monitoring and event-based experiences.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fidel_api-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fidel_api-logo.png",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -10176,7 +10176,7 @@ export const apps = {
       appName: "Fillout forms",
       description:
         "Fillout is a platform that allows users to create and manage forms, offering a REST API for programmatic access to form data.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fillout_forms-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fillout_forms-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "fillout_forms",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10189,7 +10189,7 @@ export const apps = {
       meta: {
         description:
           "Fillout is a platform that allows users to create and manage forms, offering a REST API for programmatic access to form data.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fillout_forms-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fillout_forms-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -10199,7 +10199,7 @@ export const apps = {
       appName: "Findymail",
       description:
         "Findymail is a B2B email and phone data provider offering verified contact information, email verification, automated exports, and CRM enrichment to enhance sales prospecting and outreach efforts.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/findymail_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/findymail_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "findymail",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10216,7 +10216,7 @@ export const apps = {
       meta: {
         description:
           "Findymail is a B2B email and phone data provider offering verified contact information, email verification, automated exports, and CRM enrichment to enhance sales prospecting and outreach efforts.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/findymail_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/findymail_round3_20250722.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -10295,7 +10295,7 @@ export const apps = {
       appName: "Fireberry",
       description:
         "Fireberry is a CRM platform that offers integrations with various tools and applications to streamline business processes.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fireberry-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fireberry-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "fireberry",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10308,7 +10308,7 @@ export const apps = {
       meta: {
         description:
           "Fireberry is a CRM platform that offers integrations with various tools and applications to streamline business processes.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fireberry-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fireberry-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -10341,7 +10341,7 @@ export const apps = {
       appName: "Fixer",
       description:
         "Fixer is a currency data API providing real-time and historical exchange rates for 170 world currencies.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/fixer_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/fixer_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "fixer",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10354,7 +10354,7 @@ export const apps = {
       meta: {
         description:
           "Fixer is a currency data API providing real-time and historical exchange rates for 170 world currencies.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/fixer_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/fixer_round3_20250722.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -10364,7 +10364,7 @@ export const apps = {
       appName: "Fixer io",
       description:
         "Fixer.io is a simple and lightweight API for current and historical foreign exchange rates and currency conversion.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fixer_io-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fixer_io-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "fixer_io",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10377,7 +10377,7 @@ export const apps = {
       meta: {
         description:
           "Fixer.io is a simple and lightweight API for current and historical foreign exchange rates and currency conversion.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/fixer_io-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/fixer_io-logo.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -10387,7 +10387,7 @@ export const apps = {
       appName: "Flexisign",
       description:
         "FlexiSign is a privacy and security-focused e-signature tool that simplifies how you sign, send, and manage documents.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/flexisign-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/flexisign-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "flexisign",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10400,7 +10400,7 @@ export const apps = {
       meta: {
         description:
           "FlexiSign is a privacy and security-focused e-signature tool that simplifies how you sign, send, and manage documents.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/flexisign-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/flexisign-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -10410,7 +10410,7 @@ export const apps = {
       appName: "Flowiseai",
       description:
         "FlowiseAI is an open-source generative AI development platform for building AI Agents and LLM workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/flowiseai-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/flowiseai-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "flowiseai",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10423,7 +10423,7 @@ export const apps = {
       meta: {
         description:
           "FlowiseAI is an open-source generative AI development platform for building AI Agents and LLM workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/flowiseai-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/flowiseai-logo.svg",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -10460,7 +10460,7 @@ export const apps = {
       appName: "Folk",
       description:
         "folk is a next-generation CRM designed for teams to manage and nurture their relationships efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/folk_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/folk_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "folk",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10473,7 +10473,7 @@ export const apps = {
       meta: {
         description:
           "folk is a next-generation CRM designed for teams to manage and nurture their relationships efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/folk_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/folk_round3_20250722.png",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -10529,7 +10529,7 @@ export const apps = {
       appName: "Formdesk",
       description:
         "Formdesk is an online form builder that allows users to create and manage professional online forms with flexible features and integrations.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/formdesk-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/formdesk-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "formdesk",
       createdAt: "2025-11-22T20:42:33.164Z",
@@ -10542,7 +10542,7 @@ export const apps = {
       meta: {
         description:
           "Formdesk is an online form builder that allows users to create and manage professional online forms with flexible features and integrations.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/formdesk-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/formdesk-logo.svg",
         toolsCount: 24,
         totalInstallCount: 0,
       },
@@ -10629,7 +10629,7 @@ export const apps = {
       appName: "Gagelist",
       description:
         "GageList is a user-friendly calibration management platform that simplifies the integration process with intuitive interfaces and straightforward APIs, enabling seamless connection with existing tools and workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gagelist-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gagelist-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "gagelist",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -10642,7 +10642,7 @@ export const apps = {
       meta: {
         description:
           "GageList is a user-friendly calibration management platform that simplifies the integration process with intuitive interfaces and straightforward APIs, enabling seamless connection with existing tools and workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gagelist-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gagelist-logo.jpeg",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -10652,7 +10652,7 @@ export const apps = {
       appName: "Gamma",
       description:
         "Gamma helps create beautiful, interactive content and presentations using AI. This integration enables programmatic generation via Gamma’s API.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gamma-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gamma-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "gamma",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -10665,7 +10665,7 @@ export const apps = {
       meta: {
         description:
           "Gamma helps create beautiful, interactive content and presentations using AI. This integration enables programmatic generation via Gamma’s API.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gamma-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gamma-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -10675,7 +10675,7 @@ export const apps = {
       appName: "Gan ai",
       description:
         "Gan.AI provides advanced APIs for text-to-speech, voice cloning, and video personalization, enabling developers to integrate natural and expressive speech synthesis into their applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gan_ai-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gan_ai-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "gan_ai",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -10693,7 +10693,7 @@ export const apps = {
       meta: {
         description:
           "Gan.AI provides advanced APIs for text-to-speech, voice cloning, and video personalization, enabling developers to integrate natural and expressive speech synthesis into their applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gan_ai-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gan_ai-logo.svg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -10730,7 +10730,7 @@ export const apps = {
       appName: "Gender api",
       description:
         "Gender API determines the gender of a first name, email address, or username.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gender_api-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gender_api-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "gender_api",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -10743,7 +10743,7 @@ export const apps = {
       meta: {
         description:
           "Gender API determines the gender of a first name, email address, or username.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gender_api-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gender_api-logo.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -10776,7 +10776,7 @@ export const apps = {
       appName: "Genderize",
       description:
         "Genderize is an API that predicts the gender of a person based on their first name, providing statistical probabilities for male or female classifications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/genderize-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/genderize-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "genderize",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -10793,7 +10793,7 @@ export const apps = {
       meta: {
         description:
           "Genderize is an API that predicts the gender of a person based on their first name, providing statistical probabilities for male or female classifications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/genderize-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/genderize-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -10831,7 +10831,7 @@ export const apps = {
       appName: "Geocodio",
       description:
         "Geocodio provides straightforward and easy-to-use geocoding, reverse geocoding, and data matching services for US and Canadian addresses.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/geocodio-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/geocodio-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "geocodio",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -10844,7 +10844,7 @@ export const apps = {
       meta: {
         description:
           "Geocodio provides straightforward and easy-to-use geocoding, reverse geocoding, and data matching services for US and Canadian addresses.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/geocodio-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/geocodio-logo.svg",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -10854,7 +10854,7 @@ export const apps = {
       appName: "Geokeo",
       description:
         "Geokeo provides geocoding services, converting addresses to coordinates and vice versa, with a free tier offering 2,500 daily API requests.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/geokeo-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/geokeo-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "geokeo",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -10867,7 +10867,7 @@ export const apps = {
       meta: {
         description:
           "Geokeo provides geocoding services, converting addresses to coordinates and vice versa, with a free tier offering 2,500 daily API requests.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/geokeo-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/geokeo-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -10923,7 +10923,7 @@ export const apps = {
       appName: "Gigasheet",
       description:
         "Gigasheet is a big data automation platform that offers a spreadsheet-like interface for analyzing and managing large datasets, enabling users to automate tasks, integrate with various data sources, and streamline data workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gigasheet-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gigasheet-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "gigasheet",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -10936,7 +10936,7 @@ export const apps = {
       meta: {
         description:
           "Gigasheet is a big data automation platform that offers a spreadsheet-like interface for analyzing and managing large datasets, enabling users to automate tasks, integrate with various data sources, and streamline data workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gigasheet-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gigasheet-logo.png",
         toolsCount: 29,
         totalInstallCount: 0,
       },
@@ -11065,7 +11065,7 @@ export const apps = {
       appName: "Gleap",
       description:
         "Gleap is an all-in-one customer feedback tool for apps and websites, enabling direct communication with users to build better software by discovering their everyday pain points.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gleap-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gleap-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "gleap",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11078,7 +11078,7 @@ export const apps = {
       meta: {
         description:
           "Gleap is an all-in-one customer feedback tool for apps and websites, enabling direct communication with users to build better software by discovering their everyday pain points.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gleap-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gleap-logo.svg",
         toolsCount: 29,
         totalInstallCount: 0,
       },
@@ -11180,7 +11180,7 @@ export const apps = {
       appName: "Google address validation",
       description:
         "The Address Validation API allows developers to verify the accuracy of addresses by validating and standardizing them, and determining their geocode.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google_address_validation-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google_address_validation-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "google_address_validation",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11193,7 +11193,7 @@ export const apps = {
       meta: {
         description:
           "The Address Validation API allows developers to verify the accuracy of addresses by validating and standardizing them, and determining their geocode.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google_address_validation-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google_address_validation-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -11203,7 +11203,7 @@ export const apps = {
       appName: "Google Admin",
       description:
         "Google Admin Console for managing Google Workspace users, groups, and organizational units.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google_admin-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google_admin-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "google_admin",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11216,7 +11216,7 @@ export const apps = {
       meta: {
         description:
           "Google Admin Console for managing Google Workspace users, groups, and organizational units.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google_admin-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google_admin-logo.svg",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -11226,7 +11226,7 @@ export const apps = {
       appName: "Google Classroom",
       description:
         "Google Classroom is a free web service developed by Google for schools that aims to simplify creating, distributing, and grading assignments",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/classroom.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/classroom.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "google_classroom",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11239,7 +11239,7 @@ export const apps = {
       meta: {
         description:
           "Google Classroom is a free web service developed by Google for schools that aims to simplify creating, distributing, and grading assignments",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/classroom.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/classroom.svg",
         toolsCount: 31,
         totalInstallCount: 0,
       },
@@ -11249,7 +11249,7 @@ export const apps = {
       appName: "Google cloud vision",
       description:
         "Google Cloud Vision API enables developers to integrate vision detection features into applications, including image labeling, face and landmark detection, optical character recognition (OCR), and explicit content tagging.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google_cloud_vision-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google_cloud_vision-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "google_cloud_vision",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11266,7 +11266,7 @@ export const apps = {
       meta: {
         description:
           "Google Cloud Vision API enables developers to integrate vision detection features into applications, including image labeling, face and landmark detection, optical character recognition (OCR), and explicit content tagging.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google_cloud_vision-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google_cloud_vision-logo.svg",
         toolsCount: 23,
         totalInstallCount: 0,
       },
@@ -11276,7 +11276,7 @@ export const apps = {
       appName: "Google search console",
       description:
         "Google Search Console provides tools to monitor, maintain, and troubleshoot your site's presence in Google Search results.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google_search_console-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google_search_console-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "google_search_console",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11289,7 +11289,7 @@ export const apps = {
       meta: {
         description:
           "Google Search Console provides tools to monitor, maintain, and troubleshoot your site's presence in Google Search results.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google_search_console-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google_search_console-logo.svg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -11299,7 +11299,7 @@ export const apps = {
       appName: "Google Slides",
       description:
         "Google Slides is a cloud-based presentation editor with real-time collaboration, template gallery, and integration with other Google Workspace apps",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google-slides.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google-slides.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "googleslides",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11315,7 +11315,7 @@ export const apps = {
       meta: {
         description:
           "Google Slides is a cloud-based presentation editor with real-time collaboration, template gallery, and integration with other Google Workspace apps",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/google-slides.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/google-slides.svg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -11444,7 +11444,7 @@ export const apps = {
       appName: "Groqcloud",
       description:
         "GroqCloud provides high-performance AI inference services, enabling developers to deploy and manage AI models efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/groqcloud-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/groqcloud-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "groqcloud",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11457,7 +11457,7 @@ export const apps = {
       meta: {
         description:
           "GroqCloud provides high-performance AI inference services, enabling developers to deploy and manage AI models efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/groqcloud-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/groqcloud-logo.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -11467,7 +11467,7 @@ export const apps = {
       appName: "Habitica",
       description:
         "Habitica is an open-source task management application that gamifies productivity by turning tasks into role-playing game elements.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/habitica-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/habitica-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "habitica",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11480,7 +11480,7 @@ export const apps = {
       meta: {
         description:
           "Habitica is an open-source task management application that gamifies productivity by turning tasks into role-playing game elements.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/habitica-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/habitica-logo.png",
         toolsCount: 47,
         totalInstallCount: 0,
       },
@@ -11513,7 +11513,7 @@ export const apps = {
       appName: "Hashnode",
       description:
         "Hashnode is a blogging platform tailored for developers, offering tools to create, manage, and publish content seamlessly.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hashnode-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hashnode-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "hashnode",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11526,7 +11526,7 @@ export const apps = {
       meta: {
         description:
           "Hashnode is a blogging platform tailored for developers, offering tools to create, manage, and publish content seamlessly.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hashnode-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hashnode-logo.svg",
         toolsCount: 19,
         totalInstallCount: 0,
       },
@@ -11559,7 +11559,7 @@ export const apps = {
       appName: "Helpdesk",
       description:
         "HelpDesk is a ticketing system designed to streamline customer support by organizing and managing inquiries efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/helpdesk-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/helpdesk-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "helpdesk",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11572,7 +11572,7 @@ export const apps = {
       meta: {
         description:
           "HelpDesk is a ticketing system designed to streamline customer support by organizing and managing inquiries efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/helpdesk-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/helpdesk-logo.jpeg",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -11634,7 +11634,7 @@ export const apps = {
       appName: "Heyreach",
       description:
         "HeyReach is a multichannel outreach platform designed to help businesses and professionals engage with their audience effectively.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/heyreach_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/heyreach_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "heyreach",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11647,7 +11647,7 @@ export const apps = {
       meta: {
         description:
           "HeyReach is a multichannel outreach platform designed to help businesses and professionals engage with their audience effectively.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/heyreach_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/heyreach_round3_20250722.png",
         toolsCount: 16,
         totalInstallCount: 0,
       },
@@ -11749,7 +11749,7 @@ export const apps = {
       appName: "Hookdeck",
       description:
         "Hookdeck is a platform that enables developers to manage, monitor, and secure webhooks and API events.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hookdeck-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hookdeck-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "hookdeck",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11762,7 +11762,7 @@ export const apps = {
       meta: {
         description:
           "Hookdeck is a platform that enables developers to manage, monitor, and secure webhooks and API events.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hookdeck-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hookdeck-logo.svg",
         toolsCount: 39,
         totalInstallCount: 0,
       },
@@ -11893,7 +11893,7 @@ export const apps = {
       appName: "Hyperbrowser",
       description:
         "Hyperbrowser is a next-generation platform empowering AI agents and enabling effortless, scalable browser automation.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hyperbrowser-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hyperbrowser-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "hyperbrowser",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11906,7 +11906,7 @@ export const apps = {
       meta: {
         description:
           "Hyperbrowser is a next-generation platform empowering AI agents and enabling effortless, scalable browser automation.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hyperbrowser-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hyperbrowser-logo.svg",
         toolsCount: 25,
         totalInstallCount: 0,
       },
@@ -11943,7 +11943,7 @@ export const apps = {
       appName: "Hystruct",
       description:
         "Hystruct is an AI-driven web scraping tool that simplifies data extraction from websites using predefined schemas, supporting various data fields like job listings and e-commerce.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hystruct-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hystruct-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "hystruct",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -11956,7 +11956,7 @@ export const apps = {
       meta: {
         description:
           "Hystruct is an AI-driven web scraping tool that simplifies data extraction from websites using predefined schemas, supporting various data fields like job listings and e-commerce.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/hystruct-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/hystruct-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -11989,7 +11989,7 @@ export const apps = {
       appName: "Identitycheck",
       description:
         "IdentityCheck is a verification solution designed to authenticate user identities with precision and speed, utilizing advanced algorithms and comprehensive data sources to ensure accurate validation, mitigate fraud, and enhance security.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/identitycheck-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/identitycheck-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "identitycheck",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12002,7 +12002,7 @@ export const apps = {
       meta: {
         description:
           "IdentityCheck is a verification solution designed to authenticate user identities with precision and speed, utilizing advanced algorithms and comprehensive data sources to ensure accurate validation, mitigate fraud, and enhance security.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/identitycheck-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/identitycheck-logo.png",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -12063,7 +12063,7 @@ export const apps = {
       appName: "Imagior",
       description:
         "Imagior is an AI-powered automated image generation software that enables businesses and creators to create and customize images using templates via no-code or API solutions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/imagior-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/imagior-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "imagior",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12076,7 +12076,7 @@ export const apps = {
       meta: {
         description:
           "Imagior is an AI-powered automated image generation software that enables businesses and creators to create and customize images using templates via no-code or API solutions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/imagior-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/imagior-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -12086,7 +12086,7 @@ export const apps = {
       appName: "Imejis io",
       description:
         "Imejis.io is an API-based image generation platform that enables users to create and customize images seamlessly through a user-friendly interface and a rich library of templates.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/imejis_io-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/imejis_io-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "imejis_io",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12099,7 +12099,7 @@ export const apps = {
       meta: {
         description:
           "Imejis.io is an API-based image generation platform that enables users to create and customize images seamlessly through a user-friendly interface and a rich library of templates.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/imejis_io-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/imejis_io-logo.jpeg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -12182,7 +12182,7 @@ export const apps = {
       appName: "Insighto ai",
       description:
         "Insighto.ai is an AI-powered communication platform that enables businesses to create and deploy conversational AI chatbots and voice agents for enhanced customer engagement across multiple channels.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/insighto_ai-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/insighto_ai-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "insighto_ai",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12200,7 +12200,7 @@ export const apps = {
       meta: {
         description:
           "Insighto.ai is an AI-powered communication platform that enables businesses to create and deploy conversational AI chatbots and voice agents for enhanced customer engagement across multiple channels.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/insighto_ai-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/insighto_ai-logo.jpeg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -12210,7 +12210,7 @@ export const apps = {
       appName: "Instagram",
       description:
         "Instagram is a social media platform for sharing photos, videos, and stories. Only supports Instagram Business and Creator accounts, not Instagram Personal accounts.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/instagram.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/instagram.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "instagram",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12223,7 +12223,7 @@ export const apps = {
       meta: {
         description:
           "Instagram is a social media platform for sharing photos, videos, and stories. Only supports Instagram Business and Creator accounts, not Instagram Personal accounts.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/instagram.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/instagram.svg",
         toolsCount: 16,
         totalInstallCount: 0,
       },
@@ -12256,7 +12256,7 @@ export const apps = {
       appName: "Intelliprint",
       description:
         "Intelliprint offers a Hybrid Mail API that enables businesses to automate their letter printing and mailing processes, providing features like same-day printing, secure authentication, and real-time tracking.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/intelliprint-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/intelliprint-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "intelliprint",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12269,7 +12269,7 @@ export const apps = {
       meta: {
         description:
           "Intelliprint offers a Hybrid Mail API that enables businesses to automate their letter printing and mailing processes, providing features like same-day printing, secure authentication, and real-time tracking.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/intelliprint-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/intelliprint-logo.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -12302,7 +12302,7 @@ export const apps = {
       appName: "Ip2location io",
       description:
         "IP2Location.io provides a fast and accurate IP Geolocation API tool to determine a user's location and use the geolocation information in different use cases.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ip2location_io-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ip2location_io-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ip2location_io",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12315,7 +12315,7 @@ export const apps = {
       meta: {
         description:
           "IP2Location.io provides a fast and accurate IP Geolocation API tool to determine a user's location and use the geolocation information in different use cases.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ip2location_io-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ip2location_io-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -12325,7 +12325,7 @@ export const apps = {
       appName: "Ip2proxy",
       description:
         "IP2Proxy is a proxy detection web service that identifies anonymous proxies, VPNs, TOR exit nodes, search engine robots, and residential proxies by IP address.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ip2proxy-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ip2proxy-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ip2proxy",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12338,7 +12338,7 @@ export const apps = {
       meta: {
         description:
           "IP2Proxy is a proxy detection web service that identifies anonymous proxies, VPNs, TOR exit nodes, search engine robots, and residential proxies by IP address.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ip2proxy-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ip2proxy-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -12417,7 +12417,7 @@ export const apps = {
       appName: "Iqair airvisual",
       description:
         "IQAir AirVisual provides global air quality data through its API, offering real-time and historical information on air pollution levels.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/iqair_airvisual-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/iqair_airvisual-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "iqair_airvisual",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12430,7 +12430,7 @@ export const apps = {
       meta: {
         description:
           "IQAir AirVisual provides global air quality data through its API, offering real-time and historical information on air pollution levels.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/iqair_airvisual-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/iqair_airvisual-logo.svg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -12463,7 +12463,7 @@ export const apps = {
       appName: "Jobnimbus",
       description:
         "JobNimbus is a CRM and project management software designed for contractors, helping streamline scheduling, estimates, invoicing, and job tracking.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/jobnimbus-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/jobnimbus-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "jobnimbus",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12476,7 +12476,7 @@ export const apps = {
       meta: {
         description:
           "JobNimbus is a CRM and project management software designed for contractors, helping streamline scheduling, estimates, invoicing, and job tracking.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/jobnimbus-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/jobnimbus-logo.jpeg",
         toolsCount: 22,
         totalInstallCount: 0,
       },
@@ -12536,7 +12536,7 @@ export const apps = {
       appName: "Kadoa",
       description:
         "Kadoa is an API-first platform that enables users to create, manage, and monitor data extraction workflows from unstructured data sources.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kadoa-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kadoa-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "kadoa",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12549,7 +12549,7 @@ export const apps = {
       meta: {
         description:
           "Kadoa is an API-first platform that enables users to create, manage, and monitor data extraction workflows from unstructured data sources.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kadoa-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kadoa-logo.svg",
         toolsCount: 27,
         totalInstallCount: 0,
       },
@@ -12582,7 +12582,7 @@ export const apps = {
       appName: "Kaleido",
       description:
         "Kaleido is a full-stack platform for building and managing enterprise blockchain networks and applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kaleido-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kaleido-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "kaleido",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12595,7 +12595,7 @@ export const apps = {
       meta: {
         description:
           "Kaleido is a full-stack platform for building and managing enterprise blockchain networks and applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kaleido-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kaleido-logo.svg",
         toolsCount: 17,
         totalInstallCount: 0,
       },
@@ -12628,7 +12628,7 @@ export const apps = {
       appName: "Kibana",
       description:
         "Kibana is a visualization and analytics platform for Elasticsearch, offering dashboards, data exploration, and monitoring capabilities for gaining insights from data",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kibana.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kibana.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "kibana",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12641,7 +12641,7 @@ export const apps = {
       meta: {
         description:
           "Kibana is a visualization and analytics platform for Elasticsearch, offering dashboards, data exploration, and monitoring capabilities for gaining insights from data",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kibana.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kibana.svg",
         toolsCount: 49,
         totalInstallCount: 0,
       },
@@ -12651,7 +12651,7 @@ export const apps = {
       appName: "Kickbox",
       description:
         "Kickbox provides an API for real-time email verification, list cleaning, and quality scoring to ensure email deliverability.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kickbox-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kickbox-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "kickbox",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12664,7 +12664,7 @@ export const apps = {
       meta: {
         description:
           "Kickbox provides an API for real-time email verification, list cleaning, and quality scoring to ensure email deliverability.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kickbox-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kickbox-logo.svg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -12720,7 +12720,7 @@ export const apps = {
       appName: "Kontent ai",
       description:
         "Kontent.ai is a headless CMS that delivers content via API, allowing developers to build websites and applications using their preferred frameworks, languages, or libraries.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kontent_ai-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kontent_ai-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "kontent_ai",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12733,7 +12733,7 @@ export const apps = {
       meta: {
         description:
           "Kontent.ai is a headless CMS that delivers content via API, allowing developers to build websites and applications using their preferred frameworks, languages, or libraries.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kontent_ai-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kontent_ai-logo.svg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -12743,7 +12743,7 @@ export const apps = {
       appName: "Kraken io",
       description:
         "Kraken.io is an image optimization and compression platform that helps reduce image file sizes without compromising quality.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kraken_io-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kraken_io-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "kraken_io",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12756,7 +12756,7 @@ export const apps = {
       meta: {
         description:
           "Kraken.io is an image optimization and compression platform that helps reduce image file sizes without compromising quality.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/kraken_io-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/kraken_io-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -12789,7 +12789,7 @@ export const apps = {
       appName: "Labs64 netlicensing",
       description:
         "Labs64 NetLicensing is a license management software designed to help software vendors and developers efficiently manage their software licenses and distribution.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/labs64_netlicensing-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/labs64_netlicensing-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "labs64_netlicensing",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12802,7 +12802,7 @@ export const apps = {
       meta: {
         description:
           "Labs64 NetLicensing is a license management software designed to help software vendors and developers efficiently manage their software licenses and distribution.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/labs64_netlicensing-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/labs64_netlicensing-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -12812,7 +12812,7 @@ export const apps = {
       appName: "Landbot",
       description:
         "Landbot is a no-code chatbot builder that enables businesses to create conversational experiences for customer engagement, lead generation, and support across various messaging channels.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/landbot-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/landbot-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "landbot",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12830,7 +12830,7 @@ export const apps = {
       meta: {
         description:
           "Landbot is a no-code chatbot builder that enables businesses to create conversational experiences for customer engagement, lead generation, and support across various messaging channels.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/landbot-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/landbot-logo.jpeg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -12863,7 +12863,7 @@ export const apps = {
       appName: "Leadfeeder",
       description:
         "Leadfeeder identifies companies visiting your website and converts them into high-value leads.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/leadfeeder-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/leadfeeder-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "leadfeeder",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12880,7 +12880,7 @@ export const apps = {
       meta: {
         description:
           "Leadfeeder identifies companies visiting your website and converts them into high-value leads.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/leadfeeder-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/leadfeeder-logo.jpeg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -12890,7 +12890,7 @@ export const apps = {
       appName: "Leadoku",
       description:
         "Leadoku is a platform designed to streamline lead management and sales processes.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/leadoku.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/leadoku.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "leadoku",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12903,7 +12903,7 @@ export const apps = {
       meta: {
         description:
           "Leadoku is a platform designed to streamline lead management and sales processes.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/leadoku.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/leadoku.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -12913,7 +12913,7 @@ export const apps = {
       appName: "Leiga",
       description:
         "Leiga is an AI-powered project management tool that automates tasks and enhances team collaboration.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/leiga-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/leiga-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "leiga",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12926,7 +12926,7 @@ export const apps = {
       meta: {
         description:
           "Leiga is an AI-powered project management tool that automates tasks and enhances team collaboration.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/leiga-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/leiga-logo.svg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -12986,7 +12986,7 @@ export const apps = {
       appName: "Lessonspace",
       description:
         "Lessonspace is an online collaborative classroom platform that enables educators and students to engage in interactive learning sessions with features like video conferencing, whiteboards, and resource sharing.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/lessonspace-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/lessonspace-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "lessonspace",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -12999,7 +12999,7 @@ export const apps = {
       meta: {
         description:
           "Lessonspace is an online collaborative classroom platform that enables educators and students to engage in interactive learning sessions with features like video conferencing, whiteboards, and resource sharing.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/lessonspace-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/lessonspace-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -13078,7 +13078,7 @@ export const apps = {
       appName: "Livesession",
       description:
         "LiveSession is a session replay and user behavior analytics tool that helps you understand how users interact with your website.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/livesession-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/livesession-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "livesession",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13091,7 +13091,7 @@ export const apps = {
       meta: {
         description:
           "LiveSession is a session replay and user behavior analytics tool that helps you understand how users interact with your website.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/livesession-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/livesession-logo.svg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -13101,7 +13101,7 @@ export const apps = {
       appName: "Lodgify",
       description:
         "Lodgify is an all-in-one vacation rental software that enables property owners and managers to create bookable websites, synchronize property data across multiple channels, and manage guest reservations and communications from a single platform.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/lodgify-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/lodgify-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "lodgify",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13118,7 +13118,7 @@ export const apps = {
       meta: {
         description:
           "Lodgify is an all-in-one vacation rental software that enables property owners and managers to create bookable websites, synchronize property data across multiple channels, and manage guest reservations and communications from a single platform.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/lodgify-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/lodgify-logo.svg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -13128,7 +13128,7 @@ export const apps = {
       appName: "Logo dev",
       description:
         "Logo.dev provides a high-quality logo API and company brand database, enabling developers to retrieve official high-resolution logos from any domain without scraping or manual effort.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/logo_dev-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/logo_dev-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "logo_dev",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13141,7 +13141,7 @@ export const apps = {
       meta: {
         description:
           "Logo.dev provides a high-quality logo API and company brand database, enabling developers to retrieve official high-resolution logos from any domain without scraping or manual effort.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/logo_dev-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/logo_dev-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -13151,7 +13151,7 @@ export const apps = {
       appName: "Loomio",
       description:
         "Loomio is a collaborative decision-making platform that enables groups to discuss, propose, and make decisions together.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/loomio-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/loomio-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "loomio",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13164,7 +13164,7 @@ export const apps = {
       meta: {
         description:
           "Loomio is a collaborative decision-making platform that enables groups to discuss, propose, and make decisions together.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/loomio-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/loomio-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -13174,7 +13174,7 @@ export const apps = {
       appName: "Loyverse",
       description:
         "Loyverse is a point-of-sale (POS) system designed for small businesses, offering features like sales management, inventory tracking, and customer engagement tools.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/loyverse-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/loyverse-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "loyverse",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13191,7 +13191,7 @@ export const apps = {
       meta: {
         description:
           "Loyverse is a point-of-sale (POS) system designed for small businesses, offering features like sales management, inventory tracking, and customer engagement tools.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/loyverse-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/loyverse-logo.png",
         toolsCount: 24,
         totalInstallCount: 0,
       },
@@ -13201,7 +13201,7 @@ export const apps = {
       appName: "Magnetic",
       description:
         "Magnetic is an all-in-one platform designed to help professional services firms manage projects, resources, and finances efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/magnetic-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/magnetic-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "magnetic",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13219,7 +13219,7 @@ export const apps = {
       meta: {
         description:
           "Magnetic is an all-in-one platform designed to help professional services firms manage projects, resources, and finances efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/magnetic-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/magnetic-logo.png",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -13252,7 +13252,7 @@ export const apps = {
       appName: "Mailboxlayer",
       description:
         "A simple REST-based JSON API for email address validation and verification.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mailboxlayer-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mailboxlayer-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mailboxlayer",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13265,7 +13265,7 @@ export const apps = {
       meta: {
         description:
           "A simple REST-based JSON API for email address validation and verification.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mailboxlayer-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mailboxlayer-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -13275,7 +13275,7 @@ export const apps = {
       appName: "Mailcheck",
       description:
         "Mailcheck is an email verification service that helps businesses validate email addresses to ensure deliverability and reduce bounce rates.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mailcheck-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mailcheck-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mailcheck",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13292,7 +13292,7 @@ export const apps = {
       meta: {
         description:
           "Mailcheck is an email verification service that helps businesses validate email addresses to ensure deliverability and reduce bounce rates.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mailcheck-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mailcheck-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -13302,7 +13302,7 @@ export const apps = {
       appName: "Mailcoach",
       description:
         "Mailcoach is an email marketing platform that allows users to manage email campaigns and subscriber lists efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mailcoach-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mailcoach-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mailcoach",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13315,7 +13315,7 @@ export const apps = {
       meta: {
         description:
           "Mailcoach is an email marketing platform that allows users to manage email campaigns and subscriber lists efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mailcoach-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mailcoach-logo.jpeg",
         toolsCount: 45,
         totalInstallCount: 0,
       },
@@ -13348,7 +13348,7 @@ export const apps = {
       appName: "Mails so",
       description:
         "Mails is an API service that provides powerful email validation capabilities to help maintain a clean and effective email list.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mails_so-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mails_so-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mails_so",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13361,7 +13361,7 @@ export const apps = {
       meta: {
         description:
           "Mails is an API service that provides powerful email validation capabilities to help maintain a clean and effective email list.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mails_so-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mails_so-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -13417,7 +13417,7 @@ export const apps = {
       appName: "Mapbox",
       description:
         "Mapbox is a platform that provides mapping, navigation, and location data services for developers to integrate into their applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mapbox-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mapbox-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mapbox",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13430,7 +13430,7 @@ export const apps = {
       meta: {
         description:
           "Mapbox is a platform that provides mapping, navigation, and location data services for developers to integrate into their applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mapbox-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mapbox-logo.svg",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -13440,7 +13440,7 @@ export const apps = {
       appName: "Mapulus",
       description:
         "Mapulus is a platform that enables users to create, manage, and analyze interactive maps, integrating with various applications to automate tasks and leverage location insights.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mapulus-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mapulus-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mapulus",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13453,7 +13453,7 @@ export const apps = {
       meta: {
         description:
           "Mapulus is a platform that enables users to create, manage, and analyze interactive maps, integrating with various applications to automate tasks and leverage location insights.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mapulus-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mapulus-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -13509,7 +13509,7 @@ export const apps = {
       appName: "Memberspot",
       description:
         "Memberspot is an online course and video-hosting platform designed to facilitate knowledge management and community engagement for businesses.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/memberspot_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/memberspot_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "memberspot",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13522,7 +13522,7 @@ export const apps = {
       meta: {
         description:
           "Memberspot is an online course and video-hosting platform designed to facilitate knowledge management and community engagement for businesses.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/memberspot_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/memberspot_round3_20250722.png",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -13532,7 +13532,7 @@ export const apps = {
       appName: "Memberstack",
       description:
         "Memberstack is a platform that enables developers to add user authentication, payments, and member management to their websites without writing backend code.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/memberstack-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/memberstack-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "memberstack",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13545,7 +13545,7 @@ export const apps = {
       meta: {
         description:
           "Memberstack is a platform that enables developers to add user authentication, payments, and member management to their websites without writing backend code.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/memberstack-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/memberstack-logo.jpeg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -13555,7 +13555,7 @@ export const apps = {
       appName: "Membervault",
       description:
         "MemberVault is a Relationship Marketing Platform that allows users to host courses, memberships, and other digital products in one place.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/membervault_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/membervault_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "membervault",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13572,7 +13572,7 @@ export const apps = {
       meta: {
         description:
           "MemberVault is a Relationship Marketing Platform that allows users to host courses, memberships, and other digital products in one place.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/membervault_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/membervault_round3_20250722.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -13582,7 +13582,7 @@ export const apps = {
       appName: "Metaphor",
       description:
         "Metaphor is a neural search engine that enables developers to perform contextually relevant searches by understanding how people describe and share content online.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/metaphor-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/metaphor-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "metaphor",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13595,7 +13595,7 @@ export const apps = {
       meta: {
         description:
           "Metaphor is a neural search engine that enables developers to perform contextually relevant searches by understanding how people describe and share content online.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/metaphor-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/metaphor-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -13605,7 +13605,7 @@ export const apps = {
       appName: "Mezmo",
       description:
         "Mezmo provides a comprehensive platform for log management and telemetry data processing, enabling organizations to collect, analyze, and manage their log data efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mezmo-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mezmo-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mezmo",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13618,7 +13618,7 @@ export const apps = {
       meta: {
         description:
           "Mezmo provides a comprehensive platform for log management and telemetry data processing, enabling organizations to collect, analyze, and manage their log data efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mezmo-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mezmo-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -13655,7 +13655,7 @@ export const apps = {
       appName: "Missive",
       description:
         "Missive is a collaborative email and chat application designed to streamline team communication and task management.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/missive-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/missive-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "missive",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13668,7 +13668,7 @@ export const apps = {
       meta: {
         description:
           "Missive is a collaborative email and chat application designed to streamline team communication and task management.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/missive-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/missive-logo.png",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -13705,7 +13705,7 @@ export const apps = {
       appName: "Moco",
       description:
         "MOCO is a business management software offering project management, time tracking, and invoicing solutions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moco-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moco-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "moco",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13723,7 +13723,7 @@ export const apps = {
       meta: {
         description:
           "MOCO is a business management software offering project management, time tracking, and invoicing solutions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moco-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moco-logo.jpeg",
         toolsCount: 25,
         totalInstallCount: 0,
       },
@@ -13733,7 +13733,7 @@ export const apps = {
       appName: "Modelry",
       description:
         "Modelry is a platform that provides tools and services for building, deploying, and managing machine learning models.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/modelry-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/modelry-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "modelry",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13746,7 +13746,7 @@ export const apps = {
       meta: {
         description:
           "Modelry is a platform that provides tools and services for building, deploying, and managing machine learning models.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/modelry-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/modelry-logo.png",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -13756,7 +13756,7 @@ export const apps = {
       appName: "Moneybird",
       description:
         "Moneybird is an online invoicing and accounting platform designed for small businesses and freelancers, offering features like invoicing, expense tracking, and financial reporting.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moneybird-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moneybird-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "moneybird",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13769,7 +13769,7 @@ export const apps = {
       meta: {
         description:
           "Moneybird is an online invoicing and accounting platform designed for small businesses and freelancers, offering features like invoicing, expense tracking, and financial reporting.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moneybird-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moneybird-logo.png",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -13779,7 +13779,7 @@ export const apps = {
       appName: "Moonclerk",
       description:
         "MoonClerk is a platform that enables businesses to accept recurring and one-time online payments.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moonclerk-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moonclerk-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "moonclerk",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13792,7 +13792,7 @@ export const apps = {
       meta: {
         description:
           "MoonClerk is a platform that enables businesses to accept recurring and one-time online payments.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moonclerk-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moonclerk-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -13802,7 +13802,7 @@ export const apps = {
       appName: "Moosend",
       description:
         "Moosend is a cloud-based, AI-powered email marketing solution that allows you to target your audience at scale.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moosend-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moosend-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "moosend",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13815,7 +13815,7 @@ export const apps = {
       meta: {
         description:
           "Moosend is a cloud-based, AI-powered email marketing solution that allows you to target your audience at scale.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/moosend-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/moosend-logo.png",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -13825,7 +13825,7 @@ export const apps = {
       appName: "Msg91",
       description:
         "MSG91 is a cloud communication platform offering secure and robust APIs for SMS, WhatsApp, Email, Voice, and more, enabling businesses to connect with their customers across multiple channels.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/msg91-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/msg91-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "msg91",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13838,7 +13838,7 @@ export const apps = {
       meta: {
         description:
           "MSG91 is a cloud communication platform offering secure and robust APIs for SMS, WhatsApp, Email, Voice, and more, enabling businesses to connect with their customers across multiple channels.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/msg91-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/msg91-logo.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -13848,7 +13848,7 @@ export const apps = {
       appName: "Mx technologies",
       description:
         "MX Technologies provides a comprehensive API platform for aggregating and enhancing financial data, enabling seamless connections to numerous financial institutions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mx_technologies-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mx_technologies-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "mx_technologies",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13861,7 +13861,7 @@ export const apps = {
       meta: {
         description:
           "MX Technologies provides a comprehensive API platform for aggregating and enhancing financial data, enabling seamless connections to numerous financial institutions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/mx_technologies-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/mx_technologies-logo.svg",
         toolsCount: 33,
         totalInstallCount: 0,
       },
@@ -13894,7 +13894,7 @@ export const apps = {
       appName: "Nango",
       description:
         "Nango provides a unified API to integrate with over 250 external APIs, offering pre-built and customizable integrations for various categories such as CRM, HR, and accounting systems.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/nango-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/nango-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "nango",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13907,7 +13907,7 @@ export const apps = {
       meta: {
         description:
           "Nango provides a unified API to integrate with over 250 external APIs, offering pre-built and customizable integrations for various categories such as CRM, HR, and accounting systems.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/nango-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/nango-logo.svg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -13917,7 +13917,7 @@ export const apps = {
       appName: "Nano nets",
       description:
         "Nanonets provides an AI-driven Intelligent Document Processing API that transforms unstructured documents into structured data, enabling efficient data extraction and workflow automation.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/nano_nets-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/nano_nets-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "nano_nets",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13930,7 +13930,7 @@ export const apps = {
       meta: {
         description:
           "Nanonets provides an AI-driven Intelligent Document Processing API that transforms unstructured documents into structured data, enabling efficient data extraction and workflow automation.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/nano_nets-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/nano_nets-logo.png",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -13986,7 +13986,7 @@ export const apps = {
       appName: "Needle",
       description:
         "Needle provides retrieval-augmented generation (RAG) tools that enable semantic search across your data, facilitating the development of AI agents and applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/needle-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/needle-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "needle",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -13999,7 +13999,7 @@ export const apps = {
       meta: {
         description:
           "Needle provides retrieval-augmented generation (RAG) tools that enable semantic search across your data, facilitating the development of AI agents and applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/needle-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/needle-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -14009,7 +14009,7 @@ export const apps = {
       appName: "Neuronwriter",
       description:
         "NeuronWriter is a content optimization tool that leverages semantic SEO and AI to enhance content creation and improve search engine rankings.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/neuronwriter-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/neuronwriter-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "neuronwriter",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14022,7 +14022,7 @@ export const apps = {
       meta: {
         description:
           "NeuronWriter is a content optimization tool that leverages semantic SEO and AI to enhance content creation and improve search engine rankings.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/neuronwriter-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/neuronwriter-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -14055,7 +14055,7 @@ export const apps = {
       appName: "Neverbounce",
       description:
         "NeverBounce provides email verification services to ensure the validity of email addresses, enhancing deliverability and reducing bounce rates.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/neverbounce_final_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/neverbounce_final_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "neverbounce",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14068,7 +14068,7 @@ export const apps = {
       meta: {
         description:
           "NeverBounce provides email verification services to ensure the validity of email addresses, enhancing deliverability and reducing bounce rates.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/neverbounce_final_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/neverbounce_final_20250722.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -14128,7 +14128,7 @@ export const apps = {
       appName: "Nextdns",
       description:
         "NextDNS is a DNS service that enhances internet security and privacy by blocking malicious websites, tracking scripts, and ads before they reach your device.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/nextdns-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/nextdns-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "nextdns",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14141,7 +14141,7 @@ export const apps = {
       meta: {
         description:
           "NextDNS is a DNS service that enhances internet security and privacy by blocking malicious websites, tracking scripts, and ads before they reach your device.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/nextdns-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/nextdns-logo.jpeg",
         toolsCount: 43,
         totalInstallCount: 0,
       },
@@ -14151,7 +14151,7 @@ export const apps = {
       appName: "Ninox",
       description:
         "Ninox is a low-code platform that enables users to create custom database applications tailored to their specific needs.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ninox-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ninox-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ninox",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14168,7 +14168,7 @@ export const apps = {
       meta: {
         description:
           "Ninox is a low-code platform that enables users to create custom database applications tailored to their specific needs.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ninox-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ninox-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -14178,7 +14178,7 @@ export const apps = {
       appName: "Nocrm io",
       description:
         "noCRM.io is a lead management software designed to help sales teams track and close deals efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/nocrm_io_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/nocrm_io_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "nocrm_io",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14191,7 +14191,7 @@ export const apps = {
       meta: {
         description:
           "noCRM.io is a lead management software designed to help sales teams track and close deals efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/nocrm_io_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/nocrm_io_round2_20250722.png",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -14201,7 +14201,7 @@ export const apps = {
       appName: "Npm",
       description:
         "npm is the default package manager for JavaScript and Node.js, facilitating the sharing and reuse of code, managing dependencies, and streamlining project workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/npm-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/npm-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "npm",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14214,7 +14214,7 @@ export const apps = {
       meta: {
         description:
           "npm is the default package manager for JavaScript and Node.js, facilitating the sharing and reuse of code, managing dependencies, and streamlining project workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/npm-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/npm-logo.svg",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -14247,7 +14247,7 @@ export const apps = {
       appName: "Ocrspace",
       description:
         "OCR.space provides a free and paid OCR API for extracting text from images and PDFs, returning results in JSON format.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ocrspace-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ocrspace-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ocrspace",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14260,7 +14260,7 @@ export const apps = {
       meta: {
         description:
           "OCR.space provides a free and paid OCR API for extracting text from images and PDFs, returning results in JSON format.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ocrspace-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ocrspace-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -14270,7 +14270,7 @@ export const apps = {
       appName: "Omnisend",
       description:
         "Omnisend is a marketing automation platform for ecommerce businesses, focusing on email and SMS marketing.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/omnisend_round5_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/omnisend_round5_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "omnisend",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14283,7 +14283,7 @@ export const apps = {
       meta: {
         description:
           "Omnisend is a marketing automation platform for ecommerce businesses, focusing on email and SMS marketing.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/omnisend_round5_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/omnisend_round5_20250722.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -14293,7 +14293,7 @@ export const apps = {
       appName: "Onedesk",
       description:
         "OneDesk is an all-in-one platform combining help desk and project management functionalities, enabling teams to manage customer support and project tasks seamlessly.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/onedesk-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/onedesk-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "onedesk",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14311,7 +14311,7 @@ export const apps = {
       meta: {
         description:
           "OneDesk is an all-in-one platform combining help desk and project management functionalities, enabling teams to manage customer support and project tasks seamlessly.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/onedesk-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/onedesk-logo.svg",
         toolsCount: 28,
         totalInstallCount: 0,
       },
@@ -14321,7 +14321,7 @@ export const apps = {
       appName: "Onesignal rest api",
       description:
         "The OneSignal REST API enables developers to programmatically send push notifications, emails, and SMS, manage users and subscriptions, and configure apps.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/onesignal_rest_api-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/onesignal_rest_api-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "onesignal_rest_api",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14334,7 +14334,7 @@ export const apps = {
       meta: {
         description:
           "The OneSignal REST API enables developers to programmatically send push notifications, emails, and SMS, manage users and subscriptions, and configure apps.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/onesignal_rest_api-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/onesignal_rest_api-logo.svg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -14344,7 +14344,7 @@ export const apps = {
       appName: "Onesignal user auth",
       description:
         "OneSignal is a customer engagement platform offering push notifications, email, SMS, and in-app messaging services.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/onesignal_user_auth-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/onesignal_user_auth-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "onesignal_user_auth",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14357,7 +14357,7 @@ export const apps = {
       meta: {
         description:
           "OneSignal is a customer engagement platform offering push notifications, email, SMS, and in-app messaging services.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/onesignal_user_auth-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/onesignal_user_auth-logo.svg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -14394,7 +14394,7 @@ export const apps = {
       appName: "Opencage",
       description:
         "OpenCage Geocoder provides a simple API for forward and reverse geocoding using open data sources.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/opencage-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/opencage-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "opencage",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14407,7 +14407,7 @@ export const apps = {
       meta: {
         description:
           "OpenCage Geocoder provides a simple API for forward and reverse geocoding using open data sources.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/opencage-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/opencage-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -14463,7 +14463,7 @@ export const apps = {
       appName: "Openrouter",
       description:
         "OpenRouter is a platform that provides a unified API for accessing various large language models (LLMs) from different providers, allowing developers to integrate multiple AI models seamlessly.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/openrouter-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/openrouter-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "openrouter",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14476,7 +14476,7 @@ export const apps = {
       meta: {
         description:
           "OpenRouter is a platform that provides a unified API for accessing various large language models (LLMs) from different providers, allowing developers to integrate multiple AI models seamlessly.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/openrouter-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/openrouter-logo.png",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -14509,7 +14509,7 @@ export const apps = {
       appName: "Optimoroute",
       description:
         "OptimoRoute is an online route optimization and planning solution for delivery, logistics, and field service companies.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/optimoroute-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/optimoroute-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "optimoroute",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14526,7 +14526,7 @@ export const apps = {
       meta: {
         description:
           "OptimoRoute is an online route optimization and planning solution for delivery, logistics, and field service companies.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/optimoroute-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/optimoroute-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -14536,7 +14536,7 @@ export const apps = {
       appName: "Owl protocol",
       description:
         "Owl Protocol empowers developers to build feature-rich, user-friendly Web3 applications for mainstream adoption through modular infrastructure that simplifies blockchain development.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/owl_protocol-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/owl_protocol-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "owl_protocol",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14553,7 +14553,7 @@ export const apps = {
       meta: {
         description:
           "Owl Protocol empowers developers to build feature-rich, user-friendly Web3 applications for mainstream adoption through modular infrastructure that simplifies blockchain development.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/owl_protocol-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/owl_protocol-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -14613,7 +14613,7 @@ export const apps = {
       appName: "Parallel",
       description:
         "Parallel offers a Task API for automated, structured web research, transforming natural language queries into precise, schema-compliant outputs.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/parallel-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/parallel-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "parallel",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14626,7 +14626,7 @@ export const apps = {
       meta: {
         description:
           "Parallel offers a Task API for automated, structured web research, transforming natural language queries into precise, schema-compliant outputs.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/parallel-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/parallel-logo.svg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -14636,7 +14636,7 @@ export const apps = {
       appName: "Parma",
       description:
         "Parma CRM is a relationship management app designed to help you accelerate growth by deepening and nurturing your business relationships.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/parma-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/parma-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "parma",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14649,7 +14649,7 @@ export const apps = {
       meta: {
         description:
           "Parma CRM is a relationship management app designed to help you accelerate growth by deepening and nurturing your business relationships.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/parma-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/parma-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -14659,7 +14659,7 @@ export const apps = {
       appName: "Parsehub",
       description:
         "ParseHub is a web scraping tool that allows users to extract data from websites without coding.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/parsehub-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/parsehub-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "parsehub",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14672,7 +14672,7 @@ export const apps = {
       meta: {
         description:
           "ParseHub is a web scraping tool that allows users to extract data from websites without coding.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/parsehub-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/parsehub-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -14705,7 +14705,7 @@ export const apps = {
       appName: "Parseur",
       description:
         "Parseur is an AI-powered data extraction tool that automates the parsing of emails, PDFs, and other documents into structured data.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/parseur-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/parseur-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "parseur",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14718,7 +14718,7 @@ export const apps = {
       meta: {
         description:
           "Parseur is an AI-powered data extraction tool that automates the parsing of emails, PDFs, and other documents into structured data.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/parseur-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/parseur-logo.jpeg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -14728,7 +14728,7 @@ export const apps = {
       appName: "Passcreator",
       description:
         "Passcreator is a SaaS platform that enables businesses to create, distribute, and manage digital Wallet passes for Apple Wallet and Google Wallet, including store cards, event tickets, coupons, and membership cards.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/passcreator-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/passcreator-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "passcreator",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14745,7 +14745,7 @@ export const apps = {
       meta: {
         description:
           "Passcreator is a SaaS platform that enables businesses to create, distribute, and manage digital Wallet passes for Apple Wallet and Google Wallet, including store cards, event tickets, coupons, and membership cards.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/passcreator-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/passcreator-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -14755,7 +14755,7 @@ export const apps = {
       appName: "Passslot",
       description:
         "PassSlot is a service that simplifies the creation, design, and distribution of Apple Wallet passes, including coupons, store cards, event tickets, membership cards, and boarding passes.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/passslot-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/passslot-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "passslot",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14768,7 +14768,7 @@ export const apps = {
       meta: {
         description:
           "PassSlot is a service that simplifies the creation, design, and distribution of Apple Wallet passes, including coupons, store cards, event tickets, membership cards, and boarding passes.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/passslot-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/passslot-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -14778,7 +14778,7 @@ export const apps = {
       appName: "Payhip",
       description:
         "Payhip is an e-commerce platform that enables individuals and businesses to sell digital products, memberships, and physical goods directly to their audience.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/payhip-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/payhip-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "payhip",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14796,7 +14796,7 @@ export const apps = {
       meta: {
         description:
           "Payhip is an e-commerce platform that enables individuals and businesses to sell digital products, memberships, and physical goods directly to their audience.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/payhip-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/payhip-logo.jpeg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -14829,7 +14829,7 @@ export const apps = {
       appName: "Pdf co",
       description:
         "PDF.co is a secure, cost-effective, and scalable API platform offering a suite of web APIs for tasks such as PDF extraction, generation, editing, splitting, merging, form filling, and barcode processing.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pdf_co-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pdf_co-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pdf_co",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14842,7 +14842,7 @@ export const apps = {
       meta: {
         description:
           "PDF.co is a secure, cost-effective, and scalable API platform offering a suite of web APIs for tasks such as PDF extraction, generation, editing, splitting, merging, form filling, and barcode processing.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pdf_co-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pdf_co-logo.svg",
         toolsCount: 33,
         totalInstallCount: 0,
       },
@@ -14852,7 +14852,7 @@ export const apps = {
       appName: "Pdf4me",
       description:
         "PDF4me provides robust, secure, and scalable APIs for document generation, manipulation, and management, enabling easy integration and automation across various applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pdf4me-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pdf4me-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pdf4me",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14865,7 +14865,7 @@ export const apps = {
       meta: {
         description:
           "PDF4me provides robust, secure, and scalable APIs for document generation, manipulation, and management, enabling easy integration and automation across various applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pdf4me-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pdf4me-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -14875,7 +14875,7 @@ export const apps = {
       appName: "Pdfless",
       description:
         "Pdfless is a document factory that enables developers to create high-quality PDF documents using HTML/CSS templates and data integration.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pdfless-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pdfless-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pdfless",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14888,7 +14888,7 @@ export const apps = {
       meta: {
         description:
           "Pdfless is a document factory that enables developers to create high-quality PDF documents using HTML/CSS templates and data integration.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pdfless-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pdfless-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -14944,7 +14944,7 @@ export const apps = {
       appName: "Persistiq",
       description:
         "PersistIQ is a sales automation platform that streamlines outbound sales processes with personalized email campaigns and task management.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/persistiq-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/persistiq-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "persistiq",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14957,7 +14957,7 @@ export const apps = {
       meta: {
         description:
           "PersistIQ is a sales automation platform that streamlines outbound sales processes with personalized email campaigns and task management.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/persistiq-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/persistiq-logo.png",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -14967,7 +14967,7 @@ export const apps = {
       appName: "Pexels",
       description:
         "Pexels offers a free API that provides access to a vast library of high-quality photos and videos, enabling seamless integration into applications and websites.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pexels-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pexels-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pexels",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -14980,7 +14980,7 @@ export const apps = {
       meta: {
         description:
           "Pexels offers a free API that provides access to a vast library of high-quality photos and videos, enabling seamless integration into applications and websites.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pexels-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pexels-logo.svg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -14990,7 +14990,7 @@ export const apps = {
       appName: "Phantombuster",
       description:
         "PhantomBuster is a cloud-based data extraction and automation platform that enables users to automate actions on the web, such as scraping data, generating leads, and automating social media tasks.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/phantombuster-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/phantombuster-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "phantombuster",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15003,7 +15003,7 @@ export const apps = {
       meta: {
         description:
           "PhantomBuster is a cloud-based data extraction and automation platform that enables users to automate actions on the web, such as scraping data, generating leads, and automating social media tasks.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/phantombuster-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/phantombuster-logo.png",
         toolsCount: 19,
         totalInstallCount: 0,
       },
@@ -15013,7 +15013,7 @@ export const apps = {
       appName: "Piloterr",
       description:
         "Piloterr is a developer-first platform offering over 50 ready-to-use APIs for web scraping and data extraction, enabling businesses to efficiently gather and integrate web data into their systems.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/piloterr-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/piloterr-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "piloterr",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15026,7 +15026,7 @@ export const apps = {
       meta: {
         description:
           "Piloterr is a developer-first platform offering over 50 ready-to-use APIs for web scraping and data extraction, enabling businesses to efficiently gather and integrate web data into their systems.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/piloterr-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/piloterr-logo.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -15036,7 +15036,7 @@ export const apps = {
       appName: "Pilvio",
       description:
         "Pilvio is a cloud service provider offering virtual machines, object storage, and full API support for resource management and automation.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pilvio-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pilvio-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pilvio",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15049,7 +15049,7 @@ export const apps = {
       meta: {
         description:
           "Pilvio is a cloud service provider offering virtual machines, object storage, and full API support for resource management and automation.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pilvio-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pilvio-logo.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -15059,7 +15059,7 @@ export const apps = {
       appName: "Pingdom",
       description:
         "Pingdom is a web performance monitoring service that allows users to monitor the uptime and performance of websites, servers, and applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pingdom-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pingdom-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pingdom",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15076,7 +15076,7 @@ export const apps = {
       meta: {
         description:
           "Pingdom is a web performance monitoring service that allows users to monitor the uptime and performance of websites, servers, and applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pingdom-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pingdom-logo.svg",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -15086,7 +15086,7 @@ export const apps = {
       appName: "Pipeline crm",
       description:
         "Pipeline CRM is a sales-focused customer relationship management tool designed to help teams track leads, manage deals, and streamline workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/pipeline_crm_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/pipeline_crm_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pipeline_crm",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15102,7 +15102,7 @@ export const apps = {
       meta: {
         description:
           "Pipeline CRM is a sales-focused customer relationship management tool designed to help teams track leads, manage deals, and streamline workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/pipeline_crm_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/pipeline_crm_round3_20250722.png",
         toolsCount: 17,
         totalInstallCount: 0,
       },
@@ -15112,7 +15112,7 @@ export const apps = {
       appName: "Placid",
       description:
         "Placid is a creative automation toolkit that enables users to generate images, PDFs, and videos from custom templates via REST or URL APIs.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/placid-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/placid-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "placid",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15130,7 +15130,7 @@ export const apps = {
       meta: {
         description:
           "Placid is a creative automation toolkit that enables users to generate images, PDFs, and videos from custom templates via REST or URL APIs.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/placid-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/placid-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -15140,7 +15140,7 @@ export const apps = {
       appName: "Plain",
       description:
         "Plain is a collaborative support platform for B2B support teams, offering a modern, AI-powered interface to consolidate support channels and assist customers efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/plain-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/plain-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "plain",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15153,7 +15153,7 @@ export const apps = {
       meta: {
         description:
           "Plain is a collaborative support platform for B2B support teams, offering a modern, AI-powered interface to consolidate support channels and assist customers efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/plain-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/plain-logo.png",
         toolsCount: 26,
         totalInstallCount: 0,
       },
@@ -15163,7 +15163,7 @@ export const apps = {
       appName: "Plasmic",
       description:
         "Plasmic is a visual builder for the web, enabling teams to create and manage web pages and components without code.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/plasmic-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/plasmic-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "plasmic",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15176,7 +15176,7 @@ export const apps = {
       meta: {
         description:
           "Plasmic is a visual builder for the web, enabling teams to create and manage web pages and components without code.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/plasmic-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/plasmic-logo.svg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -15186,7 +15186,7 @@ export const apps = {
       appName: "Platerecognizer",
       description:
         "Plate Recognizer offers Automatic License Plate Recognition (ALPR) solutions for processing images and videos to detect and decode vehicle license plates.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/platerecognizer-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/platerecognizer-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "platerecognizer",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15203,7 +15203,7 @@ export const apps = {
       meta: {
         description:
           "Plate Recognizer offers Automatic License Plate Recognition (ALPR) solutions for processing images and videos to detect and decode vehicle license plates.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/platerecognizer-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/platerecognizer-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -15213,7 +15213,7 @@ export const apps = {
       appName: "Plisio",
       description:
         "Plisio is a cryptocurrency payment gateway that enables businesses to accept payments in over 15 cryptocurrencies, including Bitcoin, Ethereum, and Litecoin.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/plisio-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/plisio-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "plisio",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15226,7 +15226,7 @@ export const apps = {
       meta: {
         description:
           "Plisio is a cryptocurrency payment gateway that enables businesses to accept payments in over 15 cryptocurrencies, including Bitcoin, Ethereum, and Litecoin.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/plisio-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/plisio-logo.svg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -15236,7 +15236,7 @@ export const apps = {
       appName: "Polygon",
       description:
         "Polygon.io provides real-time and historical market data APIs for stocks, options, forex, and cryptocurrencies.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/polygon-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/polygon-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "polygon",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15249,7 +15249,7 @@ export const apps = {
       meta: {
         description:
           "Polygon.io provides real-time and historical market data APIs for stocks, options, forex, and cryptocurrencies.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/polygon-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/polygon-logo.svg",
         toolsCount: 53,
         totalInstallCount: 0,
       },
@@ -15259,7 +15259,7 @@ export const apps = {
       appName: "Polygon io",
       description:
         "Polygon.io provides real-time and historical market data APIs for stocks, options, forex, and cryptocurrencies, enabling developers to build financial applications with ease.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/polygon_io-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/polygon_io-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "polygon_io",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15272,7 +15272,7 @@ export const apps = {
       meta: {
         description:
           "Polygon.io provides real-time and historical market data APIs for stocks, options, forex, and cryptocurrencies, enabling developers to build financial applications with ease.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/polygon_io-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/polygon_io-logo.svg",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -15282,7 +15282,7 @@ export const apps = {
       appName: "Postgrid",
       description:
         "PostGrid provides APIs for automating direct mail and address verification services, enabling businesses to send letters, postcards, and checks, as well as verify and standardize addresses in real-time.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/postgrid-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/postgrid-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "postgrid",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15299,7 +15299,7 @@ export const apps = {
       meta: {
         description:
           "PostGrid provides APIs for automating direct mail and address verification services, enabling businesses to send letters, postcards, and checks, as well as verify and standardize addresses in real-time.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/postgrid-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/postgrid-logo.jpeg",
         toolsCount: 22,
         totalInstallCount: 0,
       },
@@ -15309,7 +15309,7 @@ export const apps = {
       appName: "Postgrid verify",
       description:
         "PostGrid Verify is an API that allows you to autocomplete, verify, and standardize addresses in real-time, supporting both individual and batch address verification.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/postgrid_verify-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/postgrid_verify-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "postgrid_verify",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15322,7 +15322,7 @@ export const apps = {
       meta: {
         description:
           "PostGrid Verify is an API that allows you to autocomplete, verify, and standardize addresses in real-time, supporting both individual and batch address verification.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/postgrid_verify-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/postgrid_verify-logo.jpeg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -15332,7 +15332,7 @@ export const apps = {
       appName: "Postmark",
       description:
         "Postmark is an email delivery service that enables developers to send transactional emails with high deliverability and detailed analytics.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/postmark-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/postmark-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "postmark",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15345,7 +15345,7 @@ export const apps = {
       meta: {
         description:
           "Postmark is an email delivery service that enables developers to send transactional emails with high deliverability and detailed analytics.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/postmark-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/postmark-logo.svg",
         toolsCount: 22,
         totalInstallCount: 0,
       },
@@ -15355,7 +15355,7 @@ export const apps = {
       appName: "Prerender",
       description:
         "Prerender.io is a service that pre-renders JavaScript-heavy websites to improve SEO by serving static HTML versions to search engine crawlers.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/prerender-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/prerender-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "prerender",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15368,7 +15368,7 @@ export const apps = {
       meta: {
         description:
           "Prerender.io is a service that pre-renders JavaScript-heavy websites to improve SEO by serving static HTML versions to search engine crawlers.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/prerender-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/prerender-logo.svg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -15401,7 +15401,7 @@ export const apps = {
       appName: "Prisma",
       description:
         "Prisma Data Platform provides database tools including Accelerate (global database cache), Optimize (AI-driven query analysis), and Prisma Postgres (managed PostgreSQL). Manage workspaces, projects, environments, and API keys programmatically.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/prisma_symbol_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/prisma_symbol_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "prisma",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15414,7 +15414,7 @@ export const apps = {
       meta: {
         description:
           "Prisma Data Platform provides database tools including Accelerate (global database cache), Optimize (AI-driven query analysis), and Prisma Postgres (managed PostgreSQL). Manage workspaces, projects, environments, and API keys programmatically.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/prisma_symbol_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/prisma_symbol_20250722.png",
         toolsCount: 20,
         totalInstallCount: 0,
       },
@@ -15424,7 +15424,7 @@ export const apps = {
       appName: "Prismic",
       description:
         "Prismic is a headless CMS that enables developers and content teams to manage and deliver content seamlessly across various platforms.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/prismic-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/prismic-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "prismic",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15437,7 +15437,7 @@ export const apps = {
       meta: {
         description:
           "Prismic is a headless CMS that enables developers and content teams to manage and deliver content seamlessly across various platforms.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/prismic-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/prismic-logo.jpeg",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -15470,7 +15470,7 @@ export const apps = {
       appName: "Productlane",
       description:
         "Productlane is a customer support and feedback system designed for modern companies, built on Linear.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/productlane-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/productlane-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "productlane",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15483,7 +15483,7 @@ export const apps = {
       meta: {
         description:
           "Productlane is a customer support and feedback system designed for modern companies, built on Linear.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/productlane-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/productlane-logo.svg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -15493,7 +15493,7 @@ export const apps = {
       appName: "Project bubble",
       description:
         "ProProfs Project is a project management tool that helps teams plan, collaborate, and deliver projects efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/project_bubble-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/project_bubble-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "project_bubble",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15506,7 +15506,7 @@ export const apps = {
       meta: {
         description:
           "ProProfs Project is a project management tool that helps teams plan, collaborate, and deliver projects efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/project_bubble-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/project_bubble-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -15516,7 +15516,7 @@ export const apps = {
       appName: "Promptmate io",
       description:
         "Promptmate.io enables users to build AI-powered applications by integrating various AI systems like ChatGPT, Google Gemini, and Stability AI, offering features such as multi-step AI workflows, bulk processing, and automation through Zapier.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/promptmate_io-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/promptmate_io-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "promptmate_io",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15533,7 +15533,7 @@ export const apps = {
       meta: {
         description:
           "Promptmate.io enables users to build AI-powered applications by integrating various AI systems like ChatGPT, Google Gemini, and Stability AI, offering features such as multi-step AI workflows, bulk processing, and automation through Zapier.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/promptmate_io-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/promptmate_io-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -15543,7 +15543,7 @@ export const apps = {
       appName: "Proofly",
       description:
         "Proofly is a social proof toolkit that helps boost website conversions by displaying real-time notifications of customer activities.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/proofly-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/proofly-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "proofly",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15556,7 +15556,7 @@ export const apps = {
       meta: {
         description:
           "Proofly is a social proof toolkit that helps boost website conversions by displaying real-time notifications of customer activities.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/proofly-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/proofly-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -15566,7 +15566,7 @@ export const apps = {
       appName: "Proxiedmail",
       description:
         "ProxiedMail offers privacy-focused email services, including automatic creation of proxy emails and receiving emails via webhooks.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/proxiedmail-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/proxiedmail-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "proxiedmail",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15579,7 +15579,7 @@ export const apps = {
       meta: {
         description:
           "ProxiedMail offers privacy-focused email services, including automatic creation of proxy emails and receiving emails via webhooks.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/proxiedmail-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/proxiedmail-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -15589,7 +15589,7 @@ export const apps = {
       appName: "Pushbullet",
       description:
         "Pushbullet enables seamless sharing of notifications and files across devices.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/pushbullet_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/pushbullet_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pushbullet",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15602,7 +15602,7 @@ export const apps = {
       meta: {
         description:
           "Pushbullet enables seamless sharing of notifications and files across devices.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/pushbullet_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/pushbullet_round3_20250722.png",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -15612,7 +15612,7 @@ export const apps = {
       appName: "Pushover",
       description:
         "Pushover is a service that enables real-time notifications to your devices through simple API integration.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/pushover_fresh_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/pushover_fresh_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "pushover",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15625,7 +15625,7 @@ export const apps = {
       meta: {
         description:
           "Pushover is a service that enables real-time notifications to your devices through simple API integration.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/pushover_fresh_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/pushover_fresh_20250722.png",
         toolsCount: 29,
         totalInstallCount: 0,
       },
@@ -15635,7 +15635,7 @@ export const apps = {
       appName: "Quaderno",
       description:
         "Quaderno is a tax compliance platform that automates tax calculations, invoicing, and reporting for businesses worldwide.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/quaderno-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/quaderno-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "quaderno",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15648,7 +15648,7 @@ export const apps = {
       meta: {
         description:
           "Quaderno is a tax compliance platform that automates tax calculations, invoicing, and reporting for businesses worldwide.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/quaderno-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/quaderno-logo.png",
         toolsCount: 32,
         totalInstallCount: 0,
       },
@@ -15658,7 +15658,7 @@ export const apps = {
       appName: "Quickbooks",
       description:
         "Quickbooks is a cloud-based accounting software that helps you manage your finances, track your income and expenses, and get insights into your business",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/quickbooks.jpg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/quickbooks.jpg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "quickbooks",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15671,7 +15671,7 @@ export const apps = {
       meta: {
         description:
           "Quickbooks is a cloud-based accounting software that helps you manage your finances, track your income and expenses, and get insights into your business",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/quickbooks.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/quickbooks.jpg",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -15681,7 +15681,7 @@ export const apps = {
       appName: "Radar",
       description:
         "Radar is a full-stack location infrastructure platform offering SDKs and APIs for geofencing, location tracking, geocoding, search, routing, and maps.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/radar-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/radar-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "radar",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15694,7 +15694,7 @@ export const apps = {
       meta: {
         description:
           "Radar is a full-stack location infrastructure platform offering SDKs and APIs for geofencing, location tracking, geocoding, search, routing, and maps.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/radar-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/radar-logo.svg",
         toolsCount: 24,
         totalInstallCount: 0,
       },
@@ -15704,7 +15704,7 @@ export const apps = {
       appName: "Ragic",
       description:
         "Ragic is a web-based database builder that allows users to create and manage databases as easily as creating a spreadsheet.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ragic-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ragic-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ragic",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15721,7 +15721,7 @@ export const apps = {
       meta: {
         description:
           "Ragic is a web-based database builder that allows users to create and manage databases as easily as creating a spreadsheet.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ragic-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ragic-logo.jpeg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -15731,7 +15731,7 @@ export const apps = {
       appName: "Raisely",
       description:
         "Raisely is a fundraising platform that enables organizations to create and manage online fundraising campaigns.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/raisely-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/raisely-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "raisely",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15744,7 +15744,7 @@ export const apps = {
       meta: {
         description:
           "Raisely is a fundraising platform that enables organizations to create and manage online fundraising campaigns.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/raisely-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/raisely-logo.png",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -15754,7 +15754,7 @@ export const apps = {
       appName: "Ramp",
       description:
         "Ramp is a platform that helps you manage your finances, track your income and expenses, and get insights into your business",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ramp.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ramp.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ramp",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15767,7 +15767,7 @@ export const apps = {
       meta: {
         description:
           "Ramp is a platform that helps you manage your finances, track your income and expenses, and get insights into your business",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ramp.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ramp.svg",
         toolsCount: 24,
         totalInstallCount: 0,
       },
@@ -15777,7 +15777,7 @@ export const apps = {
       appName: "Re amaze",
       description:
         "Re:amaze is a multi-channel customer support platform offering live chat, email, social messaging, and automated workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/re_amaze-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/re_amaze-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "re_amaze",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15790,7 +15790,7 @@ export const apps = {
       meta: {
         description:
           "Re:amaze is a multi-channel customer support platform offering live chat, email, social messaging, and automated workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/re_amaze-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/re_amaze-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -15800,7 +15800,7 @@ export const apps = {
       appName: "Realphonevalidation",
       description:
         "RealPhoneValidation offers real-time phone number validation services, providing information on connectivity, phone type, carrier, and more.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/realphonevalidation-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/realphonevalidation-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "realphonevalidation",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15813,7 +15813,7 @@ export const apps = {
       meta: {
         description:
           "RealPhoneValidation offers real-time phone number validation services, providing information on connectivity, phone type, carrier, and more.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/realphonevalidation-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/realphonevalidation-logo.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -15823,7 +15823,7 @@ export const apps = {
       appName: "Recruitee",
       description:
         "Recruitee is a collaborative hiring software that streamlines recruitment processes, enabling teams to source, interview, and hire candidates efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/recruitee-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/recruitee-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "recruitee",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15840,7 +15840,7 @@ export const apps = {
       meta: {
         description:
           "Recruitee is a collaborative hiring software that streamlines recruitment processes, enabling teams to source, interview, and hire candidates efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/recruitee-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/recruitee-logo.png",
         toolsCount: 20,
         totalInstallCount: 0,
       },
@@ -15896,7 +15896,7 @@ export const apps = {
       appName: "Remote retrieval",
       description:
         "Remote Retrieval automates the logistics of managing equipment returns, providing efficient tracking and management of laptop and monitor returns.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/remote_retrieval-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/remote_retrieval-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "remote_retrieval",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15909,7 +15909,7 @@ export const apps = {
       meta: {
         description:
           "Remote Retrieval automates the logistics of managing equipment returns, providing efficient tracking and management of laptop and monitor returns.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/remote_retrieval-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/remote_retrieval-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -15942,7 +15942,7 @@ export const apps = {
       appName: "Render",
       description:
         "Render is a unified cloud platform that enables developers to build and run applications and websites with ease.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/render-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/render-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "render",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15955,7 +15955,7 @@ export const apps = {
       meta: {
         description:
           "Render is a unified cloud platform that enables developers to build and run applications and websites with ease.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/render-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/render-logo.svg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -15965,7 +15965,7 @@ export const apps = {
       appName: "Renderform",
       description:
         "RenderForm is a user-friendly automation and design tool that enables the creation of templates and images with custom content such as images, texts, and QR codes.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/renderform-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/renderform-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "renderform",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -15978,7 +15978,7 @@ export const apps = {
       meta: {
         description:
           "RenderForm is a user-friendly automation and design tool that enables the creation of templates and images with custom content such as images, texts, and QR codes.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/renderform-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/renderform-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -15988,7 +15988,7 @@ export const apps = {
       appName: "Repairshopr",
       description:
         "RepairShopr is a comprehensive repair shop management software designed to streamline operations, manage customer relationships, and enhance business efficiency.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/repairshopr-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/repairshopr-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "repairshopr",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -16005,7 +16005,7 @@ export const apps = {
       meta: {
         description:
           "RepairShopr is a comprehensive repair shop management software designed to streamline operations, manage customer relationships, and enhance business efficiency.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/repairshopr-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/repairshopr-logo.png",
         toolsCount: 38,
         totalInstallCount: 0,
       },
@@ -16015,7 +16015,7 @@ export const apps = {
       appName: "Replicate",
       description:
         "Replicate allows users to run AI models via a cloud API without managing infrastructure.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/replicate_mega_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/replicate_mega_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "replicate",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -16028,7 +16028,7 @@ export const apps = {
       meta: {
         description:
           "Replicate allows users to run AI models via a cloud API without managing infrastructure.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/replicate_mega_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/replicate_mega_20250722.png",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -16065,7 +16065,7 @@ export const apps = {
       appName: "Reply io",
       description:
         "Reply.io is an AI-powered sales engagement platform that automates and optimizes sales outreach across multiple channels, integrating with various business tools to enhance lead conversion rates and overall sales productivity.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/reply_io-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/reply_io-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "reply_io",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -16078,7 +16078,7 @@ export const apps = {
       meta: {
         description:
           "Reply.io is an AI-powered sales engagement platform that automates and optimizes sales outreach across multiple channels, integrating with various business tools to enhance lead conversion rates and overall sales productivity.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/reply_io-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/reply_io-logo.svg",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -16087,7 +16087,7 @@ export const apps = {
       id: "resend",
       appName: "Resend",
       description: "The universal API for sending emails.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/resend.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/resend.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "resend",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -16099,7 +16099,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "The universal API for sending emails.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/resend.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/resend.png",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -16108,7 +16108,7 @@ export const apps = {
       id: "respond_io",
       appName: "Respond io",
       description: "AI-powered customer conversation management software.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/respond_io-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/respond_io-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "respond_io",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -16120,7 +16120,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "AI-powered customer conversation management software.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/respond_io-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/respond_io-logo.jpeg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -16153,7 +16153,7 @@ export const apps = {
       appName: "Retently",
       description:
         "Retently is a customer experience management platform that enables businesses to collect, analyze, and act on customer feedback through surveys and integrations.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/retently-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/retently-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "retently",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -16170,7 +16170,7 @@ export const apps = {
       meta: {
         description:
           "Retently is a customer experience management platform that enables businesses to collect, analyze, and act on customer feedback through surveys and integrations.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/retently-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/retently-logo.png",
         toolsCount: 15,
         totalInstallCount: 0,
       },
@@ -16180,7 +16180,7 @@ export const apps = {
       appName: "Rev ai",
       description:
         "Rev AI provides advanced machine learning and speech recognition services for converting audio and video to text.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rev_ai-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rev_ai-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "rev_ai",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -16197,7 +16197,7 @@ export const apps = {
       meta: {
         description:
           "Rev AI provides advanced machine learning and speech recognition services for converting audio and video to text.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rev_ai-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rev_ai-logo.png",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -16207,7 +16207,7 @@ export const apps = {
       appName: "Revolt",
       description:
         "Revolt is a free and open-source chat platform offering secure and customizable communication.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/revolt-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/revolt-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "revolt",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -16220,7 +16220,7 @@ export const apps = {
       meta: {
         description:
           "Revolt is a free and open-source chat platform offering secure and customizable communication.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/revolt-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/revolt-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -16230,7 +16230,7 @@ export const apps = {
       appName: "Ritekit",
       description:
         "RiteKit offers a suite of APIs designed to enhance social media engagement by providing tools for hashtag generation, link shortening, and content analysis.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ritekit-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ritekit-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "ritekit",
       createdAt: "2025-11-22T20:42:33.165Z",
@@ -16243,7 +16243,7 @@ export const apps = {
       meta: {
         description:
           "RiteKit offers a suite of APIs designed to enhance social media engagement by providing tools for hashtag generation, link shortening, and content analysis.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/ritekit-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/ritekit-logo.svg",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -16253,7 +16253,7 @@ export const apps = {
       appName: "Rkvst",
       description:
         "DataTrails provides an evidence management platform that delivers a reliable chain of custody for supply chain data, ensuring data authenticity and transparency.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rkvst-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rkvst-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "rkvst",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16266,7 +16266,7 @@ export const apps = {
       meta: {
         description:
           "DataTrails provides an evidence management platform that delivers a reliable chain of custody for supply chain data, ensuring data authenticity and transparency.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rkvst-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rkvst-logo.png",
         toolsCount: 26,
         totalInstallCount: 0,
       },
@@ -16276,7 +16276,7 @@ export const apps = {
       appName: "Rootly",
       description:
         "Rootly is an AI-native incident management platform that automates workflows and collaboration, integrating with Slack, PagerDuty, and other tools to streamline incident response.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rootly-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rootly-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "rootly",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16295,7 +16295,7 @@ export const apps = {
       meta: {
         description:
           "Rootly is an AI-native incident management platform that automates workflows and collaboration, integrating with Slack, PagerDuty, and other tools to streamline incident response.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rootly-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rootly-logo.jpeg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -16305,7 +16305,7 @@ export const apps = {
       appName: "Rosette text analytics",
       description:
         "Rosette Text Analytics is a platform that uses natural language processing, statistical modeling, and machine learning to analyze unstructured and semi-structured text across 364 language-encoding-script combinations, revealing valuable information and actionable data.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rosette_text_analytics-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rosette_text_analytics-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "rosette_text_analytics",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16322,7 +16322,7 @@ export const apps = {
       meta: {
         description:
           "Rosette Text Analytics is a platform that uses natural language processing, statistical modeling, and machine learning to analyze unstructured and semi-structured text across 364 language-encoding-script combinations, revealing valuable information and actionable data.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/rosette_text_analytics-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/rosette_text_analytics-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -16332,7 +16332,7 @@ export const apps = {
       appName: "Route4me",
       description:
         "Route4Me provides a Last Mile Routing API offering automated solutions for route planning and optimization, tailored for logistics-intensive businesses.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/route4me-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/route4me-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "route4me",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16345,7 +16345,7 @@ export const apps = {
       meta: {
         description:
           "Route4Me provides a Last Mile Routing API offering automated solutions for route planning and optimization, tailored for logistics-intensive businesses.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/route4me-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/route4me-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -16355,7 +16355,7 @@ export const apps = {
       appName: "Safetyculture",
       description:
         "SafetyCulture is a platform that empowers teams to improve workplace safety, quality, and efficiency through digital inspections and audits.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/safetyculture_round2_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/safetyculture_round2_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "safetyculture",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16372,7 +16372,7 @@ export const apps = {
       meta: {
         description:
           "SafetyCulture is a platform that empowers teams to improve workplace safety, quality, and efficiency through digital inspections and audits.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/safetyculture_round2_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/safetyculture_round2_20250722.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -16405,7 +16405,7 @@ export const apps = {
       appName: "Salesmate",
       description:
         "Salesmate is an AI-powered CRM platform designed to help businesses engage leads, close deals faster, nurture relationships, and provide seamless support through a unified, intuitive interface.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/salesmate-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/salesmate-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "salesmate",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16423,7 +16423,7 @@ export const apps = {
       meta: {
         description:
           "Salesmate is an AI-powered CRM platform designed to help businesses engage leads, close deals faster, nurture relationships, and provide seamless support through a unified, intuitive interface.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/salesmate-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/salesmate-logo.jpeg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -16456,7 +16456,7 @@ export const apps = {
       appName: "Satismeter",
       description:
         "SatisMeter is a customer feedback platform that enables businesses to collect and analyze user feedback through targeted surveys.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/satismeter-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/satismeter-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "satismeter",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16469,7 +16469,7 @@ export const apps = {
       meta: {
         description:
           "SatisMeter is a customer feedback platform that enables businesses to collect and analyze user feedback through targeted surveys.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/satismeter-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/satismeter-logo.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -16479,7 +16479,7 @@ export const apps = {
       appName: "Scrape do",
       description:
         "Scrape.do is a web scraping API offering rotating residential, data-center, and mobile proxies with headless browser support and session management to bypass anti-bot protections (e.g., Cloudflare, Akamai) and extract data at scale in formats like JSON and HTML.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/scrape_do-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/scrape_do-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "scrape_do",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16492,7 +16492,7 @@ export const apps = {
       meta: {
         description:
           "Scrape.do is a web scraping API offering rotating residential, data-center, and mobile proxies with headless browser support and session management to bypass anti-bot protections (e.g., Cloudflare, Akamai) and extract data at scale in formats like JSON and HTML.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/scrape_do-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/scrape_do-logo.jpeg",
         toolsCount: 19,
         totalInstallCount: 0,
       },
@@ -16502,7 +16502,7 @@ export const apps = {
       appName: "Scrapegraph ai",
       description:
         "ScrapeGraphAI is an AI-powered web scraping API that enables developers to extract structured data from any website using natural language prompts. Website https://scrapegraphai.com",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/scrapegraph_ai-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/scrapegraph_ai-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "scrapegraph_ai",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16515,7 +16515,7 @@ export const apps = {
       meta: {
         description:
           "ScrapeGraphAI is an AI-powered web scraping API that enables developers to extract structured data from any website using natural language prompts. Website https://scrapegraphai.com",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/scrapegraph_ai-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/scrapegraph_ai-logo.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -16548,7 +16548,7 @@ export const apps = {
       appName: "Scrapingant",
       description:
         "ScrapingAnt is a web scraping API that provides tools for data extraction, including features like Chrome page rendering, low latency rotating proxies, JavaScript execution, and unlimited parallel requests.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/scrapingant-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/scrapingant-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "scrapingant",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16561,7 +16561,7 @@ export const apps = {
       meta: {
         description:
           "ScrapingAnt is a web scraping API that provides tools for data extraction, including features like Chrome page rendering, low latency rotating proxies, JavaScript execution, and unlimited parallel requests.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/scrapingant-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/scrapingant-logo.jpeg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -16571,7 +16571,7 @@ export const apps = {
       appName: "Scrapingbee",
       description:
         "ScrapingBee is a web scraping API that handles headless browsers and proxy rotation, allowing developers to extract HTML from any website in a single API call.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/scrapingbee-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/scrapingbee-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "scrapingbee",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16584,7 +16584,7 @@ export const apps = {
       meta: {
         description:
           "ScrapingBee is a web scraping API that handles headless browsers and proxy rotation, allowing developers to extract HTML from any website in a single API call.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/scrapingbee-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/scrapingbee-logo.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -16594,7 +16594,7 @@ export const apps = {
       appName: "Screenshot fyi",
       description:
         "Take stunning, premium quality screenshots of any website with one API call.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/screenshot_fyi-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/screenshot_fyi-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "screenshot_fyi",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16607,7 +16607,7 @@ export const apps = {
       meta: {
         description:
           "Take stunning, premium quality screenshots of any website with one API call.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/screenshot_fyi-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/screenshot_fyi-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -16663,7 +16663,7 @@ export const apps = {
       appName: "Segmetrics",
       description:
         "SegMetrics is a marketing analytics platform that provides detailed insights into customer journeys, helping businesses optimize their marketing strategies.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/segmetrics-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/segmetrics-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "segmetrics",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16680,7 +16680,7 @@ export const apps = {
       meta: {
         description:
           "SegMetrics is a marketing analytics platform that provides detailed insights into customer journeys, helping businesses optimize their marketing strategies.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/segmetrics-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/segmetrics-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -16690,7 +16690,7 @@ export const apps = {
       appName: "Sendbird",
       description:
         "Sendbird is a platform that provides chat, voice, and video APIs to help businesses build in-app communication features.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendbird-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendbird-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sendbird",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16703,7 +16703,7 @@ export const apps = {
       meta: {
         description:
           "Sendbird is a platform that provides chat, voice, and video APIs to help businesses build in-app communication features.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendbird-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendbird-logo.svg",
         toolsCount: 37,
         totalInstallCount: 0,
       },
@@ -16713,7 +16713,7 @@ export const apps = {
       appName: "Sendbird ai chabot",
       description:
         "Sendbird's AI Chatbot enables businesses to integrate intelligent, automated conversational agents into their applications, enhancing customer engagement and support.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendbird_ai_chabot-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendbird_ai_chabot-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sendbird_ai_chabot",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16726,7 +16726,7 @@ export const apps = {
       meta: {
         description:
           "Sendbird's AI Chatbot enables businesses to integrate intelligent, automated conversational agents into their applications, enhancing customer engagement and support.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendbird_ai_chabot-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendbird_ai_chabot-logo.svg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -16735,7 +16735,7 @@ export const apps = {
       id: "sendfox",
       appName: "Sendfox",
       description: "Template description for sendfox",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendfox-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendfox-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sendfox",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16747,7 +16747,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "Template description for sendfox",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendfox-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendfox-logo.png",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -16757,7 +16757,7 @@ export const apps = {
       appName: "Sendlane",
       description:
         "Sendlane is a cloud-based marketing automation platform that helps eCommerce businesses engage customers through personalized email and SMS campaigns.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendlane-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendlane-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sendlane",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16770,7 +16770,7 @@ export const apps = {
       meta: {
         description:
           "Sendlane is a cloud-based marketing automation platform that helps eCommerce businesses engage customers through personalized email and SMS campaigns.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendlane-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendlane-logo.svg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -16780,7 +16780,7 @@ export const apps = {
       appName: "Sendloop",
       description:
         "Sendloop is an all-in-one email marketing solution for SaaS, e-commerce, application, and small business owners.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendloop-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendloop-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sendloop",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16793,7 +16793,7 @@ export const apps = {
       meta: {
         description:
           "Sendloop is an all-in-one email marketing solution for SaaS, e-commerce, application, and small business owners.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendloop-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendloop-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -16803,7 +16803,7 @@ export const apps = {
       appName: "Sendspark",
       description:
         "Sendspark is a video messaging platform that empowers businesses to create, send, and track personalized video content, simplifying communication by allowing users to quickly record or upload videos and share them via email, social media, or other digital channels.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendspark-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendspark-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sendspark",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16816,7 +16816,7 @@ export const apps = {
       meta: {
         description:
           "Sendspark is a video messaging platform that empowers businesses to create, send, and track personalized video content, simplifying communication by allowing users to quickly record or upload videos and share them via email, social media, or other digital channels.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sendspark-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sendspark-logo.svg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -16826,7 +16826,7 @@ export const apps = {
       appName: "Sensibo",
       description:
         "Sensibo offers smart controllers that connect air conditioners and heat pumps to the internet, enabling remote control and automation.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sensibo-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sensibo-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sensibo",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16839,7 +16839,7 @@ export const apps = {
       meta: {
         description:
           "Sensibo offers smart controllers that connect air conditioners and heat pumps to the internet, enabling remote control and automation.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sensibo-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sensibo-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -16849,7 +16849,7 @@ export const apps = {
       appName: "Seqera",
       description:
         "Seqera Platform is an intuitive, centralized command post that enables data analysis at scale, allowing users to launch, manage, and monitor scalable Nextflow pipelines and compute environments on-premises or across cloud providers.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/seqera-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/seqera-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "seqera",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16862,7 +16862,7 @@ export const apps = {
       meta: {
         description:
           "Seqera Platform is an intuitive, centralized command post that enables data analysis at scale, allowing users to launch, manage, and monitor scalable Nextflow pipelines and compute environments on-premises or across cloud providers.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/seqera-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/seqera-logo.svg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -16872,7 +16872,7 @@ export const apps = {
       appName: "Serpdog",
       description:
         "Serpdog provides APIs for scraping Google search results and related services, enabling developers to access real-time data from Google Search, Maps, Scholar, and more.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/serpdog-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/serpdog-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "serpdog",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16885,7 +16885,7 @@ export const apps = {
       meta: {
         description:
           "Serpdog provides APIs for scraping Google search results and related services, enabling developers to access real-time data from Google Search, Maps, Scholar, and more.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/serpdog-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/serpdog-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -16918,7 +16918,7 @@ export const apps = {
       appName: "Sevdesk",
       description:
         "sevDesk is an online accounting software designed for small businesses and freelancers, offering features like invoicing, expense management, and financial reporting.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sevdesk-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sevdesk-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sevdesk",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16931,7 +16931,7 @@ export const apps = {
       meta: {
         description:
           "sevDesk is an online accounting software designed for small businesses and freelancers, offering features like invoicing, expense management, and financial reporting.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sevdesk-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sevdesk-logo.png",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -16941,7 +16941,7 @@ export const apps = {
       appName: "Shipengine",
       description:
         "ShipEngine is a REST API that simplifies shipping processes by integrating with multiple carriers, allowing users to manage shipping labels, track packages, and validate addresses efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/shipengine-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/shipengine-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "shipengine",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16954,7 +16954,7 @@ export const apps = {
       meta: {
         description:
           "ShipEngine is a REST API that simplifies shipping processes by integrating with multiple carriers, allowing users to manage shipping labels, track packages, and validate addresses efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/shipengine-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/shipengine-logo.svg",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -16964,7 +16964,7 @@ export const apps = {
       appName: "Short io",
       description:
         "Short.io is a URL shortening service that allows users to create branded short links, manage them, and track their performance.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/short_io-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/short_io-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "short_io",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -16977,7 +16977,7 @@ export const apps = {
       meta: {
         description:
           "Short.io is a URL shortening service that allows users to create branded short links, manage them, and track their performance.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/short_io-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/short_io-logo.jpeg",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -17010,7 +17010,7 @@ export const apps = {
       appName: "Shorten rest",
       description:
         "Shorten.REST is a link shortening and management app that allows you to generate unique, branded URLs with advanced tracking capabilities.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/shorten_rest-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/shorten_rest-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "shorten_rest",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17023,7 +17023,7 @@ export const apps = {
       meta: {
         description:
           "Shorten.REST is a link shortening and management app that allows you to generate unique, branded URLs with advanced tracking capabilities.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/shorten_rest-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/shorten_rest-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -17033,7 +17033,7 @@ export const apps = {
       appName: "Shortpixel",
       description:
         "ShortPixel is an image optimization and compression service that offers APIs and plugins to enhance website performance by reducing image sizes without compromising quality.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/shortpixel-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/shortpixel-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "shortpixel",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17046,7 +17046,7 @@ export const apps = {
       meta: {
         description:
           "ShortPixel is an image optimization and compression service that offers APIs and plugins to enhance website performance by reducing image sizes without compromising quality.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/shortpixel-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/shortpixel-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -17056,7 +17056,7 @@ export const apps = {
       appName: "Shotstack",
       description:
         "Shotstack is a cloud-based platform that enables developers, marketers, and designers to automate the generation of videos, images, and audio at scale using a RESTful API.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/shotstack-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/shotstack-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "shotstack",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17069,7 +17069,7 @@ export const apps = {
       meta: {
         description:
           "Shotstack is a cloud-based platform that enables developers, marketers, and designers to automate the generation of videos, images, and audio at scale using a RESTful API.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/shotstack-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/shotstack-logo.png",
         toolsCount: 14,
         totalInstallCount: 0,
       },
@@ -17079,7 +17079,7 @@ export const apps = {
       appName: "Sidetracker",
       description:
         "Sidetracker provides analytics to monitor and optimize marketing expenses, offering insights into sales funnels and customer journeys.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sidetracker-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sidetracker-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sidetracker",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17096,7 +17096,7 @@ export const apps = {
       meta: {
         description:
           "Sidetracker provides analytics to monitor and optimize marketing expenses, offering insights into sales funnels and customer journeys.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sidetracker-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sidetracker-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -17106,7 +17106,7 @@ export const apps = {
       appName: "Signaturely",
       description:
         "Signaturely is an electronic signature platform that allows users to sign documents online, offering features like automated signature requests, templates, and integrations with other platforms.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/signaturely-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/signaturely-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "signaturely",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17123,7 +17123,7 @@ export const apps = {
       meta: {
         description:
           "Signaturely is an electronic signature platform that allows users to sign documents online, offering features like automated signature requests, templates, and integrations with other platforms.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/signaturely-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/signaturely-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -17133,7 +17133,7 @@ export const apps = {
       appName: "Signpath",
       description:
         "SignPath is a code signing service that integrates with your build system to automate the signing of your software artifacts, ensuring their authenticity and integrity.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/signpath-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/signpath-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "signpath",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17146,7 +17146,7 @@ export const apps = {
       meta: {
         description:
           "SignPath is a code signing service that integrates with your build system to automate the signing of your software artifacts, ensuring their authenticity and integrity.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/signpath-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/signpath-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -17156,7 +17156,7 @@ export const apps = {
       appName: "Signwell",
       description:
         "SignWell is an electronic signature tool for legally binding e-signatures and faster document signing.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/signwell_final_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/signwell_final_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "signwell",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17169,7 +17169,7 @@ export const apps = {
       meta: {
         description:
           "SignWell is an electronic signature tool for legally binding e-signatures and faster document signing.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/signwell_final_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/signwell_final_20250722.png",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -17202,7 +17202,7 @@ export const apps = {
       appName: "Simla com",
       description:
         "Simla.com is a platform offering API services for integrating delivery services, managing orders, and customer data.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/simla_com-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/simla_com-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "simla_com",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17215,7 +17215,7 @@ export const apps = {
       meta: {
         description:
           "Simla.com is a platform offering API services for integrating delivery services, managing orders, and customer data.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/simla_com-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/simla_com-logo.svg",
         toolsCount: 19,
         totalInstallCount: 0,
       },
@@ -17225,7 +17225,7 @@ export const apps = {
       appName: "Simple analytics",
       description:
         "Simple Analytics is a privacy-friendly and simple alternative to Google Analytics, offering straightforward analytics without cookies or trackers.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/simple_analytics-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/simple_analytics-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "simple_analytics",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17238,7 +17238,7 @@ export const apps = {
       meta: {
         description:
           "Simple Analytics is a privacy-friendly and simple alternative to Google Analytics, offering straightforward analytics without cookies or trackers.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/simple_analytics-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/simple_analytics-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -17248,7 +17248,7 @@ export const apps = {
       appName: "Sitespeakai",
       description:
         "SiteSpeakAI enables businesses to automate customer support by creating custom-trained, embeddable GPT chatbots that provide real-time answers about products and services, reducing support tickets.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sitespeakai-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sitespeakai-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sitespeakai",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17267,7 +17267,7 @@ export const apps = {
       meta: {
         description:
           "SiteSpeakAI enables businesses to automate customer support by creating custom-trained, embeddable GPT chatbots that provide real-time answers about products and services, reducing support tickets.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sitespeakai-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sitespeakai-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -17277,7 +17277,7 @@ export const apps = {
       appName: "Skyfire",
       description:
         "Skyfire enables AI agents to autonomously transact and pay for services, creating a seamless payment infrastructure for AI applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/skyfire-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/skyfire-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "skyfire",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17290,7 +17290,7 @@ export const apps = {
       meta: {
         description:
           "Skyfire enables AI agents to autonomously transact and pay for services, creating a seamless payment infrastructure for AI applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/skyfire-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/skyfire-logo.png",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -17323,7 +17323,7 @@ export const apps = {
       appName: "Sms alert",
       description:
         "SMS Alert is a versatile multi-channel communication platform enabling businesses to engage with customers through SMS, RCS, Telegram, and WhatsApp via a unified REST API.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sms_alert-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sms_alert-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sms_alert",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17336,7 +17336,7 @@ export const apps = {
       meta: {
         description:
           "SMS Alert is a versatile multi-channel communication platform enabling businesses to engage with customers through SMS, RCS, Telegram, and WhatsApp via a unified REST API.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sms_alert-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sms_alert-logo.png",
         toolsCount: 19,
         totalInstallCount: 0,
       },
@@ -17346,7 +17346,7 @@ export const apps = {
       appName: "Smtp2go",
       description:
         "SMTP2GO is a reliable email delivery service that ensures your emails reach recipients' inboxes efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/smtp2go-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/smtp2go-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "smtp2go",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17359,7 +17359,7 @@ export const apps = {
       meta: {
         description:
           "SMTP2GO is a reliable email delivery service that ensures your emails reach recipients' inboxes efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/smtp2go-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/smtp2go-logo.jpeg",
         toolsCount: 32,
         totalInstallCount: 0,
       },
@@ -17369,7 +17369,7 @@ export const apps = {
       appName: "Snowflake basic",
       description:
         "Snowflake is a cloud-based data warehouse offering elastic scaling, secure data sharing, and SQL analytics across multiple cloud environments",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/snowflake.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/snowflake.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "snowflake_basic",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17382,7 +17382,7 @@ export const apps = {
       meta: {
         description:
           "Snowflake is a cloud-based data warehouse offering elastic scaling, secure data sharing, and SQL analytics across multiple cloud environments",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/snowflake.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/snowflake.svg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -17415,7 +17415,7 @@ export const apps = {
       appName: "Splitwise",
       description:
         "Splitwise helps you split bills and expenses with friends and family.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/splitwise.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/splitwise.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "splitwise",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17428,7 +17428,7 @@ export const apps = {
       meta: {
         description:
           "Splitwise helps you split bills and expenses with friends and family.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/splitwise.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/splitwise.svg",
         toolsCount: 8,
         totalInstallCount: 0,
       },
@@ -17438,7 +17438,7 @@ export const apps = {
       appName: "Spoki",
       description:
         "Spoki is an Italian platform that integrates WhatsApp's official APIs to automate communication for marketing, sales, customer support, and payments.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/spoki-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/spoki-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "spoki",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17455,7 +17455,7 @@ export const apps = {
       meta: {
         description:
           "Spoki is an Italian platform that integrates WhatsApp's official APIs to automate communication for marketing, sales, customer support, and payments.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/spoki-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/spoki-logo.png",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -17464,7 +17464,7 @@ export const apps = {
       id: "spondyr",
       appName: "Spondyr",
       description: "Template description for spondyr",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/spondyr_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/spondyr_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "spondyr",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17476,7 +17476,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "Template description for spondyr",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/spondyr_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/spondyr_round3_20250722.png",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -17486,7 +17486,7 @@ export const apps = {
       appName: "Spotify",
       description:
         "Spotify is a digital music and podcast streaming service with millions of tracks, personalized playlists, and social sharing features",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//spotify.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//spotify.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "spotify",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17499,7 +17499,7 @@ export const apps = {
       meta: {
         description:
           "Spotify is a digital music and podcast streaming service with millions of tracks, personalized playlists, and social sharing features",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//spotify.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//spotify.png",
         toolsCount: 109,
         totalInstallCount: 0,
       },
@@ -17509,7 +17509,7 @@ export const apps = {
       appName: "Spotlightr",
       description:
         "Spotlightr is a video hosting and streaming platform that captures leads, updates contacts with engagement data, and provides analytics reporting.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/spotlightr-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/spotlightr-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "spotlightr",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17522,7 +17522,7 @@ export const apps = {
       meta: {
         description:
           "Spotlightr is a video hosting and streaming platform that captures leads, updates contacts with engagement data, and provides analytics reporting.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/spotlightr-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/spotlightr-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -17532,7 +17532,7 @@ export const apps = {
       appName: "Sslmate cert spotter api",
       description:
         "Cert Spotter API by SSLMate monitors Certificate Transparency logs to alert users about SSL/TLS certificates issued for their domains, helping detect unauthorized certificates and potential security issues.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sslmate_cert_spotter_api-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sslmate_cert_spotter_api-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "sslmate_cert_spotter_api",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17545,7 +17545,7 @@ export const apps = {
       meta: {
         description:
           "Cert Spotter API by SSLMate monitors Certificate Transparency logs to alert users about SSL/TLS certificates issued for their domains, helping detect unauthorized certificates and potential security issues.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/sslmate_cert_spotter_api-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/sslmate_cert_spotter_api-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -17555,7 +17555,7 @@ export const apps = {
       appName: "Stannp",
       description:
         "Stannp provides a direct mail API enabling users to send postcards and letters programmatically.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/stannp-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/stannp-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "stannp",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17568,7 +17568,7 @@ export const apps = {
       meta: {
         description:
           "Stannp provides a direct mail API enabling users to send postcards and letters programmatically.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/stannp-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/stannp-logo.svg",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -17578,7 +17578,7 @@ export const apps = {
       appName: "Starton",
       description:
         "Starton is an all-in-one Web3 API platform that enables developers to deploy and interact with smart contracts, store files on IPFS, and monitor blockchain events through a unified API and frontend interface.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/starton-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/starton-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "starton",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17595,7 +17595,7 @@ export const apps = {
       meta: {
         description:
           "Starton is an all-in-one Web3 API platform that enables developers to deploy and interact with smart contracts, store files on IPFS, and monitor blockchain events through a unified API and frontend interface.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/starton-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/starton-logo.jpeg",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -17605,7 +17605,7 @@ export const apps = {
       appName: "Statuscake",
       description:
         "StatusCake is a website monitoring platform that provides observability for applications, offering features like uptime monitoring, page speed monitoring, SSL monitoring, and more.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/statuscake-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/statuscake-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "statuscake",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17622,7 +17622,7 @@ export const apps = {
       meta: {
         description:
           "StatusCake is a website monitoring platform that provides observability for applications, offering features like uptime monitoring, page speed monitoring, SSL monitoring, and more.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/statuscake-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/statuscake-logo.png",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -17632,7 +17632,7 @@ export const apps = {
       appName: "Storeganise",
       description:
         "Storeganise provides modern, cloud-based management software for valet and self-storage businesses, offering features like contactless online bookings, automated billing, and comprehensive APIs for integrations.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/storeganise-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/storeganise-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "storeganise",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17649,7 +17649,7 @@ export const apps = {
       meta: {
         description:
           "Storeganise provides modern, cloud-based management software for valet and self-storage businesses, offering features like contactless online bookings, automated billing, and comprehensive APIs for integrations.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/storeganise-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/storeganise-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -17659,7 +17659,7 @@ export const apps = {
       appName: "Storerocket",
       description:
         "StoreRocket provides a customizable and easy-to-install store locator solution for websites, enabling businesses to display their physical locations interactively.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/storerocket-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/storerocket-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "storerocket",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17672,7 +17672,7 @@ export const apps = {
       meta: {
         description:
           "StoreRocket provides a customizable and easy-to-install store locator solution for websites, enabling businesses to display their physical locations interactively.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/storerocket-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/storerocket-logo.svg",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -17682,7 +17682,7 @@ export const apps = {
       appName: "Stormglass io",
       description:
         "stormglass.io provides a global weather API offering high-resolution forecasts and historical data from trusted meteorological institutions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/stormglass_io-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/stormglass_io-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "stormglass_io",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17695,7 +17695,7 @@ export const apps = {
       meta: {
         description:
           "stormglass.io provides a global weather API offering high-resolution forecasts and historical data from trusted meteorological institutions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/stormglass_io-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/stormglass_io-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -17705,7 +17705,7 @@ export const apps = {
       appName: "Strava",
       description:
         "Strava is a social fitness network and app designed for cyclists and runners.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/strava.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/strava.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "strava",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17718,7 +17718,7 @@ export const apps = {
       meta: {
         description:
           "Strava is a social fitness network and app designed for cyclists and runners.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/strava.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/strava.png",
         toolsCount: 33,
         totalInstallCount: 0,
       },
@@ -17728,7 +17728,7 @@ export const apps = {
       appName: "Streamtime",
       description:
         "Streamtime is a web-based project management tool designed to help teams plan, manage, and track projects efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/streamtime-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/streamtime-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "streamtime",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17741,7 +17741,7 @@ export const apps = {
       meta: {
         description:
           "Streamtime is a web-based project management tool designed to help teams plan, manage, and track projects efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/streamtime-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/streamtime-logo.svg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -17779,7 +17779,7 @@ export const apps = {
       appName: "Superchat",
       description:
         "Superchat is a unified messaging platform that enables businesses to communicate with customers across multiple channels, including WhatsApp, Instagram Direct, Facebook Messenger, Email, and more.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/superchat-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/superchat-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "superchat",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17792,7 +17792,7 @@ export const apps = {
       meta: {
         description:
           "Superchat is a unified messaging platform that enables businesses to communicate with customers across multiple channels, including WhatsApp, Instagram Direct, Facebook Messenger, Email, and more.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/superchat-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/superchat-logo.jpeg",
         toolsCount: 17,
         totalInstallCount: 0,
       },
@@ -17802,7 +17802,7 @@ export const apps = {
       appName: "Supportbee",
       description:
         "SupportBee is a web-based email support tool that helps businesses organize their customer support emails efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/supportbee-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/supportbee-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "supportbee",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17815,7 +17815,7 @@ export const apps = {
       meta: {
         description:
           "SupportBee is a web-based email support tool that helps businesses organize their customer support emails efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/supportbee-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/supportbee-logo.svg",
         toolsCount: 33,
         totalInstallCount: 0,
       },
@@ -17825,7 +17825,7 @@ export const apps = {
       appName: "Supportivekoala",
       description:
         "Supportivekoala is a platform that automates image generation using customizable templates, enabling users to create visual content programmatically through API integration.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/supportivekoala-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/supportivekoala-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "supportivekoala",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17838,7 +17838,7 @@ export const apps = {
       meta: {
         description:
           "Supportivekoala is a platform that automates image generation using customizable templates, enabling users to create visual content programmatically through API integration.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/supportivekoala-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/supportivekoala-logo.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -17848,7 +17848,7 @@ export const apps = {
       appName: "Svix",
       description:
         "Svix is an enterprise-ready webhooks service that enables developers to send webhooks reliably and securely.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/svix-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/svix-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "svix",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17861,7 +17861,7 @@ export const apps = {
       meta: {
         description:
           "Svix is an enterprise-ready webhooks service that enables developers to send webhooks reliably and securely.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/svix-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/svix-logo.svg",
         toolsCount: 37,
         totalInstallCount: 0,
       },
@@ -17894,7 +17894,7 @@ export const apps = {
       appName: "Synthflow ai",
       description:
         "Synthflow AI provides AI-powered voice agents to automate both inbound and outbound calls, enhancing customer engagement and operational efficiency.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/synthflow_ai-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/synthflow_ai-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "synthflow_ai",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17911,7 +17911,7 @@ export const apps = {
       meta: {
         description:
           "Synthflow AI provides AI-powered voice agents to automate both inbound and outbound calls, enhancing customer engagement and operational efficiency.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/synthflow_ai-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/synthflow_ai-logo.jpeg",
         toolsCount: 11,
         totalInstallCount: 0,
       },
@@ -17921,7 +17921,7 @@ export const apps = {
       appName: "Taggun",
       description:
         "Taggun provides a real-time, high-accuracy receipt OCR API for extracting structured data from receipt images.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/taggun-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/taggun-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "taggun",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -17934,7 +17934,7 @@ export const apps = {
       meta: {
         description:
           "Taggun provides a real-time, high-accuracy receipt OCR API for extracting structured data from receipt images.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/taggun-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/taggun-logo.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -17990,7 +17990,7 @@ export const apps = {
       appName: "Tapfiliate",
       description:
         "Tapfiliate is an affiliate and referral tracking platform that enables businesses to create, track, and scale their affiliate programs efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tapfiliate-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tapfiliate-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "tapfiliate",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18007,7 +18007,7 @@ export const apps = {
       meta: {
         description:
           "Tapfiliate is an affiliate and referral tracking platform that enables businesses to create, track, and scale their affiliate programs efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tapfiliate-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tapfiliate-logo.jpeg",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -18017,7 +18017,7 @@ export const apps = {
       appName: "Taxjar",
       description:
         "TaxJar provides a comprehensive sales tax API for real-time tax calculations, reporting, and filing.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/taxjar-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/taxjar-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "taxjar",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18030,7 +18030,7 @@ export const apps = {
       meta: {
         description:
           "TaxJar provides a comprehensive sales tax API for real-time tax calculations, reporting, and filing.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/taxjar-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/taxjar-logo.svg",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -18040,7 +18040,7 @@ export const apps = {
       appName: "Teamcamp",
       description:
         "An all-in-one project management tool designed for teams to efficiently manage projects, collaborate seamlessly, and streamline workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/teamcamp-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/teamcamp-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "teamcamp",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18053,7 +18053,7 @@ export const apps = {
       meta: {
         description:
           "An all-in-one project management tool designed for teams to efficiently manage projects, collaborate seamlessly, and streamline workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/teamcamp-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/teamcamp-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -18063,7 +18063,7 @@ export const apps = {
       appName: "Telegram",
       description:
         "Telegram is a cloud-based messaging app with a focus on security and speed. Build bots to send messages, manage chats, and interact with users.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/telegram-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/telegram-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "telegram",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18076,7 +18076,7 @@ export const apps = {
       meta: {
         description:
           "Telegram is a cloud-based messaging app with a focus on security and speed. Build bots to send messages, manage chats, and interact with users.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/telegram-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/telegram-logo.svg",
         toolsCount: 17,
         totalInstallCount: 0,
       },
@@ -18086,7 +18086,7 @@ export const apps = {
       appName: "Telnyx",
       description:
         "Telnyx is a communications platform offering voice, messaging, and data services through a global private network.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/telnyx_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/telnyx_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "telnyx",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18099,7 +18099,7 @@ export const apps = {
       meta: {
         description:
           "Telnyx is a communications platform offering voice, messaging, and data services through a global private network.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/telnyx_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/telnyx_round3_20250722.png",
         toolsCount: 28,
         totalInstallCount: 0,
       },
@@ -18109,7 +18109,7 @@ export const apps = {
       appName: "Teltel",
       description:
         "TelTel is a telecom operator and software provider offering tools for automated voice and SMS communication, including contact center software, Voice/SMS API, and VoIP/SIP trunking.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/teltel-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/teltel-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "teltel",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18122,7 +18122,7 @@ export const apps = {
       meta: {
         description:
           "TelTel is a telecom operator and software provider offering tools for automated voice and SMS communication, including contact center software, Voice/SMS API, and VoIP/SIP trunking.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/teltel-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/teltel-logo.png",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -18183,7 +18183,7 @@ export const apps = {
       appName: "Textit",
       description:
         "TextIt is a platform that enables users to build scalable, interactive chatbots across various channels without writing code.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/textit-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/textit-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "textit",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18196,7 +18196,7 @@ export const apps = {
       meta: {
         description:
           "TextIt is a platform that enables users to build scalable, interactive chatbots across various channels without writing code.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/textit-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/textit-logo.png",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -18206,7 +18206,7 @@ export const apps = {
       appName: "Thanks io",
       description:
         "thanks.io is a direct mail automation platform that enables users to send personalized postcards, letters, and notecards with handwritten fonts.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/thanks_io_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/thanks_io_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "thanks_io",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18219,7 +18219,7 @@ export const apps = {
       meta: {
         description:
           "thanks.io is a direct mail automation platform that enables users to send personalized postcards, letters, and notecards with handwritten fonts.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/thanks_io_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/thanks_io_round3_20250722.png",
         toolsCount: 33,
         totalInstallCount: 0,
       },
@@ -18229,7 +18229,7 @@ export const apps = {
       appName: "The odds api",
       description:
         "The Odds API provides real-time sports betting odds data from various bookmakers worldwide, covering multiple sports and betting markets.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/the_odds_api-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/the_odds_api-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "the_odds_api",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18242,7 +18242,7 @@ export const apps = {
       meta: {
         description:
           "The Odds API provides real-time sports betting odds data from various bookmakers worldwide, covering multiple sports and betting markets.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/the_odds_api-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/the_odds_api-logo.png",
         toolsCount: 6,
         totalInstallCount: 0,
       },
@@ -18298,7 +18298,7 @@ export const apps = {
       appName: "Tiktok",
       description:
         "TikTok short-form video platform + creation tools + social sharing",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tiktok.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tiktok.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "tiktok",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18311,7 +18311,7 @@ export const apps = {
       meta: {
         description:
           "TikTok short-form video platform + creation tools + social sharing",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tiktok.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tiktok.svg",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -18321,7 +18321,7 @@ export const apps = {
       appName: "Timelinesai",
       description:
         "TimelinesAI enables teams to manage and automate WhatsApp communications, integrating with various CRMs and tools to streamline workflows.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//timelines.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//timelines.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "timelinesai",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18334,7 +18334,7 @@ export const apps = {
       meta: {
         description:
           "TimelinesAI enables teams to manage and automate WhatsApp communications, integrating with various CRMs and tools to streamline workflows.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//timelines.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//timelines.jpeg",
         toolsCount: 13,
         totalInstallCount: 0,
       },
@@ -18344,7 +18344,7 @@ export const apps = {
       appName: "Timelink",
       description:
         "Timelink is a time tracking application designed to simplify and enhance the process of recording work hours, offering both software and hardware solutions for efficient time management.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/timelink-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/timelink-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "timelink",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18357,7 +18357,7 @@ export const apps = {
       meta: {
         description:
           "Timelink is a time tracking application designed to simplify and enhance the process of recording work hours, offering both software and hardware solutions for efficient time management.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/timelink-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/timelink-logo.svg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -18367,7 +18367,7 @@ export const apps = {
       appName: "Toggl",
       description:
         "Toggl is a time tracking application that helps users monitor and manage their work hours efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/toggl-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/toggl-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "toggl",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18380,7 +18380,7 @@ export const apps = {
       meta: {
         description:
           "Toggl is a time tracking application that helps users monitor and manage their work hours efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/toggl-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/toggl-logo.svg",
         toolsCount: 31,
         totalInstallCount: 0,
       },
@@ -18390,7 +18390,7 @@ export const apps = {
       appName: "Token metrics",
       description:
         "Token Metrics provides an API offering real-time, AI-powered cryptocurrency data and insights for developers to build trading bots, dashboards, and portfolio tools.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/token_metrics-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/token_metrics-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "token_metrics",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18403,7 +18403,7 @@ export const apps = {
       meta: {
         description:
           "Token Metrics provides an API offering real-time, AI-powered cryptocurrency data and insights for developers to build trading bots, dashboards, and portfolio tools.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/token_metrics-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/token_metrics-logo.png",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -18436,7 +18436,7 @@ export const apps = {
       appName: "Tomtom",
       description:
         "TomTom provides a suite of location-based services and APIs, including mapping, routing, traffic information, and geofencing, enabling developers to integrate advanced navigation and location functionalities into their applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tomtom-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tomtom-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "tomtom",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18449,7 +18449,7 @@ export const apps = {
       meta: {
         description:
           "TomTom provides a suite of location-based services and APIs, including mapping, routing, traffic information, and geofencing, enabling developers to integrate advanced navigation and location functionalities into their applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tomtom-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tomtom-logo.svg",
         toolsCount: 19,
         totalInstallCount: 0,
       },
@@ -18459,7 +18459,7 @@ export const apps = {
       appName: "Tpscheck",
       description:
         "TPSCheck is a service that verifies in real-time if a phone number is registered with the UK's Telephone Preference Service (TPS) or Corporate Telephone Preference Service (CTPS), providing insights on validity, location, type, and provider of the number.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tpscheck-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tpscheck-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "tpscheck",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18472,7 +18472,7 @@ export const apps = {
       meta: {
         description:
           "TPSCheck is a service that verifies in real-time if a phone number is registered with the UK's Telephone Preference Service (TPS) or Corporate Telephone Preference Service (CTPS), providing insights on validity, location, type, and provider of the number.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/tpscheck-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/tpscheck-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -18482,7 +18482,7 @@ export const apps = {
       appName: "Triggercmd",
       description:
         "TRIGGERcmd is a cloud service that allows you to securely and remotely run commands on your computers.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/triggercmd-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/triggercmd-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "triggercmd",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18495,7 +18495,7 @@ export const apps = {
       meta: {
         description:
           "TRIGGERcmd is a cloud service that allows you to securely and remotely run commands on your computers.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/triggercmd-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/triggercmd-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -18528,7 +18528,7 @@ export const apps = {
       appName: "Turbot pipes",
       description:
         "Turbot Pipes is an intelligence, automation, and security platform built specifically for DevOps, offering hosted Steampipe database instances, shared dashboards, snapshots, and more.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/turbot_pipes-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/turbot_pipes-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "turbot_pipes",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18541,7 +18541,7 @@ export const apps = {
       meta: {
         description:
           "Turbot Pipes is an intelligence, automation, and security platform built specifically for DevOps, offering hosted Steampipe database instances, shared dashboards, snapshots, and more.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/turbot_pipes-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/turbot_pipes-logo.svg",
         toolsCount: 12,
         totalInstallCount: 0,
       },
@@ -18551,7 +18551,7 @@ export const apps = {
       appName: "Turso",
       description:
         "Turso is a fully managed database platform built on libSQL, offering serverless SQLite databases with global replication and low-latency access.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/turso-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/turso-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "turso",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18564,7 +18564,7 @@ export const apps = {
       meta: {
         description:
           "Turso is a fully managed database platform built on libSQL, offering serverless SQLite databases with global replication and low-latency access.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/turso-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/turso-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -18620,7 +18620,7 @@ export const apps = {
       appName: "Typless",
       description:
         "Typless is an AI-powered document extraction platform that automates manual data entry from various documents using a simple API.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/typless-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/typless-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "typless",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18633,7 +18633,7 @@ export const apps = {
       meta: {
         description:
           "Typless is an AI-powered document extraction platform that automates manual data entry from various documents using a simple API.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/typless-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/typless-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -18643,7 +18643,7 @@ export const apps = {
       appName: "U301",
       description:
         "U301 provides an API to manage all U301 resources, currently under development.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/u301-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/u301-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "u301",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18656,7 +18656,7 @@ export const apps = {
       meta: {
         description:
           "U301 provides an API to manage all U301 resources, currently under development.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/u301-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/u301-logo.png",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -18666,7 +18666,7 @@ export const apps = {
       appName: "Unione",
       description:
         "UniOne is an email delivery service offering a versatile Web API and SMTP API for sending transactional and marketing emails.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/unione-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/unione-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "unione",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18679,7 +18679,7 @@ export const apps = {
       meta: {
         description:
           "UniOne is an email delivery service offering a versatile Web API and SMTP API for sending transactional and marketing emails.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/unione-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/unione-logo.svg",
         toolsCount: 36,
         totalInstallCount: 0,
       },
@@ -18740,7 +18740,7 @@ export const apps = {
       appName: "Uptimerobot",
       description:
         "UptimeRobot is a service that monitors the uptime and performance of websites, applications, and services, providing real-time alerts and detailed logs.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/uptimerobot-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/uptimerobot-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "uptimerobot",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18753,7 +18753,7 @@ export const apps = {
       meta: {
         description:
           "UptimeRobot is a service that monitors the uptime and performance of websites, applications, and services, providing real-time alerts and detailed logs.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/uptimerobot-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/uptimerobot-logo.svg",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -18763,7 +18763,7 @@ export const apps = {
       appName: "Userlist",
       description:
         "Userlist is a full-stack email automation platform designed for SaaS companies, enabling targeted behavior-based campaigns through email and in-app messages.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/userlist-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/userlist-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "userlist",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18776,7 +18776,7 @@ export const apps = {
       meta: {
         description:
           "Userlist is a full-stack email automation platform designed for SaaS companies, enabling targeted behavior-based campaigns through email and in-app messages.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/userlist-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/userlist-logo.png",
         toolsCount: 2,
         totalInstallCount: 0,
       },
@@ -18786,7 +18786,7 @@ export const apps = {
       appName: "V0",
       description:
         "v0 is an AI-powered web development assistant built by Vercel, designed to generate real, production-ready code for modern web applications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/v0-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/v0-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "v0",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18799,7 +18799,7 @@ export const apps = {
       meta: {
         description:
           "v0 is an AI-powered web development assistant built by Vercel, designed to generate real, production-ready code for modern web applications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/v0-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/v0-logo.png",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -18809,7 +18809,7 @@ export const apps = {
       appName: "Veo",
       description:
         "Veo 3 is Google's state-of-the-art model for generating high-fidelity 8s 720p videos with natively generated audio via the Gemini API.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gemini.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gemini.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "veo",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18822,7 +18822,7 @@ export const apps = {
       meta: {
         description:
           "Veo 3 is Google's state-of-the-art model for generating high-fidelity 8s 720p videos with natively generated audio via the Gemini API.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/gemini.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/gemini.svg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -18855,7 +18855,7 @@ export const apps = {
       appName: "Verifiedemail",
       description:
         "VerifiedEmail offers real-time email verification and bulk email list cleaning services to ensure the accuracy and deliverability of email communications.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/verifiedemail-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/verifiedemail-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "verifiedemail",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18868,7 +18868,7 @@ export const apps = {
       meta: {
         description:
           "VerifiedEmail offers real-time email verification and bulk email list cleaning services to ensure the accuracy and deliverability of email communications.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/verifiedemail-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/verifiedemail-logo.svg",
         toolsCount: 7,
         totalInstallCount: 0,
       },
@@ -18924,7 +18924,7 @@ export const apps = {
       appName: "Virustotal",
       description:
         "VirusTotal is a free online service that analyzes files and URLs for viruses, worms, trojans, and other kinds of malicious content using multiple antivirus engines and website scanners.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/virustotal-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/virustotal-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "virustotal",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -18937,7 +18937,7 @@ export const apps = {
       meta: {
         description:
           "VirusTotal is a free online service that analyzes files and URLs for viruses, worms, trojans, and other kinds of malicious content using multiple antivirus engines and website scanners.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/virustotal-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/virustotal-logo.svg",
         toolsCount: 16,
         totalInstallCount: 0,
       },
@@ -18997,7 +18997,7 @@ export const apps = {
       appName: "Wati",
       description:
         "Wati is a WhatsApp Business API platform that automates marketing, sales, service, and support.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/wati-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/wati-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "wati",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19014,7 +19014,7 @@ export const apps = {
       meta: {
         description:
           "Wati is a WhatsApp Business API platform that automates marketing, sales, service, and support.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/wati-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/wati-logo.jpeg",
         toolsCount: 5,
         totalInstallCount: 0,
       },
@@ -19024,7 +19024,7 @@ export const apps = {
       appName: "Webscraping ai",
       description:
         "WebScraping.AI provides an API for web scraping with features like Chrome JS rendering, rotating proxies, and HTML parsing.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/webscraping_ai-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/webscraping_ai-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "webscraping_ai",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19037,7 +19037,7 @@ export const apps = {
       meta: {
         description:
           "WebScraping.AI provides an API for web scraping with features like Chrome JS rendering, rotating proxies, and HTML parsing.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/webscraping_ai-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/webscraping_ai-logo.jpeg",
         toolsCount: 4,
         totalInstallCount: 0,
       },
@@ -19047,7 +19047,7 @@ export const apps = {
       appName: "Webvizio",
       description:
         "Webvizio is a visual feedback and collaboration tool for web professionals, enabling users to annotate web pages, share feedback, track bugs, and manage tasks efficiently.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/webvizio-logo.jpeg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/webvizio-logo.jpeg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "webvizio",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19060,7 +19060,7 @@ export const apps = {
       meta: {
         description:
           "Webvizio is a visual feedback and collaboration tool for web professionals, enabling users to annotate web pages, share feedback, track bugs, and manage tasks efficiently.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/webvizio-logo.jpeg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/webvizio-logo.jpeg",
         toolsCount: 1,
         totalInstallCount: 0,
       },
@@ -19070,7 +19070,7 @@ export const apps = {
       appName: "Whautomate",
       description:
         "Whautomate is a platform that offers seamless integrations for customer engagement, including AI chatbots, appointment scheduling, and broadcast messaging.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/whautomate-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/whautomate-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "whautomate",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19083,7 +19083,7 @@ export const apps = {
       meta: {
         description:
           "Whautomate is a platform that offers seamless integrations for customer engagement, including AI chatbots, appointment scheduling, and broadcast messaging.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/whautomate-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/whautomate-logo.png",
         toolsCount: 16,
         totalInstallCount: 0,
       },
@@ -19093,7 +19093,7 @@ export const apps = {
       appName: "Winston ai",
       description:
         "Winston AI provides a comprehensive content verification and management platform, offering tools for AI-generated text detection, plagiarism detection, and AI image detection.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/winston_ai-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/winston_ai-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "winston_ai",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19110,7 +19110,7 @@ export const apps = {
       meta: {
         description:
           "Winston AI provides a comprehensive content verification and management platform, offering tools for AI-generated text detection, plagiarism detection, and AI image detection.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/winston_ai-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/winston_ai-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -19147,7 +19147,7 @@ export const apps = {
       appName: "Wolfram alpha api",
       description:
         "Integrate computational knowledge into applications via Wolfram|Alpha's APIs.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/wolfram_alpha_api-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/wolfram_alpha_api-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "wolfram_alpha_api",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19160,7 +19160,7 @@ export const apps = {
       meta: {
         description:
           "Integrate computational knowledge into applications via Wolfram|Alpha's APIs.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/wolfram_alpha_api-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/wolfram_alpha_api-logo.png",
         toolsCount: 10,
         totalInstallCount: 0,
       },
@@ -19170,7 +19170,7 @@ export const apps = {
       appName: "Woodpecker co",
       description:
         "Woodpecker.co is a cold email tool that automates personalized email outreach and follow-ups for sales teams and agencies.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/woodpecker_co-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/woodpecker_co-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "woodpecker_co",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19183,7 +19183,7 @@ export const apps = {
       meta: {
         description:
           "Woodpecker.co is a cold email tool that automates personalized email outreach and follow-ups for sales teams and agencies.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/woodpecker_co-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/woodpecker_co-logo.png",
         toolsCount: 9,
         totalInstallCount: 0,
       },
@@ -19193,7 +19193,7 @@ export const apps = {
       appName: "Workable",
       description:
         "Workable is an all-in-one HR software platform that streamlines hiring, employee data management, time tracking, and payroll.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/workable_round3_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/workable_round3_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "workable",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19210,7 +19210,7 @@ export const apps = {
       meta: {
         description:
           "Workable is an all-in-one HR software platform that streamlines hiring, employee data management, time tracking, and payroll.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/workable_round3_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/workable_round3_20250722.png",
         toolsCount: 21,
         totalInstallCount: 0,
       },
@@ -19220,7 +19220,7 @@ export const apps = {
       appName: "Workday",
       description:
         "Workday is a cloud-based enterprise resource planning (ERP) software that provides comprehensive solutions for human capital management, financial management, and analytics",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/workday.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/workday.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "workday",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19233,7 +19233,7 @@ export const apps = {
       meta: {
         description:
           "Workday is a cloud-based enterprise resource planning (ERP) software that provides comprehensive solutions for human capital management, financial management, and analytics",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/workday.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/workday.svg",
         toolsCount: 25,
         totalInstallCount: 0,
       },
@@ -19315,7 +19315,7 @@ export const apps = {
       id: "zeplin",
       appName: "Zeplin",
       description: "Template description for zeplin",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zeplin-logo.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zeplin-logo.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zeplin",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19327,7 +19327,7 @@ export const apps = {
       authSchems: ["API_KEY"],
       meta: {
         description: "Template description for zeplin",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zeplin-logo.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zeplin-logo.png",
         toolsCount: 24,
         totalInstallCount: 0,
       },
@@ -19337,7 +19337,7 @@ export const apps = {
       appName: "Zerobounce",
       description:
         "ZeroBounce is an email validation and deliverability platform that helps businesses improve email marketing performance by identifying and removing invalid or risky email addresses.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/zerobounce_final_20250722.png",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/zerobounce_final_20250722.png",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zerobounce",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19354,7 +19354,7 @@ export const apps = {
       meta: {
         description:
           "ZeroBounce is an email validation and deliverability platform that helps businesses improve email marketing performance by identifying and removing invalid or risky email addresses.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/icons/zerobounce_final_20250722.png",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/icons/zerobounce_final_20250722.png",
         toolsCount: 18,
         totalInstallCount: 0,
       },
@@ -19364,7 +19364,7 @@ export const apps = {
       appName: "Zylvie",
       description:
         "High-converting cart software for solopreneurs to sell digital products and subscriptions.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zylvie-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zylvie-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zylvie",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19377,7 +19377,7 @@ export const apps = {
       meta: {
         description:
           "High-converting cart software for solopreneurs to sell digital products and subscriptions.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zylvie-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zylvie-logo.svg",
         toolsCount: 3,
         totalInstallCount: 0,
       },
@@ -19387,7 +19387,7 @@ export const apps = {
       appName: "Zyte api",
       description:
         "Zyte API is a web scraping solution that automates data extraction from websites, handling challenges like bans and dynamic content.",
-      logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zyte_api-logo.svg",
+      logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zyte_api-logo.svg",
       status: "NEEDS-ADMIN",
       toolkitSlug: "zyte_api",
       createdAt: "2025-11-22T20:42:33.166Z",
@@ -19400,7 +19400,7 @@ export const apps = {
       meta: {
         description:
           "Zyte API is a web scraping solution that automates data extraction from websites, handling challenges like bans and dynamic content.",
-        logo: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zyte_api-logo.svg",
+        logo: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zyte_api-logo.svg",
         toolsCount: 8,
         totalInstallCount: 0,
       },

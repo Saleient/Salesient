@@ -20,7 +20,7 @@ export function EmailTemplate({ otp, magicLink }: EmailTemplateProps) {
       <Head />
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>Login to EliteNotes</Heading>
+          <Heading style={h1}>Login to SalesOrbit</Heading>
 
           {magicLink && (
             <Link href={magicLink} style={link} target="_blank">
@@ -45,11 +45,11 @@ export function EmailTemplate({ otp, magicLink }: EmailTemplateProps) {
           <Section style={footer}>
             <Text style={footerText}>
               <Link
-                href="https://elitenotes.com"
-                style={footerLink}
+                href="https://salesorbit.com"
+                style={text}
                 target="_blank"
               >
-                EliteNotes
+                SalesOrbit
               </Link>
               , your intelligent note-taking workspace
               <br />

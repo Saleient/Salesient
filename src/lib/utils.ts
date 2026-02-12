@@ -18,7 +18,7 @@ export function getIntegrationLogo(integrationName: string): string {
     supabase: "https://logos.composio.dev/api/supabase",
     outlook: "https://logos.composio.dev/api/outlook",
     perplexityai:
-      "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//perplexity.jpeg",
+      "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//perplexity.jpeg",
     twitter: "https://logos.composio.dev/api/twitter",
     googledrive: "https://logos.composio.dev/api/googledrive",
     googledocs: "https://logos.composio.dev/api/googledocs",
@@ -57,7 +57,7 @@ export function getIntegrationLogo(integrationName: string): string {
     trello: "https://logos.composio.dev/api/trello",
     apollo: "https://logos.composio.dev/api/apollo",
     semrush: "https://logos.composio.dev/api/semrush",
-    mem0: "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//mem0.png",
+    mem0: "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//mem0.png",
     neon: "https://logos.composio.dev/api/neon",
     posthog: "https://logos.composio.dev/api/posthog",
     clickup: "https://logos.composio.dev/api/clickup",
@@ -75,7 +75,7 @@ export function getIntegrationLogo(integrationName: string): string {
     confluence: "https://logos.composio.dev/api/confluence",
     freshdesk: "https://logos.composio.dev/api/freshdesk",
     borneo:
-      "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/borneo.jpeg",
+      "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/borneo.jpeg",
     mixpanel: "https://logos.composio.dev/api/mixpanel",
     coda: "https://logos.composio.dev/api/coda",
     acculynx: "https://logos.composio.dev/api/acculynx",
@@ -92,16 +92,16 @@ export function getIntegrationLogo(integrationName: string): string {
     sendgrid: "https://logos.composio.dev/api/sendgrid",
     junglescout: "https://logos.composio.dev/api/junglescout",
     pipedrive:
-      "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/pipedrive.svg",
+      "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/pipedrive.svg",
     bamboohr:
-      "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master//bamboohr.svg",
+      "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master//bamboohr.svg",
     whatsapp:
-      "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/whatsapp-logo.png",
+      "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/whatsapp-logo.png",
     dynamics365: "https://logos.composio.dev/api/dynamics365",
     zendesk:
-      "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/zendesk.svg",
+      "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/zendesk.svg",
     googlephotos:
-      "https://cdn.jsdelivr.net/gh/EliteNotes0/open-logos@master/Google_Photos.png",
+      "https://cdn.jsdelivr.net/gh/SalesOrbit/open-logos@master/Google_Photos.png",
   };
 
   // Normalize integration name (remove spaces, convert to lowercase)

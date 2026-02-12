@@ -5,22 +5,22 @@ import { Toaster } from "@/components/ui/sonner";
 import { WebVitals } from "@/lib/axiom/client";
 
 export const metadata: Metadata = {
-  title: "Elitenotes",
+  title: "SalesOrbit",
   description: "Your go-to app for everything sales",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://elitenotes.xyz"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://salesorbit.xyz"
   ), // so that og:url etc uses correct base
   openGraph: {
-    title: "Elitenotes",
+    title: "SalesOrbit",
     description: "Your go-to app for everything sales",
     url: "/",
-    siteName: "Elitenotes",
+    siteName: "SalesOrbit",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Elitenotes - Sales app screenshot",
+        alt: "SalesOrbit - Sales app screenshot",
       },
     ],
     locale: "en_US",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elitenotes",
+    title: "SalesOrbit",
     description: "Your go-to app for everything sales",
     images: ["/twitter-card.jpg"],
     // optional: handle twitter site/creator

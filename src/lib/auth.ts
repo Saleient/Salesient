@@ -14,12 +14,12 @@ export const auth = betterAuth({
   }),
   baseURL:
     process.env.NODE_ENV === "production"
-      ? "https://www.elitenotes.xyz"
+      ? "https://www.salesorbit.xyz"
       : "http://localhost:3000",
   trustedOrigins: [
     "http://localhost:3000",
-    "https://www.elitenotes.xyz",
-    "https://elitenotes.xyz",
+    "https://www.salesorbit.xyz",
+    "https://salesorbit.xyz",
   ],
   socialProviders: {
     google: {
@@ -36,9 +36,9 @@ export const auth = betterAuth({
       sendMagicLink: async ({ email, url, token }) => {
         try {
           await resend.emails.send({
-            from: "EliteNotes <noreply@elitenotes.xyz>",
+            from: "SalesOrbit <noreply@salesorbit.xyz>",
             to: [email],
-            subject: "Your EliteNotes Magic Link",
+            subject: "Your SalesOrbit Magic Link",
             react: EmailTemplate({ otp: token, magicLink: url }),
           });
         } catch (error) {

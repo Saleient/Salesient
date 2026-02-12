@@ -82,7 +82,7 @@ export default function Navbar() {
           className={`${textClasses} w-fit font-bold text-xl tracking-tight`}
           href="/"
         >
-          ELITENOTES
+          SALESORBIT
         </Link>
 
         {/* Desktop Links */}
@@ -131,7 +131,7 @@ export default function Navbar() {
               <SheetTitle
                 className={`text-left font-bold text-xl tracking-tight ${textClasses}`}
               >
-                ELITENOTES
+                SALESORBIT
               </SheetTitle>
             </SheetHeader>
             <div className="flex flex-col space-y-6">

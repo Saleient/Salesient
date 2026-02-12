@@ -1,6 +1,7 @@
 "use client";
 
 import { Plug, Search } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { InView } from "@/components/ui/in-view";
 import { Input } from "@/components/ui/input";
@@ -229,13 +230,12 @@ export default function LandingIntegrations() {
               We're always adding new integrations. Request a platform and we'll
               work on making it available for you.
             </p>
-            <a
-              href="https://cal.com/sahilgulati41/15min"
+            <Link
+              href="/contact"
               className="rounded-lg border border-neutral-800 bg-neutral-800 px-6 py-3 font-medium text-neutral-100 transition-all duration-300 hover:border-neutral-700 hover:bg-neutral-700"
-              type="button"
             >
               Request Integration
-            </a>
+            </Link>
           </InView>
         )}
       </div>

@@ -17,9 +17,9 @@ export async function POST(request: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "EliteNotes <noreply@elitenotes.xyz>", // Replace with your verified domain
-      to: [email],
-      subject: "Your EliteNotes Login Code",
+      from: "SalesOrbit <noreply@salesorbit.xyz>", // Replace with your verified domain
+      to: email,
+      subject: "Your SalesOrbit Login Code",
       react: EmailTemplate({ otp, magicLink }),
     });
 
