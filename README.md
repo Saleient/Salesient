@@ -1,10 +1,10 @@
-# EliteNotes – Technical Documentation
+# SalesOrbit – Technical Documentation
 
-> Internal engineering reference for the `elitenotes-web` repository implementation–level detail.
+> Internal engineering reference for the `salesorbit-web` repository implementation–level detail.
 
 ## 1. Purpose
 
-EliteNotes is a production-ready AI sales assistant platform combining: (1) structured data (accounts, documents, integrations), (2) unstructured knowledge (uploaded files, scraped web content, cloud storage), and (3) AI assistance (chat with RAG pipeline, memory layer, tool orchestration) to accelerate B2B sales workflows (research, objection handling, content generation, CRM integration).
+SalesOrbit is a production-ready AI sales assistant platform combining: (1) structured data (accounts, documents, integrations), (2) unstructured knowledge (uploaded files, scraped web content, cloud storage), and (3) AI assistance (chat with RAG pipeline, memory layer, tool orchestration) to accelerate B2B sales workflows (research, objection handling, content generation, CRM integration).
 
 ## 2. High-Level Architecture
 
@@ -270,7 +270,7 @@ FIRECRAWL_API_KEY               # Web scraping service
 R2_ACCOUNT_ID                   # Cloudflare R2 storage
 R2_ACCESS_KEY_ID
 R2_SECRET_ACCESS_KEY
-R2_BUCKET                       # Default: "elitenotes"
+R2_BUCKET                       # Default: "salesorbit"
 COMPOSIO_API_KEY                # Integration platform
 MEM0_DB_PATH                    # Supermemory SQLite path (default: /tmp/memory.db)
 EMBEDDINGS_DIMENSION            # Vector dimensions (default: 768)
@@ -618,7 +618,7 @@ retrieval_log (
 
 ## 21. Licensing & Ownership
 
-Proprietary – EliteNotes. All rights reserved. Internal use only.
+Proprietary – SalesOrbit. All rights reserved. Internal use only.
 
 ## 22. Versioning
 
@@ -642,6 +642,6 @@ Proprietary – EliteNotes. All rights reserved. Internal use only.
 ---
 
 Last Updated: 2025-11-09
-Repository: `elitenotes-web` (main branch)
-Owner: `EliteNotes0`
+Repository: `salesorbit-web` (main branch)
+Owner: `SalesOrbit0`
 Document Maintainer: Engineering Team
