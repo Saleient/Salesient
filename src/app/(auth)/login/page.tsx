@@ -1,7 +1,6 @@
 "use client";
 
 import { HomeIcon, Loader2, Mail } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
@@ -170,15 +169,9 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center">
-      {/* Full background image */}
-      <Image
-        alt="Background"
-        className="absolute inset-0 object-cover opacity-60"
-        fill
-        priority
-        src="/bg.png"
-      />
+    <div className="relative flex min-h-screen items-center justify-center bg-black">
+      {/* Subtle radial glow */}
+      <div className="pointer-events-none absolute top-0 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
 
       {/* Home Button */}
       <Link
@@ -196,7 +189,7 @@ export default function AuthPage() {
           {/* Header */}
           <div className="space-y-3">
             <h2 className="font-semibold text-3xl tracking-tight">
-              {isNewUser ? "Welcome!" : "Welcome to SalesOrbit"}
+              {isNewUser ? "Welcome!" : "Welcome to Salesient"}
             </h2>
             <p className="text-muted-foreground">
               {magicLinkSent && "Check your email for the magic link"}

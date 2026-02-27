@@ -36,9 +36,9 @@ export const auth = betterAuth({
       sendMagicLink: async ({ email, url, token }) => {
         try {
           await resend.emails.send({
-            from: "SalesOrbit <noreply@salesorbit.xyz>",
+            from: "Salesient <noreply@salesorbit.xyz>",
             to: [email],
-            subject: "Your SalesOrbit Magic Link",
+            subject: "Your Salesient Magic Link",
             react: EmailTemplate({ otp: token, magicLink: url }),
           });
         } catch (error) {

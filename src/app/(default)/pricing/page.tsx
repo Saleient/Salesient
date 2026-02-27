@@ -7,7 +7,7 @@ export default function Pricing() {
     {
       title: "Free",
       tagline: "For individuals & early adopters",
-      price: "₹0.00",
+      price: "$0",
       period: "per month, billed monthly",
       features: [
         "Connect 1 integration (e.g., Google doc)",
@@ -19,9 +19,9 @@ export default function Pricing() {
     },
     {
       title: "Team",
-      tagline: "For SMBs / 10 users",
-      price: "₹1999/month/team",
-      period: "up to 10 users, then +$15/user/month",
+      tagline: "For growing teams up to 10 users",
+      price: "$49/month",
+      period: "per team, then +$15/user/month",
       features: [
         "Up to 5 integrations per team",
         "Full RAG search across team’s data sources",
@@ -55,10 +55,10 @@ export default function Pricing() {
         {/* Header */}
         <div className="mb-16 max-w-4xl text-center">
           <h1 className="mb-4 text-4xl md:text-7xl">
-            Flexible pricing for teams <br /> that close faster
+            Transparent Pricing for Teams <br /> That Move Fast
           </h1>
           <p className="text-lg text-neutral-400">
-            Choose the plan that fits your team’s size and workflow
+            Select the plan that aligns with your team’s scale and workflow.
           </p>
         </div>
 
@@ -94,7 +94,9 @@ export default function Pricing() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="mb-4 font-semibold text-lg">What you get:</h3>
+                  <h3 className="mb-4 font-semibold text-lg">
+                    What’s included:
+                  </h3>
                   <ul
                     className={`space-y-4 text-sm ${
                       plan.highlight ? "text-neutral-100" : "text-neutral-300"
@@ -114,7 +116,7 @@ export default function Pricing() {
                   onClick={() => router.push("/login")}
                   type="button"
                 >
-                  {plan.price === "Custom" ? "Contact Sales" : "Book A Demo"}
+                  {plan.price === "Custom" ? "Contact Sales" : "Request a Demo"}
                 </button>
               </div>
             </div>

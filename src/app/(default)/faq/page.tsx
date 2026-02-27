@@ -11,29 +11,29 @@ import ContactForm from "@/components/contact-form";
 export default function FAQPage() {
   const faqs = [
     {
-      question: "How is this different from other AI tools who chat with PDF?",
+      question: "How does Salesient differ from standard document AI tools?",
       answer:
-        "Unlike basic PDF chat tools, SalesOrbit connects with your entire sales stack — CRMs, cloud storage, and communication tools — giving you a unified AI assistant that understands context across all your documents and data, not just single files.",
+        "Unlike basic PDF chat tools, Salesient connects with your entire sales stack — CRMs, cloud storage, and communication tools — providing a unified AI assistant that understands context across all your documents and data, not just individual files.",
     },
     {
-      question: "What all integrations I will have to chat with my documents?",
+      question: "Which integrations are supported for document access?",
       answer:
-        "We currently support 5 major integrations, allowing you to pull documents directly from your preferred cloud providers or storage platforms. More integrations are on our roadmap based on user needs.",
+        "We currently support 5 major integrations, enabling you to import documents directly from your preferred cloud providers and storage platforms. Additional integrations are on our roadmap based on customer feedback.",
     },
     {
-      question: "Who is this best suited for?",
+      question: "Who is Salesient designed for?",
       answer:
-        "SalesOrbit is built for B2B sales teams — including consultants, sales operations, and revenue leaders in SaaS, consulting, and service-driven enterprises — who want to save time and make faster, data-backed decisions.",
+        "Salesient is purpose-built for B2B sales teams — including consultants, sales operations professionals, and revenue leaders in SaaS, consulting, and service-driven enterprises — who need to operate faster with data-backed decisions.",
     },
     {
-      question: "What all types of sales documents SalesOrbit can handle?",
+      question: "What types of sales documents does Salesient support?",
       answer:
-        "From proposals, contracts, and pricing sheets to CRM exports, meeting notes, call transcripts, and sales playbooks — SalesOrbit supports both structured and unstructured sales documents, making it your single source of truth.",
+        "From proposals, contracts, and pricing sheets to CRM exports, meeting notes, call transcripts, and sales playbooks — Salesient handles both structured and unstructured sales documents, serving as your single source of truth.",
     },
     {
-      question: "Why would I share my sales data on your platform?",
+      question: "How is my sales data protected on the platform?",
       answer:
-        "Your data security is our top priority. Our custom RAG system ensures documents are ingested, indexed, and retrieved securely, with enterprise-grade encryption (for enterprise plans only) and strict access controls preventing leakage or misuse of your information.",
+        "Data security is foundational to our platform. Our custom RAG system ensures documents are ingested, indexed, and retrieved securely, with enterprise-grade encryption (available on Enterprise plans) and strict access controls to prevent unauthorized access.",
     },
   ];
 
@@ -46,8 +46,8 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h2>
           <p className="max-w-md text-gray-400 text-lg md:text-xl">
-            Have more questions? Contact us to get the answer you&apos;re
-            looking for!
+            Have additional questions? Reach out and our team will be happy to
+            help.
           </p>
         </div>
         <div className="w-full flex-1">
@@ -84,9 +84,10 @@ export default function FAQPage() {
         id="contact"
       >
         <div className="md:w-[40%]">
-          <h2 className="mb-4 text-5xl md:text-7xl">Let&apos;s Talk!</h2>
+          <h2 className="mb-4 text-5xl md:text-7xl">Contact Us</h2>
           <p className="text-gray-400 text-lg">
-            Have questions or need support? Fill out the form and we&apos;ll get back to you as soon as possible.
+            Have questions or need support? Fill out the form and we&apos;ll
+            respond as soon as possible.
           </p>
         </div>
 

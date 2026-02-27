@@ -1,29 +1,34 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section className="z-10 w-full bg-background" id="footer">
-      <footer className="mx-auto max-w-[1440px] px-6 py-16 text-gray-300">
+    <section className="z-10 w-full bg-black" id="footer">
+      <footer className="mx-auto max-w-[1440px] px-6 pt-16 pb-8 text-gray-300">
+        {/* Top separator */}
+        <div className="mb-12 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
         <div className="mx-auto max-w-[1440px]">
           {/* Header Section */}
-          <div className="mb-12">
-            <h2 className="font-semibold text-2xl text-foreground">
-              SalesOrbit
+          <div className="mb-12 flex flex-col gap-3">
+            <h2 className="font-bold text-xl tracking-tight text-white">
+              SALESIENT
             </h2>
+            <p className="max-w-sm text-sm text-white/40 leading-relaxed">
+              AI-powered sales intelligence — transforming data into revenue.
+            </p>
           </div>
 
+          {/* Mobile Layout */}
           <div className="md:hidden">
-            <div className="grid grid-cols-2 gap-12">
-              {/* Column 1 - Sitemap */}
+            <div className="grid grid-cols-2 gap-10">
               <div>
-                <h3 className="mb-4 font-semibold text-base text-foreground">
-                  Sitemap
+                <h3 className="mb-4 font-medium text-xs tracking-widest text-white/50 uppercase">
+                  Navigation
                 </h3>
-                <ul className="space-y-3 text-foreground/70 text-sm">
+                <ul className="space-y-3 text-sm">
                   <li>
                     <Link
-                      className="transition-colors hover:text-foreground"
+                      className="text-white/60 transition-colors hover:text-white"
                       href="/"
                     >
                       Home
@@ -31,7 +36,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="transition-colors hover:text-foreground"
+                      className="text-white/60 transition-colors hover:text-white"
                       href="/pricing"
                     >
                       Pricing
@@ -39,43 +44,42 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="transition-colors hover:text-foreground"
+                      className="text-white/60 transition-colors hover:text-white"
                       href="/faq"
                     >
                       FAQ
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      className="text-white/60 transition-colors hover:text-white"
+                      href="/integration"
+                    >
+                      Integrations
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
-              {/* Column 2 - Additional Links */}
               <div>
-                <h3 className="mb-4 font-semibold text-base text-foreground">
+                <h3 className="mb-4 font-medium text-xs tracking-widest text-white/50 uppercase">
                   Resources
                 </h3>
-                <ul className="space-y-3 text-foreground/70 text-sm">
+                <ul className="space-y-3 text-sm">
                   <li>
                     <Link
-                      className="transition-colors hover:text-foreground"
+                      className="text-white/60 transition-colors hover:text-white"
                       href="/pricing#features"
                     >
                       Features
                     </Link>
                   </li>
                   <li>
-                    <span
-                      className="cursor-not-allowed opacity-50"
-                      title="Coming soon"
-                    >
-                      Blog
-                    </span>
-                  </li>
-                  <li>
                     <Link
-                      className="transition-colors hover:text-foreground"
+                      className="text-white/60 transition-colors hover:text-white"
                       href="/contact"
                     >
-                      Contact Support
+                      Contact
                     </Link>
                   </li>
                 </ul>
@@ -83,24 +87,27 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="hidden gap-16 md:grid md:grid-cols-3 lg:grid-cols-4">
-            {/* Column 1 - About */}
+          {/* Desktop Layout */}
+          <div className="hidden gap-16 md:grid md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-semibold text-foreground">About</h3>
-              <p className="text-foreground/60 text-sm leading-relaxed">
-                AI-powered sales intelligence platform that harnesses your data,
-                understands your funnel, and helps your sales rise above the
-                noise
+              <h3 className="mb-5 font-medium text-xs tracking-widest text-white/50 uppercase">
+                About
+              </h3>
+              <p className="text-sm text-white/40 leading-relaxed">
+                Enterprise sales intelligence platform that transforms your data
+                into actionable insights, maps your pipeline, and drives
+                measurable revenue outcomes.
               </p>
             </div>
 
-            {/* Column 2 - Sitemap */}
             <div>
-              <h3 className="mb-4 font-semibold text-foreground">Sitemap</h3>
-              <ul className="space-y-3 text-foreground/70 text-sm">
+              <h3 className="mb-5 font-medium text-xs tracking-widest text-white/50 uppercase">
+                Navigation
+              </h3>
+              <ul className="space-y-3 text-sm">
                 <li>
                   <Link
-                    className="transition-colors hover:text-foreground"
+                    className="text-white/60 transition-colors hover:text-white"
                     href="/"
                   >
                     Home
@@ -108,7 +115,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    className="transition-colors hover:text-foreground"
+                    className="text-white/60 transition-colors hover:text-white"
                     href="/pricing"
                   >
                     Pricing
@@ -116,31 +123,39 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    className="transition-colors hover:text-foreground"
+                    className="text-white/60 transition-colors hover:text-white"
                     href="/faq"
                   >
                     FAQ
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    className="text-white/60 transition-colors hover:text-white"
+                    href="/integration"
+                  >
+                    Integrations
+                  </Link>
+                </li>
               </ul>
             </div>
 
-            {/* Column 3 - Resources */}
             <div>
-              <h3 className="mb-4 font-semibold text-foreground">Resources</h3>
-              <ul className="space-y-3 text-foreground/70 text-sm">
+              <h3 className="mb-5 font-medium text-xs tracking-widest text-white/50 uppercase">
+                Resources
+              </h3>
+              <ul className="space-y-3 text-sm">
                 <li>
                   <Link
-                    className="transition-colors hover:text-foreground"
+                    className="text-white/60 transition-colors hover:text-white"
                     href="/pricing#features"
                   >
                     Features
                   </Link>
                 </li>
-
                 <li>
                   <Link
-                    className="transition-colors hover:text-foreground"
+                    className="text-white/60 transition-colors hover:text-white"
                     href="/contact"
                   >
                     Contact Support
@@ -149,13 +164,14 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Column 4 - Legal */}
-            <div className="hidden lg:block">
-              <h3 className="mb-4 font-semibold text-foreground">Legal</h3>
-              <ul className="space-y-3 text-foreground/70 text-sm">
+            <div>
+              <h3 className="mb-5 font-medium text-xs tracking-widest text-white/50 uppercase">
+                Legal
+              </h3>
+              <ul className="space-y-3 text-sm">
                 <li>
                   <span
-                    className="cursor-not-allowed opacity-50"
+                    className="cursor-not-allowed text-white/30"
                     title="Coming soon"
                   >
                     Privacy Policy
@@ -163,7 +179,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <span
-                    className="cursor-not-allowed opacity-50"
+                    className="cursor-not-allowed text-white/30"
                     title="Coming soon"
                   >
                     Terms of Service
@@ -174,14 +190,37 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Footer Image */}
-        <Image
-          alt="SalesOrbit"
-          className="h-full w-full pt-16 md:pt-32"
-          height={60}
-          src="/salesorbit.svg"
-          width={200}
-        />
+        {/* Large Brand Watermark */}
+        <div className="relative mt-16 overflow-hidden md:mt-24">
+          <p
+            aria-hidden="true"
+            className="select-none text-center font-bold text-[clamp(4rem,15vw,12rem)] tracking-tighter text-white/[0.03] leading-none"
+          >
+            SALESIENT
+          </p>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 md:flex-row">
+          <p className="text-xs text-white/30">
+            &copy; {new Date().getFullYear()} Salesient. All rights reserved.
+          </p>
+          <div className="flex items-center gap-6">
+            <Link
+              className="text-xs text-white/30 transition-colors hover:text-white/60"
+              href="/contact"
+            >
+              Support
+            </Link>
+            <span className="text-white/10">·</span>
+            <Link
+              className="text-xs text-white/30 transition-colors hover:text-white/60"
+              href="/faq"
+            >
+              FAQ
+            </Link>
+          </div>
+        </div>
       </footer>
     </section>
   );

@@ -1,8 +1,6 @@
 "use client";
-import MuxPlayer from "@mux/mux-player-react";
 import Image from "next/image";
 import { InView } from "@/components/ui/in-view";
-import "@mux/mux-player/themes/minimal";
 
 // Types
 type FeatureCardData = {
@@ -11,7 +9,6 @@ type FeatureCardData = {
   description: string;
   bgGradient: string;
   textColor: string;
-  playbackId: string;
   imageSrc?: string;
 };
 
@@ -22,7 +19,6 @@ type ProcessStepData = {
   imageSrc?: string;
   imageAlt: string;
   isReversed?: boolean;
-  playbackId?: string;
 };
 
 // Data
@@ -31,34 +27,34 @@ const featureCards: FeatureCardData[] = [
     id: "01",
     title: "Centralized Knowledge Base",
     description:
-      "No more remembering where that one doc is—unify all product guides, FAQs, and playbooks in one place, accessible anywhere, anytime by your team.",
+      "Unify product guides, FAQs, and playbooks in a single source of truth — accessible to your entire team, anywhere, anytime.",
     bgGradient: "from-[#028D35] to-[#2AA437]",
     textColor: "text-white",
     playbackId: "7heq00cjmwaKiq002aSGOLwSUAxab2jBQJ00uGd8TGFz3E",
   },
   {
     id: "02",
-    title: "Distribute Ready Assets",
+    title: "Distribute Sales-Ready Assets",
     description:
-      "Deliver brand-approved decks, pricing sheets, and templates instantly to every rep, always up to date.",
+      "Deliver brand-approved decks, pricing sheets, and templates to every representative instantly — always current, always compliant.",
     bgGradient: "bg-white",
     textColor: "text-[#444444]",
     playbackId: "00302PQmTc7fTBr6lZFCOvMdgv57z64A02SOrQrNOYT87U",
   },
   {
     id: "03",
-    title: "Do better competitive analysis",
+    title: "Competitive Intelligence",
     description:
-      "Why waste time hunting for competitive intel? Access organized insights on competitors, market trends, and win/loss analyses to sharpen your sales strategies.",
+      "Access structured insights on competitors, market trends, and win/loss analyses to refine your positioning and sharpen sales strategy.",
     bgGradient: "bg-white",
     textColor: "text-[#444444]",
     playbackId: "tQ1e02r02KUqfDbnGYK91DOQosxc1NnttTz5iyEW9yfZ00",
   },
   {
     id: "04",
-    title: "Be better prepared for meetings",
+    title: "Intelligent Meeting Preparation",
     description:
-      "Have a client call coming up? Instantly pull up tailored briefs with key insights, past interactions, and personalized talking points to ace every conversation.",
+      "Generate tailored briefing documents with key insights, historical interactions, and personalized talking points before every client engagement.",
     bgGradient: "bg-white",
     textColor: "text-[#444444]",
     playbackId: "00302PQmTc7fTBr6lZFCOvMdgv57z64A02SOrQrNOYT87U",
@@ -68,29 +64,29 @@ const featureCards: FeatureCardData[] = [
 const processSteps: ProcessStepData[] = [
   {
     id: 1,
-    title: "Let Us understand you",
+    title: "Configure Your Workspace",
     description:
-      "Set your custom instructions, preferences, and business context to tailor our model to your unique needs.",
+      "Define your custom instructions, preferences, and business context so the platform adapts to your organization's unique workflows.",
     playbackId: "noGtcoHiq0100IE3kr9Fv01q00WZXR5gLaUK6E8OJB24s1Q",
-    imageAlt: "Feature 1",
+    imageAlt: "Workspace configuration",
     isReversed: false,
   },
   {
     id: 2,
-    title: "Allow us to snoop through your data (securely of course!)",
+    title: "Connect Your Data Sources",
     description:
-      "You choose what data to share, what apps to connect, some PDFs and links and we take care of the rest!",
+      "Select the data you want to share, connect your applications, upload documents and links — we handle the rest securely.",
     playbackId: "Oay3Ponbz1IIFy8Jb3h69ahO1STJKuNsxU5LDiKa01dI",
-    imageAlt: "Feature 2",
+    imageAlt: "Data source connection",
     isReversed: true,
   },
   {
     id: 3,
     title: "Get Instant Insights",
     description:
-      "Ask questions and you will get up to date answers with your data, with citations, from the source you choose from!",
+      "Ask questions and receive real-time, citation-backed answers drawn from your connected data sources.",
     playbackId: "00302PQmTc7fTBr6lZFCOvMdgv57z64A02SOrQrNOYT87U",
-    imageAlt: "Feature 2",
+    imageAlt: "Instant insights dashboard",
     isReversed: false,
   },
 ];
@@ -107,12 +103,14 @@ function SectionHeader({ badge, title, className = "" }: SectionHeaderProps) {
     <div
       className={`flex w-full flex-col items-start justify-center gap-6 md:items-center ${className}`}
     >
-      <div className="w-fit rounded-full border border-white/30 bg-white/20 px-4 py-2 text-neutral-800 shadow-lg backdrop-blur-md">
+      <div className="w-fit rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-white/40 backdrop-blur-sm">
         {" "}
         {badge}
       </div>
-      <h2 className="text-left font-semibold text-3xl text-neutral-950 leading-tight tracking-tight sm:max-w-3xl sm:text-center md:font-medium lg:text-5xl">
-        {title}
+      <h2 className="text-left font-semibold text-3xl leading-tight tracking-tight sm:max-w-3xl sm:text-center md:font-medium lg:text-5xl">
+        <span className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent">
+          {title}
+        </span>
       </h2>
     </div>
   );
@@ -127,14 +125,16 @@ type WorkflowHeaderProps = {
 function WorkflowHeader({ badge, title, description }: WorkflowHeaderProps) {
   return (
     <div className="flex w-full flex-col items-start justify-center gap-6 pb-8 md:items-center md:pb-16">
-      <div className="w-fit rounded-full border border-white/30 bg-white/20 px-4 py-2 text-neutral-800 shadow-lg backdrop-blur-md">
+      <div className="w-fit rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-white/40 backdrop-blur-sm">
         {" "}
         {badge}
       </div>
-      <h2 className="max-w-4xl text-left font-semibold text-3xl text-neutral-950 leading-tight tracking-tight sm:text-center md:font-medium lg:text-5xl">
-        {title}
+      <h2 className="max-w-4xl text-left font-semibold text-3xl leading-tight tracking-tight sm:text-center md:font-medium lg:text-5xl">
+        <span className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent">
+          {title}
+        </span>
       </h2>
-      <p className="max-w-2xl text-left text-base text-neutral-700 leading-relaxed sm:text-center sm:text-lg">
+      <p className="max-w-2xl text-left text-base text-white/50 leading-relaxed sm:text-center sm:text-lg">
         {description}
       </p>
     </div>
@@ -146,38 +146,54 @@ type ProcessStepProps = {
 };
 
 function ProcessStep({ step }: ProcessStepProps) {
-  const { id, title, description, imageSrc, imageAlt, isReversed, playbackId } =
-    step;
+  const { id, title, description, imageSrc, imageAlt, isReversed } = step;
 
   const imageSection = (
     <div className="rounded-2xl md:min-h-96 lg:min-h-112 xl:min-h-128">
-      {playbackId ? (
-        <MuxPlayer
-          autoPlay={false}
-          className="aspect-video min-h-full min-w-full rounded-2xl"
-          loop={true}
-          muted={true}
-          playbackId={playbackId}
-          theme="minimal"
-        />
-      ) : (
+      {imageSrc ? (
         <Image
           alt={imageAlt}
           className="aspect-video h-full w-full rounded-2xl object-cover object-center"
           height={900}
-          src={imageSrc || ""}
+          src={imageSrc}
           width={1600}
         />
+      ) : (
+        <div className="flex aspect-video items-center justify-center rounded-2xl border border-white/[0.06] bg-gradient-to-br from-white/[0.03] to-transparent">
+          <div className="flex flex-col items-center gap-3 text-white/20">
+            <svg
+              className="h-12 w-12"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Preview</title>
+              <path
+                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span className="text-sm">Preview coming soon</span>
+          </div>
+        </div>
       )}
     </div>
   );
 
   const contentSection = (
     <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-12 lg:px-12 lg:py-16">
-      <h3 className="mb-4 font-semibold text-neutral-900 text-xl md:mb-6 md:text-3xl lg:text-4xl">
+      <h3 className="mb-4 font-semibold text-white text-xl md:mb-6 md:text-3xl lg:text-4xl">
         {id}. {title}
       </h3>
-      <p className="text-base text-neutral-700 leading-relaxed md:text-lg">
+      <p className="text-base text-white/50 leading-relaxed md:text-lg">
         {description}
       </p>
     </div>
@@ -186,7 +202,7 @@ function ProcessStep({ step }: ProcessStepProps) {
   return (
     <div
       className={
-        "relative flex flex-col overflow-clip rounded-xl bg-linear-to-br from-neutral-100 to-neutral-200 p-6 md:grid md:grid-cols-2 md:gap-8 md:bg-transparent md:p-0 lg:gap-12"
+        "relative flex flex-col overflow-clip rounded-xl border border-white/[0.06] bg-[#0a0a0a] p-6 md:grid md:grid-cols-2 md:gap-8 md:border-0 md:bg-transparent md:p-0 lg:gap-12"
       }
     >
       <div className="md:hidden">
@@ -215,10 +231,10 @@ type FeatureCardProps = {
 };
 
 function FeatureCard({ card }: FeatureCardProps) {
-  const { title, description, playbackId, imageSrc } = card;
+  const { title, description, imageSrc } = card;
 
   return (
-    <div className="relative flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-6 transition-shadow duration-300 hover:shadow-lg">
+    <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0a0a0a] p-6 transition-all duration-300 hover:border-white/15 hover:bg-[#0d0d0d]">
       <div className="mb-6 aspect-video max-h-128">
         {imageSrc ? (
           <Image
@@ -229,24 +245,39 @@ function FeatureCard({ card }: FeatureCardProps) {
             width={1600}
           />
         ) : (
-          <MuxPlayer
-            autoPlay={false}
-            className="aspect-video min-h-full min-w-full rounded-xl"
-            loop={true}
-            muted={true}
-            playbackId={playbackId}
-            theme="minimal"
-          />
+          <div className="flex h-full w-full items-center justify-center rounded-xl border border-white/[0.04] bg-gradient-to-br from-white/[0.02] to-transparent">
+            <div className="flex flex-col items-center gap-3 text-white/15">
+              <svg
+                className="h-10 w-10"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Preview</title>
+                <path
+                  d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span className="text-xs">Preview coming soon</span>
+            </div>
+          </div>
         )}
       </div>
 
-      <h3 className="mb-4 font-semibold text-2xl text-neutral-900 md:text-3xl">
+      <h3 className="mb-4 font-semibold text-2xl text-white md:text-3xl">
         {title}
       </h3>
 
-      <p className="text-base text-neutral-700 leading-relaxed">
-        {description}
-      </p>
+      <p className="text-base text-white/50 leading-relaxed">{description}</p>
     </div>
   );
 }
@@ -260,13 +291,13 @@ function ProcessSection({ steps }: ProcessSectionProps) {
     <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center">
       <InView transition={{ duration: 0.5, delay: 0 }}>
         <SectionHeader
-          badge="How it Works 🤔"
+          badge="How It Works"
           className="mb-12 md:mb-20"
-          title="We will help you find insights wherever they are hidden"
+          title="Surface insights from every corner of your organization"
         />
       </InView>
 
-      <div className="grid w-full gap-12 text-neutral-950 md:grid-cols-1 md:gap-16 lg:gap-20">
+      <div className="grid w-full gap-12 text-white md:grid-cols-1 md:gap-16 lg:gap-20">
         {steps.map((step, idx) => (
           <InView
             key={step.id}
@@ -289,9 +320,9 @@ function WorkflowSection({ cards }: WorkflowSectionProps) {
     <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center">
       <InView transition={{ duration: 0.5, delay: 0 }}>
         <WorkflowHeader
-          badge="Features ✨"
-          description="Build with a toolchain that elevates the entire sales document lifecycle from team-first design to polished artifact delivery."
-          title="Elevate Sales Document Workflow"
+          badge="Capabilities"
+          description="A comprehensive toolchain that elevates the entire sales document lifecycle — from content creation to polished delivery."
+          title="Elevate Your Sales Document Workflow"
         />
       </InView>
 
@@ -312,14 +343,14 @@ function WorkflowSection({ cards }: WorkflowSectionProps) {
 // Main Component
 export default function Features() {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center gap-20 bg-foreground px-5 py-20 sm:px-8 md:gap-40 md:px-12 md:py-32">
-      {/* Process section with subtle background */}
-      <div className="w-full rounded-3xl bg-linear-to-b from-transparent via-neutral-50/30 to-transparent py-8">
+    <section className="flex min-h-screen flex-col items-center justify-center gap-20 bg-black px-5 py-20 sm:px-8 md:gap-40 md:px-12 md:py-32">
+      {/* Process section */}
+      <div className="w-full py-8">
         <ProcessSection steps={processSteps} />
       </div>
 
       {/* Divider */}
-      <div className="w-full max-w-[1440px] border-neutral-300 border-t" />
+      <div className="w-full max-w-[1440px] border-white/10 border-t" />
 
       <WorkflowSection cards={featureCards} />
     </section>

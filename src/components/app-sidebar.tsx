@@ -68,7 +68,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
               size="lg"
             >
               <a href="/dashboard">
-                <span>SalesOrbit</span>
+                <span>Salesient</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>

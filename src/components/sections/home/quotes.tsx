@@ -9,19 +9,19 @@ import {
 const testimonials = [
   {
     quote:
-      "We used to spend hours piecing together documents across tools. Now everything from pricing sheets to client proposals is in one place. It's a huge win for productivity.",
+      "We used to spend hours consolidating documents across disparate tools. Now everything from pricing sheets to client proposals lives in a single workspace. The productivity gains have been measurable.",
     name: "Priya Kapoor",
     title: "Regional Sales Manager, Finverse",
   },
   {
     quote:
-      "Our sales team is closing deals faster than ever thanks to the streamlined proposal process.",
+      "Our sales cycle has shortened significantly since adopting the platform. The streamlined proposal workflow alone has transformed how we operate.",
     name: "John Doe",
     title: "Head of Sales, TechCorp",
   },
   {
     quote:
-      "The all-in-one platform has transformed how we manage client relationships and contracts.",
+      "The unified platform has fundamentally changed how we manage client relationships, contracts, and competitive positioning.",
     name: "Jane Smith",
     title: "Customer Success Lead, SoftSolutions",
   },

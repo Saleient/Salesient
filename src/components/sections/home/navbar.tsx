@@ -62,18 +62,16 @@ export default function Navbar() {
   }, [pathname]);
 
   const navbarClasses = isDarkBackground
-    ? "fixed  w-full flex items-center justify-between px-10 py-6 z-40 bg-background transition-all duration-300"
-    : "fixed w-full flex items-center justify-between px-10 py-6 z-40 bg-foreground transition-all duration-300";
+    ? "fixed  w-full flex items-center justify-between px-10 py-6 z-40 bg-black transition-all duration-300"
+    : "fixed w-full flex items-center justify-between px-10 py-6 z-40 bg-black transition-all duration-300";
 
-  const textClasses = isDarkBackground ? "text-foreground" : "text-neutral-950";
+  const textClasses = isDarkBackground ? "text-white" : "text-white";
 
   const linkClasses = isDarkBackground
-    ? "text-foreground/80 hover:text-foreground transition font-semibold text-lg"
-    : "text-neutral-950/80 hover:text-neutral-950 transition font-semibold text-lg";
+    ? "text-white/60 hover:text-white transition font-medium text-sm tracking-wide"
+    : "text-white/60 hover:text-white transition font-medium text-sm tracking-wide";
 
-  const mobileIconClasses = isDarkBackground
-    ? "text-foreground"
-    : "text-neutral-950";
+  const mobileIconClasses = isDarkBackground ? "text-white" : "text-white";
 
   return (
     <nav className={navbarClasses}>
@@ -82,7 +80,7 @@ export default function Navbar() {
           className={`${textClasses} w-fit font-bold text-xl tracking-tight`}
           href="/"
         >
-          SALESORBIT
+          SALESIENT
         </Link>
 
         {/* Desktop Links */}
@@ -106,7 +104,7 @@ export default function Navbar() {
           href="/login"
         >
           <Button className="hidden cursor-pointer rounded-full text-white md:inline-flex">
-            Lets Get Started!
+            Get Started
           </Button>{" "}
         </Link>
       </div>
@@ -120,18 +118,14 @@ export default function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent
-            className={`w-[280px] border-l p-6 ${
-              isDarkBackground
-                ? "border-foreground/20 bg-background"
-                : "border-neutral-200 bg-white"
-            }`}
+            className={`w-[280px] border-l border-white/10 bg-black p-6`}
             side="right"
           >
             <SheetHeader className="mb-8">
               <SheetTitle
-                className={`text-left font-bold text-xl tracking-tight ${textClasses}`}
+                className={`text-left font-bold text-xl tracking-tight text-white`}
               >
-                SALESORBIT
+                SALESIENT
               </SheetTitle>
             </SheetHeader>
             <div className="flex flex-col space-y-6">
@@ -155,7 +149,7 @@ export default function Navbar() {
                 href="/login"
               >
                 <Button className="w-full cursor-pointer rounded-full text-white">
-                  Lets Get Started!
+                  Get Started
                 </Button>
               </Link>
             </div>

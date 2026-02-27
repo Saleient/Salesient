@@ -5,22 +5,22 @@ import { Toaster } from "@/components/ui/sonner";
 import { WebVitals } from "@/lib/axiom/client";
 
 export const metadata: Metadata = {
-  title: "SalesOrbit",
-  description: "Your go-to app for everything sales",
+  title: "Salesient",
+  description: "AI-powered sales intelligence platform",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://salesorbit.xyz"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://salesorbit.cp,"
   ), // so that og:url etc uses correct base
   openGraph: {
-    title: "SalesOrbit",
-    description: "Your go-to app for everything sales",
+    title: "Salesient",
+    description: "AI-powered sales intelligence platform",
     url: "/",
-    siteName: "SalesOrbit",
+    siteName: "Salesient",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/",
         width: 1200,
         height: 630,
-        alt: "SalesOrbit - Sales app screenshot",
+        alt: "Salesient - AI Sales Intelligence",
       },
     ],
     locale: "en_US",
@@ -28,17 +28,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SalesOrbit",
-    description: "Your go-to app for everything sales",
+    title: "Salesient",
+    description: "AI-powered sales intelligence platform",
     images: ["/twitter-card.jpg"],
     // optional: handle twitter site/creator
     // site: "@YourTwitterHandle",
     // creator: "@YourTwitterHandle",
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+  icons: [],
 };
 
 export default function RootLayout({
