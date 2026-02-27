@@ -4,7 +4,8 @@
 
 ## 1. Purpose
 
-SalesOrbit is a production-ready AI sales assistant platform combining: (1) structured data (accounts, documents, integrations), (2) unstructured knowledge (uploaded files, scraped web content, cloud storage), and (3) AI assistance (chat with RAG pipeline, memory layer, tool orchestration) to accelerate B2B sales workflows (research, objection handling, content generation, CRM integration).
+SalesOrbit is a production-ready AI sales assistant platform built for modern B2B sales teams. It unifies structured data (CRM accounts, deals, documents) with unstructured knowledge (uploaded files, scraped web content, cloud storage) and surfaces it through an AI layer powered by a RAG pipeline, persistent memory, and intelligent tool orchestration. From deep account research and competitive analysis to objection handling, content generation, and CRM sync — SalesOrbit gives sales teams the context and intelligence they need to move faster and close smarter.
+
 
 ## 2. High-Level Architecture
 
