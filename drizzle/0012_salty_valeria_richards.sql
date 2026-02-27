@@ -1,1 +1,0 @@
-ALTER TABLE "user" ADD COLUMN "system_preferences" json DEFAULT '{"customSystemPrompt":""}'::json;
