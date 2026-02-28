@@ -305,56 +305,8 @@ export default function AuthPage() {
             </div>
           ) : (
             <>
-              {/* Google Sign In Button */}
-              <button
-                className="group relative flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-input bg-background font-medium text-sm shadow-sm transition-all duration-200 hover:bg-muted hover:shadow disabled:cursor-not-allowed disabled:opacity-50"
-                disabled={loading || !mounted}
-                onClick={async () => {
-                  await signIn.social(
-                    {
-                      provider: "google",
-                      callbackURL: "/dashboard",
-                    },
-                    {
-                      onRequest: () => {
-                        setLoading(true);
-                      },
-                      onError: () => {
-                        setLoading(false);
-                      },
-                    }
-                  );
-                }}
-                type="button"
-              >
-                <div className="flex h-5 w-5 items-center justify-center">
-                  {loading && !showMagicLink ? (
-                    <Loader2 className="h-5 w-5 animate-spin" />
-                  ) : (
-                    <GoogleIcon className="h-5 w-5" />
-                  )}
-                </div>
-                <span className="text-foreground">
-                  {loading && !showMagicLink
-                    ? "Signing in..."
-                    : "Continue with Google"}
-                </span>
-              </button>
-
-              {/* Divider */}
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <span className="w-full border-t" />
-                </div>
-                <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-background px-2 text-muted-foreground">
-                    Or continue with
-                  </span>
-                </div>
-              </div>
-
               {/* Magic Link Form */}
-              {showMagicLink && showNameInput && (
+              {showNameInput && (
                 <form className="space-y-4" onSubmit={handleMagicLinkSubmit}>
                   <div className="space-y-2">
                     <label className="font-medium text-sm" htmlFor="email">
@@ -415,7 +367,7 @@ export default function AuthPage() {
                 </form>
               )}
 
-              {showMagicLink && !showNameInput && (
+              {!showNameInput && (
                 <form className="space-y-4" onSubmit={handleEmailSubmit}>
                   <div className="space-y-2">
                     <label className="font-medium text-sm" htmlFor="email">
@@ -449,27 +401,7 @@ export default function AuthPage() {
                       </>
                     )}
                   </button>
-                  <button
-                    className="w-full text-center font-medium text-muted-foreground text-sm transition-colors hover:text-foreground"
-                    disabled={loading}
-                    onClick={() => setShowMagicLink(false)}
-                    type="button"
-                  >
-                    Back to sign in options
-                  </button>
                 </form>
-              )}
-
-              {!showMagicLink && (
-                <button
-                  className="group relative flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-input bg-background font-medium text-sm shadow-sm transition-all duration-200 hover:bg-muted hover:shadow disabled:cursor-not-allowed disabled:opacity-50"
-                  disabled={loading || !mounted}
-                  onClick={() => setShowMagicLink(true)}
-                  type="button"
-                >
-                  <Mail className="h-5 w-5" />
-                  <span className="text-foreground">Continue with Email</span>
-                </button>
               )}
             </>
           )}

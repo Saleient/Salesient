@@ -16,8 +16,13 @@ export async function POST(request: Request) {
       );
     }
 
+    const fromAddress =
+      process.env.NODE_ENV === "production"
+        ? "Salesient <noreply@salesorbit.xyz>"
+        : "Salesient <onboarding@resend.dev>";
+
     const { data, error } = await resend.emails.send({
-      from: "Salesient <noreply@salesorbit.xyz>", // Replace with your verified domain
+      from: fromAddress,
       to: email,
       subject: "Your Salesient Login Code",
       react: EmailTemplate({ otp, magicLink }),

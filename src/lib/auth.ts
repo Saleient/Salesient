@@ -34,9 +34,13 @@ export const auth = betterAuth({
   plugins: [
     magicLink({
       sendMagicLink: async ({ email, url, token }) => {
+        const fromAddress =
+          process.env.NODE_ENV === "production"
+            ? "Salesient <noreply@salesorbit.xyz>"
+            : "Salesient <onboarding@resend.dev>";
         try {
           await resend.emails.send({
-            from: "Salesient <noreply@salesorbit.xyz>",
+            from: fromAddress,
             to: [email],
             subject: "Your Salesient Magic Link",
             react: EmailTemplate({ otp: token, magicLink: url }),
