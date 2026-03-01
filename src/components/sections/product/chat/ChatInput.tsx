@@ -89,7 +89,7 @@ const ChatInput = forwardRef<ChatInputHandle, ChatInputProps>(
     }));
 
     return (
-      <div className="relative mx-auto flex w-full max-w-5xl flex-col">
+      <div className="relative mx-auto flex w-full max-w-3xl flex-col md:max-w-4xl">
         {/* Attachments Panel */}
         <AnimatePresence>
           {showTools && (
@@ -110,10 +110,10 @@ const ChatInput = forwardRef<ChatInputHandle, ChatInputProps>(
         </AnimatePresence>
 
         {/* Input Section */}
-        <div className="mx-auto w-full max-w-5xl p-4">
-          <div className="rounded-xl bg-linear-to-b from-foreground/20 to-foreground/10 p-px transition-colors dark:from-foreground/30 dark:to-foreground/20">
+        <div className="mx-auto w-full p-3 sm:p-4">
+          <div className="rounded-xl bg-linear-to-b from-foreground/15 to-foreground/8 p-px transition-colors dark:from-foreground/25 dark:to-foreground/15">
             <form
-              className="rounded-xl bg-card p-2 shadow-lg backdrop-blur-sm dark:bg-background"
+              className="rounded-xl bg-card p-2 shadow-md backdrop-blur-sm dark:bg-background"
               onSubmit={handleFormSubmit}
             >
               <div className="flex flex-col">
@@ -128,7 +128,7 @@ const ChatInput = forwardRef<ChatInputHandle, ChatInputProps>(
                 )}
 
                 <Textarea
-                  className="min-h-[60px]! w-full resize-none overflow-y-scroll border-none! bg-card! px-3 py-3 text-base! text-foreground shadow-none placeholder:text-muted-foreground focus-visible:ring-0 dark:bg-background! dark:text-foreground dark:placeholder:text-muted-foreground [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-foreground/30 dark:[&::-webkit-scrollbar-thumb]:bg-foreground/40 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-px"
+                  className="min-h-15! w-full resize-none overflow-y-scroll border-none! bg-card! px-3 py-3 text-base! text-foreground shadow-none placeholder:text-muted-foreground focus-visible:ring-0 dark:bg-background! dark:text-foreground dark:placeholder:text-muted-foreground [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-foreground/30 dark:[&::-webkit-scrollbar-thumb]:bg-foreground/40 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-px"
                   disabled={isLoading}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => {
@@ -156,7 +156,7 @@ const ChatInput = forwardRef<ChatInputHandle, ChatInputProps>(
                     </Button>
                   </div>
                   <Button
-                    className="h-8 w-8 rounded-full bg-teal-700 text-white transition-colors hover:bg-teal-600 dark:text-background"
+                    className="h-8 w-8 rounded-full bg-teal-700 text-white shadow-sm transition-all hover:bg-teal-600 hover:shadow-md disabled:opacity-40 dark:text-background"
                     disabled={!input.trim() || isLoading}
                     type="submit"
                   >

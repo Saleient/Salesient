@@ -1,6 +1,6 @@
 "use client";
 import type { UIMessage } from "ai";
-import { ClipboardCopy, Plus } from "lucide-react";
+import { ArrowUp, ClipboardCopy, Plus } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -424,13 +424,13 @@ export default function ChatSection({
 
   return (
     <div className="relative flex h-screen flex-col overflow-clip rounded-2xl bg-background md:h-[97vh]">
-      <div className="absolute top-0 z-10 flex w-full items-center justify-between bg-transparent px-8 py-6">
+      <div className="absolute top-0 z-10 flex w-full items-center justify-between border-border/40 border-b bg-background/60 px-4 py-3 backdrop-blur-xl sm:px-6 md:px-8 md:py-4">
         <div className="flex items-center gap-3">
           <SidebarTrigger />
         </div>
         <Link href="/dashboard">
           <Button
-            className="gap-2 transition-colors hover:bg-secondary/80 dark:hover:bg-secondary/60"
+            className="gap-2 rounded-lg font-medium text-sm shadow-sm transition-all hover:bg-secondary/80 hover:shadow-md dark:hover:bg-secondary/60"
             variant="secondary"
           >
             <Plus className="h-4 w-4" /> New Chat
@@ -438,33 +438,37 @@ export default function ChatSection({
         </Link>
       </div>
 
-      <Conversation className="flex-1 overflow-hidden bg-background pt-20 md:pb-6 dark:bg-background">
-        <ConversationScrollButton className="-translate-x-1/2 sticky top-[85%] bottom-auto left-1/2 z-20 bg-accent hover:bg-accent/90" />
+      <Conversation className="flex-1 overflow-hidden bg-background pt-16 md:pb-6 md:pt-18 dark:bg-background">
+        <ConversationScrollButton className="-translate-x-1/2 sticky top-[85%] bottom-auto left-1/2 z-20 rounded-full bg-accent shadow-lg hover:bg-accent/90" />
         {messages.length === 0 && !input.trim() ? (
-          <div className="mx-auto flex h-full max-w-5xl flex-col items-start justify-center bg-background px-4 text-center sm:px-5 dark:bg-background">
-            <h1 className="mb-4 font-semibold text-2xl text-foreground sm:mb-6 sm:text-3xl md:text-4xl dark:text-foreground">
+          <div className="mx-auto flex h-full max-w-2xl flex-col items-start justify-center px-4 sm:px-6">
+            <p className="mb-1 font-medium text-muted-foreground text-xs tracking-widest uppercase sm:text-sm">
+              Salesient AI
+            </p>
+            <h1 className="mb-6 font-semibold text-2xl text-foreground tracking-tight sm:mb-8 sm:text-3xl md:text-4xl">
               {greeting}
             </h1>
             {!isLoadingPrompts && personalizedPrompts.length > 0 && (
-              <div className="flex w-full max-w-xl flex-col gap-2 pt-3 text-muted-foreground *:rounded-2xl *:border-border *:border-b *:py-2 *:text-foreground *:text-sm sm:gap-3 sm:pt-4 sm:*:py-3 sm:*:text-lg">
+              <div className="flex w-full flex-col gap-2 sm:gap-2.5">
                 {personalizedPrompts.slice(0, 6).map((promptItem, idx) => (
-                  <Button
-                    className="h-auto justify-start px-2 text-left transition-colors hover:bg-accent hover:text-accent-foreground sm:px-4 dark:hover:bg-accent/80"
+                  <button
+                    className="group flex w-full items-center gap-3 rounded-xl border border-border/60 bg-card/50 px-4 py-3 text-left text-foreground text-sm transition-all hover:border-border hover:bg-accent/60 hover:shadow-sm sm:px-5 sm:py-3.5 sm:text-base dark:bg-card/30 dark:hover:bg-accent/40"
                     key={`${promptItem.title}-${idx}`}
                     onClick={() => {
                       setInput(promptItem.prompt);
                     }}
-                    variant="ghost"
+                    type="button"
                   >
-                    {promptItem.title}
-                  </Button>
+                    <span className="flex-1">{promptItem.title}</span>
+                    <ArrowUp className="h-4 w-4 shrink-0 rotate-45 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                  </button>
                 ))}
               </div>
             )}
             {isLoadingPrompts && (
-              <div className="flex w-full max-w-xl flex-col gap-2 pt-3 sm:gap-3 sm:pt-4">
+              <div className="flex w-full flex-col gap-2 sm:gap-2.5">
                 {[1, 2, 3].map((i) => (
-                  <Skeleton className="h-12 w-full rounded-2xl" key={i} />
+                  <Skeleton className="h-12 w-full rounded-xl" key={i} />
                 ))}
               </div>
             )}
@@ -660,7 +664,7 @@ function ChatMessages(props: ChatMessagesProps) {
   }
 
   return (
-    <ConversationContent className="mx-auto max-w-5xl">
+    <ConversationContent className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-4xl">
       {allMessages.map((message, index) => {
         // Determine if this is a tool-related message
         const isToolMessage =
@@ -684,23 +688,23 @@ function ChatMessages(props: ChatMessagesProps) {
 
         return (
           <div
-            className={`flex text-lg ${
+            className={`flex text-base ${
               message.role === "user" ? "justify-end" : "justify-start"
             } ${index > 0 ? spacingClass : ""}`}
             key={message.id}
           >
             <div
-              className={`relative flex flex-row ${
+              className={`group/msg relative flex flex-row ${
                 message.role === "user"
-                  ? "w-full justify-end md:max-w-[75%]"
+                  ? "w-full justify-end md:max-w-[70%]"
                   : "w-full justify-start"
               }`}
             >
               <div
-                className={`wrap-break-word max-w-full overflow-hidden rounded-2xl px-4 py-3 transition-colors ${
+                className={`wrap-break-word max-w-full overflow-hidden rounded-2xl px-4 py-3 transition-all ${
                   message.role === "user"
-                    ? "border border-border bg-card text-foreground dark:bg-muted/80 dark:text-foreground"
-                    : "bg-transparent text-foreground dark:text-foreground"
+                    ? "border border-border/70 bg-card shadow-sm dark:bg-muted/60"
+                    : "bg-transparent text-foreground"
                 }`}
               >
                 {message.role === "user" ? (
@@ -794,14 +798,14 @@ function ChatMessages(props: ChatMessagesProps) {
                       !message.content &&
                       (!message.toolCalls ||
                         message.toolCalls.length === 0) && (
-                        <div className="flex min-w-60 flex-col gap-2">
+                        <div className="flex min-w-60 flex-col gap-3">
                           <Shimmer className="font-medium text-sm">
                             {thinkingText}
                           </Shimmer>
-                          <div className="space-y-2 pt-1">
-                            <Skeleton className="h-4 w-[90%]" />
-                            <Skeleton className="h-4 w-[75%]" />
-                            <Skeleton className="h-4 w-[50%]" />
+                          <div className="space-y-2.5 pt-1">
+                            <Skeleton className="h-3.5 w-[90%] rounded-md" />
+                            <Skeleton className="h-3.5 w-[75%] rounded-md" />
+                            <Skeleton className="h-3.5 w-[50%] rounded-md" />
                           </div>
                         </div>
                       )}
@@ -814,13 +818,13 @@ function ChatMessages(props: ChatMessagesProps) {
                 message.content &&
                 message.content.trim() && (
                   <Action
-                    className={`-bottom-10 absolute h-6 w-6 p-0 ${
+                    className={`-bottom-8 absolute h-7 w-7 rounded-md p-0 opacity-0 transition-opacity group-hover/msg:opacity-100 ${
                       message.role === "user" ? "right-1" : "left-1"
                     }`}
                     onClick={() => copyMessage(message.content)}
                     tooltip="Copy to clipboard"
                   >
-                    <ClipboardCopy className="h-4 w-4 opacity-60" />
+                    <ClipboardCopy className="h-3.5 w-3.5 text-muted-foreground" />
                   </Action>
                 )}
             </div>

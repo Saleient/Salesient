@@ -9,7 +9,9 @@ export default function Page({
   return (
     <SidebarProvider>
       <AppSidebar />
-      <SidebarInset className="md:max-h-[98vh]">{children}</SidebarInset>
+      <SidebarInset className="overflow-hidden md:max-h-screen">
+        {children}
+      </SidebarInset>
     </SidebarProvider>
   );
 }
