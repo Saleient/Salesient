@@ -1,10 +1,10 @@
-# SalesOrbit – Technical Documentation
+# Salesient – Technical Documentation
 
-> Internal engineering reference for the `salesorbit-web` repository implementation–level detail.
+> Internal engineering reference for the `Salesient` repository implementation–level detail.
 
 ## 1. Purpose
 
-SalesOrbit is a production-ready AI sales assistant platform built for modern B2B sales teams. It unifies structured data (CRM accounts, deals, documents) with unstructured knowledge (uploaded files, scraped web content, cloud storage) and surfaces it through an AI layer powered by a RAG pipeline, persistent memory, and intelligent tool orchestration. From deep account research and competitive analysis to objection handling, content generation, and CRM sync — SalesOrbit gives sales teams the context and intelligence they need to move faster and close smarter.
+Salesient is a production-ready AI sales assistant platform built for modern B2B sales teams. It unifies structured data (CRM accounts, deals, documents) with unstructured knowledge (uploaded files, scraped web content, cloud storage) and surfaces it through an AI layer powered by a RAG pipeline, persistent memory, and intelligent tool orchestration. From deep account research and competitive analysis to objection handling, content generation, and CRM sync — Salesient gives sales teams the context and intelligence they need to move faster and close smarter.
 
 
 ## 2. High-Level Architecture
@@ -271,7 +271,7 @@ FIRECRAWL_API_KEY               # Web scraping service
 R2_ACCOUNT_ID                   # Cloudflare R2 storage
 R2_ACCESS_KEY_ID
 R2_SECRET_ACCESS_KEY
-R2_BUCKET                       # Default: "salesorbit"
+R2_BUCKET                       # Default: "Salesient"
 COMPOSIO_API_KEY                # Integration platform
 MEM0_DB_PATH                    # Supermemory SQLite path (default: /tmp/memory.db)
 EMBEDDINGS_DIMENSION            # Vector dimensions (default: 768)
@@ -619,7 +619,7 @@ retrieval_log (
 
 ## 21. Licensing & Ownership
 
-Proprietary – SalesOrbit. All rights reserved. Internal use only.
+Proprietary – Salesient. All rights reserved. Internal use only.
 
 ## 22. Versioning
 
@@ -643,6 +643,6 @@ Proprietary – SalesOrbit. All rights reserved. Internal use only.
 ---
 
 Last Updated: 2025-11-09
-Repository: `salesorbit-web` (main branch)
-Owner: `SalesOrbit0`
+Repository: `Salesient-web` (main branch)
+Owner: `Salesient0`
 Document Maintainer: Engineering Team
