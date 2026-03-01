@@ -107,7 +107,7 @@ export default function Hero() {
             }}
             transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
           />
-          Salesient AI
+          Salesient
         </motion.div>
 
         {/* Heading with staggered word reveal */}

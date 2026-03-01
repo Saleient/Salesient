@@ -1,7 +1,15 @@
 "use client";
 import Image from "next/image";
-import { motion } from "motion/react";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  useScroll,
+  useInView,
+} from "motion/react";
 import { InView } from "@/components/ui/in-view";
+import { useCallback, useRef, type MouseEvent as ReactMouseEvent } from "react";
 
 // Types
 type FeatureCardData = {
@@ -30,6 +38,7 @@ type ProcessStepData = {
 
 /* ── Spring configs ── */
 const springSmooth = { type: "spring" as const, stiffness: 120, damping: 20 };
+const springSnappy = { type: "spring" as const, stiffness: 400, damping: 30 };
 
 // Data
 const featureCards: FeatureCardData[] = [
@@ -119,8 +128,57 @@ const processSteps: ProcessStepData[] = [
   },
 ];
 
+/* ── Floating particles for ambient depth ── */
+function FeatureParticles() {
+  const particles = Array.from({ length: 18 }, (_, i) => ({
+    id: i,
+    size: Math.random() * 2 + 0.8,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    duration: Math.random() * 12 + 10,
+    delay: Math.random() * 6,
+    opacity: Math.random() * 0.12 + 0.03,
+  }));
+
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      {particles.map((p) => (
+        <motion.div
+          key={p.id}
+          className="absolute rounded-full bg-white"
+          style={{
+            width: p.size,
+            height: p.size,
+            left: `${p.x}%`,
+            top: `${p.y}%`,
+          }}
+          animate={{
+            y: [0, -30, 0],
+            x: [0, Math.random() * 10 - 5, 0],
+            opacity: [0, p.opacity, p.opacity, 0],
+          }}
+          transition={{
+            duration: p.duration,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+            delay: p.delay,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 // Icon components
-function FeatureIcon({ icon, color }: { icon: string; color: string }) {
+function FeatureIcon({
+  icon,
+  color,
+  size = 6,
+}: {
+  icon: string;
+  color: string;
+  size?: number;
+}) {
   const paths: Record<string, React.ReactNode> = {
     database: (
       <path
@@ -175,7 +233,7 @@ function FeatureIcon({ icon, color }: { icon: string; color: string }) {
 
   return (
     <svg
-      className="h-6 w-6"
+      className={`h-${size} w-${size}`}
       fill="none"
       stroke={color}
       strokeWidth={1.5}
@@ -188,9 +246,512 @@ function FeatureIcon({ icon, color }: { icon: string; color: string }) {
   );
 }
 
-/* ── Animated mock UI panel for process steps ── */
+/* ── Animated gradient border wrapper ── */
+function GradientBorderCard({
+  children,
+  accentColor,
+  className = "",
+}: {
+  children: React.ReactNode;
+  accentColor: string;
+  className?: string;
+}) {
+  return (
+    <div className={`group relative ${className}`}>
+      {/* Animated gradient border */}
+      <motion.div
+        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+        style={{
+          background: `linear-gradient(135deg, ${accentColor}30, transparent 40%, transparent 60%, ${accentColor}20)`,
+        }}
+      />
+      <motion.div
+        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 blur-sm transition-opacity duration-700 group-hover:opacity-60"
+        style={{
+          background: `linear-gradient(135deg, ${accentColor}15, transparent 50%, ${accentColor}10)`,
+        }}
+      />
+      {children}
+    </div>
+  );
+}
+
+/* ── Window chrome (reusable title bar) ── */
+function WindowChrome({ accentColor }: { accentColor: string }) {
+  return (
+    <div className="flex items-center gap-2 border-white/6 border-b px-4 py-3">
+      <div className="flex gap-1.5">
+        <motion.div
+          className="h-2.5 w-2.5 rounded-full"
+          style={{ backgroundColor: "#ff5f57" }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, type: "spring", stiffness: 500 }}
+        />
+        <motion.div
+          className="h-2.5 w-2.5 rounded-full"
+          style={{ backgroundColor: "#febc2e" }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6, type: "spring", stiffness: 500 }}
+        />
+        <motion.div
+          className="h-2.5 w-2.5 rounded-full"
+          style={{ backgroundColor: "#28c840" }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.7, type: "spring", stiffness: 500 }}
+        />
+      </div>
+      <motion.div
+        className="ml-3 h-2.5 rounded-full bg-white/6"
+        initial={{ width: 0 }}
+        whileInView={{ width: 96 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.8, duration: 0.6 }}
+      />
+    </div>
+  );
+}
+
+/* ── Step 1: Configure Workspace — Settings panel with toggles ── */
+function ConfigureWorkspaceMock({ accentColor }: { accentColor: string }) {
+  const settings = [
+    { label: "Company Name", value: "Acme Corp", type: "input" as const },
+    { label: "AI Tone", value: "Professional", type: "select" as const },
+    { label: "Auto-suggestions", value: true, type: "toggle" as const },
+    { label: "Citation Mode", value: true, type: "toggle" as const },
+  ];
+
+  return (
+    <div className="space-y-3 p-5">
+      {/* Section title */}
+      <motion.div
+        className="mb-4 flex items-center gap-2"
+        initial={{ opacity: 0, y: -8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 }}
+      >
+        <div
+          className="flex h-7 w-7 items-center justify-center rounded-md"
+          style={{ backgroundColor: `${accentColor}15` }}
+        >
+          <FeatureIcon color={accentColor} icon="settings" size={4} />
+        </div>
+        <span className="text-white/50 text-xs font-medium tracking-wide uppercase">
+          Workspace Settings
+        </span>
+      </motion.div>
+
+      {settings.map((setting, idx) => (
+        <motion.div
+          key={setting.label}
+          className="flex items-center justify-between rounded-lg border border-white/4 bg-white/2 px-3.5 py-2.5"
+          initial={{ opacity: 0, x: -16, filter: "blur(3px)" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 + idx * 0.12, ...springSmooth }}
+        >
+          <span className="text-white/35 text-xs">{setting.label}</span>
+          {setting.type === "toggle" ? (
+            <motion.div
+              className="flex h-5 w-9 items-center rounded-full px-0.5"
+              style={{
+                backgroundColor: setting.value
+                  ? `${accentColor}40`
+                  : "rgba(255,255,255,0.08)",
+              }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8 + idx * 0.1 }}
+            >
+              <motion.div
+                className="h-3.5 w-3.5 rounded-full bg-white shadow-sm"
+                initial={{ x: 0 }}
+                whileInView={{ x: setting.value ? 16 : 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: 1 + idx * 0.1,
+                  type: "spring",
+                  stiffness: 500,
+                  damping: 30,
+                }}
+              />
+            </motion.div>
+          ) : setting.type === "select" ? (
+            <motion.div
+              className="flex items-center gap-1 rounded-md border border-white/6 bg-white/3 px-2 py-1"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9 + idx * 0.1 }}
+            >
+              <span className="text-white/50 text-[10px]">{setting.value}</span>
+              <svg
+                className="h-2.5 w-2.5 text-white/25"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <title>Dropdown</title>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </motion.div>
+          ) : (
+            <motion.div
+              className="rounded-md border border-white/6 bg-white/3 px-2.5 py-1"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9 + idx * 0.1 }}
+            >
+              <span className="text-white/50 text-[10px]">{setting.value}</span>
+            </motion.div>
+          )}
+        </motion.div>
+      ))}
+
+      {/* Save button */}
+      <motion.div
+        className="mt-2 flex justify-end"
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1.2 }}
+      >
+        <motion.div
+          className="rounded-lg px-4 py-1.5"
+          style={{ backgroundColor: `${accentColor}25` }}
+          animate={{
+            boxShadow: [
+              `0 0 0px ${accentColor}00`,
+              `0 0 12px ${accentColor}15`,
+              `0 0 0px ${accentColor}00`,
+            ],
+          }}
+          transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
+        >
+          <span
+            className="text-[10px] font-medium"
+            style={{ color: accentColor }}
+          >
+            Save Changes
+          </span>
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}
+
+/* ── Step 2: Connect Data Sources — Integration nodes with connection lines ── */
+function ConnectDataSourcesMock({ accentColor }: { accentColor: string }) {
+  const integrations = [
+    { name: "Salesforce", initials: "SF", color: "#00A1E0", connected: true },
+    { name: "HubSpot", initials: "HS", color: "#FF7A59", connected: true },
+    {
+      name: "Google Drive",
+      initials: "GD",
+      color: "#4285F4",
+      connected: false,
+    },
+  ];
+
+  return (
+    <div className="space-y-3 p-5">
+      {/* Header */}
+      <motion.div
+        className="mb-3 flex items-center justify-between"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 }}
+      >
+        <div className="flex items-center gap-2">
+          <div
+            className="flex h-7 w-7 items-center justify-center rounded-md"
+            style={{ backgroundColor: `${accentColor}15` }}
+          >
+            <FeatureIcon color={accentColor} icon="plug" size={4} />
+          </div>
+          <span className="text-white/50 text-xs font-medium tracking-wide uppercase">
+            Integrations
+          </span>
+        </div>
+        <motion.span
+          className="rounded-full px-2 py-0.5 text-[9px] font-medium"
+          style={{ backgroundColor: `${accentColor}15`, color: accentColor }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.8, type: "spring", stiffness: 400 }}
+        >
+          2 of 3 connected
+        </motion.span>
+      </motion.div>
+
+      {/* Integration cards */}
+      {integrations.map((app, idx) => (
+        <motion.div
+          key={app.name}
+          className="flex items-center gap-3 rounded-lg border border-white/4 bg-white/2 px-3.5 py-3"
+          initial={{ opacity: 0, x: -20, filter: "blur(3px)" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 + idx * 0.15, ...springSmooth }}
+        >
+          {/* App icon */}
+          <motion.div
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[10px] font-bold text-white"
+            style={{ backgroundColor: app.color }}
+            initial={{ scale: 0.5, rotate: -10 }}
+            whileInView={{ scale: 1, rotate: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.7 + idx * 0.15,
+              type: "spring",
+              stiffness: 400,
+            }}
+          >
+            {app.initials}
+          </motion.div>
+
+          <div className="flex flex-1 flex-col">
+            <span className="text-white/50 text-xs font-medium">
+              {app.name}
+            </span>
+            <span className="text-white/20 text-[10px]">
+              {app.connected ? "Syncing data..." : "Not connected"}
+            </span>
+          </div>
+
+          {/* Status indicator */}
+          {app.connected ? (
+            <motion.div
+              className="flex items-center gap-1.5 rounded-full border px-2 py-0.5"
+              style={{
+                borderColor: `${accentColor}30`,
+                backgroundColor: `${accentColor}08`,
+              }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9 + idx * 0.1 }}
+            >
+              <motion.div
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ backgroundColor: accentColor }}
+                animate={{ opacity: [1, 0.4, 1] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  delay: idx * 0.3,
+                }}
+              />
+              <span
+                className="text-[9px] font-medium"
+                style={{ color: accentColor }}
+              >
+                Live
+              </span>
+            </motion.div>
+          ) : (
+            <motion.div
+              className="rounded-md border border-white/8 bg-white/4 px-2 py-0.5"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1 + idx * 0.1 }}
+            >
+              <span className="text-white/30 text-[9px]">Connect</span>
+            </motion.div>
+          )}
+        </motion.div>
+      ))}
+
+      {/* Connection status bar */}
+      <motion.div
+        className="mt-2 flex items-center gap-2"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1.2 }}
+      >
+        <div className="h-1 flex-1 overflow-hidden rounded-full bg-white/5">
+          <motion.div
+            className="h-full rounded-full"
+            style={{
+              background: `linear-gradient(90deg, ${accentColor}, ${accentColor}60)`,
+            }}
+            initial={{ width: "0%" }}
+            whileInView={{ width: "67%" }}
+            viewport={{ once: true }}
+            transition={{ delay: 1.4, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          />
+        </div>
+        <span className="text-white/20 text-[9px]">67%</span>
+      </motion.div>
+    </div>
+  );
+}
+
+/* ── Step 3: Get Instant Insights — AI chat interface ── */
+function InsightsChatMock({ accentColor }: { accentColor: string }) {
+  return (
+    <div className="flex flex-col p-5">
+      {/* User message */}
+      <motion.div
+        className="mb-3 ml-auto max-w-[80%] rounded-xl rounded-br-sm border border-white/6 bg-white/4 px-3.5 py-2.5"
+        initial={{ opacity: 0, y: 12, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5, ...springSmooth }}
+      >
+        <span className="text-white/50 text-[11px] leading-relaxed">
+          What were our top competitors&apos; pricing changes last quarter?
+        </span>
+      </motion.div>
+
+      {/* AI response */}
+      <motion.div
+        className="mb-3 max-w-[90%] space-y-2 rounded-xl rounded-bl-sm border border-white/6 bg-white/2 px-3.5 py-3"
+        initial={{ opacity: 0, y: 12, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.8, ...springSmooth }}
+      >
+        {/* AI icon */}
+        <div className="mb-2 flex items-center gap-2">
+          <motion.div
+            className="flex h-5 w-5 items-center justify-center rounded-md"
+            style={{ backgroundColor: `${accentColor}20` }}
+            animate={{
+              boxShadow: [
+                `0 0 0px ${accentColor}00`,
+                `0 0 8px ${accentColor}25`,
+                `0 0 0px ${accentColor}00`,
+              ],
+            }}
+            transition={{ duration: 2.5, repeat: Number.POSITIVE_INFINITY }}
+          >
+            <FeatureIcon color={accentColor} icon="sparkle" size={3} />
+          </motion.div>
+          <span className="text-white/30 text-[9px] font-medium uppercase tracking-wider">
+            Salesient AI
+          </span>
+        </div>
+
+        {/* Typed response lines */}
+        {[
+          "Based on 3 sources, CompetitorA raised",
+          "enterprise pricing by 12% while CompetitorB",
+          "introduced a new freemium tier...",
+        ].map((line, idx) => (
+          <motion.div
+            key={`line-${idx}`}
+            className="text-white/40 text-[11px] leading-relaxed"
+            initial={{ opacity: 0, filter: "blur(2px)" }}
+            whileInView={{ opacity: 1, filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{ delay: 1 + idx * 0.2, duration: 0.4 }}
+          >
+            {line}
+          </motion.div>
+        ))}
+
+        {/* Citation tags */}
+        <motion.div
+          className="mt-2 flex flex-wrap gap-1.5"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 1.7 }}
+        >
+          {["Q3 Report", "Market Analysis", "Pricing DB"].map((source, idx) => (
+            <motion.span
+              key={source}
+              className="rounded-md border px-1.5 py-0.5 text-[8px] font-medium"
+              style={{
+                borderColor: `${accentColor}25`,
+                color: `${accentColor}`,
+                backgroundColor: `${accentColor}08`,
+              }}
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 1.8 + idx * 0.1,
+                type: "spring",
+                stiffness: 400,
+              }}
+            >
+              {source}
+            </motion.span>
+          ))}
+        </motion.div>
+      </motion.div>
+
+      {/* Input bar */}
+      <motion.div
+        className="flex items-center gap-2 rounded-lg border border-white/6 bg-white/2 px-3 py-2"
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 2 }}
+      >
+        <span className="flex-1 text-white/15 text-[10px]">
+          Ask a follow-up question...
+        </span>
+        <motion.div
+          className="flex h-5 w-5 items-center justify-center rounded-md"
+          style={{ backgroundColor: `${accentColor}30` }}
+          animate={{
+            boxShadow: [
+              `0 0 0px ${accentColor}00`,
+              `0 0 6px ${accentColor}20`,
+              `0 0 0px ${accentColor}00`,
+            ],
+          }}
+          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+        >
+          <svg
+            className="h-2.5 w-2.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke={accentColor}
+            strokeWidth={2.5}
+          >
+            <title>Send</title>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+            />
+          </svg>
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}
+
+/* ── Process step mock UI router — renders the right mock for each step ── */
 function ProcessMockUI({ step }: { step: ProcessStepData }) {
-  const { icon, accentColor, mockElements } = step;
+  const { accentColor } = step;
+
+  const contentByStep: Record<number, React.ReactNode> = {
+    1: <ConfigureWorkspaceMock accentColor={accentColor} />,
+    2: <ConnectDataSourcesMock accentColor={accentColor} />,
+    3: <InsightsChatMock accentColor={accentColor} />,
+  };
 
   return (
     <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl border border-white/6 bg-linear-to-br from-white/3 to-transparent">
@@ -200,123 +761,152 @@ function ProcessMockUI({ step }: { step: ProcessStepData }) {
         style={{
           background: `radial-gradient(ellipse at 30% 50%, ${accentColor}10, transparent 70%)`,
         }}
-      />
-
-      {/* Dot grid background */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
+        animate={{
+          background: [
+            `radial-gradient(ellipse at 30% 50%, ${accentColor}10, transparent 70%)`,
+            `radial-gradient(ellipse at 60% 40%, ${accentColor}12, transparent 70%)`,
+            `radial-gradient(ellipse at 30% 50%, ${accentColor}10, transparent 70%)`,
+          ],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
         }}
       />
 
-      {/* Mock window chrome */}
+      {/* Dot grid */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      />
+
+      {/* Window */}
       <motion.div
         className="relative mx-6 w-full max-w-md overflow-hidden rounded-xl border border-white/8 bg-black/60 shadow-2xl backdrop-blur-xl sm:mx-10 md:mx-8 lg:mx-12"
-        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+        initial={{ opacity: 0, y: 30, scale: 0.92 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3, ...springSmooth }}
       >
-        {/* Title bar */}
-        <div className="flex items-center gap-2 border-white/6 border-b px-4 py-3">
-          <div className="flex gap-1.5">
-            <div className="h-2.5 w-2.5 rounded-full bg-white/10" />
-            <div className="h-2.5 w-2.5 rounded-full bg-white/10" />
-            <div className="h-2.5 w-2.5 rounded-full bg-white/10" />
-          </div>
-          <div className="ml-3 h-2.5 w-24 rounded-full bg-white/6" />
-        </div>
+        <WindowChrome accentColor={accentColor} />
+        {contentByStep[step.id]}
+      </motion.div>
 
-        {/* Content area with animated rows */}
-        <div className="space-y-3 p-5">
-          {/* Icon header */}
+      {/* Accent orb */}
+      <motion.div
+        className="pointer-events-none absolute right-8 bottom-8 h-28 w-28 rounded-full blur-3xl"
+        style={{ backgroundColor: `${accentColor}08` }}
+        animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.8, 0.4] }}
+        transition={{
+          duration: 6,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+        }}
+      />
+    </div>
+  );
+}
+
+/* ── Knowledge Base card mock — document library with search ── */
+function KnowledgeBaseMock({ accentColor }: { accentColor: string }) {
+  const docs = [
+    { name: "Product Playbook", type: "PDF", pages: 24 },
+    { name: "Enterprise FAQ", type: "DOC", pages: 12 },
+    { name: "Onboarding Guide", type: "PDF", pages: 18 },
+    { name: "API Reference", type: "MD", pages: 45 },
+  ];
+
+  return (
+    <div className="relative flex h-full w-full flex-col overflow-hidden rounded-xl border border-white/4 bg-linear-to-br from-white/2 to-transparent p-4 sm:p-5">
+      {/* Search bar */}
+      <motion.div
+        className="mb-3 flex items-center gap-2 rounded-lg border border-white/6 bg-white/3 px-3 py-2"
+        initial={{ opacity: 0, y: -8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+      >
+        <svg
+          className="h-3.5 w-3.5 text-white/20"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <title>Search</title>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          />
+        </svg>
+        <span className="text-white/15 text-[10px]">
+          Search knowledge base...
+        </span>
+      </motion.div>
+
+      {/* Document list */}
+      <div className="space-y-2">
+        {docs.map((doc, idx) => (
           <motion.div
-            className="mb-4 flex items-center gap-3"
+            key={doc.name}
+            className="flex items-center gap-2.5 rounded-lg border border-white/4 bg-white/2 px-3 py-2"
             initial={{ opacity: 0, x: -12 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.4 + idx * 0.1, ...springSmooth }}
           >
+            {/* File icon */}
             <div
-              className="flex h-9 w-9 items-center justify-center rounded-lg"
-              style={{ backgroundColor: `${accentColor}15` }}
-            >
-              <FeatureIcon color={accentColor} icon={icon} />
-            </div>
-            <div className="space-y-1.5">
-              <div className="h-2.5 w-28 rounded-full bg-white/15" />
-              <div className="h-2 w-20 rounded-full bg-white/8" />
-            </div>
-          </motion.div>
-
-          {/* Animated list items */}
-          {mockElements.map((label, idx) => (
-            <motion.div
-              key={label}
-              className="flex items-center gap-3 rounded-lg border border-white/4 bg-white/2 px-3 py-2.5"
-              initial={{ opacity: 0, x: -16 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 + idx * 0.15, ...springSmooth }}
-            >
-              <motion.div
-                className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md"
-                style={{ backgroundColor: `${accentColor}20` }}
-                animate={{
-                  boxShadow: [
-                    `0 0 0px ${accentColor}00`,
-                    `0 0 8px ${accentColor}30`,
-                    `0 0 0px ${accentColor}00`,
-                  ],
-                }}
-                transition={{
-                  duration: 2.5,
-                  repeat: Number.POSITIVE_INFINITY,
-                  delay: idx * 0.5,
-                }}
-              >
-                <div
-                  className="h-1.5 w-1.5 rounded-full"
-                  style={{ backgroundColor: accentColor }}
-                />
-              </motion.div>
-              <span className="text-white/40 text-xs">{label}</span>
-              <div className="ml-auto h-1.5 w-12 rounded-full bg-white/6" />
-            </motion.div>
-          ))}
-
-          {/* Animated progress bar */}
-          <motion.div
-            className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/5"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 1 }}
-          >
-            <motion.div
-              className="h-full rounded-full"
-              style={{ backgroundColor: accentColor }}
-              initial={{ width: "0%" }}
-              whileInView={{ width: "72%" }}
-              viewport={{ once: true }}
-              transition={{
-                delay: 1.2,
-                duration: 1.5,
-                ease: [0.22, 1, 0.36, 1],
+              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-[8px] font-bold"
+              style={{
+                backgroundColor: `${accentColor}15`,
+                color: accentColor,
               }}
+            >
+              {doc.type}
+            </div>
+            <div className="flex-1">
+              <span className="text-white/45 text-[11px] font-medium">
+                {doc.name}
+              </span>
+              <div className="text-white/15 text-[9px]">{doc.pages} pages</div>
+            </div>
+            <motion.div
+              className="h-1 w-6 rounded-full"
+              style={{ backgroundColor: `${accentColor}30` }}
+              initial={{ width: 0 }}
+              whileInView={{ width: 24 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 + idx * 0.1, duration: 0.4 }}
             />
           </motion.div>
-        </div>
+        ))}
+      </div>
+
+      {/* Stats row */}
+      <motion.div
+        className="mt-auto flex items-center gap-3 pt-3"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.9 }}
+      >
+        <span className="text-white/15 text-[9px]">128 documents</span>
+        <div className="h-2.5 w-px bg-white/6" />
+        <span className="text-white/15 text-[9px]">Last updated 2h ago</span>
       </motion.div>
 
-      {/* Floating accent orbs */}
+      {/* Ambient glow */}
       <motion.div
-        className="pointer-events-none absolute right-8 bottom-8 h-32 w-32 rounded-full blur-[60px]"
-        style={{ backgroundColor: `${accentColor}08` }}
-        animate={{ scale: [1, 1.3, 1], opacity: [0.5, 1, 0.5] }}
+        className="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full blur-2xl"
+        style={{ backgroundColor: `${accentColor}06` }}
+        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{
           duration: 5,
           repeat: Number.POSITIVE_INFINITY,
@@ -327,113 +917,154 @@ function ProcessMockUI({ step }: { step: ProcessStepData }) {
   );
 }
 
-/* ── Animated mock UI panel for feature cards ── */
-function FeatureCardMockUI({ card }: { card: FeatureCardData }) {
-  const { icon, accentColor, title } = card;
-
-  /* Mock data bars */
-  const bars = [85, 62, 93, 48, 76];
+/* ── Sales Assets card mock — asset distribution grid ── */
+function SalesAssetsMock({ accentColor }: { accentColor: string }) {
+  const assets = [
+    { name: "Q4 Pricing Deck", status: "Approved", updatedAgo: "1d" },
+    { name: "Case Study: Fintech", status: "Approved", updatedAgo: "3d" },
+    { name: "ROI Calculator", status: "Draft", updatedAgo: "5h" },
+  ];
 
   return (
-    <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-xl border border-white/4 bg-linear-to-br from-white/2 to-transparent">
-      {/* Ambient glow */}
+    <div className="relative flex h-full w-full flex-col overflow-hidden rounded-xl border border-white/4 bg-linear-to-br from-white/2 to-transparent p-4 sm:p-5">
+      {/* Header */}
       <motion.div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background: `radial-gradient(ellipse at 50% 80%, ${accentColor}08, transparent 70%)`,
-        }}
-      />
-
-      {/* Mock card content */}
-      <motion.div
-        className="relative w-full px-5 py-6 sm:px-6 sm:py-8"
+        className="mb-3 flex items-center justify-between"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.2, duration: 0.5 }}
+        transition={{ delay: 0.3 }}
       >
-        {/* Header row */}
+        <span className="text-white/40 text-[10px] font-medium uppercase tracking-wider">
+          Active Assets
+        </span>
+        <motion.span
+          className="rounded-full px-2 py-0.5 text-[8px] font-bold"
+          style={{ backgroundColor: `${accentColor}15`, color: accentColor }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, type: "spring", stiffness: 400 }}
+        >
+          3 items
+        </motion.span>
+      </motion.div>
+
+      {/* Asset cards */}
+      {assets.map((asset, idx) => (
         <motion.div
-          className="mb-5 flex items-center gap-3"
+          key={asset.name}
+          className="mb-2 flex items-center gap-3 rounded-lg border border-white/4 bg-white/2 px-3 py-2.5"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.4 + idx * 0.12, ...springSmooth }}
         >
-          <div
-            className="flex h-10 w-10 items-center justify-center rounded-xl"
-            style={{ backgroundColor: `${accentColor}12` }}
+          {/* Thumbnail placeholder */}
+          <motion.div
+            className="flex h-9 w-12 shrink-0 items-center justify-center rounded-md border border-white/6"
+            style={{ backgroundColor: `${accentColor}08` }}
           >
-            <FeatureIcon color={accentColor} icon={icon} />
-          </div>
-          <div className="space-y-1.5">
-            <div className="h-2.5 w-24 rounded-full bg-white/12" />
-            <div className="h-2 w-16 rounded-full bg-white/6" />
-          </div>
-        </motion.div>
-
-        {/* Animated data bars */}
-        <div className="space-y-2.5">
-          {bars.map((width, idx) => (
-            <motion.div
-              key={`bar-${title}-${idx}`}
-              className="flex items-center gap-3"
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 + idx * 0.1 }}
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke={accentColor}
+              strokeWidth={1.5}
             >
-              <div className="h-2 w-8 rounded-full bg-white/8" />
-              <div className="flex-1 overflow-hidden rounded-full bg-white/4">
-                <motion.div
-                  className="h-2 rounded-full"
-                  style={{
-                    backgroundColor: `${accentColor}${idx === 2 ? "90" : "50"}`,
-                  }}
-                  initial={{ width: "0%" }}
-                  whileInView={{ width: `${width}%` }}
-                  viewport={{ once: true }}
-                  transition={{
-                    delay: 0.6 + idx * 0.12,
-                    duration: 1.2,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                />
-              </div>
-            </motion.div>
+              <title>Document</title>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+              />
+            </svg>
+          </motion.div>
+
+          <div className="flex-1">
+            <span className="text-white/45 text-[11px] font-medium">
+              {asset.name}
+            </span>
+            <div className="mt-0.5 flex items-center gap-2">
+              <span
+                className="rounded-sm px-1 py-px text-[7px] font-bold uppercase"
+                style={{
+                  backgroundColor:
+                    asset.status === "Approved"
+                      ? `${accentColor}15`
+                      : "rgba(255,255,255,0.06)",
+                  color:
+                    asset.status === "Approved"
+                      ? accentColor
+                      : "rgba(255,255,255,0.3)",
+                }}
+              >
+                {asset.status}
+              </span>
+              <span className="text-white/15 text-[8px]">
+                {asset.updatedAgo} ago
+              </span>
+            </div>
+          </div>
+
+          {/* Share icon */}
+          <motion.div
+            className="flex h-6 w-6 items-center justify-center rounded-md border border-white/6"
+            whileHover={{ borderColor: `${accentColor}30` }}
+          >
+            <svg
+              className="h-3 w-3 text-white/25"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <title>Share</title>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+              />
+            </svg>
+          </motion.div>
+        </motion.div>
+      ))}
+
+      {/* Distribution bar */}
+      <motion.div
+        className="mt-auto flex items-center gap-2 pt-2"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1 }}
+      >
+        <span className="text-white/15 text-[9px]">Distributed to</span>
+        <div className="flex -space-x-1">
+          {["#6366f1", "#ec4899", "#f59e0b", "#10b981"].map((c, i) => (
+            <motion.div
+              key={`avatar-${c}`}
+              className="h-4 w-4 rounded-full border border-[#060606]"
+              style={{ backgroundColor: `${c}40` }}
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 1.1 + i * 0.08,
+                type: "spring",
+                stiffness: 500,
+              }}
+            />
           ))}
         </div>
-
-        {/* Bottom stats row */}
-        <motion.div
-          className="mt-5 flex items-center gap-3"
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.9 }}
-        >
-          {[1, 2, 3].map((i) => (
-            <div
-              key={`stat-${title}-${i}`}
-              className="flex-1 rounded-lg border border-white/4 bg-white/2 px-3 py-2"
-            >
-              <div
-                className="mb-1 h-3 w-8 rounded"
-                style={{ backgroundColor: `${accentColor}25` }}
-              />
-              <div className="h-1.5 w-12 rounded-full bg-white/6" />
-            </div>
-          ))}
-        </motion.div>
+        <span className="text-white/15 text-[9px]">+12 reps</span>
       </motion.div>
 
-      {/* Floating shimmer */}
       <motion.div
-        className="pointer-events-none absolute -right-4 -top-4 h-24 w-24 rounded-full blur-2xl"
+        className="pointer-events-none absolute -right-4 -bottom-4 h-20 w-20 rounded-full blur-2xl"
         style={{ backgroundColor: `${accentColor}06` }}
-        animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0.7, 0.3] }}
+        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{
-          duration: 4,
+          duration: 5,
           repeat: Number.POSITIVE_INFINITY,
           ease: "easeInOut",
         }}
@@ -442,36 +1073,359 @@ function FeatureCardMockUI({ card }: { card: FeatureCardData }) {
   );
 }
 
+/* ── Competitive Intelligence card mock — comparison matrix ── */
+function CompetitiveIntelMock({ accentColor }: { accentColor: string }) {
+  const competitors = [
+    { name: "You", scores: [95, 88, 92] },
+    { name: "Comp A", scores: [72, 80, 65] },
+    { name: "Comp B", scores: [68, 75, 78] },
+  ];
+  const metrics = ["Features", "Pricing", "Support"];
+
+  return (
+    <div className="relative flex h-full w-full flex-col overflow-hidden rounded-xl border border-white/4 bg-linear-to-br from-white/2 to-transparent p-4 sm:p-5">
+      {/* Header */}
+      <motion.div
+        className="mb-3 flex items-center gap-2"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+      >
+        <div
+          className="flex h-6 w-6 items-center justify-center rounded-md"
+          style={{ backgroundColor: `${accentColor}15` }}
+        >
+          <FeatureIcon color={accentColor} icon="chart" size={3} />
+        </div>
+        <span className="text-white/40 text-[10px] font-medium uppercase tracking-wider">
+          Market Position
+        </span>
+      </motion.div>
+
+      {/* Comparison table header */}
+      <motion.div
+        className="mb-2 grid grid-cols-4 gap-1 px-1"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4 }}
+      >
+        <div />
+        {metrics.map((m) => (
+          <span
+            key={m}
+            className="text-center text-white/20 text-[8px] uppercase tracking-wider"
+          >
+            {m}
+          </span>
+        ))}
+      </motion.div>
+
+      {/* Rows */}
+      {competitors.map((comp, idx) => (
+        <motion.div
+          key={comp.name}
+          className="mb-1.5 grid grid-cols-4 items-center gap-1 rounded-lg border border-white/4 bg-white/2 px-2.5 py-2"
+          initial={{ opacity: 0, x: -12 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 + idx * 0.12, ...springSmooth }}
+          style={
+            idx === 0
+              ? {
+                  borderColor: `${accentColor}20`,
+                  backgroundColor: `${accentColor}05`,
+                }
+              : undefined
+          }
+        >
+          <span
+            className="text-[10px] font-medium"
+            style={{
+              color: idx === 0 ? accentColor : "rgba(255,255,255,0.35)",
+            }}
+          >
+            {comp.name}
+          </span>
+          {comp.scores.map((score, sIdx) => (
+            <motion.div
+              key={`score-${comp.name}-${sIdx}`}
+              className="flex items-center justify-center"
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.7 + idx * 0.1 + sIdx * 0.08,
+                type: "spring",
+                stiffness: 300,
+              }}
+            >
+              <span
+                className="rounded-md px-1.5 py-0.5 text-[9px] font-bold"
+                style={{
+                  backgroundColor:
+                    idx === 0 ? `${accentColor}20` : "rgba(255,255,255,0.04)",
+                  color: idx === 0 ? accentColor : "rgba(255,255,255,0.3)",
+                }}
+              >
+                {score}
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
+      ))}
+
+      {/* Trend indicator */}
+      <motion.div
+        className="mt-auto flex items-center gap-2 pt-2"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1.1 }}
+      >
+        <svg
+          className="h-3 w-3"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke={accentColor}
+          strokeWidth={2}
+        >
+          <title>Trending up</title>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-.94m5.94.94l-.94 5.94"
+          />
+        </svg>
+        <span className="text-[9px] font-medium" style={{ color: accentColor }}>
+          +8% win rate this quarter
+        </span>
+      </motion.div>
+
+      <motion.div
+        className="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full blur-2xl"
+        style={{ backgroundColor: `${accentColor}06` }}
+        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
+        transition={{
+          duration: 5,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+        }}
+      />
+    </div>
+  );
+}
+
+/* ── Meeting Preparation card mock — briefing document ── */
+function MeetingPrepMock({ accentColor }: { accentColor: string }) {
+  const talkingPoints = [
+    "Discuss Q4 renewal pricing",
+    "Address support escalation from Oct",
+    "Present new enterprise tier benefits",
+  ];
+
+  return (
+    <div className="relative flex h-full w-full flex-col overflow-hidden rounded-xl border border-white/4 bg-linear-to-br from-white/2 to-transparent p-4 sm:p-5">
+      {/* Meeting header */}
+      <motion.div
+        className="mb-3 rounded-lg border border-white/6 bg-white/3 px-3 py-2.5"
+        initial={{ opacity: 0, y: -8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+      >
+        <div className="flex items-center justify-between">
+          <span className="text-white/50 text-[11px] font-medium">
+            Acme Corp — Q4 Review
+          </span>
+          <span className="text-white/20 text-[9px]">Today, 2:00 PM</span>
+        </div>
+        <div className="mt-1.5 flex items-center gap-2">
+          <div className="flex -space-x-1">
+            {["#6366f1", "#ec4899", "#f59e0b"].map((c) => (
+              <motion.div
+                key={`attendee-${c}`}
+                className="h-4 w-4 rounded-full border border-[#060606]"
+                style={{ backgroundColor: `${c}50` }}
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5, type: "spring", stiffness: 400 }}
+              />
+            ))}
+          </div>
+          <span className="text-white/15 text-[8px]">3 attendees</span>
+        </div>
+      </motion.div>
+
+      {/* AI-generated talking points */}
+      <motion.div
+        className="mb-2 flex items-center gap-1.5"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 }}
+      >
+        <motion.div
+          className="flex h-4 w-4 items-center justify-center rounded-sm"
+          style={{ backgroundColor: `${accentColor}15` }}
+          animate={{
+            boxShadow: [
+              `0 0 0px ${accentColor}00`,
+              `0 0 6px ${accentColor}20`,
+              `0 0 0px ${accentColor}00`,
+            ],
+          }}
+          transition={{ duration: 2.5, repeat: Number.POSITIVE_INFINITY }}
+        >
+          <FeatureIcon color={accentColor} icon="sparkle" size={2} />
+        </motion.div>
+        <span
+          className="text-[9px] font-medium"
+          style={{ color: `${accentColor}90` }}
+        >
+          AI-Generated Briefing
+        </span>
+      </motion.div>
+
+      <div className="space-y-1.5">
+        {talkingPoints.map((point, idx) => (
+          <motion.div
+            key={`tp-${idx}`}
+            className="flex items-start gap-2 rounded-md border border-white/4 bg-white/2 px-2.5 py-2"
+            initial={{ opacity: 0, x: -10, filter: "blur(2px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6 + idx * 0.15, ...springSmooth }}
+          >
+            <motion.div
+              className="mt-0.5 h-3 w-3 shrink-0 rounded-sm border"
+              style={{ borderColor: `${accentColor}30` }}
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.8 + idx * 0.1,
+                type: "spring",
+                stiffness: 400,
+              }}
+            />
+            <span className="text-white/40 text-[10px] leading-relaxed">
+              {point}
+            </span>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Context badge */}
+      <motion.div
+        className="mt-auto flex items-center gap-2 pt-3"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1.2 }}
+      >
+        <span className="text-white/15 text-[9px]">Based on</span>
+        {["CRM History", "Past Emails"].map((src) => (
+          <span
+            key={src}
+            className="rounded-md border px-1.5 py-0.5 text-[7px] font-medium"
+            style={{
+              borderColor: `${accentColor}20`,
+              color: `${accentColor}80`,
+              backgroundColor: `${accentColor}06`,
+            }}
+          >
+            {src}
+          </span>
+        ))}
+      </motion.div>
+
+      <motion.div
+        className="pointer-events-none absolute -left-4 -bottom-4 h-20 w-20 rounded-full blur-2xl"
+        style={{ backgroundColor: `${accentColor}06` }}
+        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
+        transition={{
+          duration: 5,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+        }}
+      />
+    </div>
+  );
+}
+
+/* ── Feature card mock UI router — renders the right visual for each card ── */
+function FeatureCardMockUI({ card }: { card: FeatureCardData }) {
+  const mockByIcon: Record<string, React.ReactNode> = {
+    database: <KnowledgeBaseMock accentColor={card.accentColor} />,
+    share: <SalesAssetsMock accentColor={card.accentColor} />,
+    chart: <CompetitiveIntelMock accentColor={card.accentColor} />,
+    calendar: <MeetingPrepMock accentColor={card.accentColor} />,
+  };
+
+  return mockByIcon[card.icon] ?? null;
+}
+
 // Components
 type SectionHeaderProps = {
   badge: string;
   title: string;
+  subtitle?: string;
   className?: string;
 };
 
-function SectionHeader({ badge, title, className = "" }: SectionHeaderProps) {
+function SectionHeader({
+  badge,
+  title,
+  subtitle,
+  className = "",
+}: SectionHeaderProps) {
   return (
     <div
       className={`flex w-full flex-col items-start justify-center gap-6 md:items-center ${className}`}
     >
       <motion.div
-        className="w-fit rounded-full border border-white/10 bg-white/3 px-5 py-2 text-sm text-white/40 backdrop-blur-sm"
+        className="group/badge relative w-fit cursor-default overflow-hidden rounded-full border border-white/10 bg-white/3 px-5 py-2 text-sm text-white/50 backdrop-blur-sm"
         whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.2)" }}
         transition={{ type: "spring", stiffness: 400, damping: 15 }}
       >
-        {badge}
+        {/* Shimmer sweep on badge */}
+        <motion.div
+          className="pointer-events-none absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/8 to-transparent"
+          animate={{ translateX: ["-100%", "200%"] }}
+          transition={{
+            duration: 3,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+            repeatDelay: 4,
+          }}
+        />
+        <span className="relative">{badge}</span>
       </motion.div>
       <h2 className="text-left font-semibold text-3xl leading-tight tracking-tight sm:max-w-3xl sm:text-center md:font-medium lg:text-5xl">
         <motion.span
           className="bg-linear-to-b from-white to-white/50 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ delay: 0.1, ...springSmooth }}
         >
           {title}
         </motion.span>
       </h2>
+      {subtitle ? (
+        <motion.p
+          className="max-w-2xl text-left text-base text-white/40 leading-relaxed sm:text-center sm:text-lg"
+          initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.25, duration: 0.6 }}
+        >
+          {subtitle}
+        </motion.p>
+      ) : null}
     </div>
   );
 }
@@ -486,17 +1440,27 @@ function WorkflowHeader({ badge, title, description }: WorkflowHeaderProps) {
   return (
     <div className="flex w-full flex-col items-start justify-center gap-6 pb-8 md:items-center md:pb-16">
       <motion.div
-        className="w-fit rounded-full border border-white/10 bg-white/3 px-5 py-2 text-sm text-white/40 backdrop-blur-sm"
+        className="group/badge relative w-fit cursor-default overflow-hidden rounded-full border border-white/10 bg-white/3 px-5 py-2 text-sm text-white/50 backdrop-blur-sm"
         whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.2)" }}
         transition={{ type: "spring", stiffness: 400, damping: 15 }}
       >
-        {badge}
+        <motion.div
+          className="pointer-events-none absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/8 to-transparent"
+          animate={{ translateX: ["-100%", "200%"] }}
+          transition={{
+            duration: 3,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+            repeatDelay: 5,
+          }}
+        />
+        <span className="relative">{badge}</span>
       </motion.div>
       <h2 className="max-w-4xl text-left font-semibold text-3xl leading-tight tracking-tight sm:text-center md:font-medium lg:text-5xl">
         <motion.span
           className="bg-linear-to-b from-white to-white/50 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ delay: 0.1, ...springSmooth }}
         >
@@ -504,7 +1468,7 @@ function WorkflowHeader({ badge, title, description }: WorkflowHeaderProps) {
         </motion.span>
       </h2>
       <motion.p
-        className="max-w-2xl text-left text-base text-white/50 leading-relaxed sm:text-center sm:text-lg"
+        className="max-w-2xl text-left text-base text-white/40 leading-relaxed sm:text-center sm:text-lg"
         initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={{ once: true }}
@@ -513,6 +1477,59 @@ function WorkflowHeader({ badge, title, description }: WorkflowHeaderProps) {
         {description}
       </motion.p>
     </div>
+  );
+}
+
+/* ── Step number with animated ring ── */
+function StepNumber({
+  num,
+  accentColor,
+}: {
+  num: number;
+  accentColor: string;
+}) {
+  return (
+    <motion.div
+      className="relative flex h-14 w-14 items-center justify-center md:h-16 md:w-16"
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.2, type: "spring", stiffness: 300, damping: 20 }}
+    >
+      {/* Animated ring */}
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 64 64">
+        <title>Step {num}</title>
+        <motion.circle
+          cx="32"
+          cy="32"
+          r="28"
+          fill="none"
+          stroke={`${accentColor}20`}
+          strokeWidth="1.5"
+        />
+        <motion.circle
+          cx="32"
+          cy="32"
+          r="28"
+          fill="none"
+          stroke={accentColor}
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeDasharray="176"
+          initial={{ strokeDashoffset: 176 }}
+          whileInView={{ strokeDashoffset: 44 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            duration: 1.5,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        />
+      </svg>
+      <span className="font-semibold text-lg" style={{ color: accentColor }}>
+        {num}
+      </span>
+    </motion.div>
   );
 }
 
@@ -541,27 +1558,18 @@ function ProcessStep({ step }: ProcessStepProps) {
 
   const contentSection = (
     <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-12 lg:px-12 lg:py-16">
-      <motion.div
-        className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl md:mb-6"
-        style={{ backgroundColor: `${step.accentColor}12` }}
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2, type: "spring", stiffness: 300, damping: 20 }}
-      >
-        <FeatureIcon color={step.accentColor} icon={step.icon} />
-      </motion.div>
+      <StepNumber accentColor={step.accentColor} num={id} />
       <motion.h3
-        className="mb-4 font-semibold text-white text-xl md:mb-6 md:text-3xl lg:text-4xl"
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        className="mb-4 mt-4 font-semibold text-white text-xl md:mb-6 md:mt-6 md:text-3xl lg:text-4xl"
+        initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={{ once: true }}
         transition={{ delay: 0.3, ...springSmooth }}
       >
-        {id}. {title}
+        {title}
       </motion.h3>
       <motion.p
-        className="text-base text-white/50 leading-relaxed md:text-lg"
+        className="max-w-md text-base text-white/45 leading-relaxed md:text-lg"
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -569,14 +1577,37 @@ function ProcessStep({ step }: ProcessStepProps) {
       >
         {description}
       </motion.p>
+
+      {/* Decorative accent line */}
+      <motion.div
+        className="mt-8 h-px w-full max-w-xs"
+        style={{
+          background: `linear-gradient(90deg, ${step.accentColor}30, transparent)`,
+        }}
+        initial={{ scaleX: 0, originX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.6, duration: 0.8 }}
+      />
     </div>
   );
 
   return (
     <motion.div
-      className="group relative flex flex-col overflow-clip rounded-xl border border-white/6 bg-[#0a0a0a] p-6 transition-colors duration-300 hover:border-white/10 md:grid md:grid-cols-2 md:gap-8 md:rounded-2xl md:border-white/4 md:bg-linear-to-br md:from-white/2 md:to-transparent md:p-0 lg:gap-12"
-      whileHover={{ borderColor: "rgba(255,255,255,0.08)" }}
+      className="group relative flex flex-col overflow-clip rounded-2xl border border-white/4 bg-[#060606] transition-all duration-500 hover:border-white/8 md:grid md:grid-cols-2 md:gap-0 md:bg-linear-to-br md:from-white/2 md:to-transparent"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
+      {/* Hover gradient overlay */}
+      <motion.div
+        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+        style={{
+          background: `radial-gradient(ellipse at ${isReversed ? "0% 50%" : "100% 50%"}, ${step.accentColor}06, transparent 70%)`,
+        }}
+      />
+
       <div className="md:hidden">
         {imageSection}
         {contentSection}
@@ -598,73 +1629,163 @@ function ProcessStep({ step }: ProcessStepProps) {
   );
 }
 
+/* ── Feature card with 3D tilt on hover ── */
 type FeatureCardProps = {
   card: FeatureCardData;
+  index: number;
 };
 
-function FeatureCard({ card }: FeatureCardProps) {
+function FeatureCard({ card, index }: FeatureCardProps) {
   const { title, description, imageSrc, accentColor, accentGlow } = card;
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [4, -4]), {
+    stiffness: 300,
+    damping: 30,
+  });
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-4, 4]), {
+    stiffness: 300,
+    damping: 30,
+  });
+
+  const handleMouseMove = useCallback(
+    (e: ReactMouseEvent<HTMLDivElement>) => {
+      const rect = cardRef.current?.getBoundingClientRect();
+      if (!rect) return;
+      mouseX.set((e.clientX - rect.left) / rect.width - 0.5);
+      mouseY.set((e.clientY - rect.top) / rect.height - 0.5);
+    },
+    [mouseX, mouseY]
+  );
+
+  const handleMouseLeave = useCallback(() => {
+    mouseX.set(0);
+    mouseY.set(0);
+  }, [mouseX, mouseY]);
 
   return (
-    <motion.div
-      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/6 bg-[#0a0a0a] p-6 transition-colors duration-300 hover:border-white/12"
-      whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 300, damping: 25 }}
-    >
-      {/* Hover glow overlay */}
-      <div
-        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-        style={{
-          background: `radial-gradient(ellipse at 50% 0%, ${accentGlow}, transparent 70%)`,
-        }}
-      />
-
-      <div className="relative mb-6 aspect-video max-h-128">
-        {imageSrc ? (
-          <Image
-            alt={title}
-            className="h-full w-full rounded-xl object-cover"
-            height={900}
-            src={imageSrc}
-            width={1600}
-          />
-        ) : (
-          <FeatureCardMockUI card={card} />
-        )}
-      </div>
-
-      <motion.h3
-        className="relative mb-4 font-semibold text-2xl text-white md:text-3xl"
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.15, ...springSmooth }}
-      >
-        {title}
-      </motion.h3>
-
-      <motion.p
-        className="relative text-base text-white/50 leading-relaxed"
-        initial={{ opacity: 0, y: 8 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.25, duration: 0.5 }}
-      >
-        {description}
-      </motion.p>
-
-      {/* Bottom accent line */}
+    <GradientBorderCard accentColor={accentColor}>
       <motion.div
-        className="absolute inset-x-0 bottom-0 h-px"
+        ref={cardRef}
+        className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/6 bg-[#060606] p-6 transition-colors duration-500 hover:border-white/10"
         style={{
-          background: `linear-gradient(90deg, transparent, ${accentColor}40, transparent)`,
+          rotateX,
+          rotateY,
+          transformPerspective: 1200,
+          transformStyle: "preserve-3d",
         }}
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
+        initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        viewport={{ once: true, margin: "-30px" }}
+        transition={{
+          delay: index * 0.12,
+          duration: 0.7,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
+        {/* Hover glow overlay */}
+        <div
+          className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+          style={{
+            background: `radial-gradient(ellipse at 50% 0%, ${accentGlow}, transparent 70%)`,
+          }}
+        />
+
+        <div
+          className="relative mb-6 aspect-video max-h-128"
+          style={{ transform: "translateZ(20px)" }}
+        >
+          {imageSrc ? (
+            <Image
+              alt={title}
+              className="h-full w-full rounded-xl object-cover"
+              height={900}
+              src={imageSrc}
+              width={1600}
+            />
+          ) : (
+            <FeatureCardMockUI card={card} />
+          )}
+        </div>
+
+        <div style={{ transform: "translateZ(30px)" }}>
+          <motion.h3
+            className="relative mb-3 font-semibold text-xl text-white md:mb-4 md:text-2xl lg:text-3xl"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 + index * 0.1, ...springSmooth }}
+          >
+            {title}
+          </motion.h3>
+
+          <motion.p
+            className="relative text-sm text-white/40 leading-relaxed md:text-base"
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.25 + index * 0.1, duration: 0.5 }}
+          >
+            {description}
+          </motion.p>
+        </div>
+
+        {/* Bottom accent line */}
+        <motion.div
+          className="absolute inset-x-0 bottom-0 h-px"
+          style={{
+            background: `linear-gradient(90deg, transparent, ${accentColor}40, transparent)`,
+          }}
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 + index * 0.1, duration: 0.8 }}
+        />
+
+        {/* Corner accents */}
+        <motion.div
+          className="pointer-events-none absolute top-0 right-0 h-16 w-16"
+          style={{
+            background: `radial-gradient(circle at 100% 0%, ${accentColor}08, transparent 70%)`,
+          }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 + index * 0.1 }}
+        />
+      </motion.div>
+    </GradientBorderCard>
+  );
+}
+
+/* ── Vertical timeline connector ── */
+function TimelineConnector({ accentColor }: { accentColor: string }) {
+  return (
+    <div className="relative mx-auto hidden h-16 w-px md:flex md:h-20 lg:h-24">
+      <motion.div
+        className="h-full w-full"
+        style={{
+          background: `linear-gradient(180deg, ${accentColor}30, ${accentColor}08)`,
+        }}
+        initial={{ scaleY: 0, originY: 0 }}
+        whileInView={{ scaleY: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.4, duration: 0.8 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       />
-    </motion.div>
+      <motion.div
+        className="absolute bottom-0 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full"
+        style={{ backgroundColor: accentColor }}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4, type: "spring", stiffness: 500 }}
+      />
+    </div>
   );
 }
 
@@ -680,17 +1801,18 @@ function ProcessSection({ steps }: ProcessSectionProps) {
           badge="How It Works"
           className="mb-12 md:mb-20"
           title="Surface insights from every corner of your organization"
+          subtitle="Three simple steps to transform your team's knowledge into actionable intelligence."
         />
       </InView>
 
-      <div className="grid w-full gap-12 text-white md:grid-cols-1 md:gap-16 lg:gap-20">
+      <div className="flex w-full flex-col text-white">
         {steps.map((step, idx) => (
-          <InView
-            key={step.id}
-            transition={{ duration: 0.6, delay: idx * 0.2 }}
-          >
+          <div key={step.id}>
             <ProcessStep step={step} />
-          </InView>
+            {idx < steps.length - 1 ? (
+              <TimelineConnector accentColor={steps[idx + 1].accentColor} />
+            ) : null}
+          </div>
         ))}
       </div>
     </div>
@@ -712,14 +1834,9 @@ function WorkflowSection({ cards }: WorkflowSectionProps) {
         />
       </InView>
 
-      <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 md:gap-12 lg:gap-16">
+      <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 md:gap-10 lg:gap-12">
         {cards.map((card, idx) => (
-          <InView
-            key={card.id}
-            transition={{ duration: 0.6, delay: idx * 0.15 }}
-          >
-            <FeatureCard card={card} />
-          </InView>
+          <FeatureCard card={card} index={idx} key={card.id} />
         ))}
       </div>
     </div>
@@ -728,32 +1845,83 @@ function WorkflowSection({ cards }: WorkflowSectionProps) {
 
 // Main Component
 export default function Features() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center gap-20 bg-black px-5 py-20 sm:px-8 md:gap-40 md:px-12 md:py-32">
-      {/* Subtle background pattern */}
-      <div
+    <section
+      ref={sectionRef}
+      className="relative flex min-h-screen flex-col items-center justify-center gap-20 overflow-hidden bg-black px-5 py-20 sm:px-8 md:gap-40 md:px-12 md:py-32"
+    >
+      {/* Parallax dot grid background */}
+      <motion.div
         className="pointer-events-none absolute inset-0 opacity-[0.015]"
         style={{
           backgroundImage:
             "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
           backgroundSize: "40px 40px",
+          y: backgroundY,
         }}
       />
+
+      {/* Ambient radial glows */}
+      <motion.div
+        className="pointer-events-none absolute top-0 left-1/2 h-150 w-200 -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.03)_0%,transparent_70%)]"
+        animate={{
+          scale: [1, 1.08, 1],
+          opacity: [0.6, 1, 0.6],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="pointer-events-none absolute bottom-0 left-1/3 h-125 w-150 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.02)_0%,transparent_70%)]"
+        animate={{
+          scale: [1, 1.12, 1],
+          opacity: [0.4, 0.8, 0.4],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+          delay: 3,
+        }}
+      />
+
+      {/* Floating particles */}
+      <FeatureParticles />
 
       {/* Process section */}
       <div className="relative w-full py-8">
         <ProcessSection steps={processSteps} />
       </div>
 
-      {/* Animated divider */}
+      {/* Animated divider with glow */}
       <motion.div
         className="relative w-full max-w-360"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent" />
+        <motion.div
+          className="absolute left-1/2 top-0 h-px w-1/3 -translate-x-1/2 bg-linear-to-r from-transparent via-white/20 to-transparent blur-sm"
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{
+            duration: 3,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+        />
       </motion.div>
 
       <WorkflowSection cards={featureCards} />
