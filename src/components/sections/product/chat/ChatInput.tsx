@@ -95,7 +95,7 @@ const ChatInput = forwardRef<ChatInputHandle, ChatInputProps>(
           {showTools && (
             <motion.div
               animate={{ opacity: 1, y: 0 }}
-              className="absolute bottom-full mb-2 w-full max-w-xl space-y-4 rounded-xl border border-border bg-background p-4 shadow-xl transition-colors dark:bg-background"
+              className="absolute bottom-full mb-2 w-full max-w-xl space-y-4 rounded-xl border border-border/40 bg-[#161715] p-4 shadow-xl"
               exit={{ opacity: 0, y: 10 }}
               initial={{ opacity: 0, y: 10 }}
               ref={toolsRef}
@@ -113,7 +113,7 @@ const ChatInput = forwardRef<ChatInputHandle, ChatInputProps>(
         <div className="mx-auto w-full p-3 sm:p-4">
           <div className="rounded-xl bg-linear-to-b from-foreground/15 to-foreground/8 p-px transition-colors dark:from-foreground/25 dark:to-foreground/15">
             <form
-              className="rounded-xl bg-card p-2 shadow-md backdrop-blur-sm dark:bg-background"
+              className="rounded-xl bg-[#161715] p-2 shadow-md backdrop-blur-sm"
               onSubmit={handleFormSubmit}
             >
               <div className="flex flex-col">
@@ -128,7 +128,7 @@ const ChatInput = forwardRef<ChatInputHandle, ChatInputProps>(
                 )}
 
                 <Textarea
-                  className="min-h-15! w-full resize-none overflow-y-scroll border-none! bg-card! px-3 py-3 text-base! text-foreground shadow-none placeholder:text-muted-foreground focus-visible:ring-0 dark:bg-background! dark:text-foreground dark:placeholder:text-muted-foreground [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-foreground/30 dark:[&::-webkit-scrollbar-thumb]:bg-foreground/40 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-px"
+                  className="min-h-15! w-full resize-none overflow-y-scroll border-none! bg-[#161715]! px-3 py-3 text-base! text-foreground shadow-none placeholder:text-muted-foreground focus-visible:ring-0 dark:text-foreground dark:placeholder:text-muted-foreground [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-foreground/30 dark:[&::-webkit-scrollbar-thumb]:bg-foreground/40 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-px"
                   disabled={isLoading}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => {

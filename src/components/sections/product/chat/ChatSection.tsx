@@ -423,8 +423,8 @@ export default function ChatSection({
   }, [activeChatId, messages, startFromExistingLastUserMessage]);
 
   return (
-    <div className="relative flex h-screen flex-col overflow-clip rounded-2xl bg-background md:h-[97vh]">
-      <div className="absolute top-0 z-10 flex w-full items-center justify-between border-border/40 border-b bg-background/60 px-4 py-3 backdrop-blur-xl sm:px-6 md:px-8 md:py-4">
+    <div className="relative flex h-screen flex-col overflow-clip rounded-2xl bg-[#161715] md:h-[97vh]">
+      <div className="absolute top-0 z-10 flex w-full items-center justify-between border-border/40 border-b bg-[#161715]/80 px-4 py-3 backdrop-blur-xl sm:px-6 md:px-8 md:py-4">
         <div className="flex items-center gap-3">
           <SidebarTrigger />
         </div>
@@ -438,7 +438,7 @@ export default function ChatSection({
         </Link>
       </div>
 
-      <Conversation className="flex-1 overflow-hidden bg-background pt-16 md:pb-6 md:pt-18 dark:bg-background">
+      <Conversation className="flex-1 overflow-hidden bg-[#161715] pt-16 md:pb-6 md:pt-18">
         <ConversationScrollButton className="-translate-x-1/2 sticky top-[85%] bottom-auto left-1/2 z-20 rounded-full bg-accent shadow-lg hover:bg-accent/90" />
         {messages.length === 0 && !input.trim() ? (
           <div className="mx-auto flex h-full max-w-2xl flex-col items-start justify-center px-4 sm:px-6">
