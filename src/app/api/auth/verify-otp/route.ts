@@ -12,16 +12,19 @@ export async function POST(request: Request) {
     }
 
     // Create a verification URL to trigger the Better Auth magic link verification
-    const baseURL =
-      process.env.NODE_ENV === "production"
-        ? "https://www.salesorbit.xyz"
-        : "http://localhost:3000";
-
-    const verifyUrl = `${baseURL}/api/auth/magic-link/verify?token=${code}&callbackURL=/dashboard`;
+    const configuredBaseURL =
+      process.env.BETTER_AUTH_URL ||
+      process.env.NEXT_PUBLIC_APP_URL ||
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      new URL(request.url).origin;
+    const baseURL = configuredBaseURL.replace(/\/$/, "");
+    const verifyUrl = new URL("/api/auth/magic-link/verify", baseURL);
+    verifyUrl.searchParams.set("token", code);
+    verifyUrl.searchParams.set("callbackURL", "/dashboard");
 
     return NextResponse.json({
       success: true,
-      redirectUrl: verifyUrl,
+      redirectUrl: verifyUrl.toString(),
     });
   } catch (error) {
     console.error("OTP verification error:", error);

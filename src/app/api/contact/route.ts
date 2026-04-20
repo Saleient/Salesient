@@ -17,9 +17,9 @@ export async function POST(req: NextRequest) {
     }
 
     // Send email using Resend
-    await resend.emails.send({
-      from: "SalesOrbit <noreply@salesorbit.xyz>",
-      to: process.env.CONTACT_EMAIL || "support@salesorbit.xyz",
+    const { error } = await resend.emails.send({
+      from: "Salesient <onboarding@resend.dev>",
+      to: process.env.CONTACT_EMAIL || "onboarding@resend.dev",
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
@@ -31,6 +31,11 @@ export async function POST(req: NextRequest) {
         <p>${message.replace(/\n/g, "<br>")}</p>
       `,
     });
+
+    if (error) {
+      console.error("Contact form email send error:", error);
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {

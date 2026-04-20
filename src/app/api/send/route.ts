@@ -16,10 +16,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const fromAddress =
-      process.env.NODE_ENV === "production"
-        ? "Salesient <noreply@salesorbit.xyz>"
-        : "Salesient <onboarding@resend.dev>";
+    const fromAddress = "Salesient <onboarding@resend.dev>";
 
     const { data, error } = await resend.emails.send({
       from: fromAddress,
