@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu } from "lucide-react";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -12,150 +13,142 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Integrations", href: "/integration" },
+];
 
 export default function Navbar() {
-  const [isDarkBackground, setIsDarkBackground] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    // For pricing and FAQ pages, always use dark background
-    const shouldUseDarkBackground =
-      pathname === "/pricing" ||
-      pathname === "/faq" ||
-      pathname === "/integration";
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 12);
+    };
 
-    if (shouldUseDarkBackground) {
-      setIsDarkBackground(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.target.id === "quote") {
-            // Once we cross the quote section, stay dark until the end
-            if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
-              setIsDarkBackground(true);
-            } else {
-              setIsDarkBackground(false);
-            }
-          }
-        });
-      },
-      {
-        threshold: 0, // Trigger as soon as any part is visible
-        rootMargin: "-10% 0px -10% 0px", // Add some margin to trigger earlier
-      }
-    );
-
-    // Observe the quote section
-    const quoteSection = document.getElementById("quote");
-    if (quoteSection) {
-      observer.observe(quoteSection);
-    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
-      if (quoteSection) {
-        observer.unobserve(quoteSection);
-      }
+      window.removeEventListener("scroll", onScroll);
     };
-  }, [pathname]);
+  }, []);
 
-  const navbarClasses = isDarkBackground
-    ? "fixed  w-full flex items-center justify-between px-10 py-6 z-40 bg-black transition-all duration-300"
-    : "fixed w-full flex items-center justify-between px-10 py-6 z-40 bg-black transition-all duration-300";
+  const isHome = pathname === "/";
+  const shouldElevate = !isHome || isScrolled;
 
-  const textClasses = isDarkBackground ? "text-white" : "text-white";
+  const linkClass = (href: string) =>
+    cn(
+      "relative py-1 text-sm font-medium tracking-wide transition-colors duration-300 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:bg-white/60 after:transition-all after:duration-300",
+      pathname === href
+        ? "text-white after:w-full"
+        : "text-white/60 hover:text-white/90 after:w-0 hover:after:w-full"
+    );
 
-  const linkClasses = isDarkBackground
-    ? "text-white/60 hover:text-white transition font-medium text-sm tracking-wide"
-    : "text-white/60 hover:text-white transition font-medium text-sm tracking-wide";
-
-  const mobileIconClasses = isDarkBackground ? "text-white" : "text-white";
+  const ctaClass = cn(
+    "block rounded-full bg-linear-to-b p-px transition-transform duration-300 hover:scale-[1.01]",
+    "from-[#636363] to-[#2D2E2F]"
+  );
 
   return (
-    <nav className={navbarClasses}>
-      <div className="mx-auto flex w-full max-w-[1440px] flex-row justify-between">
-        <Link
-          className={`${textClasses} w-fit font-bold text-xl tracking-tight`}
-          href="/"
+    <nav className="fixed inset-x-0 top-0 z-50 px-4 py-3 sm:px-6 md:px-8">
+      <motion.div
+        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: -16, opacity: 0 }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div
+          className={cn(
+            "mx-auto flex w-full max-w-360 items-center justify-between px-4 py-3 transition-all duration-500 md:px-6",
+            shouldElevate
+              ? "rounded-2xl border border-white/10 bg-black/80 shadow-[0_12px_32px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+              : "rounded-2xl border border-transparent bg-black/10 backdrop-blur-sm"
+          )}
         >
-          SALESIENT
-        </Link>
-
-        {/* Desktop Links */}
-        <div className="hidden space-x-6 md:flex">
-          <Link className={linkClasses} href="/">
-            Home
-          </Link>
-          <Link className={linkClasses} href="/pricing">
-            Pricing
-          </Link>
-          <Link className={linkClasses} href="/faq">
-            FAQ
-          </Link>
-          <Link className={linkClasses} href="/integration">
-            Integrations
-          </Link>
-        </div>
-
-        <Link
-          className="hidden cursor-pointer rounded-full bg-linear-to-b from-[#636363] to-[#2D2E2F] p-px md:block"
-          href="/login"
-        >
-          <Button className="hidden cursor-pointer rounded-full text-white md:inline-flex">
-            Get Started
-          </Button>{" "}
-        </Link>
-      </div>
-
-      {/* Mobile Sidebar */}
-      <div className="md:hidden">
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button className={mobileIconClasses} size="icon" variant="ghost">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent
-            className={`w-[280px] border-l border-white/10 bg-black p-6`}
-            side="right"
+          <Link
+            className="w-fit font-bold text-white text-xl tracking-tight"
+            href="/"
           >
-            <SheetHeader className="mb-8">
-              <SheetTitle
-                className={`text-left font-bold text-xl tracking-tight text-white`}
-              >
-                SALESIENT
-              </SheetTitle>
-            </SheetHeader>
-            <div className="flex flex-col space-y-6">
-              <Link className={linkClasses} href="/">
-                Home
-              </Link>
-              <Link className={linkClasses} href="/pricing">
-                Pricing
-              </Link>
-              <Link className={linkClasses} href="/faq">
-                FAQ
-              </Link>
-              <Link className={linkClasses} href="/integration">
-                Integrations
-              </Link>
-            </div>
+            SALESIENT
+          </Link>
 
-            <div className="mt-8">
+          <div className="hidden items-center gap-7 md:flex">
+            {navItems.map((item) => (
               <Link
-                className="block cursor-pointer rounded-full bg-linear-to-b from-[#636363] to-[#2D2E2F] p-px"
-                href="/login"
+                className={linkClass(item.href)}
+                href={item.href}
+                key={item.href}
               >
-                <Button className="w-full cursor-pointer rounded-full text-white">
-                  Get Started
-                </Button>
+                {item.label}
               </Link>
-            </div>
-          </SheetContent>
-        </Sheet>
-      </div>
+            ))}
+          </div>
+
+          <div className="hidden md:block">
+            <Link className={ctaClass} href="/login">
+              <Button
+                className="cursor-pointer rounded-full text-white"
+                type="button"
+              >
+                Get Started
+              </Button>
+            </Link>
+          </div>
+
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button
+                  className="text-white"
+                  size="icon"
+                  type="button"
+                  variant="ghost"
+                >
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent
+                className="w-70 border-white/10 border-l bg-black/95 p-6 backdrop-blur-xl"
+                side="right"
+              >
+                <SheetHeader className="mb-8">
+                  <SheetTitle className="text-left font-bold text-white text-xl tracking-tight">
+                    SALESIENT
+                  </SheetTitle>
+                </SheetHeader>
+
+                <div className="flex flex-col space-y-6">
+                  {navItems.map((item) => (
+                    <Link
+                      className={linkClass(item.href)}
+                      href={item.href}
+                      key={item.href}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+
+                <div className="mt-8">
+                  <Link className={ctaClass} href="/login">
+                    <Button
+                      className="w-full cursor-pointer rounded-full text-white"
+                      type="button"
+                    >
+                      Get Started
+                    </Button>
+                  </Link>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </motion.div>
     </nav>
   );
 }
