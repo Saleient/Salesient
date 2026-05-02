@@ -590,14 +590,7 @@ export async function POST(req: Request) {
 
     // If user has custom instructions, prioritize them at the top
     if (customPrompt && customPrompt.trim().length > 0) {
-      systemPrompt =
-        systemPrompt +
-        primaryContextPrompt +
-        customPrompt +
-        `
-
----
-`;
+      systemPrompt += primaryContextPrompt(customPrompt);
     }
 
     // Add base assistant capabilities

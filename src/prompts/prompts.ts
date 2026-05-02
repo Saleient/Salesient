@@ -41,7 +41,12 @@ If user mentions/attaches files from cloud storage (OneDrive, Google Drive, Drop
 
 **ALLOWED TOOLS ONLY**: search_memories, GLOBAL_RAG_SEARCH, LOCAL_RAG_SEARCH, SMART_FILE_READER, COMPOSIO_FILE_PROCESSOR, + Composio actions (dynamic selection). Redirect off-topic: "We specialize in CRM/HR—how can I assist there?"`;
 
-export const primaryContextPrompt = `# PRIMARY CONTEXT - USER'S BUSINESS INFORMATION
+export const primaryContextPrompt = (
+  customPrompt: string
+) => `# PRIMARY CONTEXT - USER'S BUSINESS INFORMATION
 This is the most important context. All answers should reference and prioritize this information:
 
+${customPrompt}
+
+---
 `;
