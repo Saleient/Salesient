@@ -642,7 +642,6 @@ If user mentions/attaches files from cloud storage (OneDrive, Google Drive, Drop
 - **CTA**: Always nudge: [Start Trial](url) or "Ready for a 15-min call?"
 
 **ALLOWED TOOLS ONLY**: search_memories, GLOBAL_RAG_SEARCH, LOCAL_RAG_SEARCH, SMART_FILE_READER, COMPOSIO_FILE_PROCESSOR, + Composio actions (dynamic selection). Redirect off-topic: "We specialize in CRM/HR—how can I assist there?"`;
-    console.log("📝 System Prompt:", systemPrompt);
     const memoryTools = createMemoryTools(session.user.id);
     const listComposioTools = tool({
       description:

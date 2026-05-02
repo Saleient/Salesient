@@ -9,7 +9,12 @@ import {
   useInView,
 } from "motion/react";
 import { InView } from "@/components/ui/in-view";
-import { useCallback, useRef, type MouseEvent as ReactMouseEvent } from "react";
+import {
+  useCallback,
+  useMemo,
+  useRef,
+  type MouseEvent as ReactMouseEvent,
+} from "react";
 
 // Types
 type FeatureCardData = {
@@ -39,6 +44,19 @@ type ProcessStepData = {
 /* ── Spring configs ── */
 const springSmooth = { type: "spring" as const, stiffness: 120, damping: 20 };
 const springSnappy = { type: "spring" as const, stiffness: 400, damping: 30 };
+
+const particleSeed = 1337;
+
+function createSeededRandom(seed: number) {
+  let t = seed;
+  return () => {
+    t += 0x6d2b79f5;
+    let r = t;
+    r = Math.imul(r ^ (r >>> 15), r | 1);
+    r ^= r + Math.imul(r ^ (r >>> 7), r | 61);
+    return ((r ^ (r >>> 14)) >>> 0) / 4294967296;
+  };
+}
 
 // Data
 const featureCards: FeatureCardData[] = [
@@ -130,15 +148,19 @@ const processSteps: ProcessStepData[] = [
 
 /* ── Floating particles for ambient depth ── */
 function FeatureParticles() {
-  const particles = Array.from({ length: 18 }, (_, i) => ({
-    id: i,
-    size: Math.random() * 2 + 0.8,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    duration: Math.random() * 12 + 10,
-    delay: Math.random() * 6,
-    opacity: Math.random() * 0.12 + 0.03,
-  }));
+  const particles = useMemo(() => {
+    const rand = createSeededRandom(particleSeed);
+    return Array.from({ length: 18 }, (_, i) => ({
+      id: i,
+      size: rand() * 2 + 0.8,
+      x: rand() * 100,
+      y: rand() * 100,
+      duration: rand() * 12 + 10,
+      delay: rand() * 6,
+      opacity: rand() * 0.12 + 0.03,
+      driftX: rand() * 10 - 5,
+    }));
+  }, []);
 
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -154,7 +176,7 @@ function FeatureParticles() {
           }}
           animate={{
             y: [0, -30, 0],
-            x: [0, Math.random() * 10 - 5, 0],
+            x: [0, p.driftX, 0],
             opacity: [0, p.opacity, p.opacity, 0],
           }}
           transition={{
