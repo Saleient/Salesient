@@ -589,9 +589,11 @@ export async function POST(req: Request) {
     let systemPrompt = `Current time (UTC): ${currentTimeIso}\n\n`;
 
     // If user has custom instructions, prioritize them at the top
-    if (customPrompt && customPrompt.trim().length > 0) {
-      systemPrompt += primaryContextPrompt(customPrompt);
-    }
+    systemPrompt += primaryContextPrompt(
+      customPrompt?.trim().length
+        ? customPrompt
+        : "No specific business context has been configured for this user."
+    );
 
     // Add base assistant capabilities
     systemPrompt += baseAssistantPrompt;
