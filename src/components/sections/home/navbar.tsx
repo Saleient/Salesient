@@ -50,11 +50,6 @@ export default function Navbar() {
         : "text-white/60 hover:text-white/90 after:w-0 hover:after:w-full"
     );
 
-  const ctaClass = cn(
-    "block rounded-full bg-linear-to-b p-px transition-transform duration-300 hover:scale-[1.01]",
-    "from-[#636363] to-[#2D2E2F]"
-  );
-
   return (
     <nav className="fixed inset-x-0 top-0 z-50 px-4 py-3 sm:px-6 md:px-8">
       <motion.div
@@ -90,9 +85,9 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:block">
-            <Link className={ctaClass} href="/login">
+            <Link href="/login">
               <Button
-                className="cursor-pointer rounded-full text-white"
+                className="cursor-pointer rounded-full bg-white px-4 py-2 text-xs font-semibold text-black transition-colors hover:bg-zinc-200"
                 type="button"
               >
                 Get Started
@@ -135,9 +130,9 @@ export default function Navbar() {
                 </div>
 
                 <div className="mt-8">
-                  <Link className={ctaClass} href="/login">
+                  <Link href="/login">
                     <Button
-                      className="w-full cursor-pointer rounded-full text-white"
+                      className="w-full cursor-pointer rounded-full bg-white py-2.5 text-sm font-semibold text-black transition-colors hover:bg-zinc-200"
                       type="button"
                     >
                       Get Started

@@ -37,39 +37,24 @@ export default function Security() {
           <div className="pointer-events-none absolute top-0 left-0 h-64 w-64 rounded-full bg-emerald-500/3 blur-[80px]" />
 
           <motion.div
-            className="flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/3 px-4 py-1.5 text-xs tracking-widest text-white/40 uppercase"
+            className="flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/3 px-3.5 py-1 text-xs tracking-wider text-zinc-400 uppercase"
             initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, ...springSmooth }}
           >
-            <motion.span
-              className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500"
-              animate={{
-                boxShadow: [
-                  "0 0 4px rgba(16,185,129,0.4)",
-                  "0 0 10px rgba(16,185,129,0.7)",
-                  "0 0 4px rgba(16,185,129,0.4)",
-                ],
-              }}
-              transition={{
-                duration: 2.5,
-                repeat: Number.POSITIVE_INFINITY,
-              }}
-            />
-            Security
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            Security &amp; Compliance
           </motion.div>
 
           <motion.h2
-            className="max-w-lg text-left font-medium text-3xl leading-tight md:text-4xl lg:text-5xl"
-            initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            className="max-w-lg text-left font-semibold text-3xl leading-tight text-white md:text-4xl lg:text-5xl"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, ...springSmooth }}
           >
-            <span className="bg-linear-to-b from-white to-white/50 bg-clip-text text-transparent">
-              Enterprise-Grade Data Security
-            </span>
+            Enterprise-Grade Data Security
           </motion.h2>
 
           <motion.p

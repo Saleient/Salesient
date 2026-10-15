@@ -797,23 +797,7 @@ function SectionDivider() {
    ═══════════════════════════════════════════════════════════════ */
 export default function Integration() {
   return (
-    <section className="relative flex w-full justify-center overflow-hidden py-20 sm:py-28 md:py-36">
-      {/* Dot-grid background */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-      />
-
-      {/* Edge fade gradients */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-linear-to-b from-black/80 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-black/80 to-transparent" />
-
-      <FloatingParticles />
-
+    <section className="relative flex w-full justify-center overflow-hidden py-16 sm:py-24 md:py-32">
       <div className="relative z-10 flex w-full max-w-6xl flex-col gap-20 px-4 sm:px-6 md:gap-28">
         {/* ── Section Header ── */}
         <InView className="mx-auto w-fit!">

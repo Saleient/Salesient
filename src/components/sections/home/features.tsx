@@ -1,13 +1,6 @@
 "use client";
 import Image from "next/image";
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  useScroll,
-  useInView,
-} from "motion/react";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { InView } from "@/components/ui/in-view";
 import {
   useCallback,
@@ -15,6 +8,19 @@ import {
   useRef,
   type MouseEvent as ReactMouseEvent,
 } from "react";
+import {
+  Database,
+  FileText,
+  CheckCircle2,
+  Search,
+  ShieldCheck,
+  Copy,
+  Sparkles,
+  ArrowRight,
+  UploadCloud,
+  Check,
+  Layers,
+} from "lucide-react";
 
 // Types
 type FeatureCardData = {
@@ -109,40 +115,48 @@ const featureCards: FeatureCardData[] = [
 const processSteps: ProcessStepData[] = [
   {
     id: 1,
-    title: "Configure Your Workspace",
+    title: "Ingest & Index Knowledge",
     description:
-      "Define your custom instructions, preferences, and business context so the platform adapts to your organization's unique workflows.",
-    imageAlt: "Workspace configuration",
+      "Upload proposals, pitch decks, playbooks, and contracts. Salesient automatically parses tables, hierarchical sections, and generates semantic vector embeddings.",
+    imageAlt: "Knowledge ingestion interface",
     isReversed: false,
-    icon: "settings",
-    accentColor: "#6366f1",
+    icon: "database",
+    accentColor: "#38bdf8",
     mockElements: [
-      "Custom Instructions",
-      "Business Context",
-      "Team Preferences",
+      "PDFs & Contracts",
+      "CRM & Battlecards",
+      "Structural Hierarchy",
     ],
   },
   {
     id: 2,
-    title: "Connect Your Data Sources",
+    title: "Hybrid Semantic Retrieval",
     description:
-      "Select the data you want to share, connect your applications, upload documents and links — we handle the rest securely.",
-    imageAlt: "Data source connection",
+      "Query during deal prep or prospect calls. Sub-second hybrid retrieval pairs dense embeddings with lexical keyword matching to pinpoint exact clauses.",
+    imageAlt: "Semantic search retrieval",
     isReversed: true,
-    icon: "plug",
-    accentColor: "#10b981",
-    mockElements: ["CRM Data", "Documents", "API Connections"],
+    icon: "chart",
+    accentColor: "#818cf8",
+    mockElements: [
+      "< 200ms Latency",
+      "Dense Vector Match",
+      "Exact Clause Ranking",
+    ],
   },
   {
     id: 3,
-    title: "Get Instant Insights",
+    title: "Act on Cited Intelligence",
     description:
-      "Ask questions and receive real-time, citation-backed answers drawn from your connected data sources.",
-    imageAlt: "Instant insights dashboard",
+      "Get evidence-backed answers with deterministic citations back to source pages. Copy talking points or export deal memos with zero hallucinations.",
+    imageAlt: "Attributed answers interface",
     isReversed: false,
-    icon: "sparkle",
-    accentColor: "#f59e0b",
-    mockElements: ["AI Analysis", "Citations", "Real-time Answers"],
+    icon: "share",
+    accentColor: "#34d399",
+    mockElements: [
+      "Page-Level Citations",
+      "Zero Hallucinations",
+      "One-Click Memo Export",
+    ],
   },
 ];
 
@@ -298,538 +312,220 @@ function GradientBorderCard({
   );
 }
 
-/* ── Window chrome (reusable title bar) ── */
-function WindowChrome({ accentColor }: { accentColor: string }) {
-  return (
-    <div className="flex items-center gap-2 border-white/6 border-b px-4 py-3">
-      <div className="flex gap-1.5">
-        <motion.div
-          className="h-2.5 w-2.5 rounded-full"
-          style={{ backgroundColor: "#ff5f57" }}
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, type: "spring", stiffness: 500 }}
-        />
-        <motion.div
-          className="h-2.5 w-2.5 rounded-full"
-          style={{ backgroundColor: "#febc2e" }}
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, type: "spring", stiffness: 500 }}
-        />
-        <motion.div
-          className="h-2.5 w-2.5 rounded-full"
-          style={{ backgroundColor: "#28c840" }}
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.7, type: "spring", stiffness: 500 }}
-        />
-      </div>
-      <motion.div
-        className="ml-3 h-2.5 rounded-full bg-white/6"
-        initial={{ width: 0 }}
-        whileInView={{ width: 96 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-      />
-    </div>
-  );
-}
-
-/* ── Step 1: Configure Workspace — Settings panel with toggles ── */
-function ConfigureWorkspaceMock({ accentColor }: { accentColor: string }) {
-  const settings = [
-    { label: "Company Name", value: "Acme Corp", type: "input" as const },
-    { label: "AI Tone", value: "Professional", type: "select" as const },
-    { label: "Auto-suggestions", value: true, type: "toggle" as const },
-    { label: "Citation Mode", value: true, type: "toggle" as const },
-  ];
-
-  return (
-    <div className="space-y-3 p-5">
-      {/* Section title */}
-      <motion.div
-        className="mb-4 flex items-center gap-2"
-        initial={{ opacity: 0, y: -8 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5 }}
-      >
-        <div
-          className="flex h-7 w-7 items-center justify-center rounded-md"
-          style={{ backgroundColor: `${accentColor}15` }}
-        >
-          <FeatureIcon color={accentColor} icon="settings" size={4} />
-        </div>
-        <span className="text-white/50 text-xs font-medium tracking-wide uppercase">
-          Workspace Settings
-        </span>
-      </motion.div>
-
-      {settings.map((setting, idx) => (
-        <motion.div
-          key={setting.label}
-          className="flex items-center justify-between rounded-lg border border-white/4 bg-white/2 px-3.5 py-2.5"
-          initial={{ opacity: 0, x: -16, filter: "blur(3px)" }}
-          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 + idx * 0.12, ...springSmooth }}
-        >
-          <span className="text-white/35 text-xs">{setting.label}</span>
-          {setting.type === "toggle" ? (
-            <motion.div
-              className="flex h-5 w-9 items-center rounded-full px-0.5"
-              style={{
-                backgroundColor: setting.value
-                  ? `${accentColor}40`
-                  : "rgba(255,255,255,0.08)",
-              }}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.8 + idx * 0.1 }}
-            >
-              <motion.div
-                className="h-3.5 w-3.5 rounded-full bg-white shadow-sm"
-                initial={{ x: 0 }}
-                whileInView={{ x: setting.value ? 16 : 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: 1 + idx * 0.1,
-                  type: "spring",
-                  stiffness: 500,
-                  damping: 30,
-                }}
-              />
-            </motion.div>
-          ) : setting.type === "select" ? (
-            <motion.div
-              className="flex items-center gap-1 rounded-md border border-white/6 bg-white/3 px-2 py-1"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.9 + idx * 0.1 }}
-            >
-              <span className="text-white/50 text-[10px]">{setting.value}</span>
-              <svg
-                className="h-2.5 w-2.5 text-white/25"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <title>Dropdown</title>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </motion.div>
-          ) : (
-            <motion.div
-              className="rounded-md border border-white/6 bg-white/3 px-2.5 py-1"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.9 + idx * 0.1 }}
-            >
-              <span className="text-white/50 text-[10px]">{setting.value}</span>
-            </motion.div>
-          )}
-        </motion.div>
-      ))}
-
-      {/* Save button */}
-      <motion.div
-        className="mt-2 flex justify-end"
-        initial={{ opacity: 0, y: 8 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 1.2 }}
-      >
-        <motion.div
-          className="rounded-lg px-4 py-1.5"
-          style={{ backgroundColor: `${accentColor}25` }}
-          animate={{
-            boxShadow: [
-              `0 0 0px ${accentColor}00`,
-              `0 0 12px ${accentColor}15`,
-              `0 0 0px ${accentColor}00`,
-            ],
-          }}
-          transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
-        >
-          <span
-            className="text-[10px] font-medium"
-            style={{ color: accentColor }}
-          >
-            Save Changes
-          </span>
-        </motion.div>
-      </motion.div>
-    </div>
-  );
-}
-
-/* ── Step 2: Connect Data Sources — Integration nodes with connection lines ── */
-function ConnectDataSourcesMock({ accentColor }: { accentColor: string }) {
-  const integrations = [
-    { name: "Salesforce", initials: "SF", color: "#00A1E0", connected: true },
-    { name: "HubSpot", initials: "HS", color: "#FF7A59", connected: true },
+/* ── Step 1: Ingest & Index Knowledge ── */
+function IngestKnowledgeMock() {
+  const sources = [
     {
-      name: "Google Drive",
-      initials: "GD",
-      color: "#4285F4",
-      connected: false,
+      name: "Enterprise_Playbook_2025.pdf",
+      type: "PDF",
+      meta: "42 pages · 312 chunks",
+      status: "Indexed",
+    },
+    {
+      name: "SOC2_TypeII_Addendum.docx",
+      type: "DOCX",
+      meta: "18 pages · 145 chunks",
+      status: "Indexed",
+    },
+    {
+      name: "Salesforce_Deals_Sync",
+      type: "CRM",
+      meta: "1,420 records · Live sync",
+      status: "Active",
     },
   ];
 
   return (
-    <div className="space-y-3 p-5">
+    <div className="flex flex-col gap-3 p-4 sm:p-5">
       {/* Header */}
-      <motion.div
-        className="mb-3 flex items-center justify-between"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5 }}
-      >
+      <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
         <div className="flex items-center gap-2">
+          <Database className="h-4 w-4 text-sky-400" />
+          <span className="font-medium text-xs text-zinc-300">
+            Knowledge Ingestion
+          </span>
+        </div>
+        <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-400">
+          3 Sources Synced
+        </span>
+      </div>
+
+      {/* Source Cards */}
+      <div className="space-y-2">
+        {sources.map((src) => (
           <div
-            className="flex h-7 w-7 items-center justify-center rounded-md"
-            style={{ backgroundColor: `${accentColor}15` }}
+            key={src.name}
+            className="flex items-center justify-between rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2.5 transition-colors hover:border-white/15"
           >
-            <FeatureIcon color={accentColor} icon="plug" size={4} />
-          </div>
-          <span className="text-white/50 text-xs font-medium tracking-wide uppercase">
-            Integrations
-          </span>
-        </div>
-        <motion.span
-          className="rounded-full px-2 py-0.5 text-[9px] font-medium"
-          style={{ backgroundColor: `${accentColor}15`, color: accentColor }}
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8, type: "spring", stiffness: 400 }}
-        >
-          2 of 3 connected
-        </motion.span>
-      </motion.div>
-
-      {/* Integration cards */}
-      {integrations.map((app, idx) => (
-        <motion.div
-          key={app.name}
-          className="flex items-center gap-3 rounded-lg border border-white/4 bg-white/2 px-3.5 py-3"
-          initial={{ opacity: 0, x: -20, filter: "blur(3px)" }}
-          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 + idx * 0.15, ...springSmooth }}
-        >
-          {/* App icon */}
-          <motion.div
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[10px] font-bold text-white"
-            style={{ backgroundColor: app.color }}
-            initial={{ scale: 0.5, rotate: -10 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.7 + idx * 0.15,
-              type: "spring",
-              stiffness: 400,
-            }}
-          >
-            {app.initials}
-          </motion.div>
-
-          <div className="flex flex-1 flex-col">
-            <span className="text-white/50 text-xs font-medium">
-              {app.name}
-            </span>
-            <span className="text-white/20 text-[10px]">
-              {app.connected ? "Syncing data..." : "Not connected"}
-            </span>
-          </div>
-
-          {/* Status indicator */}
-          {app.connected ? (
-            <motion.div
-              className="flex items-center gap-1.5 rounded-full border px-2 py-0.5"
-              style={{
-                borderColor: `${accentColor}30`,
-                backgroundColor: `${accentColor}08`,
-              }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.9 + idx * 0.1 }}
-            >
-              <motion.div
-                className="h-1.5 w-1.5 rounded-full"
-                style={{ backgroundColor: accentColor }}
-                animate={{ opacity: [1, 0.4, 1] }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Number.POSITIVE_INFINITY,
-                  delay: idx * 0.3,
-                }}
-              />
-              <span
-                className="text-[9px] font-medium"
-                style={{ color: accentColor }}
-              >
-                Live
+            <div className="flex items-center gap-2.5">
+              <span className="rounded border border-white/10 bg-white/[0.04] px-1.5 py-0.5 font-mono text-[9px] font-semibold text-zinc-400">
+                {src.type}
               </span>
-            </motion.div>
-          ) : (
-            <motion.div
-              className="rounded-md border border-white/8 bg-white/4 px-2 py-0.5"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 1 + idx * 0.1 }}
-            >
-              <span className="text-white/30 text-[9px]">Connect</span>
-            </motion.div>
-          )}
-        </motion.div>
-      ))}
+              <div>
+                <p className="font-medium text-xs text-zinc-200">{src.name}</p>
+                <p className="text-[10px] text-zinc-500">{src.meta}</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-1.5 text-emerald-400 text-[11px]">
+              <Check className="h-3 w-3" />
+              <span className="text-[10px]">{src.status}</span>
+            </div>
+          </div>
+        ))}
+      </div>
 
-      {/* Connection status bar */}
-      <motion.div
-        className="mt-2 flex items-center gap-2"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 1.2 }}
-      >
-        <div className="h-1 flex-1 overflow-hidden rounded-full bg-white/5">
-          <motion.div
-            className="h-full rounded-full"
-            style={{
-              background: `linear-gradient(90deg, ${accentColor}, ${accentColor}60)`,
-            }}
-            initial={{ width: "0%" }}
-            whileInView={{ width: "67%" }}
-            viewport={{ once: true }}
-            transition={{ delay: 1.4, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-          />
-        </div>
-        <span className="text-white/20 text-[9px]">67%</span>
-      </motion.div>
+      {/* Status Bar */}
+      <div className="mt-1 flex items-center justify-between border-t border-white/[0.06] pt-2.5 text-[10px] text-zinc-500">
+        <span>Embeddings: 1536-dim Vectors</span>
+        <span className="text-zinc-400">Hierarchy & Tables Preserved</span>
+      </div>
     </div>
   );
 }
 
-/* ── Step 3: Get Instant Insights — AI chat interface ── */
-function InsightsChatMock({ accentColor }: { accentColor: string }) {
-  return (
-    <div className="flex flex-col p-5">
-      {/* User message */}
-      <motion.div
-        className="mb-3 ml-auto max-w-[80%] rounded-xl rounded-br-sm border border-white/6 bg-white/4 px-3.5 py-2.5"
-        initial={{ opacity: 0, y: 12, scale: 0.95 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5, ...springSmooth }}
-      >
-        <span className="text-white/50 text-[11px] leading-relaxed">
-          What were our top competitors&apos; pricing changes last quarter?
-        </span>
-      </motion.div>
+/* ── Step 2: Hybrid Semantic Retrieval ── */
+function SemanticRetrievalMock() {
+  const matches = [
+    {
+      source: "Playbook §4.1 (p. 19)",
+      score: "99.2% match",
+      text: "Tier-1 SLA discounts are capped at 14.5% on multi-year commitments. Exceeding 15% requires VP of Sales approval.",
+    },
+    {
+      source: "MSA_Template_v2.docx §7.1 (p. 6)",
+      score: "95.4% match",
+      text: "Standard invoicing schedule is Net-30 annually upfront unless specified otherwise in Schedule B.",
+    },
+  ];
 
-      {/* AI response */}
-      <motion.div
-        className="mb-3 max-w-[90%] space-y-2 rounded-xl rounded-bl-sm border border-white/6 bg-white/2 px-3.5 py-3"
-        initial={{ opacity: 0, y: 12, scale: 0.95 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.8, ...springSmooth }}
-      >
-        {/* AI icon */}
-        <div className="mb-2 flex items-center gap-2">
-          <motion.div
-            className="flex h-5 w-5 items-center justify-center rounded-md"
-            style={{ backgroundColor: `${accentColor}20` }}
-            animate={{
-              boxShadow: [
-                `0 0 0px ${accentColor}00`,
-                `0 0 8px ${accentColor}25`,
-                `0 0 0px ${accentColor}00`,
-              ],
-            }}
-            transition={{ duration: 2.5, repeat: Number.POSITIVE_INFINITY }}
-          >
-            <FeatureIcon color={accentColor} icon="sparkle" size={3} />
-          </motion.div>
-          <span className="text-white/30 text-[9px] font-medium uppercase tracking-wider">
-            Salesient AI
+  return (
+    <div className="flex flex-col gap-3 p-4 sm:p-5">
+      {/* Header */}
+      <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
+        <div className="flex items-center gap-2">
+          <Search className="h-4 w-4 text-indigo-400" />
+          <span className="font-medium text-xs text-zinc-300">
+            Hybrid Retrieval Query
           </span>
         </div>
-
-        {/* Typed response lines */}
-        {[
-          "Based on 3 sources, CompetitorA raised",
-          "enterprise pricing by 12% while CompetitorB",
-          "introduced a new freemium tier...",
-        ].map((line, idx) => (
-          <motion.div
-            key={`line-${idx}`}
-            className="text-white/40 text-[11px] leading-relaxed"
-            initial={{ opacity: 0, filter: "blur(2px)" }}
-            whileInView={{ opacity: 1, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ delay: 1 + idx * 0.2, duration: 0.4 }}
-          >
-            {line}
-          </motion.div>
-        ))}
-
-        {/* Citation tags */}
-        <motion.div
-          className="mt-2 flex flex-wrap gap-1.5"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1.7 }}
-        >
-          {["Q3 Report", "Market Analysis", "Pricing DB"].map((source, idx) => (
-            <motion.span
-              key={source}
-              className="rounded-md border px-1.5 py-0.5 text-[8px] font-medium"
-              style={{
-                borderColor: `${accentColor}25`,
-                color: `${accentColor}`,
-                backgroundColor: `${accentColor}08`,
-              }}
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                delay: 1.8 + idx * 0.1,
-                type: "spring",
-                stiffness: 400,
-              }}
-            >
-              {source}
-            </motion.span>
-          ))}
-        </motion.div>
-      </motion.div>
-
-      {/* Input bar */}
-      <motion.div
-        className="flex items-center gap-2 rounded-lg border border-white/6 bg-white/2 px-3 py-2"
-        initial={{ opacity: 0, y: 8 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 2 }}
-      >
-        <span className="flex-1 text-white/15 text-[10px]">
-          Ask a follow-up question...
+        <span className="rounded-md border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] text-zinc-400">
+          Latency: 178ms
         </span>
-        <motion.div
-          className="flex h-5 w-5 items-center justify-center rounded-md"
-          style={{ backgroundColor: `${accentColor}30` }}
-          animate={{
-            boxShadow: [
-              `0 0 0px ${accentColor}00`,
-              `0 0 6px ${accentColor}20`,
-              `0 0 0px ${accentColor}00`,
-            ],
-          }}
-          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-        >
-          <svg
-            className="h-2.5 w-2.5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke={accentColor}
-            strokeWidth={2.5}
+      </div>
+
+      {/* Simulated Query Box */}
+      <div className="rounded-lg border border-white/10 bg-zinc-950 px-3 py-2 text-xs text-zinc-300">
+        <span className="text-zinc-500">Q: </span>
+        <span>
+          What are standard payment terms and discount caps for 2-year
+          enterprise deals?
+        </span>
+      </div>
+
+      {/* Matched Chunks */}
+      <div className="space-y-2">
+        {matches.map((item) => (
+          <div
+            key={item.source}
+            className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-2.5"
           >
-            <title>Send</title>
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
-            />
-          </svg>
-        </motion.div>
-      </motion.div>
+            <div className="flex items-center justify-between pb-1.5">
+              <span className="font-mono text-[10px] text-indigo-300">
+                {item.source}
+              </span>
+              <span className="rounded bg-indigo-500/10 px-1.5 py-0.2 text-[9px] font-medium text-indigo-400">
+                {item.score}
+              </span>
+            </div>
+            <p className="text-[11px] text-zinc-400 leading-relaxed">
+              {item.text}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
-/* ── Process step mock UI router — renders the right mock for each step ── */
-function ProcessMockUI({ step }: { step: ProcessStepData }) {
-  const { accentColor } = step;
+/* ── Step 3: Act on Cited Intelligence ── */
+function VerifiedAnswerMock() {
+  return (
+    <div className="flex flex-col gap-3 p-4 sm:p-5">
+      {/* Header */}
+      <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
+        <div className="flex items-center gap-2">
+          <Sparkles className="h-4 w-4 text-emerald-400" />
+          <span className="font-medium text-xs text-zinc-300">
+            Attributed Answer
+          </span>
+        </div>
+        <div className="flex items-center gap-1.5 text-emerald-400 text-[10px]">
+          <CheckCircle2 className="h-3 w-3" />
+          <span>100% Attributed</span>
+        </div>
+      </div>
 
+      {/* Synthesized Response */}
+      <div className="space-y-2 rounded-lg border border-white/[0.06] bg-white/[0.02] p-3 text-xs text-zinc-300 leading-relaxed">
+        <p>
+          <strong className="text-white">1. Multi-Year Discount:</strong> Capped
+          at <strong className="text-white">14.5%</strong>. Discretionary
+          approval required for higher concessions.
+        </p>
+        <p>
+          <strong className="text-white">2. Payment Schedule:</strong> Net-30
+          annual upfront standard. Net-45 allowable for &gt;$75k ACV.
+        </p>
+      </div>
+
+      {/* Citations */}
+      <div className="flex flex-wrap items-center gap-2 pt-1">
+        <span className="text-[10px] uppercase tracking-wider text-zinc-500">
+          Sources:
+        </span>
+        <span className="inline-flex items-center gap-1 rounded border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] text-zinc-300">
+          <FileText className="h-3 w-3 text-zinc-400" />
+          Playbook §4.1 (p. 19)
+        </span>
+        <span className="inline-flex items-center gap-1 rounded border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] text-zinc-300">
+          <ShieldCheck className="h-3 w-3 text-emerald-400" />
+          MSA §7.1 (p. 6)
+        </span>
+      </div>
+
+      {/* Action Footer */}
+      <div className="flex items-center gap-2 border-t border-white/[0.06] pt-2.5">
+        <button
+          type="button"
+          className="inline-flex items-center gap-1 rounded border border-white/10 bg-white/[0.02] px-2.5 py-1 text-[11px] text-zinc-300 hover:border-white/20 hover:text-white"
+        >
+          <Copy className="h-3 w-3" />
+          <span>Copy Talking Points</span>
+        </button>
+        <button
+          type="button"
+          className="inline-flex items-center gap-1 rounded border border-white/10 bg-white/[0.02] px-2.5 py-1 text-[11px] text-zinc-300 hover:border-white/20 hover:text-white"
+        >
+          <span>Export Deal Memo</span>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ── Process step mock UI router ── */
+function ProcessMockUI({ step }: { step: ProcessStepData }) {
   const contentByStep: Record<number, React.ReactNode> = {
-    1: <ConfigureWorkspaceMock accentColor={accentColor} />,
-    2: <ConnectDataSourcesMock accentColor={accentColor} />,
-    3: <InsightsChatMock accentColor={accentColor} />,
+    1: <IngestKnowledgeMock />,
+    2: <SemanticRetrievalMock />,
+    3: <VerifiedAnswerMock />,
   };
 
   return (
-    <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl border border-white/6 bg-linear-to-br from-white/3 to-transparent">
-      {/* Ambient glow */}
-      <motion.div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background: `radial-gradient(ellipse at 30% 50%, ${accentColor}10, transparent 70%)`,
-        }}
-        animate={{
-          background: [
-            `radial-gradient(ellipse at 30% 50%, ${accentColor}10, transparent 70%)`,
-            `radial-gradient(ellipse at 60% 40%, ${accentColor}12, transparent 70%)`,
-            `radial-gradient(ellipse at 30% 50%, ${accentColor}10, transparent 70%)`,
-          ],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-        }}
-      />
-
-      {/* Dot grid */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
-        }}
-      />
-
-      {/* Window */}
-      <motion.div
-        className="relative mx-6 w-full max-w-md overflow-hidden rounded-xl border border-white/8 bg-black/60 shadow-2xl backdrop-blur-xl sm:mx-10 md:mx-8 lg:mx-12"
-        initial={{ opacity: 0, y: 30, scale: 0.92 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, ...springSmooth }}
-      >
-        <WindowChrome accentColor={accentColor} />
+    <div className="relative flex h-full w-full items-center justify-center p-3 sm:p-5 md:p-6">
+      <div className="w-full overflow-hidden rounded-xl border border-white/[0.08] bg-[#0c0c0e] shadow-xl">
         {contentByStep[step.id]}
-      </motion.div>
-
-      {/* Accent orb */}
-      <motion.div
-        className="pointer-events-none absolute right-8 bottom-8 h-28 w-28 rounded-full blur-3xl"
-        style={{ backgroundColor: `${accentColor}08` }}
-        animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.8, 0.4] }}
-        transition={{
-          duration: 6,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-        }}
-      />
+      </div>
     </div>
   );
 }
@@ -1406,47 +1102,20 @@ function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div
-      className={`flex w-full flex-col items-start justify-center gap-6 md:items-center ${className}`}
+      className={`flex w-full flex-col items-start justify-center gap-4 text-left md:items-center md:text-center ${className}`}
     >
-      <motion.div
-        className="group/badge relative w-fit cursor-default overflow-hidden rounded-full border border-white/10 bg-white/3 px-5 py-2 text-sm text-white/50 backdrop-blur-sm"
-        whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.2)" }}
-        transition={{ type: "spring", stiffness: 400, damping: 15 }}
-      >
-        {/* Shimmer sweep on badge */}
-        <motion.div
-          className="pointer-events-none absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/8 to-transparent"
-          animate={{ translateX: ["-100%", "200%"] }}
-          transition={{
-            duration: 3,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            repeatDelay: 4,
-          }}
-        />
-        <span className="relative">{badge}</span>
-      </motion.div>
-      <h2 className="text-left font-semibold text-3xl leading-tight tracking-tight sm:max-w-3xl sm:text-center md:font-medium lg:text-5xl">
-        <motion.span
-          className="bg-linear-to-b from-white to-white/50 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1, ...springSmooth }}
-        >
-          {title}
-        </motion.span>
+      <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1 text-xs text-zinc-300">
+        <span className="font-medium uppercase tracking-wider text-[11px]">
+          {badge}
+        </span>
+      </div>
+      <h2 className="max-w-3xl font-semibold text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+        {title}
       </h2>
       {subtitle ? (
-        <motion.p
-          className="max-w-2xl text-left text-base text-white/40 leading-relaxed sm:text-center sm:text-lg"
-          initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.25, duration: 0.6 }}
-        >
+        <p className="max-w-2xl text-base text-zinc-400 leading-relaxed sm:text-lg">
           {subtitle}
-        </motion.p>
+        </p>
       ) : null}
     </div>
   );
@@ -1502,59 +1171,6 @@ function WorkflowHeader({ badge, title, description }: WorkflowHeaderProps) {
   );
 }
 
-/* ── Step number with animated ring ── */
-function StepNumber({
-  num,
-  accentColor,
-}: {
-  num: number;
-  accentColor: string;
-}) {
-  return (
-    <motion.div
-      className="relative flex h-14 w-14 items-center justify-center md:h-16 md:w-16"
-      initial={{ opacity: 0, scale: 0.5 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.2, type: "spring", stiffness: 300, damping: 20 }}
-    >
-      {/* Animated ring */}
-      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 64 64">
-        <title>Step {num}</title>
-        <motion.circle
-          cx="32"
-          cy="32"
-          r="28"
-          fill="none"
-          stroke={`${accentColor}20`}
-          strokeWidth="1.5"
-        />
-        <motion.circle
-          cx="32"
-          cy="32"
-          r="28"
-          fill="none"
-          stroke={accentColor}
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeDasharray="176"
-          initial={{ strokeDashoffset: 176 }}
-          whileInView={{ strokeDashoffset: 44 }}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.4,
-            duration: 1.5,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        />
-      </svg>
-      <span className="font-semibold text-lg" style={{ color: accentColor }}>
-        {num}
-      </span>
-    </motion.div>
-  );
-}
-
 type ProcessStepProps = {
   step: ProcessStepData;
 };
@@ -1563,7 +1179,7 @@ function ProcessStep({ step }: ProcessStepProps) {
   const { id, title, description, imageSrc, imageAlt, isReversed } = step;
 
   const imageSection = (
-    <div className="rounded-2xl md:min-h-96 lg:min-h-112 xl:min-h-128">
+    <div className="flex h-full w-full items-center justify-center bg-black/40">
       {imageSrc ? (
         <Image
           alt={imageAlt}
@@ -1579,57 +1195,44 @@ function ProcessStep({ step }: ProcessStepProps) {
   );
 
   const contentSection = (
-    <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-12 lg:px-12 lg:py-16">
-      <StepNumber accentColor={step.accentColor} num={id} />
-      <motion.h3
-        className="mb-4 mt-4 font-semibold text-white text-xl md:mb-6 md:mt-6 md:text-3xl lg:text-4xl"
-        initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, ...springSmooth }}
-      >
-        {title}
-      </motion.h3>
-      <motion.p
-        className="max-w-md text-base text-white/45 leading-relaxed md:text-lg"
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.4, duration: 0.5 }}
-      >
-        {description}
-      </motion.p>
+    <div className="flex flex-col justify-center p-6 sm:p-8 md:p-10 lg:p-12">
+      <div className="flex items-center gap-3">
+        <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-xs font-semibold uppercase tracking-wider text-zinc-300">
+          Phase 0{id}
+        </span>
+        <span className="h-px w-8 bg-white/10" />
+      </div>
 
-      {/* Decorative accent line */}
-      <motion.div
-        className="mt-8 h-px w-full max-w-xs"
-        style={{
-          background: `linear-gradient(90deg, ${step.accentColor}30, transparent)`,
-        }}
-        initial={{ scaleX: 0, originX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.6, duration: 0.8 }}
-      />
+      <h3 className="mt-5 font-semibold text-2xl text-white md:text-3xl lg:text-4xl">
+        {title}
+      </h3>
+
+      <p className="mt-3.5 text-base text-zinc-400 leading-relaxed">
+        {description}
+      </p>
+
+      {/* Feature tags */}
+      <div className="mt-6 flex flex-wrap gap-2">
+        {step.mockElements.map((el) => (
+          <span
+            key={el}
+            className="rounded-md border border-white/[0.08] bg-white/[0.02] px-2.5 py-1 text-xs text-zinc-400"
+          >
+            {el}
+          </span>
+        ))}
+      </div>
     </div>
   );
 
   return (
     <motion.div
-      className="group relative flex flex-col overflow-clip rounded-2xl border border-white/4 bg-[#060606] transition-all duration-500 hover:border-white/8 md:grid md:grid-cols-2 md:gap-0 md:bg-linear-to-br md:from-white/2 md:to-transparent"
-      initial={{ opacity: 0, y: 40 }}
+      className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#09090b] transition-colors hover:border-white/15 md:grid md:grid-cols-2"
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
-      {/* Hover gradient overlay */}
-      <motion.div
-        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
-        style={{
-          background: `radial-gradient(ellipse at ${isReversed ? "0% 50%" : "100% 50%"}, ${step.accentColor}06, transparent 70%)`,
-        }}
-      />
-
       <div className="md:hidden">
         {imageSection}
         {contentSection}
@@ -1785,29 +1388,9 @@ function FeatureCard({ card, index }: FeatureCardProps) {
   );
 }
 
-/* ── Vertical timeline connector ── */
-function TimelineConnector({ accentColor }: { accentColor: string }) {
+function TimelineConnector() {
   return (
-    <div className="relative mx-auto hidden h-16 w-px md:flex md:h-20 lg:h-24">
-      <motion.div
-        className="h-full w-full"
-        style={{
-          background: `linear-gradient(180deg, ${accentColor}30, ${accentColor}08)`,
-        }}
-        initial={{ scaleY: 0, originY: 0 }}
-        whileInView={{ scaleY: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      />
-      <motion.div
-        className="absolute bottom-0 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full"
-        style={{ backgroundColor: accentColor }}
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.4, type: "spring", stiffness: 500 }}
-      />
-    </div>
+    <div className="mx-auto my-6 h-8 w-px bg-linear-to-b from-white/20 to-transparent" />
   );
 }
 
@@ -1817,23 +1400,19 @@ type ProcessSectionProps = {
 
 function ProcessSection({ steps }: ProcessSectionProps) {
   return (
-    <div className="mx-auto flex w-full max-w-360 flex-col items-center justify-center">
-      <InView transition={{ duration: 0.5, delay: 0 }}>
-        <SectionHeader
-          badge="How It Works"
-          className="mb-12 md:mb-20"
-          title="Surface insights from every corner of your organization"
-          subtitle="Three simple steps to transform your team's knowledge into actionable intelligence."
-        />
-      </InView>
+    <div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center">
+      <SectionHeader
+        badge="How It Works"
+        className="mb-12 md:mb-16"
+        title="Surface verified insights in three simple steps"
+        subtitle="From raw sales collateral to instant, source-backed answers in deal rooms."
+      />
 
-      <div className="flex w-full flex-col text-white">
+      <div className="flex w-full flex-col">
         {steps.map((step, idx) => (
           <div key={step.id}>
             <ProcessStep step={step} />
-            {idx < steps.length - 1 ? (
-              <TimelineConnector accentColor={steps[idx + 1].accentColor} />
-            ) : null}
+            {idx < steps.length - 1 ? <TimelineConnector /> : null}
           </div>
         ))}
       </div>
@@ -1867,84 +1446,15 @@ function WorkflowSection({ cards }: WorkflowSectionProps) {
 
 // Main Component
 export default function Features() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
   return (
-    <section
-      ref={sectionRef}
-      className="relative flex min-h-screen flex-col items-center justify-center gap-20 overflow-hidden bg-black px-5 py-20 sm:px-8 md:gap-40 md:px-12 md:py-32"
-    >
-      {/* Parallax dot grid background */}
-      <motion.div
-        className="pointer-events-none absolute inset-0 opacity-[0.015]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-          y: backgroundY,
-        }}
-      />
-
-      {/* Ambient radial glows */}
-      <motion.div
-        className="pointer-events-none absolute top-0 left-1/2 h-150 w-200 -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.03)_0%,transparent_70%)]"
-        animate={{
-          scale: [1, 1.08, 1],
-          opacity: [0.6, 1, 0.6],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="pointer-events-none absolute bottom-0 left-1/3 h-125 w-150 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.02)_0%,transparent_70%)]"
-        animate={{
-          scale: [1, 1.12, 1],
-          opacity: [0.4, 0.8, 0.4],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-          delay: 3,
-        }}
-      />
-
-      {/* Floating particles */}
-      <FeatureParticles />
-
+    <section className="relative flex flex-col items-center justify-center gap-16 overflow-hidden bg-black px-4 py-16 sm:px-6 md:gap-28 md:px-10 md:py-24">
       {/* Process section */}
-      <div className="relative w-full py-8">
+      <div className="relative w-full py-4">
         <ProcessSection steps={processSteps} />
       </div>
 
-      {/* Animated divider with glow */}
-      <motion.div
-        className="relative w-full max-w-360"
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className="h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent" />
-        <motion.div
-          className="absolute left-1/2 top-0 h-px w-1/3 -translate-x-1/2 bg-linear-to-r from-transparent via-white/20 to-transparent blur-sm"
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{
-            duration: 3,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-      </motion.div>
+      {/* Clean separator */}
+      <div className="w-full max-w-5xl border-t border-white/[0.08]" />
 
       <WorkflowSection cards={featureCards} />
     </section>

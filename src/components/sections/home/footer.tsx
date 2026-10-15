@@ -199,35 +199,15 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Large Brand Watermark */}
-        <motion.div
-          className="relative mt-16 overflow-hidden md:mt-24"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          {/* Ambient watermark glow */}
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <div className="h-32 w-96 rounded-full bg-white/2 blur-[100px]" />
-          </div>
-          <p
-            aria-hidden="true"
-            className="select-none text-center font-bold text-[clamp(4rem,15vw,12rem)] tracking-tighter text-white/3 leading-none"
-          >
-            SALESIENT
-          </p>
-        </motion.div>
-
         {/* Bottom bar */}
         <motion.div
-          className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 md:flex-row"
+          className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 md:flex-row"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
         >
-          <p className="text-xs text-white/30">
+          <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} Salesient. All rights reserved.
           </p>
           <div className="flex items-center gap-6">

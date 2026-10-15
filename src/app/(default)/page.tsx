@@ -1,17 +1,45 @@
 "use client";
 
 import { motion } from "motion/react";
+import {
+  Database,
+  Layers,
+  ShieldCheck,
+  CheckCircle2,
+  FileSearch,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 import Features from "@/components/sections/home/features";
 import Hero from "@/components/sections/home/hero";
 import Integration from "@/components/sections/home/integrations";
 import Security from "@/components/sections/home/security";
 
-const springSmooth = { type: "spring" as const, stiffness: 120, damping: 20 };
-const missionMetrics = [
-  { label: "Revenue Intelligence", value: "Unified" },
-  { label: "Document Workflows", value: "Automated" },
-  { label: "Execution Speed", value: "Accelerated" },
-  { label: "Decision Quality", value: "Evidence-Backed" },
+const capabilities = [
+  {
+    icon: Database,
+    tag: "Ingestion Engine",
+    title: "Dense Vector & Structural Indexing",
+    description:
+      "Upload PDFs, spreadsheets, pitch decks, and agreements. Salesient parses tabular schemas and hierarchy to preserve exact clause context.",
+    stats: "Supports PDF, DOCX, CSV, Notion, Drive",
+  },
+  {
+    icon: FileSearch,
+    tag: "Hybrid Retrieval",
+    title: "Sub-Second Semantic Search",
+    description:
+      "Combines semantic embeddings with lexical keyword matching to pinpoint specific contract terms, competitive battlecards, and objection rebuttals.",
+    stats: "Average query latency: < 190ms",
+  },
+  {
+    icon: ShieldCheck,
+    tag: "Guaranteed Truth",
+    title: "100% Attributed Responses",
+    description:
+      "Strict RAG guardrails prevent model hallucinations. Every generated bullet point links directly back to the verified page and clause.",
+    stats: "Zero hallucination tolerance",
+  },
 ];
 
 export default function Home() {
@@ -19,130 +47,96 @@ export default function Home() {
     <>
       <Hero />
       <Features />
-      <Security />
-      <section
-        className="relative flex flex-col items-center justify-center bg-black px-5 py-20 sm:px-10 md:py-28"
-        id="quote"
-      >
-        {/* Subtle radial glow */}
-        <motion.div
-          className="pointer-events-none absolute top-1/2 left-1/2 h-125 w-200 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.03)_0%,transparent_60%)]"
-          animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
-          transition={{
-            duration: 8,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
 
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-        />
-
-        <div className="relative z-10 mx-auto flex w-full max-w-360 flex-col gap-6 text-center md:gap-8">
-          <motion.div
-            className="relative overflow-hidden rounded-3xl border border-white/8 bg-linear-to-b from-white/4 to-transparent px-6 py-12 md:px-14 md:py-16"
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ ...springSmooth }}
-          >
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-linear-to-b from-white/5 to-transparent" />
+      {/* ── Architecture & Capabilities Section ── */}
+      <section className="relative bg-black px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          {/* Header */}
+          <div className="flex flex-col items-center text-center">
             <motion.div
-              className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/3 px-4 py-1.5 text-xs tracking-widest text-white/40 uppercase"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1 text-xs text-zinc-300"
+            >
+              <Layers className="h-3.5 w-3.5 text-zinc-400" />
+              <span className="font-medium uppercase tracking-wider text-[11px]">
+                Engineered For Precision
+              </span>
+            </motion.div>
+
+            <motion.h2
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ ...springSmooth }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="max-w-3xl font-semibold text-3xl tracking-tight text-white sm:text-5xl md:text-6xl"
             >
-              <motion.span
-                className="inline-block h-1.5 w-1.5 rounded-full bg-white/30"
-                animate={{ opacity: [0.3, 0.8, 0.3] }}
-                transition={{ duration: 2.5, repeat: Number.POSITIVE_INFINITY }}
-              />
-              Our Mission
-            </motion.div>
-            <motion.blockquote
-              className="mx-auto max-w-5xl text-balance text-2xl leading-snug md:text-4xl lg:text-5xl"
-              initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              viewport={{ once: true }}
-              transition={{
-                delay: 0.15,
-                ...springSmooth,
-                filter: { duration: 0.6 },
-              }}
-            >
-              <span className="font-light text-white/40">
-                &ldquo;We transform{" "}
+              No hallucinations.
+              <br />
+              <span className="text-zinc-500">
+                Every single sentence is verified.
               </span>
-              <span className="font-semibold text-white">your data</span>
-              <span className="font-light text-white/40"> into </span>
-              <span className="font-semibold text-white">
-                actionable intelligence
-              </span>
-              <span className="font-light text-white/40">, mapping your</span>
-              <span className="font-semibold text-white"> sales pipeline</span>
-              <span className="font-light text-white/40"> and leveraging </span>
-              <span className="font-semibold text-white">AI</span>
-              <span className="font-light text-white/40">
-                to drive measurable results. We don&apos;t just analyze &mdash;{" "}
-              </span>
-              <span className="font-semibold text-white">we execute</span>
-              <span className="font-light text-white/40">.&rdquo;</span>
-            </motion.blockquote>
-            <motion.div
-              className="mt-8 h-px w-full max-w-md bg-linear-to-r from-transparent via-white/10 to-transparent"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                delay: 0.4,
-                duration: 0.8,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            />
+            </motion.h2>
 
             <motion.p
-              className="mt-4 text-sm text-white/35"
-              initial={{ opacity: 0, y: 8 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.45 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-5 max-w-2xl text-base text-zinc-400 leading-relaxed sm:text-lg"
             >
-              Salesient Team · AI Revenue Systems
+              Standard AI chatbots invent plausible-sounding terms. Salesient is
+              built specifically for high-stakes revenue conversations where
+              accuracy is non-negotiable.
             </motion.p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="grid grid-cols-2 gap-3 md:grid-cols-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-          >
-            {missionMetrics.map((metric) => (
-              <div
-                className="rounded-xl border border-white/7 bg-white/2 px-4 py-3 text-left md:text-center"
-                key={metric.label}
-              >
-                <p className="font-medium text-sm text-white/80 md:text-base">
-                  {metric.value}
-                </p>
-                <p className="text-[11px] text-white/35 uppercase tracking-wide">
-                  {metric.label}
-                </p>
-              </div>
-            ))}
-          </motion.div>
+          {/* Capability Cards Grid */}
+          <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {capabilities.map((cap, idx) => {
+              const Icon = cap.icon;
+              return (
+                <motion.div
+                  key={cap.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/[0.08] bg-[#09090b] p-7 transition-colors hover:border-white/20"
+                >
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-white">
+                        <Icon className="h-5 w-5 text-zinc-300" />
+                      </div>
+                      <span className="rounded-full border border-white/10 bg-white/[0.02] px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-zinc-400">
+                        {cap.tag}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-6 font-semibold text-xl text-white">
+                      {cap.title}
+                    </h3>
+                    <p className="mt-3 text-sm text-zinc-400 leading-relaxed">
+                      {cap.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-8 border-t border-white/[0.06] pt-4">
+                    <span className="text-xs font-medium text-zinc-500">
+                      {cap.stats}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
+      <Security />
       <Integration />
     </>
   );
