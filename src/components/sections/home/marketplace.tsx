@@ -22,6 +22,32 @@ type ComposioApp = {
   };
 };
 
+function AppLogo({ app }: { app: ComposioApp }) {
+  const [error, setError] = useState(false);
+  const slug = app.toolkitSlug?.toLowerCase() || "";
+  const logoSrc = `/integrations/logos/${slug}.svg`;
+
+  if (error) {
+    return (
+      <span className="font-semibold text-base text-white">
+        {app.appName.charAt(0).toUpperCase()}
+      </span>
+    );
+  }
+
+  return (
+    // biome-ignore lint/performance/noImgElement: integration logo
+    // biome-ignore lint/correctness/useImageSize: CSS-controlled
+    <img
+      alt={app.appName}
+      className="h-full w-full object-contain"
+      src={logoSrc}
+      loading="lazy"
+      onError={() => setError(true)}
+    />
+  );
+}
+
 export default function LandingIntegrations() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -116,19 +142,7 @@ export default function LandingIntegrations() {
       <div>
         <div className="mb-4 flex items-center justify-between gap-3">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] p-2">
-            {app.meta.logo ? (
-              // biome-ignore lint/performance/noImgElement: external integration logo
-              // biome-ignore lint/correctness/useImageSize: CSS-controlled
-              <img
-                alt={app.appName}
-                className="h-full w-full object-contain"
-                src={app.meta.logo}
-              />
-            ) : (
-              <span className="font-semibold text-base text-white">
-                {getInitial(app.appName)}
-              </span>
-            )}
+            <AppLogo app={app} />
           </div>
           <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 font-mono text-[10px] text-emerald-400">
             OAuth 2.0
