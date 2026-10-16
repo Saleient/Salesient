@@ -77,7 +77,13 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
                     className="h-full w-full object-contain p-0.5"
                   />
                 </span>
-                <span className="tracking-tight">Salesient</span>
+                {/** biome-ignore lint/performance/noImgElement: brand wordmark */}
+                {/** biome-ignore lint/correctness/useImageSize: CSS sized */}
+                <img
+                  alt="SALESIENT"
+                  src="/salesient-wordmark.png"
+                  className="h-3 w-auto object-contain tracking-wider opacity-95"
+                />
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>

@@ -35,9 +35,13 @@ export function SalesientLogo({ className }: { className?: string }) {
           className="h-full w-full object-contain p-0.5"
         />
       </div>
-      <span className="font-semibold text-[15px] tracking-tight text-white">
-        Salesient
-      </span>
+      {/** biome-ignore lint/performance/noImgElement: brand wordmark */}
+      {/** biome-ignore lint/correctness/useImageSize: CSS sized */}
+      <img
+        alt="SALESIENT"
+        src="/salesient-wordmark.png"
+        className="h-3.5 w-auto object-contain tracking-wider opacity-95"
+      />
     </div>
   );
 }
@@ -78,9 +82,6 @@ export default function Navbar() {
             <Link href="/" className="group focus:outline-none">
               <SalesientLogo />
             </Link>
-            <span className="hidden rounded-full border border-white/10 bg-white/[0.03] px-2 py-0.5 font-mono text-[10px] text-zinc-400 sm:inline-block">
-              RAG 2.4
-            </span>
           </div>
 
           {/* Center Navigation Pill */}

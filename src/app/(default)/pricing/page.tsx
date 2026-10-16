@@ -27,7 +27,7 @@ const plans = [
     title: "Team",
     badge: "Most Popular",
     tagline: "For high-velocity revenue teams up to 10 seats",
-    price: "$49",
+    price: "$19",
     period: "per month base, then +$15 / user / mo",
     cta: "Start Team Trial",
     highlight: true,
