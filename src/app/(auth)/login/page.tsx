@@ -1,43 +1,25 @@
 "use client";
 
-import { HomeIcon, Loader2, Mail } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  Loader2,
+  Lock,
+  Mail,
+  ShieldCheck,
+} from "lucide-react";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import { SalesientLogo } from "@/components/sections/home/navbar";
 import { signIn } from "@/lib/auth-client";
 
-/**
- * Google icon component
- */
-const GoogleIcon = (props: React.ComponentProps<"svg">) => (
-  <svg preserveAspectRatio="xMidYMid" viewBox="0 0 256 262" {...props}>
-    <title>Google logo</title>
-    <path
-      d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
-      fill="#4285F4"
-    />
-    <path
-      d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
-      fill="#34A853"
-    />
-    <path
-      d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"
-      fill="#FBBC05"
-    />
-    <path
-      d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
-      fill="#EB4335"
-    />
-  </svg>
-);
-
-/**
- * Authentication page with split screen layout
- */
 export default function AuthPage() {
   const [loading, setLoading] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [showMagicLink, setShowMagicLink] = useState(false);
+  const [_showMagicLink, setShowMagicLink] = useState(false);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [magicLinkSent, setMagicLinkSent] = useState(false);
@@ -48,7 +30,6 @@ export default function AuthPage() {
 
   // Clear cookies only after component fully mounts and renders
   useEffect(() => {
-    // Mark as mounted after render
     setMounted(true);
 
     const frameId = requestAnimationFrame(() => {
@@ -78,7 +59,6 @@ export default function AuthPage() {
     setLoading(true);
 
     try {
-      // Check if user exists
       const response = await fetch("/api/auth/check-user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -88,7 +68,6 @@ export default function AuthPage() {
       const data = await response.json();
 
       if (data.exists) {
-        // User exists, send magic link directly
         await signIn.magicLink({
           email,
           callbackURL: "/dashboard",
@@ -96,7 +75,6 @@ export default function AuthPage() {
         setMagicLinkSent(true);
         toast.success("Magic link sent! Check your email.");
       } else {
-        // New user, show name input
         setIsNewUser(true);
         setShowNameInput(true);
       }
@@ -169,263 +147,289 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center bg-black">
-      {/* Subtle radial glow */}
-      <div className="pointer-events-none absolute top-0 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
+    <div className="relative flex min-h-screen flex-col justify-between overflow-hidden bg-[#050507] px-4 py-8 text-white sm:px-8">
+      {/* Architectural Grid & Top Illumination */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-grid-subtle [mask-image:radial-gradient(ellipse_70%_55%_at_50%_30%,#000_25%,transparent_100%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-36 left-1/2 h-96 w-[720px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06)_0%,transparent_70%)] blur-2xl"
+      />
 
-      {/* Home Button */}
-      <Link
-        className="absolute top-8 left-8 z-20 inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 py-2 font-medium text-sm ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-        href="/"
-      >
-        <HomeIcon className="mr-2 h-4 w-4" />
-        Home
-      </Link>
+      {/* Top Navigation Bar */}
+      <div className="relative z-20 mx-auto flex w-full max-w-6xl items-center justify-between">
+        <Link href="/" className="focus:outline-none">
+          <SalesientLogo />
+        </Link>
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium text-zinc-300 transition-colors hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" />
+          <span>Back to Overview</span>
+        </Link>
+      </div>
 
-      {/* Centered card with sign in form */}
-      <div className="relative z-10 mx-4 w-full max-w-[420px] rounded-lg border border-input bg-background/95 p-8 shadow-lg backdrop-blur-sm">
-        {/* Sign in form content - centered block, left-aligned text within */}
-        <div className="space-y-8 text-left">
-          {/* Header */}
-          <div className="space-y-3">
-            <h2 className="font-semibold text-3xl tracking-tight">
-              {isNewUser ? "Welcome!" : "Welcome to Salesient"}
-            </h2>
-            <p className="text-muted-foreground">
-              {magicLinkSent && "Check your email for the magic link"}
-              {isNewUser &&
-                !magicLinkSent &&
-                "Please enter your name to complete registration"}
-              {!(isNewUser || magicLinkSent) &&
-                "Sign in to continue to your account"}
-            </p>
-          </div>
-
-          {magicLinkSent ? (
-            <div className="space-y-6 rounded-lg border border-input bg-muted/50 p-6">
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-semibold text-base">Check your email</h3>
-                  <p className="text-muted-foreground text-sm">
-                    We sent a magic link to {email}
-                  </p>
-                </div>
+      {/* Main Centered Auth Portal */}
+      <div className="relative z-10 mx-auto my-12 w-full max-w-[440px]">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          className="overflow-hidden rounded-3xl border border-white/[0.09] bg-[#09090c] p-7 shadow-[0_24px_80px_-16px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-9"
+        >
+          <div className="space-y-6 text-left">
+            {/* Badge + Header */}
+            <div className="space-y-2.5">
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-zinc-400">
+                <Lock className="h-3 w-3 text-emerald-400" />
+                <span>Zero-Trust Workspace Auth</span>
               </div>
-              <p className="text-muted-foreground text-sm">
-                Click the link in the email to sign in, or enter the 6-digit
-                code below.
+              <h1 className="font-semibold text-2xl tracking-tight text-white sm:text-3xl">
+                {isNewUser ? "Create your workspace" : "Sign in to Salesient"}
+              </h1>
+              <p className="text-xs text-zinc-400 leading-relaxed sm:text-sm">
+                {magicLinkSent &&
+                  "We dispatched a one-time verification code and magic link."}
+                {isNewUser &&
+                  !magicLinkSent &&
+                  "Complete your profile to initialize your isolated knowledge vault."}
+                {!(isNewUser || magicLinkSent) &&
+                  "Enter your work email for instant passwordless access."}
               </p>
-
-              {/* OTP Input */}
-              <div className="space-y-3">
-                <label className="block font-medium text-sm" htmlFor="otp">
-                  Enter verification code
-                </label>
-                <input
-                  className="flex h-12 w-full rounded-lg border border-input bg-background px-4 font-medium text-sm ring-offset-background transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                  disabled={verifyingOtp}
-                  id="otp"
-                  onChange={(e) => setOtp(e.target.value)}
-                  placeholder="Enter the code from your email"
-                  value={otp}
-                />
-                <button
-                  className="flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 py-2 font-medium text-sm ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-                  disabled={verifyingOtp || !otp}
-                  onClick={() => handleOtpVerification(otp)}
-                  type="button"
-                >
-                  {verifyingOtp ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Verifying...
-                    </>
-                  ) : (
-                    "Verify Code"
-                  )}
-                </button>
-                {verifyingOtp && (
-                  <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                    <span>Verifying...</span>
-                  </div>
-                )}
-              </div>
-
-              <div className="flex flex-row justify-between space-x-2 pt-2">
-                <button
-                  className="w-fit font-medium text-muted-foreground text-sm transition-colors hover:text-foreground"
-                  disabled={verifyingOtp}
-                  onClick={async () => {
-                    setLoading(true);
-                    try {
-                      if (isNewUser) {
-                        await signIn.magicLink({
-                          email,
-                          name,
-                          callbackURL: "/dashboard",
-                        });
-                      } else {
-                        await signIn.magicLink({
-                          email,
-                          callbackURL: "/dashboard",
-                        });
-                      }
-                      toast.success("New code sent! Check your email.");
-                    } catch (_error) {
-                      toast.error("Failed to resend code.");
-                    } finally {
-                      setLoading(false);
-                    }
-                  }}
-                  type="button"
-                >
-                  Resend code
-                </button>
-                <button
-                  className="block w-fit font-medium text-primary text-sm transition-colors hover:text-primary/80"
-                  disabled={verifyingOtp}
-                  onClick={() => {
-                    setMagicLinkSent(false);
-                    setShowMagicLink(false);
-                    setShowNameInput(false);
-                    setIsNewUser(false);
-                    setEmail("");
-                    setName("");
-                    setOtp("");
-                  }}
-                  type="button"
-                >
-                  Try a different email
-                </button>
-              </div>
             </div>
-          ) : (
-            <>
-              {/* Magic Link Form */}
-              {showNameInput && (
-                <form className="space-y-4" onSubmit={handleMagicLinkSubmit}>
-                  <div className="space-y-2">
-                    <label className="font-medium text-sm" htmlFor="email">
-                      Email
-                    </label>
-                    <input
-                      className="flex h-12 w-full rounded-lg border border-input bg-background px-4 font-medium text-sm ring-offset-background transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      disabled
-                      id="email"
-                      type="email"
-                      value={email}
-                    />
+
+            {magicLinkSent ? (
+              <div className="space-y-5 rounded-2xl border border-white/[0.08] bg-[#060608] p-5">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-emerald-500/25 bg-emerald-500/10">
+                    <Mail className="h-5 w-5 text-emerald-400" />
                   </div>
-                  <div className="space-y-2">
-                    <label className="font-medium text-sm" htmlFor="name">
-                      Name
-                    </label>
-                    <input
-                      className="flex h-12 w-full rounded-lg border border-input bg-background px-4 font-medium text-sm ring-offset-background transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      disabled={loading}
-                      id="name"
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Enter your name"
-                      required
-                      type="text"
-                      value={name}
-                    />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-sm text-white">
+                      Check your inbox
+                    </h3>
+                    <p className="truncate text-xs text-zinc-400">{email}</p>
                   </div>
-                  <button
-                    className="group relative flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-input bg-background font-medium text-sm shadow-sm transition-all duration-200 hover:bg-muted hover:shadow disabled:cursor-not-allowed disabled:opacity-50"
-                    disabled={loading || !mounted}
-                    type="submit"
+                </div>
+
+                {/* OTP Input */}
+                <div className="space-y-3 border-t border-white/[0.06] pt-4">
+                  <label
+                    className="block font-mono text-[11px] uppercase tracking-wider text-zinc-400"
+                    htmlFor="otp"
                   >
-                    {loading ? (
+                    Verification Code
+                  </label>
+                  <input
+                    className="flex h-11 w-full rounded-xl border border-white/10 bg-[#09090c] px-4 font-mono text-sm tracking-widest text-white transition-colors placeholder:font-sans placeholder:tracking-normal placeholder:text-zinc-600 focus:border-white/25 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                    disabled={verifyingOtp}
+                    id="otp"
+                    onChange={(e) => setOtp(e.target.value)}
+                    placeholder="Enter 6-digit code"
+                    value={otp}
+                  />
+                  <button
+                    className="flex h-11 w-full cursor-pointer items-center justify-center rounded-full bg-white px-4 font-semibold text-xs text-black transition-all hover:bg-zinc-200 disabled:pointer-events-none disabled:opacity-40 sm:text-sm"
+                    disabled={verifyingOtp || !otp}
+                    onClick={() => handleOtpVerification(otp)}
+                    type="button"
+                  >
+                    {verifyingOtp ? (
                       <>
-                        <Loader2 className="h-5 w-5 animate-spin" />
-                        <span className="text-foreground">Sending...</span>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Verifying Code...
                       </>
                     ) : (
-                      <>
-                        <Mail className="h-5 w-5" />
-                        <span className="text-foreground">Send Magic Link</span>
-                      </>
+                      "Verify & Open Workspace"
                     )}
                   </button>
+                </div>
+
+                <div className="flex items-center justify-between border-t border-white/[0.06] pt-3 text-xs">
                   <button
-                    className="w-full text-center font-medium text-muted-foreground text-sm transition-colors hover:text-foreground"
-                    disabled={loading}
-                    onClick={() => {
-                      setShowNameInput(false);
-                      setEmail("");
-                      setName("");
+                    className="cursor-pointer font-medium text-zinc-400 transition-colors hover:text-white"
+                    disabled={verifyingOtp}
+                    onClick={async () => {
+                      setLoading(true);
+                      try {
+                        if (isNewUser) {
+                          await signIn.magicLink({
+                            email,
+                            name,
+                            callbackURL: "/dashboard",
+                          });
+                        } else {
+                          await signIn.magicLink({
+                            email,
+                            callbackURL: "/dashboard",
+                          });
+                        }
+                        toast.success("New code sent! Check your email.");
+                      } catch (_error) {
+                        toast.error("Failed to resend code.");
+                      } finally {
+                        setLoading(false);
+                      }
                     }}
                     type="button"
                   >
-                    Use a different email
+                    Resend code
                   </button>
-                </form>
-              )}
-
-              {!showNameInput && (
-                <form className="space-y-4" onSubmit={handleEmailSubmit}>
-                  <div className="space-y-2">
-                    <label className="font-medium text-sm" htmlFor="email">
-                      Email
-                    </label>
-                    <input
-                      className="flex h-12 w-full rounded-lg border border-input bg-background px-4 font-medium text-sm ring-offset-background transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      disabled={loading}
-                      id="email"
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email"
-                      required
-                      type="email"
-                      value={email}
-                    />
-                  </div>
                   <button
-                    className="group relative flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-input bg-background font-medium text-sm shadow-sm transition-all duration-200 hover:bg-muted hover:shadow disabled:cursor-not-allowed disabled:opacity-50"
-                    disabled={loading || !mounted}
-                    type="submit"
+                    className="cursor-pointer font-medium text-zinc-300 transition-colors hover:text-white"
+                    disabled={verifyingOtp}
+                    onClick={() => {
+                      setMagicLinkSent(false);
+                      setShowMagicLink(false);
+                      setShowNameInput(false);
+                      setIsNewUser(false);
+                      setEmail("");
+                      setName("");
+                      setOtp("");
+                    }}
+                    type="button"
                   >
-                    {loading ? (
-                      <>
-                        <Loader2 className="h-5 w-5 animate-spin" />
-                        <span className="text-foreground">Verifying...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Mail className="h-5 w-5" />
-                        <span className="text-foreground">Continue</span>
-                      </>
-                    )}
+                    Use different email
                   </button>
-                </form>
-              )}
-            </>
-          )}
+                </div>
+              </div>
+            ) : (
+              <>
+                {showNameInput && (
+                  <form className="space-y-4" onSubmit={handleMagicLinkSubmit}>
+                    <div className="space-y-2">
+                      <label
+                        className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
+                        htmlFor="email"
+                      >
+                        Work Email
+                      </label>
+                      <input
+                        className="flex h-11 w-full rounded-xl border border-white/10 bg-[#060608] px-4 text-sm text-zinc-400 disabled:cursor-not-allowed disabled:opacity-60"
+                        disabled
+                        id="email"
+                        type="email"
+                        value={email}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label
+                        className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
+                        htmlFor="name"
+                      >
+                        Full Name
+                      </label>
+                      <input
+                        className="flex h-11 w-full rounded-xl border border-white/10 bg-[#060608] px-4 text-sm text-white transition-colors placeholder:text-zinc-600 focus:border-white/25 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                        disabled={loading}
+                        id="name"
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Enter your full name"
+                        required
+                        type="text"
+                        value={name}
+                      />
+                    </div>
+                    <button
+                      className="group flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-white font-semibold text-xs text-black shadow-[0_0_24px_rgba(255,255,255,0.14)] transition-all hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50 sm:text-sm"
+                      disabled={loading || !mounted}
+                      type="submit"
+                    >
+                      {loading ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          <span>Sending Magic Link...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Continue with Magic Link</span>
+                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                        </>
+                      )}
+                    </button>
+                    <button
+                      className="w-full cursor-pointer pt-1 text-center font-medium text-xs text-zinc-400 transition-colors hover:text-white"
+                      disabled={loading}
+                      onClick={() => {
+                        setShowNameInput(false);
+                        setEmail("");
+                        setName("");
+                      }}
+                      type="button"
+                    >
+                      Use a different email address
+                    </button>
+                  </form>
+                )}
 
-          {/* Footer */}
-          <div className="space-y-4">
-            <p className="text-muted-foreground/70 text-xs leading-relaxed">
-              By continuing, you agree to our{" "}
-              <Link
-                className="underline underline-offset-2 hover:text-foreground"
-                href="/terms"
-              >
-                Terms of Service
-              </Link>{" "}
-              and{" "}
-              <Link
-                className="underline underline-offset-2 hover:text-foreground"
-                href="/privacy-policy"
-              >
-                Privacy Policy
-              </Link>
-            </p>
+                {!showNameInput && (
+                  <form className="space-y-4" onSubmit={handleEmailSubmit}>
+                    <div className="space-y-2">
+                      <label
+                        className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
+                        htmlFor="email"
+                      >
+                        Work Email
+                      </label>
+                      <input
+                        className="flex h-11 w-full rounded-xl border border-white/10 bg-[#060608] px-4 text-sm text-white transition-colors placeholder:text-zinc-600 focus:border-white/25 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                        disabled={loading}
+                        id="email"
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="you@company.com"
+                        required
+                        type="email"
+                        value={email}
+                      />
+                    </div>
+                    <button
+                      className="group flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-white font-semibold text-xs text-black shadow-[0_0_24px_rgba(255,255,255,0.14)] transition-all hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50 sm:text-sm"
+                      disabled={loading || !mounted}
+                      type="submit"
+                    >
+                      {loading ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          <span>Verifying...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Continue with Email</span>
+                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                        </>
+                      )}
+                    </button>
+                  </form>
+                )}
+              </>
+            )}
+
+            {/* Security Reassurance */}
+            <div className="border-t border-white/[0.06] pt-5">
+              <div className="flex items-center justify-between text-[11px] text-zinc-500">
+                <span className="inline-flex items-center gap-1.5">
+                  <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+                  <span>SOC 2 Type II Secured</span>
+                </span>
+                <span>Passwordless OTP</span>
+              </div>
+            </div>
           </div>
-        </div>
+        </motion.div>
+      </div>
+
+      {/* Bottom Legal Note */}
+      <div className="relative z-10 mx-auto max-w-md text-center text-xs text-zinc-500">
+        Need help accessing your organization workspace?{" "}
+        <Link
+          href="/contact"
+          className="text-zinc-300 underline underline-offset-4 hover:text-white"
+        >
+          Contact Support
+        </Link>
       </div>
     </div>
   );

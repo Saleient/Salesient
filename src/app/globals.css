@@ -5,39 +5,39 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ── Promptverse AI: Pure-black monochromatic design tokens ── */
-  --background: #000000;
-  --foreground: #ffffff;
-  --card: #0a0a0a;
-  --card-foreground: #f0f0f0;
-  --popover: #0a0a0a;
-  --popover-foreground: #f0f0f0;
+  /* ── Salesient Architectural Obsidian Design Tokens ── */
+  --background: #050507;
+  --foreground: #fafafa;
+  --card: #0a0a0d;
+  --card-foreground: #f4f4f5;
+  --popover: #0a0a0d;
+  --popover-foreground: #f4f4f5;
   --primary: #ffffff;
-  --primary-foreground: #000000;
-  --secondary: #111111;
-  --secondary-foreground: #e0e0e0;
-  --muted: #111111;
-  --muted-foreground: #777777;
-  --accent: #161616;
-  --accent-foreground: #e0e0e0;
-  --destructive: #ff4444;
+  --primary-foreground: #050507;
+  --secondary: #121216;
+  --secondary-foreground: #e4e4e7;
+  --muted: #121216;
+  --muted-foreground: #8e8e93;
+  --accent: #18181d;
+  --accent-foreground: #f4f4f5;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #1a1a1a;
-  --input: #111111;
-  --ring: #333333;
+  --border: #1c1c22;
+  --input: #121216;
+  --ring: #3f3f46;
   --chart-1: #ffffff;
-  --chart-2: #cccccc;
-  --chart-3: #999999;
-  --chart-4: #666666;
-  --chart-5: #444444;
-  --sidebar: #181818;
-  --sidebar-foreground: #f0f0f0;
+  --chart-2: #d4d4d8;
+  --chart-3: #a1a1aa;
+  --chart-4: #71717a;
+  --chart-5: #52525b;
+  --sidebar: #0c0c0f;
+  --sidebar-foreground: #f4f4f5;
   --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: #222222;
-  --sidebar-accent-foreground: #e0e0e0;
-  --sidebar-border: #2a2a2a;
-  --sidebar-ring: #333333;
+  --sidebar-primary-foreground: #050507;
+  --sidebar-accent: #18181d;
+  --sidebar-accent-foreground: #e4e4e7;
+  --sidebar-border: #1f1f26;
+  --sidebar-ring: #3f3f46;
   --radius: 0.625rem;
   --shadow-2xs: 0 1px 2px 0px rgba(0, 0, 0, 0.4);
   --shadow-xs: 0 1px 3px 0px rgba(0, 0, 0, 0.5);
@@ -50,28 +50,27 @@
     0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
   --shadow-xl:
     0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.65);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
   --rainbow: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.15) 25%,
-    rgba(255, 255, 255, 0.08) 50%,
-    rgba(255, 255, 255, 0.15) 75%,
-    rgba(255, 255, 255, 0.08) 100%
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.14) 25%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.14) 75%,
+    rgba(255, 255, 255, 0.06) 100%
   );
-
   --radial-black: radial-gradient(
     ellipse 80% 60% at 50% 0%,
-    rgba(40, 40, 40, 0.3) 0%,
-    #000000 70%
+    rgba(36, 36, 44, 0.35) 0%,
+    #050507 70%
   );
 
-  font-family: Geist, sans-serif;
+  font-family: Geist, -apple-system, BlinkMacSystemFont, sans-serif;
   font-feature-settings:
     "liga" 1,
-    "calt" 1; /* fix for Chrome */
+    "calt" 1;
   font-size: 14px;
 }
 
@@ -123,64 +122,14 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
-
-  /* ── Promptverse: Monochrome neutral overrides ── */
-  --color-neutral-50: #fafafa;
-  --color-neutral-100: #e0e0e0;
-  --color-neutral-200: #c0c0c0;
-  --color-neutral-300: #999999;
-  --color-neutral-400: #777777;
-  --color-neutral-500: #555555;
-  --color-neutral-600: #3a3a3a;
-  --color-neutral-700: #2a2a2a;
-  --color-neutral-800: #1a1a1a;
-  --color-neutral-900: #0d0d0d;
-  --color-neutral-950: #050505;
-
-  --color-gray-50: #fafafa;
-  --color-gray-100: #e0e0e0;
-  --color-gray-200: #c0c0c0;
-  --color-gray-300: #888888;
-  --color-gray-400: #666666;
-  --color-gray-500: #555555;
-  --color-gray-600: #3a3a3a;
-  --color-gray-700: #2a2a2a;
-  --color-gray-800: #1a1a1a;
-  --color-gray-900: #0d0d0d;
-  --color-gray-950: #050505;
-
-  --color-zinc-50: #fafafa;
-  --color-zinc-100: #0d0d0d;
-  --color-zinc-200: #c0c0c0;
-  --color-zinc-300: #888888;
-  --color-zinc-400: #666666;
-  --color-zinc-500: #555555;
-  --color-zinc-600: #3a3a3a;
-  --color-zinc-700: #2a2a2a;
-  --color-zinc-800: #1a1a1a;
-  --color-zinc-900: #0d0d0d;
-  --color-zinc-950: #050505;
-
-  /* Replace sky accent → white/gray monochrome */
-  --color-sky-50: #fafafa;
-  --color-sky-100: #e0e0e0;
-  --color-sky-200: #c0c0c0;
-  --color-sky-300: #999999;
-  --color-sky-400: #777777;
-  --color-sky-500: #ffffff;
-  --color-sky-600: #ffffff;
-  --color-sky-700: #e0e0e0;
-  --color-sky-800: #c0c0c0;
-  --color-sky-900: #999999;
-  --color-sky-950: #555555;
 }
 
 @layer utilities {
   .bg-radialBlack {
     background: radial-gradient(
       ellipse 80% 60% at 50% 0%,
-      rgba(40, 40, 40, 0.3) 0%,
-      #000000 70%
+      rgba(36, 36, 44, 0.35) 0%,
+      #050507 70%
     );
   }
   .bg-rainbow {
@@ -193,7 +142,57 @@
       rgba(255, 255, 255, 0.06) 100%
     );
   }
-  /* Glassmorphism utility — Promptverse dark minimal */
+  .bg-grid-subtle {
+    background-size: 48px 48px;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.025) 1px,
+        transparent 1px
+      );
+  }
+  .bg-dot-subtle {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    );
+    background-size: 20px 20px;
+  }
+  .surface-card {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.035) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+      0 16px 40px -12px rgba(0, 0, 0, 0.7);
+  }
+  .surface-card-interactive {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.035) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+      0 16px 40px -12px rgba(0, 0, 0, 0.7);
+    transition:
+      border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .surface-card-interactive:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.055) 0%,
+      rgba(255, 255, 255, 0.015) 100%
+    );
+  }
   .glass-input {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -222,7 +221,7 @@
 }
 
 body {
-  background: #000000;
+  background: var(--background);
   color: var(--foreground);
 }
 
@@ -236,171 +235,17 @@ body {
 }
 
 .dark {
-  --sidebar: #181818;
-  --sidebar-foreground: #f0f0f0;
+  --sidebar: #0c0c0f;
+  --sidebar-foreground: #f4f4f5;
   --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: #222222;
-  --sidebar-accent-foreground: #e0e0e0;
-  --sidebar-border: #2a2a2a;
-  --sidebar-ring: #333333;
+  --sidebar-primary-foreground: #050507;
+  --sidebar-accent: #18181d;
+  --sidebar-accent-foreground: #e4e4e7;
+  --sidebar-border: #1f1f26;
+  --sidebar-ring: #3f3f46;
 }
 
-/* ══════════════════════════════════════════════
-   Promptverse AI: Global overrides
-   Pure-black, monochromatic, minimal design
-   ══════════════════════════════════════════════ */
-
-/* ── Remove background images globally ── */
-[style*="background-image"] {
-  background-image: none !important;
-}
-
-/* Hide hero/layout background <Image> elements (decorative bg images) */
-img[src="/bg.png"] {
-  opacity: 0 !important;
-}
-
-/* ── Override foreground-as-background sections → pure black ── */
-.bg-foreground {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
-
-/* Fix gradient overlays using foreground as stops */
-.from-foreground {
-  --tw-gradient-from: #000000 !important;
-}
-.via-foreground\/10 {
-  --tw-gradient-via: rgba(0, 0, 0, 0.1) !important;
-}
-.to-foreground {
-  --tw-gradient-to: #000000 !important;
-}
-
-/* ── Fix text colors inside formerly-light sections ── */
-.bg-foreground .text-neutral-950,
-.bg-foreground [class*="text-neutral-950"] {
-  color: #ffffff !important;
-}
-.bg-foreground .text-neutral-900,
-.bg-foreground [class*="text-neutral-900"] {
-  color: #f0f0f0 !important;
-}
-.bg-foreground .text-neutral-800,
-.bg-foreground [class*="text-neutral-800"] {
-  color: #e0e0e0 !important;
-}
-.bg-foreground .text-neutral-700,
-.bg-foreground [class*="text-neutral-700"] {
-  color: #999999 !important;
-}
-
-/* ── Fix gradient text in hero heading ── */
-.bg-foreground [class*="from-neutral-900"] {
-  --tw-gradient-from: #ffffff !important;
-}
-.bg-foreground [class*="to-neutral-900"] {
-  --tw-gradient-to: rgba(255, 255, 255, 0.7) !important;
-}
-
-/* ── Fix light surface backgrounds inside dark sections ── */
-.bg-foreground [class*="bg-white"],
-.bg-foreground .bg-white {
-  background-color: #0d0d0d !important;
-}
-.bg-foreground [class*="bg-neutral-100"],
-.bg-foreground .bg-neutral-100 {
-  background-color: #111111 !important;
-}
-.bg-foreground [class*="bg-neutral-200"],
-.bg-foreground .bg-neutral-200 {
-  background-color: #161616 !important;
-}
-.bg-foreground [class*="from-neutral-100"] {
-  --tw-gradient-from: #111111 !important;
-}
-.bg-foreground [class*="to-neutral-200"] {
-  --tw-gradient-to: #161616 !important;
-}
-.bg-foreground [class*="via-neutral-50"] {
-  --tw-gradient-via: rgba(17, 17, 17, 0.3) !important;
-}
-
-/* ── Fix borders inside foreground sections ── */
-.bg-foreground [class*="border-neutral-200"],
-.bg-foreground .border-neutral-200 {
-  border-color: rgba(255, 255, 255, 0.08) !important;
-}
-.bg-foreground [class*="border-neutral-300"],
-.bg-foreground .border-neutral-300 {
-  border-color: rgba(255, 255, 255, 0.06) !important;
-}
-
-/* ── Fix badge pills inside foreground sections ── */
-.bg-foreground [class*="bg-white\/20"] {
-  background-color: rgba(255, 255, 255, 0.06) !important;
-}
-.bg-foreground [class*="border-white\/30"] {
-  border-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-/* ── Override feature card hover shadows ── */
-.bg-foreground [class*="hover\:shadow-lg"]:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
-}
-
-/* ── Override hardcoded gradient borders → subtle white ── */
-.from-\[\#636363\] {
-  --tw-gradient-from: rgba(255, 255, 255, 0.15) !important;
-}
-.to-\[\#2D2E2F\] {
-  --tw-gradient-to: rgba(255, 255, 255, 0.05) !important;
-}
-.from-\[\#636363bd\] {
-  --tw-gradient-from: rgba(255, 255, 255, 0.12) !important;
-}
-.to-\[\#2d2e2fb7\] {
-  --tw-gradient-to: rgba(255, 255, 255, 0.04) !important;
-}
-
-/* ── Override hardcoded teal pricing highlight → white on dark ── */
-.bg-\[\#115E59\] {
-  background-color: #1a1a1a !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-}
-
-/* ── Override hardcoded radial-black gradients → pure black ── */
-.bg-\[radial-gradient\(70\%_70\%_at_50\%_50\%\,\#1a1b1c_0\%\,\#151515_100\%\)\] {
-  background: #050505 !important;
-}
-
-/* ── Override hardcoded feature card text ── */
-.text-\[\#444444\] {
-  color: #777777 !important;
-}
-
-/* ── Override hardcoded feature green gradients → white/gray ── */
-.from-\[\#028D35\] {
-  --tw-gradient-from: #ffffff !important;
-}
-.to-\[\#2AA437\] {
-  --tw-gradient-to: #cccccc !important;
-}
-
-/* ── Override divider gradients in quote section ── */
-.from-white\/0 {
-  --tw-gradient-from: rgba(255, 255, 255, 0) !important;
-}
-.via-white\/30 {
-  --tw-gradient-via: rgba(255, 255, 255, 0.08) !important;
-}
-.to-white\/0 {
-  --tw-gradient-to: rgba(255, 255, 255, 0) !important;
-}
-
-/* ── Global selection color ── */
 ::selection {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.18);
   color: #ffffff;
 }

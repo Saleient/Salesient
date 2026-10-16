@@ -1,461 +1,117 @@
 "use client";
 
 import {
-  AnimatePresence,
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-} from "motion/react";
-import { InView } from "@/components/ui/in-view";
-import { useCallback, useEffect, useRef, useState } from "react";
+  ArrowRight,
+  ArrowUpRight,
+  BookOpen,
+  Calendar,
+  CheckCircle2,
+  Database,
+  FileText,
+  Layers,
+  MessageSquare,
+  Plug,
+  RefreshCw,
+  ShieldCheck,
+  Sparkles,
+  TrendingUp,
+  Zap,
+} from "lucide-react";
+import { motion } from "motion/react";
+import Link from "next/link";
 
-/* ── Integration data ── */
-const integrationImages = [
+const coreIntegrations = [
   {
-    src: "/integrations/gmail.png",
-    alt: "Gmail",
-    color: "#EA4335",
-    category: "Email",
-    desc: "Sync emails & threads",
+    name: "Salesforce",
+    category: "CRM & Pipeline",
+    logo: "/integrations/salesforce.png",
+    description:
+      "Bi-directional sync of opportunities, account notes, stage history, and custom deal fields.",
+    syncMode: "Real-time webhook",
+    status: "Live",
   },
   {
-    src: "/integrations/salesforce.png",
-    alt: "Salesforce",
-    color: "#00A1E0",
-    category: "CRM",
-    desc: "Full CRM integration",
+    name: "Gmail & Workspace",
+    category: "Communication",
+    logo: "/integrations/gmail.png",
+    description:
+      "Automatically indexes prospect threads, redline attachments, and stakeholder commitments.",
+    syncMode: "Delta stream",
+    status: "Live",
   },
   {
-    src: "/integrations/slack.png",
-    alt: "Slack",
-    color: "#4A154B",
-    category: "Messaging",
-    desc: "Real-time notifications",
+    name: "Slack",
+    category: "Deal Rooms",
+    logo: "/integrations/slack.png",
+    description:
+      "Query your knowledge vault directly from #deal-desk channels and capture internal decisions.",
+    syncMode: "Event socket",
+    status: "Live",
   },
   {
-    src: "/integrations/zoho.png",
-    alt: "Zoho",
-    color: "#D4382C",
-    category: "CRM",
-    desc: "Pipeline & contacts sync",
+    name: "Zoho CRM",
+    category: "CRM & Contacts",
+    logo: "/integrations/zoho.png",
+    description:
+      "Enriches deal rooms with contact hierarchies, historical quotes, and territory playbooks.",
+    syncMode: "Real-time webhook",
+    status: "Live",
   },
 ];
 
-/* Extra integrations rendered as icon-only "coming soon" slots */
-const upcomingIntegrations = [
-  { name: "HubSpot", color: "#FF7A59", icon: "H" },
-  { name: "Microsoft 365", color: "#0078D4", icon: "M" },
-  { name: "Google Drive", color: "#4285F4", icon: "G" },
-  { name: "Notion", color: "#FFFFFF", icon: "N" },
+const ecosystemTags = [
+  { name: "Google Drive", category: "Cloud Storage", status: "Supported" },
+  { name: "Notion", category: "Knowledge Wiki", status: "Supported" },
+  { name: "HubSpot", category: "CRM Suite", status: "Supported" },
+  { name: "Microsoft 365", category: "Enterprise Suite", status: "Supported" },
+  { name: "SharePoint", category: "Document Repo", status: "Supported" },
+  { name: "Zendesk", category: "Support Tickets", status: "Supported" },
+  { name: "Linear", category: "Product Roadmap", status: "Supported" },
+  { name: "Jira", category: "Engineering Specs", status: "Supported" },
 ];
 
-/* ── Spring physics ── */
-const springSmooth = { type: "spring" as const, stiffness: 120, damping: 20 };
-const springSnappy = { type: "spring" as const, stiffness: 300, damping: 25 };
-
-/* ── Stagger variants ── */
-const gridStagger = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.3 },
+const inputSignals = [
+  {
+    label: "Salesforce & Zoho CRM",
+    sub: "Opportunities & Notes",
+    icon: Database,
   },
-};
-
-const cardReveal = {
-  hidden: { opacity: 0, y: 32, scale: 0.92, filter: "blur(8px)" },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    filter: "blur(0px)",
-    transition: {
-      ...springSmooth,
-      opacity: { duration: 0.5 },
-      filter: { duration: 0.5 },
-    },
+  { label: "Playbooks, MSAs & XLSX", sub: "Tables & Clauses", icon: FileText },
+  {
+    label: "Gmail & Slack Threads",
+    sub: "Live Deal Context",
+    icon: MessageSquare,
   },
-};
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   Integration Card — Glass-morphism with 3D tilt & status
-   ═══════════════════════════════════════════════════════════════ */
-function IntegrationCard({
-  image,
-  index,
-}: {
-  image: (typeof integrationImages)[number];
-  index: number;
-}) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
+const outputActions = [
+  {
+    label: "100% Cited Deal Answers",
+    sub: "Exact page & § clause links",
+    icon: ShieldCheck,
+  },
+  {
+    label: "Pre-Call Deal Briefings",
+    sub: "1-click executive dossiers",
+    icon: Calendar,
+  },
+  {
+    label: "Competitive Rebuttals",
+    sub: "Live objection battlecards",
+    icon: TrendingUp,
+  },
+];
 
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [6, -6]), {
-    stiffness: 250,
-    damping: 22,
-  });
-  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-6, 6]), {
-    stiffness: 250,
-    damping: 22,
-  });
-  const glowX = useSpring(useTransform(mouseX, [-0.5, 0.5], [20, 80]), {
-    stiffness: 200,
-    damping: 20,
-  });
-  const glowY = useSpring(useTransform(mouseY, [-0.5, 0.5], [20, 80]), {
-    stiffness: 200,
-    damping: 20,
-  });
-
-  const handleMouseMove = useCallback(
-    (event: React.MouseEvent<HTMLDivElement>) => {
-      const card = cardRef.current;
-      if (!card) return;
-      const rect = card.getBoundingClientRect();
-      mouseX.set((event.clientX - rect.left) / rect.width - 0.5);
-      mouseY.set((event.clientY - rect.top) / rect.height - 0.5);
-    },
-    [mouseX, mouseY]
-  );
-
-  const handleMouseLeave = useCallback(() => {
-    setIsHovered(false);
-    mouseX.set(0);
-    mouseY.set(0);
-  }, [mouseX, mouseY]);
-
+function AnimatedConduitBeam({ delay = 0 }: { delay?: number }) {
   return (
-    <motion.div
-      className="group relative"
-      style={{ perspective: 900 }}
-      variants={cardReveal}
-    >
+    <div className="relative flex h-6 w-full items-center justify-center overflow-hidden">
+      <div className="h-px w-full bg-white/[0.08]" />
       <motion.div
-        ref={cardRef}
-        className="relative cursor-pointer"
-        style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={handleMouseLeave}
-        whileHover={{ scale: 1.03 }}
-        transition={springSnappy}
-      >
-        {/* Outer glow on hover */}
-        <AnimatePresence>
-          {isHovered && (
-            <motion.div
-              className="absolute -inset-2 rounded-3xl blur-2xl"
-              style={{ background: image.color }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 0.12, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.35 }}
-            />
-          )}
-        </AnimatePresence>
-
-        {/* Card body */}
-        <div className="relative flex flex-col items-center overflow-hidden rounded-2xl border border-white/6 bg-linear-to-br from-white/6 to-white/2 px-6 py-6 shadow-[0_4px_24px_rgba(0,0,0,0.3)] backdrop-blur-xl sm:px-8 sm:py-8">
-          {/* Specular highlight */}
-          <motion.div
-            className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            style={{
-              background: useTransform(
-                [glowX, glowY],
-                ([x, y]: number[]) =>
-                  `radial-gradient(circle at ${x}% ${y}%, ${image.color}12, transparent 55%)`
-              ),
-            }}
-          />
-
-          {/* Shimmer border */}
-          <AnimatePresence>
-            {isHovered && (
-              <motion.div
-                className="pointer-events-none absolute inset-0 rounded-2xl"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  background: `linear-gradient(135deg, ${image.color}25, transparent 40%, transparent 60%, ${image.color}15)`,
-                  mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                  maskComposite: "exclude",
-                  padding: "1px",
-                  borderRadius: "inherit",
-                }}
-              />
-            )}
-          </AnimatePresence>
-
-          {/* Status indicator */}
-          <motion.div
-            className="absolute top-3 right-3 flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/8 px-2.5 py-1"
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.6 + index * 0.15,
-              type: "spring",
-              stiffness: 400,
-            }}
-          >
-            <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-emerald-400"
-              animate={{
-                boxShadow: [
-                  "0 0 3px rgba(52,211,153,0.4)",
-                  "0 0 8px rgba(52,211,153,0.7)",
-                  "0 0 3px rgba(52,211,153,0.4)",
-                ],
-              }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-            />
-            <span className="text-emerald-400/80 text-[9px] font-semibold uppercase tracking-wider">
-              Live
-            </span>
-          </motion.div>
-
-          {/* Logo */}
-          <motion.div
-            className="relative mb-4 flex h-16 w-16 items-center justify-center sm:h-20 sm:w-20"
-            style={{ translateZ: 24 }}
-          >
-            {/** biome-ignore lint/performance/noImgElement: integration logo */}
-            {/** biome-ignore lint/correctness/useImageSize: CSS-controlled sizing */}
-            <motion.img
-              alt={image.alt}
-              className="h-full w-full object-contain"
-              src={image.src}
-              style={{
-                filter: isHovered
-                  ? `drop-shadow(0 6px 20px ${image.color}40)`
-                  : "drop-shadow(0 4px 12px rgba(0,0,0,0.25))",
-                transition: "filter 0.4s ease",
-              }}
-              animate={isHovered ? { scale: 1.08 } : { scale: 1 }}
-              transition={springSnappy}
-            />
-          </motion.div>
-
-          {/* Category chip */}
-          <motion.span
-            className="mb-2 rounded-full px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-widest"
-            style={{
-              backgroundColor: `${image.color}12`,
-              color: `${image.color}BB`,
-            }}
-          >
-            {image.category}
-          </motion.span>
-
-          {/* Name */}
-          <span className="font-semibold text-sm text-white/70 tracking-wide sm:text-base">
-            {image.alt}
-          </span>
-
-          {/* Description */}
-          <span className="mt-1 text-center text-[11px] text-white/25 sm:text-xs">
-            {image.desc}
-          </span>
-
-          {/* Bottom shine sweep */}
-          <motion.div
-            className="pointer-events-none absolute inset-0 -translate-x-full skew-x-12 bg-linear-to-r from-transparent via-white/3 to-transparent group-hover:translate-x-full"
-            style={{ transition: "transform 0.9s ease" }}
-          />
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   Upcoming / Coming Soon pill
-   ═══════════════════════════════════════════════════════════════ */
-function UpcomingPill({
-  integration,
-  index,
-}: {
-  integration: (typeof upcomingIntegrations)[number];
-  index: number;
-}) {
-  return (
-    <motion.div
-      className="group relative flex items-center gap-3 rounded-xl border border-white/4 bg-white/2 px-4 py-3 backdrop-blur-sm"
-      initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.8 + index * 0.1, ...springSmooth }}
-      whileHover={{
-        borderColor: `${integration.color}20`,
-        backgroundColor: "rgba(255,255,255,0.03)",
-        y: -2,
-      }}
-    >
-      <div
-        className="flex h-8 w-8 items-center justify-center rounded-lg text-xs font-bold"
-        style={{
-          backgroundColor: `${integration.color}10`,
-          color: `${integration.color}80`,
-        }}
-      >
-        {integration.icon}
-      </div>
-      <div className="flex flex-col">
-        <span className="text-xs font-medium text-white/50">
-          {integration.name}
-        </span>
-        <span className="text-[9px] text-white/20">Coming soon</span>
-      </div>
-    </motion.div>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   Central Hub — Animated radial visual
-   ═══════════════════════════════════════════════════════════════ */
-function CentralHubVisual() {
-  return (
-    <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-      {/* Outer breathing ring */}
-      <motion.div
-        className="absolute h-80 w-80 rounded-full border border-white/3 sm:h-96 sm:w-96 md:h-130 md:w-130"
-        animate={{ scale: [1, 1.04, 1], opacity: [0.3, 0.6, 0.3] }}
+        className="absolute h-1.5 w-12 rounded-full bg-gradient-to-r from-transparent via-emerald-400 to-transparent"
+        animate={{ left: ["-20%", "110%"] }}
         transition={{
-          duration: 6,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-        }}
-      />
-
-      {/* Middle dashed ring — rotating */}
-      <motion.div
-        className="absolute h-60 w-60 rounded-full border border-dashed border-white/4 sm:h-80 sm:w-80 md:h-96 md:w-96"
-        animate={{ rotate: [0, 360] }}
-        transition={{
-          duration: 50,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "linear",
-        }}
-      >
-        <motion.div
-          className="absolute -top-0.5 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-sky-400/50"
-          style={{ boxShadow: "0 0 8px rgba(56,189,248,0.3)" }}
-        />
-        <motion.div
-          className="absolute top-1/2 -right-0.5 h-1 w-1 -translate-y-1/2 rounded-full bg-purple-400/40"
-          style={{ boxShadow: "0 0 6px rgba(192,132,252,0.3)" }}
-        />
-      </motion.div>
-
-      {/* Inner rotating ring */}
-      <motion.div
-        className="absolute h-40 w-40 rounded-full border border-white/3 sm:h-52 sm:w-52 md:h-64 md:w-64"
-        animate={{ rotate: [360, 0] }}
-        transition={{
-          duration: 40,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "linear",
-        }}
-      >
-        <motion.div
-          className="absolute -bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-emerald-400/40"
-          style={{ boxShadow: "0 0 6px rgba(52,211,153,0.3)" }}
-        />
-      </motion.div>
-
-      {/* Core hub node */}
-      <motion.div
-        className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full border border-sky-400/20 bg-sky-500/5 backdrop-blur-md sm:h-24 sm:w-24"
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5, type: "spring", stiffness: 200, damping: 15 }}
-      >
-        {/* Animated glow */}
-        <motion.div
-          className="pointer-events-none absolute inset-0 rounded-full"
-          animate={{
-            boxShadow: [
-              "0 0 20px rgba(56,189,248,0.08), inset 0 0 20px rgba(56,189,248,0.03)",
-              "0 0 40px rgba(56,189,248,0.15), inset 0 0 30px rgba(56,189,248,0.06)",
-              "0 0 20px rgba(56,189,248,0.08), inset 0 0 20px rgba(56,189,248,0.03)",
-            ],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-
-        {/* Pulse rings */}
-        <motion.div
-          className="absolute h-full w-full rounded-full border border-sky-400/15"
-          animate={{ scale: [1, 1.8, 1.8], opacity: [0.5, 0, 0] }}
-          transition={{
-            duration: 3,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeOut",
-          }}
-        />
-        <motion.div
-          className="absolute h-full w-full rounded-full border border-sky-400/15"
-          animate={{ scale: [1, 1.8, 1.8], opacity: [0.5, 0, 0] }}
-          transition={{
-            duration: 3,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeOut",
-            delay: 1,
-          }}
-        />
-
-        {/* Hub icon */}
-        <div className="flex flex-col items-center gap-1">
-          <svg
-            className="h-6 w-6 text-sky-400 sm:h-7 sm:w-7"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.5}
-          >
-            <title>Salesient hub</title>
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.54a4.5 4.5 0 00-1.242-7.244l4.5-4.5a4.5 4.5 0 016.364 6.364l-1.757 1.757"
-            />
-          </svg>
-          <span className="text-[8px] font-bold tracking-[0.15em] text-sky-400/60 uppercase">
-            Hub
-          </span>
-        </div>
-      </motion.div>
-
-      {/* Ambient glows */}
-      <motion.div
-        className="absolute h-64 w-64 rounded-full bg-sky-500/3 blur-3xl sm:h-80 sm:w-80"
-        animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{
-          duration: 7,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute h-48 w-48 rounded-full bg-purple-500/3 blur-3xl sm:h-60 sm:w-60"
-        animate={{
-          scale: [1.1, 0.9, 1.1],
-          opacity: [0.2, 0.35, 0.2],
-          x: [-15, 15, -15],
-        }}
-        transition={{
-          duration: 9,
+          duration: 2.2,
+          delay,
           repeat: Number.POSITIVE_INFINITY,
           ease: "easeInOut",
         }}
@@ -464,539 +120,292 @@ function CentralHubVisual() {
   );
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   Data beam — animated connection line
-   ═══════════════════════════════════════════════════════════════ */
-function DataBeam({
-  color,
-  direction,
-  delay,
-}: {
-  color: string;
-  direction: "left" | "right";
-  delay: number;
-}) {
-  const isLeft = direction === "left";
-  return (
-    <motion.div
-      className="hidden h-px flex-1 md:block"
-      initial={{ scaleX: 0, opacity: 0 }}
-      whileInView={{ scaleX: 1, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      style={{ originX: isLeft ? 1 : 0 }}
-    >
-      <div className="relative h-full w-full overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{
-            background: isLeft
-              ? `linear-gradient(90deg, transparent, ${color}15, ${color}08)`
-              : `linear-gradient(90deg, ${color}08, ${color}15, transparent)`,
-          }}
-        />
-        <motion.div
-          className="absolute top-0 h-full"
-          animate={{
-            left: isLeft ? ["120%", "-40%"] : ["-40%", "120%"],
-          }}
-          transition={{
-            duration: 2.2,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: [0.37, 0, 0.63, 1],
-            delay: delay + 0.5,
-            repeatDelay: 1.5,
-          }}
-          style={{
-            width: "30%",
-            background: `linear-gradient(90deg, transparent, ${color}70, transparent)`,
-          }}
-        />
-        <motion.div
-          className="absolute -top-px h-0.5 w-0.5 rounded-full"
-          animate={{
-            left: isLeft ? ["105%", "-5%"] : ["-5%", "105%"],
-          }}
-          transition={{
-            duration: 2.2,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: [0.37, 0, 0.63, 1],
-            delay: delay + 0.5,
-            repeatDelay: 1.5,
-          }}
-          style={{
-            background: color,
-            boxShadow: `0 0 6px ${color}, 0 0 12px ${color}50`,
-          }}
-        />
-      </div>
-    </motion.div>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   Animated counter with intersection observer
-   ═══════════════════════════════════════════════════════════════ */
-function AnimatedCounter({ value }: { value: string }) {
-  const numericMatch = value.match(/(\d+\.?\d*)/);
-  const prefix = value.slice(0, value.indexOf(numericMatch?.at(0) ?? "")) || "";
-  const suffix = numericMatch
-    ? value.slice(
-        value.indexOf(numericMatch.at(0) ?? "") +
-          (numericMatch.at(0) ?? "").length
-      )
-    : "";
-  const targetNum = numericMatch
-    ? Number.parseFloat(numericMatch.at(0) ?? "0")
-    : 0;
-  const hasDecimal = numericMatch?.at(0)?.includes(".") ?? false;
-
-  const [count, setCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const counterRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    if (hasAnimated || !counterRef.current) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setHasAnimated(true);
-            const duration = 1_600;
-            const startTime = performance.now();
-
-            const animate = (currentTime: number) => {
-              const elapsed = currentTime - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              const eased = 1 - (1 - progress) ** 3;
-              setCount(eased * targetNum);
-              if (progress < 1) {
-                requestAnimationFrame(animate);
-              }
-            };
-            requestAnimationFrame(animate);
-            observer.disconnect();
-          }
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(counterRef.current);
-    return () => observer.disconnect();
-  }, [hasAnimated, targetNum]);
-
-  return (
-    <span ref={counterRef}>
-      {prefix}
-      {hasDecimal ? count.toFixed(1) : Math.round(count)}
-      {suffix}
-    </span>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   Stats grid with animated counters
-   ═══════════════════════════════════════════════════════════════ */
-const stats = [
-  { value: "50+", label: "Integrations Available", icon: "grid" },
-  { value: "99.9%", label: "Uptime Guarantee", icon: "shield" },
-  { value: "2min", label: "Average Setup Time", icon: "clock" },
-  { value: "10M+", label: "Data Syncs Daily", icon: "pulse" },
-];
-
-function StatIcon({ icon, color }: { icon: string; color: string }) {
-  const paths: Record<string, React.ReactNode> = {
-    grid: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
-      />
-    ),
-    shield: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
-      />
-    ),
-    clock: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-      />
-    ),
-    pulse: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-      />
-    ),
-  };
-
-  return (
-    <svg
-      className="h-5 w-5"
-      fill="none"
-      stroke={color}
-      strokeWidth={1.5}
-      viewBox="0 0 24 24"
-    >
-      <title>{icon}</title>
-      {paths[icon]}
-    </svg>
-  );
-}
-
-function StatsGrid() {
-  return (
-    <motion.div
-      className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4"
-      variants={gridStagger}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-    >
-      {stats.map((stat, idx) => (
-        <motion.div
-          key={stat.label}
-          className="group relative flex flex-col items-center gap-2 overflow-hidden rounded-2xl border border-white/5 bg-white/2 px-4 py-5 backdrop-blur-sm sm:gap-3 sm:px-6 sm:py-7"
-          variants={cardReveal}
-          whileHover={{
-            borderColor: "rgba(56,189,248,0.12)",
-            y: -3,
-            backgroundColor: "rgba(255,255,255,0.03)",
-          }}
-          transition={springSnappy}
-        >
-          {/* Icon */}
-          <motion.div
-            className="mb-1 flex h-10 w-10 items-center justify-center rounded-xl border border-sky-400/10 bg-sky-500/5"
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.6 + idx * 0.12,
-              type: "spring",
-              stiffness: 350,
-              damping: 18,
-            }}
-          >
-            <StatIcon icon={stat.icon} color="rgba(56,189,248,0.6)" />
-          </motion.div>
-
-          <span className="font-bold text-2xl tracking-tight text-white/80 sm:text-3xl">
-            <AnimatedCounter value={stat.value} />
-          </span>
-
-          <span className="text-center text-[11px] font-medium text-white/30 sm:text-xs">
-            {stat.label}
-          </span>
-
-          {/* Hover shine */}
-          <motion.div
-            className="pointer-events-none absolute inset-0 -translate-x-full skew-x-12 bg-linear-to-r from-transparent via-white/3 to-transparent group-hover:translate-x-full"
-            style={{ transition: "transform 0.8s ease" }}
-          />
-        </motion.div>
-      ))}
-    </motion.div>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   Floating ambient particles
-   ═══════════════════════════════════════════════════════════════ */
-function FloatingParticles() {
-  const particles = Array.from({ length: 16 }, (_, i) => ({
-    id: i,
-    size: Math.random() * 2.5 + 1,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    duration: Math.random() * 10 + 7,
-    delay: Math.random() * 5,
-    opacity: Math.random() * 0.2 + 0.04,
-  }));
-
-  return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {particles.map((p) => (
-        <motion.div
-          key={p.id}
-          className="absolute rounded-full bg-sky-400"
-          style={{
-            width: p.size,
-            height: p.size,
-            left: `${p.x}%`,
-            top: `${p.y}%`,
-          }}
-          animate={{
-            y: [0, -25, 0],
-            x: [0, 8, -8, 0],
-            opacity: [0, p.opacity, p.opacity, 0],
-          }}
-          transition={{
-            duration: p.duration,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: p.delay,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   Animated divider
-   ═══════════════════════════════════════════════════════════════ */
-function SectionDivider() {
-  return (
-    <motion.div
-      className="mx-auto flex w-full max-w-xs items-center gap-4"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.2, duration: 0.6 }}
-    >
-      <motion.div
-        className="h-px flex-1 bg-linear-to-r from-transparent to-white/8"
-        initial={{ scaleX: 0, originX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      />
-      <motion.div
-        className="h-1 w-1 rounded-full bg-sky-400/40"
-        animate={{
-          boxShadow: [
-            "0 0 4px rgba(56,189,248,0.2)",
-            "0 0 10px rgba(56,189,248,0.5)",
-            "0 0 4px rgba(56,189,248,0.2)",
-          ],
-        }}
-        transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
-      />
-      <motion.div
-        className="h-px flex-1 bg-linear-to-l from-transparent to-white/8"
-        initial={{ scaleX: 0, originX: 1 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      />
-    </motion.div>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   MAIN EXPORT — Integration Section
-   ═══════════════════════════════════════════════════════════════ */
 export default function Integration() {
   return (
-    <section className="relative flex w-full justify-center overflow-hidden py-16 sm:py-24 md:py-32">
-      <div className="relative z-10 flex w-full max-w-6xl flex-col gap-20 px-4 sm:px-6 md:gap-28">
-        {/* ── Section Header ── */}
-        <InView className="mx-auto w-fit!">
-          <div className="flex flex-col items-center gap-6">
-            {/* Badge */}
-            <motion.div
-              className="flex items-center gap-2.5 rounded-full border border-sky-500/15 bg-sky-500/5 px-5 py-2 backdrop-blur-sm"
-              whileHover={{
-                scale: 1.05,
-                borderColor: "rgba(56,189,248,0.25)",
-              }}
-              transition={springSnappy}
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-sky-500" />
-              </span>
-              <span className="text-[10px] font-bold tracking-[0.25em] text-sky-400/70 uppercase sm:text-xs">
-                Integrations
-              </span>
-            </motion.div>
-
-            {/* Heading */}
-            <h2 className="max-w-3xl text-center font-semibold text-4xl leading-[1.08] tracking-tight sm:text-5xl md:text-[3.5rem]">
-              <motion.span
-                className="inline-block bg-linear-to-b from-white via-white/90 to-white/40 bg-clip-text text-transparent"
-                initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
-                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1, ...springSmooth }}
-              >
-                Your Stack,{" "}
-              </motion.span>
-              <motion.span
-                className="inline-block bg-linear-to-r from-sky-300 via-sky-400 to-sky-600 bg-clip-text text-transparent"
-                initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
-                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2, ...springSmooth }}
-              >
-                Unified.
-              </motion.span>
-            </h2>
-
-            {/* Subtext */}
-            <motion.p
-              className="max-w-lg text-center text-base leading-relaxed text-white/40 md:text-lg"
-              initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              viewport={{ once: true }}
-              transition={{
-                delay: 0.35,
-                duration: 0.6,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
-              Connect your existing tools in minutes. One intelligent layer that
-              syncs, enriches, and orchestrates your data seamlessly.
-            </motion.p>
-          </div>
-        </InView>
-
-        {/* ── Integration showcase: Hub + Cards ── */}
-        <div className="relative">
-          {/* Central hub visual — rings & glow (visible on md+) */}
-          <div className="pointer-events-none absolute inset-0 hidden items-center justify-center md:flex">
-            <CentralHubVisual />
-          </div>
-
-          {/* Card grid */}
+    <section className="relative w-full overflow-hidden bg-[#050507] px-4 py-24 sm:px-6 md:py-32 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        {/* Section Header */}
+        <div className="flex flex-col items-start justify-between gap-6 border-b border-white/[0.07] pb-12 md:flex-row md:items-end">
           <motion.div
-            className="relative z-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4 lg:gap-6"
-            variants={gridStagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            initial={{ opacity: 0, x: -32 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           >
-            {integrationImages.map((image, index) => (
-              <IntegrationCard key={image.src} image={image} index={index} />
-            ))}
-          </motion.div>
-
-          {/* Data beam connectors (desktop) */}
-          <div className="pointer-events-none absolute inset-0 hidden items-center md:flex">
-            <div className="mx-auto flex w-full max-w-lg items-center justify-between">
-              <DataBeam
-                color={integrationImages.at(0)?.color ?? "#fff"}
-                direction="left"
-                delay={1}
-              />
-              <div className="w-20" />
-              <DataBeam
-                color={integrationImages.at(3)?.color ?? "#fff"}
-                direction="right"
-                delay={1.2}
-              />
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-400">
+              <Plug className="h-3 w-3 text-zinc-300" />
+              <span>Unified Ecosystem · 120+ Connectors</span>
             </div>
-          </div>
-        </div>
-
-        {/* ── Upcoming integrations ── */}
-        <div className="flex flex-col items-center gap-6">
-          <motion.div
-            className="flex items-center gap-3"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-          >
-            <div className="h-px w-8 bg-linear-to-r from-transparent to-white/8" />
-            <span className="text-[10px] font-semibold tracking-[0.25em] text-white/20 uppercase sm:text-xs">
-              Coming Soon
-            </span>
-            <div className="h-px w-8 bg-linear-to-l from-transparent to-white/8" />
+            <h2 className="max-w-2xl font-semibold text-3xl tracking-[-0.025em] text-white sm:text-4xl md:text-5xl">
+              Every revenue signal,{" "}
+              <span className="text-zinc-500">indexed in one place.</span>
+            </h2>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-            {upcomingIntegrations.map((integration, index) => (
-              <UpcomingPill
-                key={integration.name}
-                integration={integration}
-                index={index}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* ── Divider ── */}
-        <SectionDivider />
-
-        {/* ── Stats ── */}
-        <div className="flex flex-col items-center gap-10">
           <motion.div
-            className="flex flex-col items-center gap-3"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 32 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.15, ...springSmooth }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col items-start gap-4 md:items-end"
           >
-            <h3 className="text-center font-semibold text-2xl tracking-tight text-white/70 sm:text-3xl">
-              Built for Scale
-            </h3>
-            <p className="max-w-sm text-center text-sm text-white/30">
-              Enterprise-grade infrastructure that grows with your team.
+            <p className="max-w-md text-sm text-zinc-400 leading-relaxed md:text-right">
+              Connect your existing CRM, cloud storage, and messaging tools in
+              under two minutes via OAuth 2.0. Zero custom ETL pipelines.
             </p>
+            <Link
+              href="/integration"
+              className="group inline-flex items-center gap-1.5 font-medium text-xs text-white transition-colors hover:text-zinc-300"
+            >
+              <span>Browse all 120+ integrations</span>
+              <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
           </motion.div>
-
-          <StatsGrid />
         </div>
 
-        {/* ── CTA ── */}
+        {/* ── Live Animated Data Flow Architecture Diagram ── */}
         <motion.div
-          className="flex flex-col items-center gap-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, ...springSmooth }}
+          transition={{ duration: 0.5 }}
+          className="mt-12 overflow-hidden rounded-2xl border border-white/[0.08] bg-[#09090c] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] sm:p-8"
         >
-          <motion.a
-            className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full border border-sky-500/20 bg-sky-500/8 px-7 py-3 font-medium text-sm text-sky-300 backdrop-blur-sm transition-all hover:border-sky-500/30 hover:bg-sky-500/12"
-            href="/integration"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            transition={springSnappy}
-          >
-            {/* Shine sweep */}
-            <motion.div
-              className="pointer-events-none absolute inset-0 -translate-x-full skew-x-12 bg-linear-to-r from-transparent via-white/6 to-transparent group-hover:translate-x-full"
-              style={{ transition: "transform 0.7s ease" }}
-            />
-            <span className="relative z-10">Explore All Integrations</span>
-            <motion.span
-              className="relative z-10 inline-block"
-              animate={{ x: [0, 3, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-            >
-              →
-            </motion.span>
-          </motion.a>
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.06] pb-4">
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              </span>
+              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-white">
+                Live Data Flow Topology
+              </span>
+            </div>
+            <span className="font-mono text-[11px] text-zinc-400">
+              Raw Stack Signals ──► Hybrid RAG Engine ──► Grounded Deal Output
+            </span>
+          </div>
 
-          <motion.span
-            className="text-[11px] text-white/20"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-          >
-            Don&apos;t see your tool?{" "}
-            <a
-              className="text-sky-400/50 underline decoration-sky-400/20 underline-offset-2 transition-colors hover:text-sky-400/70"
-              href="/contact"
+          <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-11">
+            {/* Left: Input Signals (3 Cols) */}
+            <div className="space-y-2.5 lg:col-span-3">
+              <p className="font-mono text-[10px] uppercase tracking-wider text-zinc-500">
+                01 · Connected Inputs
+              </p>
+              {inputSignals.map((sig, i) => {
+                const Icon = sig.icon;
+                return (
+                  <motion.div
+                    key={sig.label}
+                    initial={{ opacity: 0, x: -12 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-[#060608] p-3"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04]">
+                      <Icon className="h-4 w-4 text-zinc-300" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="truncate font-medium text-xs text-white">
+                        {sig.label}
+                      </p>
+                      <p className="truncate text-[10px] text-zinc-500">
+                        {sig.sub}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Animated Conduit Left -> Center (1 Col) */}
+            <div className="hidden flex-col justify-center space-y-6 lg:col-span-1 lg:flex">
+              <AnimatedConduitBeam delay={0} />
+              <AnimatedConduitBeam delay={0.4} />
+              <AnimatedConduitBeam delay={0.8} />
+            </div>
+
+            {/* Center: Salesient Hybrid RAG Core (3 Cols) */}
+            <div className="relative flex flex-col items-center justify-center rounded-2xl border border-emerald-500/30 bg-gradient-to-b from-emerald-500/[0.08] to-[#060608] p-6 text-center shadow-[0_0_40px_rgba(16,185,129,0.08)] lg:col-span-3">
+              <motion.div
+                animate={{
+                  boxShadow: [
+                    "0 0 0 0px rgba(52,211,153,0.25)",
+                    "0 0 0 12px rgba(52,211,153,0)",
+                  ],
+                }}
+                transition={{
+                  duration: 2.4,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeOut",
+                }}
+                className="flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-400/40 bg-emerald-500/15 text-emerald-300"
+              >
+                <Layers className="h-5 w-5" />
+              </motion.div>
+
+              <span className="mt-3 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] text-emerald-400">
+                Salesient RAG Core
+              </span>
+              <h3 className="mt-2 font-semibold text-base text-white">
+                Hybrid Vector + BM25 Index
+              </h3>
+              <p className="mt-1 text-[11px] text-zinc-400 leading-relaxed">
+                Parses tables, enforces workspace ACLs, and ranks exact clauses
+                in &lt;190ms.
+              </p>
+
+              <div className="mt-4 grid w-full grid-cols-2 gap-2 border-t border-white/[0.08] pt-3 font-mono text-[10px]">
+                <div className="rounded bg-black/40 py-1 text-zinc-300">
+                  1,536-dim
+                </div>
+                <div className="rounded bg-black/40 py-1 text-emerald-400">
+                  0 Hallucinations
+                </div>
+              </div>
+            </div>
+
+            {/* Animated Conduit Center -> Right (1 Col) */}
+            <div className="hidden flex-col justify-center space-y-6 lg:col-span-1 lg:flex">
+              <AnimatedConduitBeam delay={0.3} />
+              <AnimatedConduitBeam delay={0.7} />
+              <AnimatedConduitBeam delay={1.1} />
+            </div>
+
+            {/* Right: Grounded Outputs (3 Cols) */}
+            <div className="space-y-2.5 lg:col-span-3">
+              <p className="font-mono text-[10px] uppercase tracking-wider text-zinc-500">
+                02 · Verified Outputs
+              </p>
+              {outputActions.map((act, i) => {
+                const Icon = act.icon;
+                return (
+                  <motion.div
+                    key={act.label}
+                    initial={{ opacity: 0, x: 12 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 + i * 0.1 }}
+                    className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-[#060608] p-3"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-emerald-500/20 bg-emerald-500/10">
+                      <Icon className="h-4 w-4 text-emerald-400" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="truncate font-medium text-xs text-white">
+                        {act.label}
+                      </p>
+                      <p className="truncate text-[10px] text-zinc-500">
+                        {act.sub}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Core Connectors Grid */}
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {coreIntegrations.map((item, idx) => (
+            <motion.div
+              key={item.name}
+              initial={{ opacity: 0, x: idx < 2 ? -28 : 28 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{
+                duration: 0.5,
+                delay: idx * 0.08,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="group flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-[#09090c] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-white/16"
             >
-              Request an integration
-            </a>
-          </motion.span>
+              <div>
+                <div className="flex items-center justify-between">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] p-2.5">
+                    {/** biome-ignore lint/performance/noImgElement: integration logo */}
+                    {/** biome-ignore lint/correctness/useImageSize: CSS sized */}
+                    <img
+                      alt={item.name}
+                      src={item.logo}
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] font-medium text-emerald-400">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                    {item.status}
+                  </span>
+                </div>
+
+                <div className="mt-5">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-zinc-500">
+                    {item.category}
+                  </span>
+                  <h3 className="mt-1 font-semibold text-lg text-white">
+                    {item.name}
+                  </h3>
+                  <p className="mt-2 text-xs text-zinc-400 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 flex items-center justify-between border-t border-white/[0.06] pt-3.5 font-mono text-[11px] text-zinc-500">
+                <span className="flex items-center gap-1.5">
+                  <RefreshCw className="h-3 w-3 text-zinc-400" />
+                  {item.syncMode}
+                </span>
+                <span className="text-zinc-400">OAuth 2.0</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Architectural Sync Strip + Extended Directory */}
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-6 rounded-2xl border border-white/[0.08] bg-[#09090c] p-6 sm:p-8"
+        >
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
+            <div className="max-w-md">
+              <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-zinc-400">
+                <Zap className="h-3.5 w-3.5 text-emerald-400" />
+                <span>Continuous Context Sync</span>
+              </div>
+              <h3 className="mt-2 font-semibold text-xl text-white">
+                Plus 120+ enterprise tools ready out of the box
+              </h3>
+              <p className="mt-1.5 text-xs text-zinc-400 leading-relaxed sm:text-sm">
+                Permissions and ACLs are inherited from your source systems so
+                reps only retrieve documents they are authorized to view.
+              </p>
+            </div>
+
+            <div className="grid flex-1 grid-cols-2 gap-2.5 sm:grid-cols-4">
+              {ecosystemTags.map((tool) => (
+                <Link
+                  key={tool.name}
+                  href="/integration"
+                  className="group flex flex-col justify-between rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3 transition-colors hover:border-white/15 hover:bg-white/[0.04]"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-xs text-zinc-200 group-hover:text-white">
+                      {tool.name}
+                    </span>
+                    <ArrowRight className="h-3 w-3 text-zinc-600 transition-transform group-hover:translate-x-0.5 group-hover:text-zinc-300" />
+                  </div>
+                  <span className="mt-1 text-[10px] text-zinc-500">
+                    {tool.category}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

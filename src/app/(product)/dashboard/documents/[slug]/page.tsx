@@ -303,13 +303,13 @@ export default function ProjectDocuments() {
   }
 
   return (
-    <div className="mx-auto flex h-[calc(100vh-4rem)] w-full max-w-[1440px] flex-col space-y-4 overflow-hidden rounded-2xl bg-background p-4 md:space-y-6 md:p-6">
-      <div className="flex items-center justify-between pt-6 md:pt-10">
+    <div className="mx-auto flex h-[calc(100vh-4rem)] w-full max-w-[1440px] flex-col space-y-6 overflow-hidden rounded-2xl bg-background p-4 md:space-y-8 md:p-8">
+      <div className="flex items-center justify-between border-b border-border/60 pt-4 pb-5 md:pt-6">
         <div className="min-w-0 flex-1">
-          <div className="mb-2 flex items-center gap-2">
+          <div className="flex items-center gap-2.5">
             <SidebarTrigger className="shrink-0 md:hidden" />
             <Button
-              className="shrink-0 p-2"
+              className="h-8 w-8 shrink-0 rounded-lg border border-border/60 p-0"
               onClick={() => router.push("/dashboard/documents")}
               size="sm"
               type="button"
@@ -320,14 +320,16 @@ export default function ProjectDocuments() {
             {isProjectLoading ? (
               <LoadingSpinner size="sm" />
             ) : (
-              <h1 className="truncate font-semibold text-xl md:text-3xl">
-                {project?.name || "Project"}
-              </h1>
+              <div>
+                <h1 className="truncate font-semibold text-xl tracking-tight md:text-2xl">
+                  {project?.name || "Project"}
+                </h1>
+                <p className="hidden text-muted-foreground text-xs sm:block">
+                  Indexed project files and documents
+                </p>
+              </div>
             )}
           </div>
-          <p className="ml-8 hidden text-muted-foreground text-xs sm:block md:ml-10 md:text-sm">
-            Project files and documents
-          </p>
         </div>
         <div className="flex shrink-0 items-center gap-2">
           <FileUpload
@@ -345,16 +347,16 @@ export default function ProjectDocuments() {
           }
           if (filesError) {
             return (
-              <div className="text-red-600 text-sm">
+              <div className="text-destructive text-sm">
                 Failed to load project files
               </div>
             );
           }
           if (files.length === 0) {
             return (
-              <div className="py-12 text-center text-muted-foreground">
-                <FileText className="mx-auto mb-4 h-12 w-12 opacity-50" />
-                <p>
+              <div className="rounded-xl border border-dashed border-border/70 bg-card/40 py-14 text-center text-muted-foreground">
+                <FileText className="mx-auto mb-3 h-8 w-8 opacity-40" />
+                <p className="text-sm">
                   No files in this project yet. Upload files to get started.
                 </p>
               </div>
@@ -366,15 +368,17 @@ export default function ProjectDocuments() {
                 const FileIcon = getFileIcon(file.type);
                 return (
                   <Card
-                    className="group flex flex-col transition-colors hover:bg-accent"
+                    className="group flex flex-col rounded-xl border-border/70 bg-card/60 transition-all hover:border-foreground/20 hover:bg-accent/40"
                     key={file.id}
                   >
-                    <CardContent className="flex flex-col gap-2 p-3 md:p-4">
+                    <CardContent className="flex flex-col gap-2.5 p-4">
                       <div className="flex items-start justify-between">
-                        <FileIcon className="h-4 w-4 text-primary md:h-5 md:w-5" />
-                        <div className="flex gap-1">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-secondary/60">
+                          <FileIcon className="h-4 w-4 text-foreground/80" />
+                        </div>
+                        <div className="flex items-center gap-1">
                           <button
-                            className="rounded p-1 opacity-0 transition-colors hover:bg-blue-100 group-hover:opacity-100"
+                            className="rounded-md p-1.5 text-muted-foreground opacity-0 transition-colors hover:bg-accent hover:text-foreground group-hover:opacity-100"
                             disabled={loadingDownloadId === file.id}
                             onClick={(e) =>
                               handleDownloadFile(e, file.id, file.name)
@@ -385,11 +389,27 @@ export default function ProjectDocuments() {
                             {loadingDownloadId === file.id ? (
                               <LoadingSpinner size="sm" />
                             ) : (
-                              <Download className="h-4 w-4 text-blue-600" />
+                              <Download className="h-4 w-4" />
                             )}
                           </button>
                           <button
-                            className="rounded p-1 transition-colors hover:bg-red-100"
+                            className="rounded-md px-2 py-1 font-medium text-muted-foreground text-xs transition-colors hover:bg-accent hover:text-foreground"
+                            disabled={movingFileId === file.id}
+                            onClick={() => {
+                              setMoveFileId(file.id);
+                              setSelectedMoveTarget(projectId);
+                            }}
+                            title="Move"
+                            type="button"
+                          >
+                            {movingFileId === file.id ? (
+                              <LoadingSpinner size="sm" />
+                            ) : (
+                              <span>Move</span>
+                            )}
+                          </button>
+                          <button
+                            className="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-destructive/15 hover:text-destructive"
                             disabled={deletingFileId === file.id}
                             onClick={() => handleDeleteFile(file.id)}
                             title="Delete"
@@ -398,23 +418,7 @@ export default function ProjectDocuments() {
                             {deletingFileId === file.id ? (
                               <LoadingSpinner size="sm" />
                             ) : (
-                              <Trash2 className="h-4 w-4 text-red-600" />
-                            )}
-                          </button>
-                          <button
-                            className="rounded p-1 transition-colors hover:bg-accent"
-                            disabled={movingFileId === file.id}
-                            onClick={() => {
-                              setMoveFileId(file.id);
-                              setSelectedMoveTarget(projectId); // default current project
-                            }}
-                            title="Move"
-                            type="button"
-                          >
-                            {movingFileId === file.id ? (
-                              <LoadingSpinner size="sm" />
-                            ) : (
-                              <span className="font-medium text-xs">Move</span>
+                              <Trash2 className="h-4 w-4" />
                             )}
                           </button>
                         </div>
@@ -422,7 +426,7 @@ export default function ProjectDocuments() {
                       <div className="truncate font-medium text-xs md:text-sm">
                         {file.name}
                       </div>
-                      <p className="text-muted-foreground text-xs">
+                      <p className="font-mono text-[11px] text-muted-foreground">
                         {getFileCategory(file.name)}
                       </p>
                     </CardContent>

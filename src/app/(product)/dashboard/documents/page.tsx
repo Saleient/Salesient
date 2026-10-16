@@ -366,18 +366,21 @@ export default function DocumentsPage() {
   };
 
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col space-y-4 overflow-hidden rounded-2xl bg-background p-4 md:h-[calc(100vh-4rem)] md:space-y-6 md:p-6">
-      <div className="flex items-center justify-between pt-6 md:pt-10">
-        <div className="flex items-center gap-2 md:gap-0">
+    <div className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col space-y-6 overflow-hidden rounded-2xl bg-background p-4 md:h-[calc(100vh-4rem)] md:space-y-8 md:p-8">
+      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border/60 pt-4 pb-5 md:pt-6">
+        <div className="flex items-center gap-3">
           <SidebarTrigger className="md:hidden" />
           <div>
-            <h1 className="font-semibold text-2xl md:text-3xl">Documents</h1>
-            <p className="hidden text-muted-foreground text-xs sm:block md:text-sm">
-              Organize your files in projects or upload to root directory.
+            <h1 className="font-semibold text-2xl tracking-tight md:text-3xl">
+              Knowledge Vault
+            </h1>
+            <p className="mt-0.5 hidden text-muted-foreground text-xs sm:block md:text-sm">
+              Organize sales playbooks, contracts, and spreadsheets into indexed
+              project rooms.
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5">
           <FileUpload
             accept=".pdf,.docx,.pptx,.xlsx,.csv,.txt,.md,.jpg,.jpeg,.png,.webp,.gif"
             loading={false}
@@ -386,7 +389,11 @@ export default function DocumentsPage() {
           />
           <Dialog onOpenChange={setIsDialogOpen} open={isDialogOpen}>
             <DialogTrigger asChild>
-              <Button className="gap-2" disabled={isPending} variant="default">
+              <Button
+                className="gap-2 rounded-lg"
+                disabled={isPending}
+                variant="default"
+              >
                 <Plus className="h-4 w-4" />
                 <span className="hidden sm:inline">New Project</span>
               </Button>
@@ -427,31 +434,38 @@ export default function DocumentsPage() {
         </div>
       </div>
 
-      <section className="pt-4 md:pt-6">
-        <h2 className="mb-3 font-medium text-base md:mb-4 md:text-lg">
-          Projects
-        </h2>
+      <section>
+        <div className="mb-3.5 flex items-center justify-between">
+          <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            Project Workspaces ({projects.length})
+          </h2>
+        </div>
         {projects.length === 0 ? (
-          <div className="py-12 text-center text-muted-foreground">
-            <Folder className="mx-auto mb-4 h-12 w-12 opacity-50" />
-            <p>No projects yet. Create your first project to get started.</p>
+          <div className="rounded-xl border border-dashed border-border/70 bg-card/40 py-10 text-center text-muted-foreground">
+            <Folder className="mx-auto mb-3 h-8 w-8 opacity-40" />
+            <p className="text-sm">
+              No projects yet. Create your first project workspace to organize
+              documents.
+            </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-3">
             {projects.map((project) => (
               <Card
-                className="flex cursor-pointer flex-row items-center justify-between p-3 transition-colors hover:bg-accent md:p-4"
+                className="group flex cursor-pointer flex-row items-center justify-between rounded-xl border-border/70 bg-card/60 p-3.5 transition-all hover:border-foreground/20 hover:bg-accent/50 md:p-4"
                 key={project.id}
                 onClick={() => handleProjectClick(project.id)}
               >
-                <div className="flex min-w-0 items-center gap-2 md:gap-3">
-                  <Folder className="h-5 w-5 shrink-0 fill-teal-700 text-teal-700 md:h-6 md:w-6" />
+                <div className="flex min-w-0 items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border bg-secondary/60">
+                    <Folder className="h-4 w-4 text-foreground/80" />
+                  </div>
                   <span className="truncate font-medium text-sm md:text-base">
                     {project.name}
                   </span>
                 </div>
                 <button
-                  className="shrink-0 rounded p-1 transition-colors hover:bg-red-100"
+                  className="shrink-0 rounded-md p-1.5 text-muted-foreground opacity-0 transition-all hover:bg-destructive/15 hover:text-destructive group-hover:opacity-100"
                   disabled={deletingProjectId === project.id}
                   onClick={(e) => handleDeleteProject(e, project.id)}
                   title="Delete project"
@@ -460,7 +474,7 @@ export default function DocumentsPage() {
                   {deletingProjectId === project.id ? (
                     <LoadingSpinner size="sm" />
                   ) : (
-                    <Trash2 className="h-4 w-4 text-red-600" />
+                    <Trash2 className="h-4 w-4" />
                   )}
                 </button>
               </Card>
@@ -469,11 +483,13 @@ export default function DocumentsPage() {
         )}
       </section>
 
-      <section className="flex-1 overflow-y-auto pt-4 md:pt-6">
-        <div className="mb-3 flex items-center justify-between md:mb-4">
-          <h2 className="font-medium text-base md:text-lg">Root Files</h2>
+      <section className="flex-1 overflow-y-auto pt-2">
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            Indexed Root Files ({rootFiles.length})
+          </h2>
           <Select onValueChange={setFilterType} value={filterType}>
-            <SelectTrigger className="w-48">
+            <SelectTrigger className="h-9 w-48 rounded-lg text-xs">
               <SelectValue placeholder="Filter by type" />
             </SelectTrigger>
             <SelectContent>
@@ -493,12 +509,12 @@ export default function DocumentsPage() {
               const FileIcon = getFileIcon(file.type);
               return (
                 <Card
-                  className="group flex flex-col transition-colors hover:bg-accent"
+                  className="group flex flex-col rounded-xl border-border/70 bg-card/60 transition-all hover:border-foreground/20 hover:bg-accent/40"
                   key={file.id}
                 >
-                  <CardContent className="flex flex-col gap-2 p-3 md:p-4">
+                  <CardContent className="flex flex-col gap-2.5 p-4">
                     <div className="flex items-start justify-between">
-                      <div className="flex items-center gap-2">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-secondary/60">
                         {file.integrationLogo ? (
                           // biome-ignore lint/correctness/useImageSize: <explanation>
                           <img
@@ -507,17 +523,17 @@ export default function DocumentsPage() {
                             src={file.integrationLogo}
                           />
                         ) : (
-                          <FileIcon className="h-4 w-4 text-primary md:h-5 md:w-5" />
+                          <FileIcon className="h-4 w-4 text-foreground/80" />
                         )}
                       </div>
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                           <button
                             aria-label={`Actions for ${file.name}`}
-                            className="rounded p-1 opacity-0 transition-colors hover:bg-accent group-hover:opacity-100"
+                            className="rounded-md p-1 text-muted-foreground opacity-0 transition-all hover:bg-accent hover:text-foreground group-hover:opacity-100"
                             type="button"
                           >
-                            <MoreVertical className="h-4 w-4 text-muted-foreground" />
+                            <MoreVertical className="h-4 w-4" />
                           </button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end" className="w-40">
@@ -567,7 +583,7 @@ export default function DocumentsPage() {
                     <div className="truncate font-medium text-xs md:text-sm">
                       {file.name}
                     </div>
-                    <p className="text-muted-foreground text-xs">
+                    <p className="font-mono text-[11px] text-muted-foreground">
                       {getFileCategory(file.name)}
                     </p>
                   </CardContent>

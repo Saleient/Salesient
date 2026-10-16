@@ -59,16 +59,25 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar variant="inset" {...props}>
       {/* Logo / Brand */}
-      <SidebarHeader className="h-16  px-2 py-4">
+      <SidebarHeader className="h-16 border-b border-sidebar-border/60 px-3 py-4">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="font-semibold text-lg hover:bg-transparent active:bg-transparent"
+              className="font-semibold text-base hover:bg-transparent active:bg-transparent"
               size="lg"
             >
-              <a href="/dashboard">
-                <span>Salesient</span>
+              <a href="/dashboard" className="flex items-center gap-2.5">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-sidebar-border bg-black">
+                  {/** biome-ignore lint/performance/noImgElement: brand mark */}
+                  {/** biome-ignore lint/correctness/useImageSize: CSS sized */}
+                  <img
+                    alt="Salesient Logo"
+                    src="/salesient-mark.png"
+                    className="h-full w-full object-contain p-0.5"
+                  />
+                </span>
+                <span className="tracking-tight">Salesient</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -77,33 +86,33 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
 
       <SidebarContent>
         {/* Main Navigation */}
-        <div className="flex flex-col gap-2 p-4 pt-10">
-          <div className="flex items-center gap-2  text-xs font-medium text-muted-foreground/70">
-            <span>Platform</span>
+        <div className="flex flex-col gap-2 p-4 pt-6">
+          <div className="flex items-center gap-2 font-mono text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/70">
+            <span>Workspace</span>
           </div>
           <NavMain />
         </div>
 
         {/* Chat History */}
-        <div className="flex flex-1 flex-col gap-2 p-4 pt-0">
-          <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground/70">
-            <span>Recent Chats</span>
+        <div className="flex flex-1 flex-col gap-2 p-4 pt-2">
+          <div className="flex items-center gap-2 font-mono text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/70">
+            <span>Recent Threads</span>
           </div>
 
           <div className="flex-1 overflow-y-auto">
             <div className="flex flex-col gap-1">
               {isLoadingChats ? (
-                <div className="px-2 py-1.5 text-sm text-muted-foreground">
+                <div className="px-2 py-1.5 text-xs text-muted-foreground">
                   Loading...
                 </div>
               ) : chats.length === 0 ? (
-                <div className="px-2 py-1.5 text-sm text-muted-foreground">
+                <div className="px-2 py-1.5 text-xs text-muted-foreground">
                   No chats yet
                 </div>
               ) : (
                 chats.map((chat) => (
                   <div
-                    className="group relative bg-linear-to-r from-transparent to-sidebar flex cursor-pointer items-center justify-between rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                    className="group relative flex cursor-pointer items-center justify-between rounded-lg px-2.5 py-1.5 text-sm transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                     key={chat.id}
                     onClick={() => router.push(`/dashboard/chat/${chat.id}`)}
                     onMouseEnter={() => setHoveredChatId(chat.id)}

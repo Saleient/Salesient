@@ -1,10 +1,11 @@
 "use client";
 
+import { ArrowRight, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -50,16 +51,16 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div className="space-y-2">
           <Label
-            className="text-xs tracking-wider text-white/50 uppercase"
+            className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
             htmlFor="name"
           >
-            Name *
+            Full Name *
           </Label>
           <Input
             required
-            className="border-white/[0.06] bg-white/[0.02] text-white placeholder:text-white/20 focus:border-white/15 focus:ring-white/5"
+            className="h-11 rounded-xl border-white/10 bg-[#060608] text-white placeholder:text-zinc-600 focus:border-white/25"
             id="name"
-            placeholder="Your name"
+            placeholder="Alex Morgan"
             type="text"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -68,16 +69,16 @@ export default function ContactForm() {
 
         <div className="space-y-2">
           <Label
-            className="text-xs tracking-wider text-white/50 uppercase"
+            className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
             htmlFor="email"
           >
-            Email *
+            Work Email *
           </Label>
           <Input
             required
-            className="border-white/[0.06] bg-white/[0.02] text-white placeholder:text-white/20 focus:border-white/15 focus:ring-white/5"
+            className="h-11 rounded-xl border-white/10 bg-[#060608] text-white placeholder:text-zinc-600 focus:border-white/25"
             id="email"
-            placeholder="you@company.com"
+            placeholder="alex@company.com"
             type="email"
             value={formData.email}
             onChange={(e) =>
@@ -89,15 +90,15 @@ export default function ContactForm() {
 
       <div className="space-y-2">
         <Label
-          className="text-xs tracking-wider text-white/50 uppercase"
+          className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
           htmlFor="company"
         >
-          Company
+          Company &amp; Team Size
         </Label>
         <Input
-          className="border-white/[0.06] bg-white/[0.02] text-white placeholder:text-white/20 focus:border-white/15 focus:ring-white/5"
+          className="h-11 rounded-xl border-white/10 bg-[#060608] text-white placeholder:text-zinc-600 focus:border-white/25"
           id="company"
-          placeholder="Your company name"
+          placeholder="Acme Corp · 25 Account Executives"
           type="text"
           value={formData.company}
           onChange={(e) =>
@@ -108,16 +109,16 @@ export default function ContactForm() {
 
       <div className="space-y-2">
         <Label
-          className="text-xs tracking-wider text-white/50 uppercase"
+          className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
           htmlFor="message"
         >
-          Message *
+          How can we help? *
         </Label>
         <Textarea
           required
-          className="min-h-[140px] border-white/[0.06] bg-white/[0.02] text-white placeholder:text-white/20 focus:border-white/15 focus:ring-white/5"
+          className="min-h-[140px] rounded-xl border-white/10 bg-[#060608] text-white placeholder:text-zinc-600 focus:border-white/25"
           id="message"
-          placeholder="Tell us how we can help..."
+          placeholder="Tell us about your sales document workflow, CRM stack, or security requirements..."
           value={formData.message}
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })
@@ -127,81 +128,38 @@ export default function ContactForm() {
 
       <div className="pt-2">
         <Button
-          className="w-full rounded-full bg-white py-5 font-medium text-black transition-all hover:bg-white/90 disabled:opacity-40"
+          className="group h-11 w-full cursor-pointer rounded-full bg-white font-semibold text-black text-sm shadow-[0_0_24px_rgba(255,255,255,0.14)] transition-all hover:bg-zinc-200 disabled:opacity-40"
           disabled={isSubmitting}
           size="lg"
           type="submit"
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center gap-2">
-              <svg
-                className="h-4 w-4 animate-spin"
-                fill="none"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Loading</title>
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                />
-                <path
-                  className="opacity-75"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                  fill="currentColor"
-                />
-              </svg>
-              Sending...
+              <Loader2 className="h-4 w-4 animate-spin" />
+              Sending Inquiry...
             </span>
           ) : (
-            "Send Message →"
+            <span className="flex items-center justify-center gap-1.5">
+              <span>Send Message</span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </span>
           )}
         </Button>
       </div>
 
       {submitStatus === "success" && (
-        <div className="flex items-center justify-center gap-2 rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-3 text-center text-emerald-400 text-sm">
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Success</title>
-            <path
-              d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          Thanks for reaching out! We&apos;ll get back to you soon.
+        <div className="flex items-center justify-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 p-3.5 text-center text-emerald-400 text-xs sm:text-sm">
+          <CheckCircle2 className="h-4 w-4 shrink-0" />
+          <span>
+            Inquiry received. A Solutions Engineer will respond shortly.
+          </span>
         </div>
       )}
 
       {submitStatus === "error" && (
-        <div className="flex items-center justify-center gap-2 rounded-lg border border-red-500/20 bg-red-500/5 p-3 text-center text-red-400 text-sm">
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Error</title>
-            <path
-              d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          Something went wrong. Please try again.
+        <div className="flex items-center justify-center gap-2 rounded-xl border border-red-500/25 bg-red-500/10 p-3.5 text-center text-red-400 text-xs sm:text-sm">
+          <AlertCircle className="h-4 w-4 shrink-0" />
+          <span>Unable to send message right now. Please try again.</span>
         </div>
       )}
     </form>
