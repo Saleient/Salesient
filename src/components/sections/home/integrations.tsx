@@ -279,7 +279,6 @@ export default function Integration() {
                 02 · Verified Outputs
               </p>
               {outputActions.map((act, i) => {
-                const Icon = act.icon;
                 return (
                   <motion.div
                     key={act.label}
@@ -289,9 +288,7 @@ export default function Integration() {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-[#060608] p-3"
                   >
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-emerald-500/20 bg-emerald-500/10">
-                      <Icon className="h-4 w-4 text-emerald-400" />
-                    </div>
+                    <span className="h-6 w-px shrink-0 bg-emerald-400/50" />
                     <div className="min-w-0">
                       <p className="truncate font-medium text-xs text-white">
                         {act.label}

@@ -180,7 +180,7 @@ export default function Navbar() {
                       >
                         <span>{item.label}</span>
                         {isActive && (
-                          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                          <span className="h-1.5 w-1.5 rounded-full bg-white" />
                         )}
                       </Link>
                     );

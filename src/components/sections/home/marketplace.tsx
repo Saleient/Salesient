@@ -144,7 +144,7 @@ export default function LandingIntegrations() {
           <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] p-2">
             <AppLogo app={app} />
           </div>
-          <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 font-mono text-[10px] text-emerald-400">
+          <span className="rounded-full border border-white/15 bg-white/[0.06] px-2 py-0.5 font-mono text-[10px] text-white">
             OAuth 2.0
           </span>
         </div>
@@ -304,7 +304,7 @@ export default function LandingIntegrations() {
               <div key={category}>
                 <div className="mb-5 flex items-center justify-between border-b border-white/[0.07] pb-3">
                   <div className="flex items-center gap-2.5">
-                    <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                    <span className="h-2 w-2 rounded-full bg-white" />
                     <h2 className="font-semibold text-base text-white capitalize sm:text-lg">
                       {category}
                     </h2>

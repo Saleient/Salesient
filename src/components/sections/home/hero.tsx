@@ -2,14 +2,11 @@
 
 import {
   ArrowRight,
-  CheckCircle2,
   Lock,
   Pause,
   Play,
   RotateCcw,
-  ShieldCheck,
   Sparkles,
-  Zap,
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
@@ -132,7 +129,7 @@ export default function Hero() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-12 -right-24 h-[480px] w-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.1)_0%,rgba(59,130,246,0.05)_45%,transparent_75%)] blur-3xl"
+        className="pointer-events-none absolute top-12 -right-24 h-[480px] w-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.05)_45%,transparent_75%)] blur-3xl"
       />
 
       <div className="relative z-10 mx-auto max-w-7xl">
@@ -150,14 +147,14 @@ export default function Hero() {
             {/* Eyebrow Pill */}
             <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs text-zinc-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
               </span>
               <span className="font-medium text-white">
                 Salesient RAG Engine
               </span>
               <span className="h-3 w-px bg-white/15" />
-              <span className="text-emerald-400">Zero hallucinations</span>
+              <span className="text-white">Zero hallucinations</span>
             </div>
 
             {/* Balanced 3-Line Display Headline */}
@@ -201,30 +198,29 @@ export default function Hero() {
             <div className="mt-10 grid w-full grid-cols-1 gap-3 border-t border-white/[0.08] pt-7 sm:grid-cols-3">
               {[
                 {
-                  icon: Zap,
+                  index: "01",
                   title: "< 190ms Retrieval",
                   sub: "Dense + BM25 fusion",
                 },
                 {
-                  icon: CheckCircle2,
+                  index: "02",
                   title: "100% Cited Clauses",
                   sub: "Locked to PDF & CRM",
                 },
                 {
-                  icon: ShieldCheck,
+                  index: "03",
                   title: "Zero Model Training",
                   sub: "SOC 2 & ISO isolated",
                 },
               ].map((item) => {
-                const Icon = item.icon;
                 return (
                   <div
                     key={item.title}
-                    className="flex items-start gap-2.5 rounded-xl border border-white/[0.06] bg-white/[0.015] p-3"
+                    className="flex items-start gap-3 border-l border-white/10 pl-3"
                   >
-                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-emerald-500/25 bg-emerald-500/10 text-emerald-400">
-                      <Icon className="h-3.5 w-3.5" />
-                    </div>
+                    <span className="mt-0.5 font-mono text-[10px] tracking-wider text-zinc-600">
+                      {item.index}
+                    </span>
                     <div className="min-w-0">
                       <p className="font-semibold text-xs text-white">
                         {item.title}
@@ -253,7 +249,7 @@ export default function Hero() {
             {/* Outer Ambient Glow Rim */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -inset-1 rounded-3xl bg-gradient-to-tr from-emerald-500/15 via-white/5 to-blue-500/15 opacity-70 blur-xl"
+              className="pointer-events-none absolute -inset-1 rounded-3xl bg-gradient-to-tr from-white/[0.06] via-white/5 to-white/10 opacity-70 blur-xl"
             />
 
             {/* Main Glass Showcase Frame (Zero overlapping badges) */}
@@ -269,7 +265,7 @@ export default function Hero() {
                     </div>
                     <div className="hidden h-3.5 w-px bg-white/10 sm:block" />
                     <div className="flex items-center gap-1.5">
-                      <Lock className="h-3 w-3 text-emerald-400" />
+                      <Lock className="h-3 w-3 text-white" />
                       <span className="font-mono text-[11px] text-zinc-300">
                         salesient://rag-pipeline
                       </span>
@@ -285,9 +281,9 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 6 }}
                         transition={{ duration: 0.2 }}
-                        className="hidden items-center gap-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] text-emerald-300 sm:inline-flex"
+                        className="hidden items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2.5 py-0.5 font-mono text-[10px] text-white sm:inline-flex"
                       >
-                        <Sparkles className="h-2.5 w-2.5 text-emerald-400" />
+                        <Sparkles className="h-2.5 w-2.5 text-white" />
                         <span>
                           {videoPhases[activePhase].step} &middot;{" "}
                           {videoPhases[activePhase].label}
@@ -337,7 +333,7 @@ export default function Hero() {
                   {/* Continuous Thin Progress Line at Bottom of Video */}
                   <div className="absolute inset-x-0 bottom-0 h-[2px] bg-white/10">
                     <div
-                      className="h-full bg-emerald-400 transition-all duration-150 ease-linear"
+                      className="h-full bg-white transition-all duration-150 ease-linear"
                       style={{ width: `${progress}%` }}
                     />
                   </div>
@@ -355,7 +351,7 @@ export default function Hero() {
                         className={cn(
                           "group flex cursor-pointer items-center gap-2 px-3 py-2.5 text-left transition-colors",
                           isActive
-                            ? "bg-emerald-500/[0.08] text-white"
+                            ? "bg-white/[0.06] text-white"
                             : "text-zinc-500 hover:bg-white/[0.02] hover:text-zinc-300"
                         )}
                       >
@@ -363,7 +359,7 @@ export default function Hero() {
                           className={cn(
                             "flex h-5 w-5 shrink-0 items-center justify-center rounded font-mono text-[10px] font-semibold",
                             isActive
-                              ? "bg-emerald-500/20 text-emerald-300"
+                              ? "bg-white/[0.06] text-white"
                               : "bg-white/[0.04] text-zinc-500"
                           )}
                         >

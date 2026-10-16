@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Database, Layers, Search, ShieldCheck } from "lucide-react";
+import { Check, Layers } from "lucide-react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -16,7 +16,6 @@ const pipelineStages = [
       "Nested table & header preservation",
       "Real-time CRM delta webhooks",
     ],
-    icon: Database,
     video: "/stage-ingestion.mp4",
     terminalTitle: "parser://structure-aware-chunker",
     previewItems: [
@@ -48,7 +47,6 @@ const pipelineStages = [
       "1,536-dim dense embeddings + BM25",
       "< 190ms p95 retrieval latency",
     ],
-    icon: Search,
     video: "/stage-chunking.mp4",
     terminalTitle: "indexer://vector-chunker",
     previewItems: [
@@ -80,7 +78,6 @@ const pipelineStages = [
       "Interactive page & clause links",
       "SOC 2 Type II audit trail",
     ],
-    icon: ShieldCheck,
     video: "/stage-citation.mp4",
     terminalTitle: "verifier://citation-guardrail",
     previewItems: [
@@ -143,7 +140,6 @@ export default function Features() {
         {/* Alternating Left-Right Rows */}
         <div className="mt-14 space-y-12 md:space-y-20">
           {pipelineStages.map((stage, idx) => {
-            const Icon = stage.icon;
             const isReversed = idx % 2 === 1;
             return (
               <div
@@ -162,7 +158,7 @@ export default function Features() {
                   )}
                 >
                   <div className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1">
-                    <span className="font-mono text-xs font-semibold text-emerald-400">
+                    <span className="font-mono text-xs font-semibold text-white">
                       STAGE {stage.step}
                     </span>
                     <span className="h-3 w-px bg-white/15" />
@@ -184,7 +180,7 @@ export default function Features() {
                         key={m}
                         className="inline-flex items-center gap-1.5 rounded-lg border border-white/[0.08] bg-[#09090c] px-3 py-1.5 text-xs text-zinc-300"
                       >
-                        <Check className="h-3.5 w-3.5 text-emerald-400" />
+                        <Check className="h-3.5 w-3.5 text-white" />
                         {m}
                       </span>
                     ))}
@@ -211,14 +207,12 @@ export default function Features() {
                       {/* Window Chrome */}
                       <div className="flex items-center justify-between border-b border-white/[0.07] bg-[#0b0b10] px-4 py-2.5">
                         <div className="flex items-center gap-2.5">
-                          <div className="flex h-6 w-6 items-center justify-center rounded-md border border-emerald-500/30 bg-emerald-500/15 text-emerald-400">
-                            <Icon className="h-3.5 w-3.5" />
-                          </div>
+                          <span className="h-1.5 w-1.5 rounded-full bg-zinc-600" />
                           <span className="font-mono text-[11px] text-zinc-300">
                             {stage.terminalTitle}
                           </span>
                         </div>
-                        <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] text-emerald-400">
+                        <span className="rounded-full border border-white/15 bg-white/[0.06] px-2.5 py-0.5 font-mono text-[10px] text-white">
                           Stage {stage.step}
                         </span>
                       </div>
@@ -258,7 +252,7 @@ export default function Features() {
                               <p className="truncate font-semibold text-[11px] text-white">
                                 {item.label}
                               </p>
-                              <span className="shrink-0 font-mono text-[10px] text-emerald-400">
+                              <span className="shrink-0 font-mono text-[10px] text-white">
                                 {item.badge}
                               </span>
                             </div>

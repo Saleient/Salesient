@@ -1,32 +1,21 @@
 "use client";
 
-import {
-  CheckCircle2,
-  EyeOff,
-  KeyRound,
-  Lock,
-  Server,
-  ShieldCheck,
-} from "lucide-react";
 import { motion } from "motion/react";
 
 const securityPillars = [
   {
-    icon: EyeOff,
     title: "Zero Model Training",
     spec: "Strict ZDR Endpoints",
     description:
       "Customer documents, CRM records, and chat prompts are never used to train or fine-tune foundation models.",
   },
   {
-    icon: Server,
     title: "Tenant-Isolated Vectors",
     spec: "Per-Org Namespaces",
     description:
       "Every workspace operates inside a cryptographically isolated vector namespace with strict row-level ACL enforcement.",
   },
   {
-    icon: KeyRound,
     title: "End-to-End Encryption",
     spec: "AES-256 & TLS 1.3",
     description:
@@ -65,8 +54,8 @@ export default function Security() {
               viewport={{ once: true }}
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/[0.08] px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-emerald-400">
-                <ShieldCheck className="h-3.5 w-3.5" />
+              <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-white">
+                <span className="h-1.5 w-1.5 rounded-full bg-white" />
                 <span>Enterprise Trust &amp; Governance</span>
               </div>
               <h2 className="max-w-2xl font-semibold text-3xl tracking-[-0.025em] text-white sm:text-4xl">
@@ -111,7 +100,6 @@ export default function Security() {
           {/* 3-Column Security Architecture Pillars */}
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {securityPillars.map((pillar, idx) => {
-              const Icon = pillar.icon;
               return (
                 <motion.div
                   key={pillar.title}
@@ -127,9 +115,9 @@ export default function Security() {
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-zinc-200">
-                        <Icon className="h-4 w-4" />
-                      </div>
+                      <span className="font-mono text-xs tracking-wider text-zinc-600">
+                        {String(idx + 1).padStart(2, "0")}
+                      </span>
                       <span className="rounded border border-white/10 bg-white/[0.03] px-2 py-0.5 font-mono text-[10px] text-zinc-400">
                         {pillar.spec}
                       </span>
@@ -142,8 +130,8 @@ export default function Security() {
                     </p>
                   </div>
 
-                  <div className="mt-6 flex items-center gap-1.5 border-t border-white/[0.05] pt-3.5 text-[11px] text-emerald-400">
-                    <CheckCircle2 className="h-3.5 w-3.5" />
+                  <div className="mt-6 flex items-center gap-1.5 border-t border-white/[0.05] pt-3.5 text-[11px] text-white">
+                    <span className="h-1.5 w-1.5 rounded-full bg-white" />
                     <span>Enforced across all workspaces</span>
                   </div>
                 </motion.div>
