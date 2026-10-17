@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Layers } from "lucide-react";
+import { Check, FileText, FolderOpen } from "lucide-react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -17,7 +17,8 @@ const pipelineStages = [
       "Real-time CRM delta webhooks",
     ],
     video: "/stage-ingestion.mp4",
-    terminalTitle: "parser://structure-aware-chunker",
+    breadcrumbs: ["Workspace", "Knowledge Vault", "Q4_Enterprise_Playbook.pdf"],
+    statusLabel: "Synced · 48 pages",
     previewItems: [
       {
         label: "Q4_Enterprise_Playbook.pdf",
@@ -48,7 +49,8 @@ const pipelineStages = [
       "< 190ms p95 retrieval latency",
     ],
     video: "/stage-chunking.mp4",
-    terminalTitle: "indexer://vector-chunker",
+    breadcrumbs: ["Workspace", "Deal Room", "Global_Rate_Card_2025.xlsx"],
+    statusLabel: "312 chunks indexed",
     previewItems: [
       {
         label: "Clause-Aware Slicing",
@@ -79,7 +81,8 @@ const pipelineStages = [
       "SOC 2 Type II audit trail",
     ],
     video: "/stage-citation.mp4",
-    terminalTitle: "verifier://citation-guardrail",
+    breadcrumbs: ["Workspace", "Deal Room", "Acme Corp MSA"],
+    statusLabel: "Citations locked",
     previewItems: [
       {
         label: "SLA Concession Cap: 14.5% Max",
@@ -103,39 +106,27 @@ const pipelineStages = [
 export default function Features() {
   return (
     <section
-      id="features"
       className="relative w-full overflow-hidden bg-[#050507] px-4 py-24 sm:px-6 md:py-32 lg:px-8"
+      id="features"
     >
       <div className="mx-auto max-w-7xl">
-        {/* Section Header */}
-        <div className="flex flex-col items-start justify-between gap-6 border-b border-white/[0.07] pb-12 md:flex-row md:items-end">
-          <motion.div
-            initial={{ opacity: 0, x: -32 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-          >
-            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-400">
-              <Layers className="h-3 w-3 text-zinc-300" />
-              <span>Under the Hood · RAG Architecture</span>
-            </div>
-            <h2 className="max-w-2xl font-semibold text-3xl tracking-[-0.025em] text-white sm:text-4xl md:text-5xl">
-              How Salesient turns raw files into{" "}
-              <span className="text-zinc-500">verifiable deal truth.</span>
-            </h2>
-          </motion.div>
-          <motion.p
-            initial={{ opacity: 0, x: 32 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-            className="max-w-md text-sm text-zinc-400 leading-relaxed sm:text-base"
-          >
+        {/* Section Header — Left-aligned, no pill badge, solid white H2 */}
+        <motion.div
+          className="max-w-3xl border-white/[0.07] border-b pb-12"
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.55 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <h2 className="font-semibold text-3xl text-white tracking-[-0.025em] sm:text-4xl md:text-5xl">
+            How Salesient turns raw files into verifiable deal truth.
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm text-zinc-400 leading-relaxed sm:text-base">
             Generic AI wrappers hallucinate pricing and contract terms. Our
-            three-stage RAG pipeline is purpose-built for precision revenue
-            workflows.
-          </motion.p>
-        </div>
+            three-stage RAG pipeline preserves complex tables and locks every
+            answer to its exact source page.
+          </p>
+        </motion.div>
 
         {/* Alternating Left-Right Rows */}
         <div className="mt-14 space-y-12 md:space-y-20">
@@ -143,31 +134,31 @@ export default function Features() {
             const isReversed = idx % 2 === 1;
             return (
               <div
-                key={stage.step}
                 className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12"
+                key={stage.step}
               >
                 {/* Narrative Column (Alternates Left / Right) */}
                 <motion.div
-                  initial={{ opacity: 0, x: isReversed ? 44 : -44 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                   className={cn(
                     "flex flex-col items-start lg:col-span-5",
                     isReversed ? "lg:order-2" : "lg:order-1"
                   )}
+                  initial={{ opacity: 0, x: isReversed ? 44 : -44 }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  whileInView={{ opacity: 1, x: 0 }}
                 >
                   <div className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1">
-                    <span className="font-mono text-xs font-semibold text-white">
+                    <span className="font-mono font-semibold text-white text-xs">
                       STAGE {stage.step}
                     </span>
                     <span className="h-3 w-px bg-white/15" />
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-zinc-400">
+                    <span className="font-mono text-[11px] text-zinc-400 uppercase tracking-wider">
                       {stage.tag}
                     </span>
                   </div>
 
-                  <h3 className="mt-5 font-semibold text-2xl tracking-tight text-white sm:text-3xl">
+                  <h3 className="mt-5 font-semibold text-2xl text-white tracking-tight sm:text-3xl">
                     {stage.title}
                   </h3>
                   <p className="mt-3 text-sm text-zinc-400 leading-relaxed sm:text-base">
@@ -177,8 +168,8 @@ export default function Features() {
                   <div className="mt-6 flex flex-wrap gap-2.5">
                     {stage.metrics.map((m) => (
                       <span
-                        key={m}
                         className="inline-flex items-center gap-1.5 rounded-lg border border-white/[0.08] bg-[#09090c] px-3 py-1.5 text-xs text-zinc-300"
+                        key={m}
                       >
                         <Check className="h-3.5 w-3.5 text-white" />
                         {m}
@@ -189,44 +180,68 @@ export default function Features() {
 
                 {/* Visual Video Card Column (Alternates Right / Left) */}
                 <motion.div
+                  className={cn(
+                    "lg:col-span-7",
+                    isReversed ? "lg:order-1" : "lg:order-2"
+                  )}
                   initial={{ opacity: 0, x: isReversed ? -44 : 44 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
                   transition={{
                     duration: 0.6,
                     delay: 0.08,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className={cn(
-                    "lg:col-span-7",
-                    isReversed ? "lg:order-1" : "lg:order-2"
-                  )}
+                  viewport={{ once: true, margin: "-60px" }}
+                  whileInView={{ opacity: 1, x: 0 }}
                 >
                   <div className="overflow-hidden rounded-2xl border border-white/[0.1] bg-[#09090c] p-1.5 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.85),inset_0_1px_0_rgba(255,255,255,0.08)]">
                     <div className="overflow-hidden rounded-xl border border-white/[0.07] bg-[#050507]">
-                      {/* Window Chrome */}
-                      <div className="flex items-center justify-between border-b border-white/[0.07] bg-[#0b0b10] px-4 py-2.5">
-                        <div className="flex items-center gap-2.5">
-                          <span className="h-1.5 w-1.5 rounded-full bg-zinc-600" />
-                          <span className="font-mono text-[11px] text-zinc-300">
-                            {stage.terminalTitle}
-                          </span>
-                        </div>
-                        <span className="rounded-full border border-white/15 bg-white/[0.06] px-2.5 py-0.5 font-mono text-[10px] text-white">
-                          Stage {stage.step}
+                      {/* Real Application Breadcrumb Chrome */}
+                      <div className="flex items-center justify-between border-white/[0.07] border-b bg-[#0b0b10] px-4 py-2.5">
+                        <nav
+                          aria-label="App location"
+                          className="flex min-w-0 items-center gap-1.5 text-[11px]"
+                        >
+                          <FolderOpen className="h-3.5 w-3.5 shrink-0 text-zinc-500" />
+                          {stage.breadcrumbs.map((crumb, cIdx) => {
+                            const isLast =
+                              cIdx === stage.breadcrumbs.length - 1;
+                            return (
+                              <span
+                                className="flex items-center gap-1.5 truncate"
+                                key={crumb}
+                              >
+                                {cIdx > 0 && (
+                                  <span className="text-zinc-700">/</span>
+                                )}
+                                <span
+                                  className={cn(
+                                    "truncate",
+                                    isLast
+                                      ? "font-medium text-zinc-200"
+                                      : "hidden text-zinc-500 sm:inline"
+                                  )}
+                                >
+                                  {crumb}
+                                </span>
+                              </span>
+                            );
+                          })}
+                        </nav>
+                        <span className="shrink-0 rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[10px] text-zinc-300">
+                          {stage.statusLabel}
                         </span>
                       </div>
 
                       {/* Stage Video */}
                       <div className="relative aspect-video w-full overflow-hidden bg-black">
                         <video
-                          src={stage.video}
                           autoPlay
+                          className="h-full w-full object-cover"
                           loop
                           muted
                           playsInline
                           preload="metadata"
-                          className="h-full w-full object-cover"
+                          src={stage.video}
                         />
                         <div
                           aria-hidden="true"
@@ -235,18 +250,18 @@ export default function Features() {
                       </div>
 
                       {/* Compact Detail Strip */}
-                      <div className="grid grid-cols-1 divide-y divide-white/[0.06] border-t border-white/[0.07] bg-[#08080c] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+                      <div className="grid grid-cols-1 divide-y divide-white/[0.06] border-white/[0.07] border-t bg-[#08080c] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
                         {stage.previewItems.map((item, itemIdx) => (
                           <motion.div
-                            key={item.label}
+                            className="min-w-0 px-4 py-3"
                             initial={{ opacity: 0, x: isReversed ? -12 : 12 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            key={item.label}
                             transition={{
                               duration: 0.4,
                               delay: 0.15 + itemIdx * 0.08,
                             }}
-                            className="min-w-0 px-4 py-3"
+                            viewport={{ once: true }}
+                            whileInView={{ opacity: 1, x: 0 }}
                           >
                             <div className="flex items-center justify-between gap-2">
                               <p className="truncate font-semibold text-[11px] text-white">
@@ -269,6 +284,175 @@ export default function Features() {
             );
           })}
         </div>
+
+        {/* ═══════════════════════════════════════════════════════════════════
+            REALISTIC "MESSY" HUMAN INTERACTION · LIVE REP DEAL ROOM QUERY
+           ═══════════════════════════════════════════════════════════════════ */}
+        <motion.div
+          className="mt-24 overflow-hidden rounded-2xl border border-white/[0.1] bg-[#09090c] shadow-[0_24px_80px_-20px_rgba(0,0,0,0.9)]"
+          initial={{ opacity: 0, y: 24 }}
+          transition={{ duration: 0.55 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          {/* App Breadcrumb Top Bar */}
+          <div className="flex flex-wrap items-center justify-between gap-3 border-white/[0.07] border-b bg-[#0c0c11] px-5 py-3">
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-zinc-500">Workspace</span>
+              <span className="text-zinc-700">/</span>
+              <span className="text-zinc-400">Deal Room</span>
+              <span className="text-zinc-700">/</span>
+              <span className="font-medium text-white">
+                Acme Corp ($68k Annual · Stage 4 Negotiation)
+              </span>
+            </div>
+            <div className="flex items-center gap-3 font-mono text-[11px] text-zinc-400">
+              <span>3 sources active</span>
+              <span className="text-zinc-700">&middot;</span>
+              <span className="text-emerald-400">164ms retrieval</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 divide-y divide-white/[0.07] lg:grid-cols-12 lg:divide-x lg:divide-y-0">
+            {/* Left 7 Cols: Unfiltered Rep Prompt + Cited Answer */}
+            <div className="space-y-6 p-6 sm:p-8 lg:col-span-7">
+              {/* Messy Human Rep Message */}
+              <div className="flex items-start gap-3.5">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-zinc-800 font-semibold text-white text-xs">
+                  MK
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-semibold text-white text-xs">
+                      Maya Lin
+                    </span>
+                    <span className="text-[11px] text-zinc-500">
+                      Senior AE &middot; 4:47 PM
+                    </span>
+                  </div>
+                  <div className="mt-2 rounded-2xl rounded-tl-sm border border-white/[0.08] bg-[#111117] px-4 py-3 text-sm text-zinc-200 leading-relaxed">
+                    hey can we give acme a 20% discount on annual if they sign
+                    by friday or does legal block that? also they&apos;re asking
+                    if standard msa covers eu data residency
+                  </div>
+                </div>
+              </div>
+
+              {/* Grounded Salesient Response */}
+              <div className="flex items-start gap-3.5">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-500/10 font-mono font-semibold text-[11px] text-emerald-400">
+                  S
+                </div>
+                <div className="min-w-0 flex-1 space-y-3.5">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-semibold text-white text-xs">
+                      Salesient Deal Desk
+                    </span>
+                    <span className="rounded border border-white/10 bg-white/[0.03] px-1.5 py-0.5 font-mono text-[10px] text-zinc-400">
+                      Grounded in 3 files
+                    </span>
+                  </div>
+
+                  <div className="space-y-3 rounded-2xl rounded-tl-sm border border-white/[0.07] bg-[#060609] p-4 text-xs text-zinc-300 leading-relaxed sm:text-sm">
+                    <p>
+                      <strong className="text-white">
+                        1. 20% Annual Discount — Allowed with VP Sales sign-off
+                        (No Legal redline needed):
+                      </strong>{" "}
+                      AE self-serve discounting caps at{" "}
+                      <span className="font-medium text-white">15%</span>.
+                      However, for annual commits over{" "}
+                      <span className="font-medium text-white">$50k ACV</span>{" "}
+                      closing before Friday EOQ, discounts up to{" "}
+                      <span className="font-medium text-white">22%</span> only
+                      require VP Sales approval in Salesforce—Legal does not
+                      block or review standard order form discounts{" "}
+                      <span className="inline-flex items-center gap-1 rounded border border-white/15 bg-white/[0.06] px-1.5 py-0.5 font-mono text-[10px] text-white">
+                        <FileText className="h-2.5 w-2.5" />
+                        Q4_Playbook.pdf · §3.2, p.14
+                      </span>
+                      .
+                    </p>
+
+                    <p>
+                      <strong className="text-white">
+                        2. EU Data Residency — Requires Annex B Checkbox:
+                      </strong>{" "}
+                      Acme&apos;s current draft MSA defaults to{" "}
+                      <code className="rounded bg-white/[0.06] px-1 py-0.5 font-mono text-[11px] text-zinc-200">
+                        us-east-1
+                      </code>
+                      . To lock AWS Frankfurt (
+                      <code className="rounded bg-white/[0.06] px-1 py-0.5 font-mono text-[11px] text-zinc-200">
+                        eu-central-1
+                      </code>
+                      ), check{" "}
+                      <span className="font-medium text-white">
+                        Box 2 in Order Form Annex B
+                      </span>{" "}
+                      at no extra fee since Acme is on the Enterprise tier ($68k
+                      ACV){" "}
+                      <span className="inline-flex items-center gap-1 rounded border border-white/15 bg-white/[0.06] px-1.5 py-0.5 font-mono text-[10px] text-white">
+                        <FileText className="h-2.5 w-2.5" />
+                        Acme_MSA_v3.pdf · §7.1, p.6
+                      </span>
+                      .
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right 5 Cols: Verifiable Source Passage Inspector */}
+            <div className="flex flex-col justify-between bg-[#07070a] p-6 sm:p-8 lg:col-span-5">
+              <div>
+                <div className="flex items-center justify-between border-white/[0.07] border-b pb-3">
+                  <span className="font-mono text-[11px] text-zinc-400 uppercase tracking-wider">
+                    Verified Source Passages
+                  </span>
+                  <span className="font-mono text-[10px] text-zinc-500">
+                    Exact match
+                  </span>
+                </div>
+
+                <div className="mt-4 space-y-3.5">
+                  <div className="rounded-xl border border-white/[0.08] bg-[#0b0b10] p-3.5">
+                    <div className="flex items-center justify-between font-mono text-[10px] text-zinc-400">
+                      <span className="text-white">
+                        Q4_Enterprise_Playbook.pdf
+                      </span>
+                      <span>Page 14 · §3.2</span>
+                    </div>
+                    <p className="mt-2 border-emerald-400/70 border-l-2 pl-3 font-mono text-[11px] text-zinc-300 leading-relaxed">
+                      &ldquo;Discounts between 15.1% and 22.0% on Annual Upfront
+                      Order Forms (&gt;$50,000 ACV) require VP Sales approval
+                      via Deal Desk workflow. Legal review is waived if standard
+                      payment terms (Net 30) remain unmodified.&rdquo;
+                    </p>
+                  </div>
+
+                  <div className="rounded-xl border border-white/[0.08] bg-[#0b0b10] p-3.5">
+                    <div className="flex items-center justify-between font-mono text-[10px] text-zinc-400">
+                      <span className="text-white">Acme_MSA_v3.pdf</span>
+                      <span>Page 6 · §7.1</span>
+                    </div>
+                    <p className="mt-2 border-white/40 border-l-2 pl-3 font-mono text-[11px] text-zinc-300 leading-relaxed">
+                      &ldquo;Customer Data shall be hosted in the US-East region
+                      unless EU-Central (Frankfurt) is selected on the
+                      applicable Order Form Annex B. Regional pinning is
+                      included for Enterprise subscriptions.&rdquo;
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <p className="mt-5 font-mono text-[11px] text-zinc-500">
+                Synced with Salesforce Opportunity #SF-8841 (Acme Corp · $68,000
+                ACV)
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

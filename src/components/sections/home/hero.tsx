@@ -66,7 +66,9 @@ export default function Hero() {
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video) {
+      return;
+    }
 
     const handleTimeUpdate = () => {
       const t = video.currentTime;
@@ -88,18 +90,22 @@ export default function Hero() {
 
   const seekToPhase = (idx: number) => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video) {
+      return;
+    }
     video.currentTime = videoPhases[idx].startTime;
-    video.play().catch(() => {});
+    video.play().catch(() => null);
     setIsPlaying(true);
     setActivePhase(idx);
   };
 
   const togglePlay = () => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video) {
+      return;
+    }
     if (video.paused) {
-      video.play().catch(() => {});
+      video.play().catch(() => null);
       setIsPlaying(true);
     } else {
       video.pause();
@@ -109,9 +115,11 @@ export default function Hero() {
 
   const restartVideo = () => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video) {
+      return;
+    }
     video.currentTime = 0;
-    video.play().catch(() => {});
+    video.play().catch(() => null);
     setIsPlaying(true);
     setActivePhase(0);
   };
@@ -125,11 +133,11 @@ export default function Hero() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-10 -left-32 h-[420px] w-[520px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.055)_0%,transparent_70%)] blur-3xl"
+        className="-left-32 pointer-events-none absolute top-10 h-[420px] w-[520px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.055)_0%,transparent_70%)] blur-3xl"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-12 -right-24 h-[480px] w-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.05)_45%,transparent_75%)] blur-3xl"
+        className="-right-24 pointer-events-none absolute top-12 h-[480px] w-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.05)_45%,transparent_75%)] blur-3xl"
       />
 
       <div className="relative z-10 mx-auto max-w-7xl">
@@ -139,10 +147,10 @@ export default function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-12">
           {/* ── LEFT COLUMN (6 Cols): Crisp Typography, CTAs & Trust Specs ── */}
           <motion.div
-            initial={{ opacity: 0, x: -36 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col items-start text-left lg:col-span-6"
+            initial={{ opacity: 0, x: -36 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* Eyebrow Pill */}
             <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs text-zinc-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md">
@@ -158,7 +166,7 @@ export default function Hero() {
             </div>
 
             {/* Balanced 3-Line Display Headline */}
-            <h1 className="font-semibold text-4xl leading-[1.07] tracking-[-0.03em] text-white sm:text-5xl xl:text-[3.75rem]">
+            <h1 className="font-semibold text-4xl text-white leading-[1.07] tracking-[-0.03em] sm:text-5xl xl:text-[3.75rem]">
               Revenue intelligence,{" "}
               <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent">
                 grounded in your stack.
@@ -176,8 +184,8 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
               <Link href="/login">
                 <Button
+                  className="group h-11 cursor-pointer rounded-full bg-white px-7 font-semibold text-black text-sm shadow-[0_0_30px_rgba(255,255,255,0.18)] transition-all hover:bg-zinc-200"
                   size="lg"
-                  className="group h-11 cursor-pointer rounded-full bg-white px-7 text-sm font-semibold text-black shadow-[0_0_30px_rgba(255,255,255,0.18)] transition-all hover:bg-zinc-200"
                 >
                   Start Free Workspace
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -185,9 +193,9 @@ export default function Hero() {
               </Link>
               <Link href="/integration">
                 <Button
-                  variant="outline"
+                  className="h-11 cursor-pointer rounded-full border-white/10 bg-white/[0.03] px-6 font-medium text-sm text-zinc-300 backdrop-blur-sm transition-colors hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
                   size="lg"
-                  className="h-11 cursor-pointer rounded-full border-white/10 bg-white/[0.03] px-6 text-sm font-medium text-zinc-300 backdrop-blur-sm transition-colors hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+                  variant="outline"
                 >
                   Explore 120+ Connectors
                 </Button>
@@ -195,7 +203,7 @@ export default function Hero() {
             </div>
 
             {/* Compact Architectural Checkpoints (Replaces bulky stacked boxes) */}
-            <div className="mt-10 grid w-full grid-cols-1 gap-3 border-t border-white/[0.08] pt-7 sm:grid-cols-3">
+            <div className="mt-10 grid w-full grid-cols-1 gap-3 border-white/[0.08] border-t pt-7 sm:grid-cols-3">
               {[
                 {
                   index: "01",
@@ -212,76 +220,77 @@ export default function Hero() {
                   title: "Zero Model Training",
                   sub: "SOC 2 & ISO isolated",
                 },
-              ].map((item) => {
-                return (
-                  <div
-                    key={item.title}
-                    className="flex items-start gap-3 border-l border-white/10 pl-3"
-                  >
-                    <span className="mt-0.5 font-mono text-[10px] tracking-wider text-zinc-600">
-                      {item.index}
-                    </span>
-                    <div className="min-w-0">
-                      <p className="font-semibold text-xs text-white">
-                        {item.title}
-                      </p>
-                      <p className="mt-0.5 truncate text-[11px] text-zinc-500">
-                        {item.sub}
-                      </p>
-                    </div>
+              ].map((item) => (
+                <div
+                  className="flex items-start gap-3 border-white/10 border-l pl-3"
+                  key={item.title}
+                >
+                  <span className="mt-0.5 font-mono text-[10px] text-zinc-600 tracking-wider">
+                    {item.index}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-semibold text-white text-xs">
+                      {item.title}
+                    </p>
+                    <p className="mt-0.5 truncate text-[11px] text-zinc-500">
+                      {item.sub}
+                    </p>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </motion.div>
 
           {/* ── RIGHT COLUMN (6 Cols): Clean, Unobstructed Video Showcase ── */}
           <motion.div
-            initial={{ opacity: 0, x: 36 }}
             animate={{ opacity: 1, x: 0 }}
+            className="relative lg:col-span-6"
+            initial={{ opacity: 0, x: 36 }}
             transition={{
               duration: 0.65,
               delay: 0.1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative lg:col-span-6"
           >
             {/* Outer Ambient Glow Rim */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -inset-1 rounded-3xl bg-gradient-to-tr from-white/[0.06] via-white/5 to-white/10 opacity-70 blur-xl"
+              className="-inset-1 pointer-events-none absolute rounded-3xl bg-gradient-to-tr from-white/[0.06] via-white/5 to-white/10 opacity-70 blur-xl"
             />
 
             {/* Main Glass Showcase Frame (Zero overlapping badges) */}
             <div className="relative overflow-hidden rounded-2xl border border-white/[0.12] bg-[#09090d] p-1.5 shadow-[0_32px_96px_-16px_rgba(0,0,0,0.95),inset_0_1px_0_rgba(255,255,255,0.12)]">
               <div className="overflow-hidden rounded-xl border border-white/[0.07] bg-[#050507]">
-                {/* Top Window Bar — Clean & Unobstructed */}
-                <div className="flex items-center justify-between border-b border-white/[0.07] bg-[#0b0b10] px-4 py-2.5">
-                  <div className="flex items-center gap-2.5">
-                    <div className="flex items-center gap-1.5">
-                      <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-                    </div>
-                    <div className="hidden h-3.5 w-px bg-white/10 sm:block" />
-                    <div className="flex items-center gap-1.5">
-                      <Lock className="h-3 w-3 text-white" />
-                      <span className="font-mono text-[11px] text-zinc-300">
-                        salesient://rag-pipeline
+                {/* Top Window Bar — App Breadcrumb Chrome */}
+                <div className="flex items-center justify-between border-white/[0.07] border-b bg-[#0b0b10] px-4 py-2.5">
+                  <div className="flex items-center gap-2 text-[11px]">
+                    <Lock className="h-3 w-3 shrink-0 text-zinc-400" />
+                    <nav
+                      aria-label="Workspace breadcrumb"
+                      className="flex items-center gap-1.5 truncate"
+                    >
+                      <span className="hidden text-zinc-500 sm:inline">
+                        Workspace
                       </span>
-                    </div>
+                      <span className="hidden text-zinc-700 sm:inline">/</span>
+                      <span className="text-zinc-400">Deal Room</span>
+                      <span className="text-zinc-700">/</span>
+                      <span className="truncate font-medium text-zinc-200">
+                        Acme Corp MSA
+                      </span>
+                    </nav>
                   </div>
 
                   {/* Live Synced Stage Pill Inside Top Bar */}
                   <div className="flex items-center gap-2">
                     <AnimatePresence mode="wait">
                       <motion.span
-                        key={videoPhases[activePhase].step}
-                        initial={{ opacity: 0, y: -6 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 6 }}
-                        transition={{ duration: 0.2 }}
                         className="hidden items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2.5 py-0.5 font-mono text-[10px] text-white sm:inline-flex"
+                        exit={{ opacity: 0, y: 6 }}
+                        initial={{ opacity: 0, y: -6 }}
+                        key={videoPhases[activePhase].step}
+                        transition={{ duration: 0.2 }}
                       >
                         <Sparkles className="h-2.5 w-2.5 text-white" />
                         <span>
@@ -292,10 +301,10 @@ export default function Hero() {
                     </AnimatePresence>
 
                     <button
-                      type="button"
-                      onClick={togglePlay}
                       className="inline-flex cursor-pointer items-center gap-1 rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 font-mono text-[10px] text-zinc-300 transition-colors hover:border-white/20 hover:text-white"
+                      onClick={togglePlay}
                       title={isPlaying ? "Pause video" : "Play video"}
+                      type="button"
                     >
                       {isPlaying ? (
                         <Pause className="h-3 w-3" />
@@ -304,10 +313,10 @@ export default function Hero() {
                       )}
                     </button>
                     <button
-                      type="button"
-                      onClick={restartVideo}
                       className="inline-flex cursor-pointer items-center gap-1 rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 font-mono text-[10px] text-zinc-300 transition-colors hover:border-white/20 hover:text-white"
+                      onClick={restartVideo}
                       title="Restart video"
+                      type="button"
                     >
                       <RotateCcw className="h-3 w-3" />
                     </button>
@@ -317,13 +326,13 @@ export default function Hero() {
                 {/* Muted Autoplay Product Explainer Video */}
                 <div className="relative aspect-video w-full overflow-hidden bg-black">
                   <video
-                    ref={videoRef}
-                    src="/salesient-explainer.mp4"
                     autoPlay
+                    className="h-full w-full object-cover"
                     loop
                     muted
                     playsInline
-                    className="h-full w-full object-cover"
+                    ref={videoRef}
+                    src="/salesient-explainer.mp4"
                   />
                   {/* Subtle edge vignette */}
                   <div
@@ -340,24 +349,24 @@ export default function Hero() {
                 </div>
 
                 {/* Integrated 3-Pill Interactive Scrubber Bar Inside Frame Footer */}
-                <div className="grid grid-cols-3 divide-x divide-white/[0.06] border-t border-white/[0.07] bg-[#08080c]">
+                <div className="grid grid-cols-3 divide-x divide-white/[0.06] border-white/[0.07] border-t bg-[#08080c]">
                   {videoPhases.map((phase, idx) => {
                     const isActive = activePhase === idx;
                     return (
                       <button
-                        key={phase.id}
-                        type="button"
-                        onClick={() => seekToPhase(idx)}
                         className={cn(
                           "group flex cursor-pointer items-center gap-2 px-3 py-2.5 text-left transition-colors",
                           isActive
                             ? "bg-white/[0.06] text-white"
                             : "text-zinc-500 hover:bg-white/[0.02] hover:text-zinc-300"
                         )}
+                        key={phase.id}
+                        onClick={() => seekToPhase(idx)}
+                        type="button"
                       >
                         <span
                           className={cn(
-                            "flex h-5 w-5 shrink-0 items-center justify-center rounded font-mono text-[10px] font-semibold",
+                            "flex h-5 w-5 shrink-0 items-center justify-center rounded font-mono font-semibold text-[10px]",
                             isActive
                               ? "bg-white/[0.06] text-white"
                               : "bg-white/[0.04] text-zinc-500"
@@ -383,18 +392,18 @@ export default function Hero() {
         <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.08] md:mt-20 lg:grid-cols-4">
           {telemetryMetrics.map((metric, idx) => (
             <motion.div
-              key={metric.label}
+              className="flex flex-col justify-between bg-[#070709] p-5 sm:p-6"
               initial={{ opacity: 0, x: idx < 2 ? -24 : 24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              key={metric.label}
               transition={{
                 duration: 0.5,
                 delay: idx * 0.08,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col justify-between bg-[#070709] p-5 sm:p-6"
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, x: 0 }}
             >
-              <p className="font-semibold text-2xl tracking-tight text-white sm:text-3xl">
+              <p className="font-semibold text-2xl text-white tracking-tight sm:text-3xl">
                 {metric.value}
               </p>
               <div className="mt-2">
