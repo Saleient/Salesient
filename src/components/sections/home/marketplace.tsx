@@ -41,9 +41,9 @@ function AppLogo({ app }: { app: ComposioApp }) {
     <img
       alt={app.appName}
       className="h-full w-full object-contain"
-      src={logoSrc}
       loading="lazy"
       onError={() => setError(true)}
+      src={logoSrc}
     />
   );
 }
@@ -136,7 +136,7 @@ export default function LandingIntegrations() {
 
   const renderAppCard = (app: ComposioApp) => (
     <div
-      className="group flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-[#09090c] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:border-white/16"
+      className="group hover:-translate-y-0.5 flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-[#09090c] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-200 hover:border-white/16"
       key={app.toolkitSlug}
     >
       <div>
@@ -157,7 +157,7 @@ export default function LandingIntegrations() {
         </p>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-1.5 border-t border-white/[0.06] pt-3">
+      <div className="mt-4 flex flex-wrap gap-1.5 border-white/[0.06] border-t pt-3">
         {app.categories.slice(0, 2).map((category) => (
           <span
             className="inline-block rounded-md border border-white/[0.06] bg-white/[0.02] px-2 py-0.5 font-mono text-[10px] text-zinc-400"
@@ -182,30 +182,30 @@ export default function LandingIntegrations() {
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1 font-mono text-[11px] text-zinc-400 uppercase tracking-wider"
+            initial={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.4 }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-400"
           >
             <Plug className="h-3.5 w-3.5 text-zinc-300" />
             <span>Integration Directory</span>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
+            className="font-semibold text-4xl text-white tracking-[-0.03em] sm:text-5xl md:text-6xl"
+            initial={{ opacity: 0, y: 14 }}
             transition={{ duration: 0.45, delay: 0.06 }}
-            className="font-semibold text-4xl tracking-[-0.03em] text-white sm:text-5xl md:text-6xl"
           >
             Connect your entire{" "}
             <span className="text-zinc-500">revenue stack.</span>
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.12 }}
             className="mx-auto mt-4 max-w-xl text-sm text-zinc-400 leading-relaxed sm:text-base"
+            initial={{ opacity: 0, y: 14 }}
+            transition={{ duration: 0.45, delay: 0.12 }}
           >
             Sync CRMs, cloud repositories, and messaging workspaces into a
             unified RAG index in minutes.
@@ -213,10 +213,10 @@ export default function LandingIntegrations() {
 
           {/* Search & Filter Controls */}
           <motion.div
-            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.18 }}
             className="mx-auto mt-8 max-w-lg"
+            initial={{ opacity: 0, y: 14 }}
+            transition={{ duration: 0.45, delay: 0.18 }}
           >
             <div className="relative">
               <Search className="-translate-y-1/2 pointer-events-none absolute top-1/2 left-3.5 h-4 w-4 text-zinc-500" />
@@ -229,9 +229,9 @@ export default function LandingIntegrations() {
               />
               {searchQuery && (
                 <button
-                  type="button"
-                  onClick={() => setSearchQuery("")}
                   className="-translate-y-1/2 absolute top-1/2 right-3 rounded-md p-1 text-zinc-500 hover:text-white"
+                  onClick={() => setSearchQuery("")}
+                  type="button"
                 >
                   <X className="h-3.5 w-3.5" />
                 </button>
@@ -242,30 +242,30 @@ export default function LandingIntegrations() {
 
         {/* Category Filter Pills */}
         {!loading && sortedCategories.length > 0 && (
-          <div className="mt-8 flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
+          <div className="no-scrollbar mt-8 flex items-center gap-2 overflow-x-auto pb-2">
             <button
-              type="button"
-              onClick={() => setSelectedCategory("all")}
               className={cn(
                 "shrink-0 cursor-pointer rounded-full border px-3.5 py-1.5 font-mono text-xs transition-colors",
                 selectedCategory === "all"
-                  ? "border-white/20 bg-white text-black font-semibold"
+                  ? "border-white/20 bg-white font-semibold text-black"
                   : "border-white/[0.08] bg-[#09090c] text-zinc-400 hover:border-white/15 hover:text-white"
               )}
+              onClick={() => setSelectedCategory("all")}
+              type="button"
             >
               All ({marketplaceApps.length})
             </button>
             {sortedCategories.slice(0, 8).map((cat) => (
               <button
-                key={cat}
-                type="button"
-                onClick={() => setSelectedCategory(cat)}
                 className={cn(
                   "shrink-0 cursor-pointer rounded-full border px-3.5 py-1.5 text-xs capitalize transition-colors",
                   selectedCategory === cat
-                    ? "border-white/20 bg-white text-black font-semibold"
+                    ? "border-white/20 bg-white font-semibold text-black"
                     : "border-white/[0.08] bg-[#09090c] text-zinc-400 hover:border-white/15 hover:text-white"
                 )}
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                type="button"
               >
                 {cat} ({categorizedApps[cat].length})
               </button>
@@ -290,9 +290,9 @@ export default function LandingIntegrations() {
                   </p>
                   {searchQuery && (
                     <button
-                      type="button"
-                      onClick={() => setSearchQuery("")}
                       className="mt-3 text-xs text-zinc-400 underline underline-offset-4 hover:text-white"
+                      onClick={() => setSearchQuery("")}
+                      type="button"
                     >
                       Clear search filter
                     </button>
@@ -302,7 +302,7 @@ export default function LandingIntegrations() {
             }
             return visibleCategories.map((category) => (
               <div key={category}>
-                <div className="mb-5 flex items-center justify-between border-b border-white/[0.07] pb-3">
+                <div className="mb-5 flex items-center justify-between border-white/[0.07] border-b pb-3">
                   <div className="flex items-center gap-2.5">
                     <span className="h-2 w-2 rounded-full bg-white" />
                     <h2 className="font-semibold text-base text-white capitalize sm:text-lg">
@@ -325,7 +325,7 @@ export default function LandingIntegrations() {
         {!loading && marketplaceApps.length > 0 && (
           <div className="mt-20 flex flex-col items-center justify-between gap-6 rounded-2xl border border-white/[0.08] bg-[#09090c] p-8 sm:flex-row sm:p-10">
             <div>
-              <h2 className="font-semibold text-xl text-white sm:text-2xl">
+              <h2 className="font-semibold text-white text-xl sm:text-2xl">
                 Need a custom internal connector or webhook?
               </h2>
               <p className="mt-1.5 max-w-xl text-xs text-zinc-400 leading-relaxed sm:text-sm">
@@ -334,8 +334,8 @@ export default function LandingIntegrations() {
               </p>
             </div>
             <Link
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-white px-6 py-3 font-semibold text-black text-xs transition-colors hover:bg-zinc-200"
               href="/contact"
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-white px-6 py-3 font-semibold text-xs text-black transition-colors hover:bg-zinc-200"
             >
               <span>Request Connector</span>
               <ArrowUpRight className="h-3.5 w-3.5" />

@@ -50,11 +50,11 @@ export default function RootLayout({
       >
         <div className="mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="relative overflow-hidden rounded-3xl border border-white/[0.08] bg-[#09090c] px-6 py-16 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:px-12 md:py-20"
+            initial={{ opacity: 0, y: 18 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             {/* Subtle background grid & top spotlight */}
             <div
@@ -63,16 +63,16 @@ export default function RootLayout({
             />
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -top-32 left-1/2 h-64 w-[520px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08)_0%,transparent_70%)] blur-2xl"
+              className="-top-32 -translate-x-1/2 pointer-events-none absolute left-1/2 h-64 w-[520px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08)_0%,transparent_70%)] blur-2xl"
             />
 
             <div className="relative z-10 mx-auto flex max-w-2xl flex-col items-center">
-              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-400">
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] text-zinc-400 uppercase tracking-wider">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 Deploy in 2 Minutes
               </span>
 
-              <h2 className="text-balance font-semibold text-3xl tracking-[-0.025em] text-white sm:text-5xl">
+              <h2 className="text-balance font-semibold text-3xl text-white tracking-[-0.025em] sm:text-5xl">
                 Turn every sales signal into{" "}
                 <span className="text-zinc-500">verified revenue action.</span>
               </h2>
@@ -84,20 +84,30 @@ export default function RootLayout({
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
                 <Button
+                  className="group h-11 cursor-pointer rounded-full bg-white px-7 font-semibold text-black text-sm shadow-[0_0_25px_rgba(255,255,255,0.16)] transition-all hover:bg-zinc-200"
+                  onClick={() => router.push("/contact?plan=pro")}
                   size="lg"
-                  className="group h-11 cursor-pointer rounded-full bg-white px-7 text-sm font-semibold text-black shadow-[0_0_25px_rgba(255,255,255,0.16)] transition-all hover:bg-zinc-200"
-                  onClick={() => router.push("/login")}
                   type="button"
                 >
-                  Start Free Workspace
+                  Buy Pro Plan
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </Button>
+
+                <Button
+                  className="h-11 cursor-pointer rounded-full border-white/15 bg-white/[0.05] px-6 font-medium text-sm text-white transition-colors hover:border-white/25 hover:bg-white/[0.09]"
+                  onClick={() => router.push("/login")}
+                  size="lg"
+                  type="button"
+                  variant="outline"
+                >
+                  Start Free Workspace
                 </Button>
 
                 <Link href="/pricing">
                   <Button
-                    variant="outline"
+                    className="h-11 cursor-pointer rounded-full border-white/10 bg-white/[0.02] px-6 font-medium text-sm text-zinc-300 transition-colors hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
                     size="lg"
-                    className="h-11 cursor-pointer rounded-full border-white/10 bg-white/[0.03] px-6 text-sm font-medium text-zinc-300 transition-colors hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+                    variant="outline"
                   >
                     Compare Plans
                   </Button>
@@ -111,7 +121,7 @@ export default function RootLayout({
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Check className="h-3.5 w-3.5 text-emerald-400" />
-                  <span>No credit card required</span>
+                  <span>14-day 100% refund guarantee</span>
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Check className="h-3.5 w-3.5 text-emerald-400" />

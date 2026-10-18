@@ -4,7 +4,7 @@ import {
   ArrowUpRight,
   HelpCircle,
   MessageSquare,
-  ShieldCheck,
+  RefreshCcw,
 } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -53,6 +53,20 @@ const faqs = [
     answer:
       "Every workspace operates within a tenant-isolated vector namespace encrypted with AES-256 at rest and TLS 1.3 in transit. We enforce a strict Zero-Data-Retention (ZDR) and Zero-Model-Training policy: your documents and prompts are never used to train foundation models.",
   },
+  {
+    id: "06",
+    category: "Pro Plan & Onboarding",
+    question: "How do we purchase and activate the Pro Plan?",
+    answer:
+      "Clicking 'Buy Pro Plan' on our Pricing page routes you directly to our Solutions & Billing desk (/contact?plan=pro) with the Pro Plan pre-selected. Our team provisions your shared team vault, assists with initial CRM connector mapping, and dispatches a payment link or corporate invoice within 2 business hours.",
+  },
+  {
+    id: "07",
+    category: "Refund & Cancellation Policy",
+    question: "What is your refund and cancellation policy for paid plans?",
+    answer:
+      "Every new Pro subscription (monthly or annual) is backed by a 14-day 100% money-back guarantee. If Salesient does not meet your team's expectations within the first 14 calendar days, request a full refund via billing@salesient.com or our Contact page—no questions asked. Beyond 14 days, you can cancel anytime with zero cancellation fees, and annual plans receive prorated refunds for unused full months.",
+  },
 ];
 
 export default function FAQPage() {
@@ -68,55 +82,66 @@ export default function FAQPage() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left Sticky Header Column */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
             className="flex flex-col justify-between lg:col-span-5"
+            initial={{ opacity: 0, y: 16 }}
+            transition={{ duration: 0.45 }}
           >
             <div>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider text-zinc-400">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1 font-mono text-[11px] text-zinc-400 uppercase tracking-wider">
                 <HelpCircle className="h-3.5 w-3.5 text-zinc-300" />
-                <span>Knowledge &amp; Architecture FAQ</span>
+                <span>Knowledge, Billing &amp; Architecture FAQ</span>
               </div>
 
-              <h1 className="font-semibold text-4xl tracking-[-0.03em] text-white sm:text-5xl">
+              <h1 className="font-semibold text-4xl text-white tracking-[-0.03em] sm:text-5xl">
                 Frequently asked{" "}
                 <span className="text-zinc-500">questions.</span>
               </h1>
 
               <p className="mt-4 text-sm text-zinc-400 leading-relaxed sm:text-base">
                 Everything you need to know about our hybrid RAG pipeline,
-                citation verification, security controls, and workspace setup.
+                citation verification, security controls, Pro plan onboarding,
+                and our 14-day refund policy.
               </p>
 
               {/* Support escalation card */}
-              <div className="mt-10 rounded-2xl border border-white/[0.08] bg-[#09090c] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+              <div className="mt-8 rounded-2xl border border-white/[0.08] bg-[#09090c] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
                 <div className="flex items-center gap-2.5">
                   <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]">
                     <MessageSquare className="h-4 w-4 text-zinc-200" />
                   </div>
                   <div>
                     <h2 className="font-semibold text-sm text-white">
-                      Need a custom security review?
+                      Ready to activate Pro or need a security review?
                     </h2>
                     <p className="text-xs text-zinc-500">
-                      Average response time &lt; 4 hours
+                      Average response time &lt; 2 hours
                     </p>
                   </div>
                 </div>
                 <p className="mt-3 text-xs text-zinc-400 leading-relaxed">
-                  Our solutions engineering team can walk through custom CRM
-                  schemas, SOC 2 documentation, or enterprise deployment.
+                  Our solutions engineering team can provision your Pro team
+                  workspace, walk through custom CRM schemas, or share SOC 2
+                  documentation.
                 </p>
-                <div className="mt-5">
-                  <Link href="/contact">
+                <div className="mt-5 flex flex-wrap items-center gap-2.5">
+                  <Link href="/contact?plan=pro">
                     <Button
-                      variant="outline"
+                      className="h-9 cursor-pointer rounded-full bg-white px-4 font-semibold text-black text-xs hover:bg-zinc-200"
                       size="sm"
-                      className="h-9 cursor-pointer rounded-full border-white/12 bg-white/[0.04] px-4 text-xs font-medium text-white hover:border-white/25 hover:bg-white/[0.08]"
                     >
-                      <span>Contact Solutions Engineering</span>
+                      <span>Buy Pro Plan</span>
                       <ArrowUpRight className="ml-1.5 h-3.5 w-3.5" />
+                    </Button>
+                  </Link>
+                  <Link href="/pricing#refund-policy">
+                    <Button
+                      className="h-9 cursor-pointer rounded-full border-white/12 bg-white/[0.04] px-4 font-medium text-white text-xs hover:border-white/25 hover:bg-white/[0.08]"
+                      size="sm"
+                      variant="outline"
+                    >
+                      <RefreshCcw className="mr-1.5 h-3 w-3 text-emerald-400" />
+                      <span>14-Day Refund Policy</span>
                     </Button>
                   </Link>
                 </div>
@@ -126,22 +151,22 @@ export default function FAQPage() {
 
           {/* Right Accordion Column */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-7"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Accordion
-              type="single"
+              className="space-y-3.5"
               collapsible
               defaultValue="item-0"
-              className="space-y-3.5"
+              type="single"
             >
               {faqs.map((faq, i) => (
                 <AccordionItem
+                  className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#09090c] px-5 transition-colors data-[state=open]:border-white/20 data-[state=open]:bg-[#0c0c10] sm:px-6"
                   key={faq.id}
                   value={`item-${i}`}
-                  className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#09090c] px-5 transition-colors data-[state=open]:border-white/20 data-[state=open]:bg-[#0c0c10] sm:px-6"
                 >
                   <AccordionTrigger className="cursor-pointer py-5 text-left hover:no-underline">
                     <div className="flex items-start gap-3.5 pr-4">
@@ -149,7 +174,7 @@ export default function FAQPage() {
                         {faq.id}
                       </span>
                       <div>
-                        <span className="block font-mono text-[10px] uppercase tracking-wider text-zinc-500">
+                        <span className="block font-mono text-[10px] text-zinc-500 uppercase tracking-wider">
                           {faq.category}
                         </span>
                         <span className="mt-1 block font-medium text-sm text-white sm:text-base">

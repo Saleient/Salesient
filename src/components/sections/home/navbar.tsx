@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Menu, Sparkles } from "lucide-react";
+import { ArrowUpRight, Menu } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -31,16 +31,16 @@ export function SalesientLogo({ className }: { className?: string }) {
         {/** biome-ignore lint/correctness/useImageSize: CSS sized */}
         <img
           alt="Salesient Logo"
-          src="/salesient-mark.png"
           className="h-full w-full object-contain p-0.5"
+          src="/salesient-mark.png"
         />
       </div>
       {/** biome-ignore lint/performance/noImgElement: brand wordmark */}
       {/** biome-ignore lint/correctness/useImageSize: CSS sized */}
       <img
         alt="SALESIENT"
-        src="/salesient-wordmark.png"
         className="h-3.5 w-auto object-contain tracking-wider opacity-95"
+        src="/salesient-wordmark.png"
       />
     </div>
   );
@@ -65,9 +65,9 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3.5 sm:px-6 lg:px-8">
       <motion.div
         animate={{ y: 0, opacity: 1 }}
+        className="mx-auto max-w-6xl"
         initial={{ y: -14, opacity: 0 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="mx-auto max-w-6xl"
       >
         <div
           className={cn(
@@ -79,7 +79,7 @@ export default function Navbar() {
         >
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <Link href="/" className="group focus:outline-none">
+            <Link className="group focus:outline-none" href="/">
               <SalesientLogo />
             </Link>
           </div>
@@ -93,19 +93,19 @@ export default function Navbar() {
               const isActive = pathname === item.href;
               return (
                 <Link
-                  key={item.href}
-                  href={item.href}
                   className={cn(
-                    "relative rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors duration-200",
+                    "relative rounded-full px-3.5 py-1.5 font-medium text-xs transition-colors duration-200",
                     isActive
                       ? "text-white"
                       : "text-zinc-400 hover:text-zinc-200"
                   )}
+                  href={item.href}
+                  key={item.href}
                 >
                   {isActive && (
                     <motion.span
-                      layoutId="navbar-active-pill"
                       className="absolute inset-0 rounded-full border border-white/10 bg-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]"
+                      layoutId="navbar-active-pill"
                       transition={{
                         type: "spring",
                         stiffness: 380,
@@ -122,26 +122,26 @@ export default function Navbar() {
           {/* Right CTAs */}
           <div className="hidden items-center gap-3 md:flex">
             <Link
+              className="px-2.5 py-1.5 font-medium text-xs text-zinc-400 transition-colors hover:text-white"
               href="/login"
-              className="px-2.5 py-1.5 text-xs font-medium text-zinc-400 transition-colors hover:text-white"
             >
               Sign in
             </Link>
             <Link href="/login">
               <Button
+                className="group h-8 cursor-pointer rounded-full bg-white px-4 font-semibold text-black text-xs shadow-[0_1px_12px_rgba(255,255,255,0.15)] transition-all hover:bg-zinc-200"
                 size="sm"
-                className="group h-8 cursor-pointer rounded-full bg-white px-4 text-xs font-semibold text-black shadow-[0_1px_12px_rgba(255,255,255,0.15)] transition-all hover:bg-zinc-200"
                 type="button"
               >
                 <span>Open Workspace</span>
-                <ArrowUpRight className="ml-1 h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="group-hover:-translate-y-0.5 ml-1 h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
               </Button>
             </Link>
           </div>
 
           {/* Mobile Drawer */}
           <div className="md:hidden">
-            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+            <Sheet onOpenChange={setMobileOpen} open={mobileOpen}>
               <SheetTrigger asChild>
                 <Button
                   aria-label="Open navigation menu"
@@ -157,7 +157,7 @@ export default function Navbar() {
                 className="w-72 border-white/10 border-l bg-[#070709]/95 p-6 backdrop-blur-2xl"
                 side="right"
               >
-                <SheetHeader className="mb-8 border-b border-white/[0.06] pb-4">
+                <SheetHeader className="mb-8 border-white/[0.06] border-b pb-4">
                   <SheetTitle className="text-left">
                     <SalesientLogo />
                   </SheetTitle>
@@ -168,15 +168,15 @@ export default function Navbar() {
                     const isActive = pathname === item.href;
                     return (
                       <Link
-                        key={item.href}
-                        href={item.href}
-                        onClick={() => setMobileOpen(false)}
                         className={cn(
-                          "flex items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors",
+                          "flex items-center justify-between rounded-xl px-3.5 py-2.5 font-medium text-sm transition-colors",
                           isActive
                             ? "border border-white/10 bg-white/[0.06] text-white"
                             : "text-zinc-400 hover:bg-white/[0.03] hover:text-white"
                         )}
+                        href={item.href}
+                        key={item.href}
+                        onClick={() => setMobileOpen(false)}
                       >
                         <span>{item.label}</span>
                         {isActive && (
@@ -187,10 +187,10 @@ export default function Navbar() {
                   })}
                 </div>
 
-                <div className="mt-8 flex flex-col gap-2.5 border-t border-white/[0.06] pt-6">
+                <div className="mt-8 flex flex-col gap-2.5 border-white/[0.06] border-t pt-6">
                   <Link href="/login" onClick={() => setMobileOpen(false)}>
                     <Button
-                      className="w-full cursor-pointer rounded-full bg-white py-2.5 text-xs font-semibold text-black hover:bg-zinc-200"
+                      className="w-full cursor-pointer rounded-full bg-white py-2.5 font-semibold text-black text-xs hover:bg-zinc-200"
                       type="button"
                     >
                       Open Workspace
