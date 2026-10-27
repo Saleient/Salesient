@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  ArrowRight,
-  Check,
-  Clock,
-  CreditCard,
-  Layers,
-  RefreshCcw,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -20,13 +12,13 @@ type BillingCycle = "monthly" | "annual";
 
 const comparisonRows = [
   {
-    feature: "Hybrid Vector + BM25 Lexical Search",
+    feature: "Document & CRM Search",
     free: "Included",
     pro: "Included",
     enterprise: "Dedicated Cluster",
   },
   {
-    feature: "Deterministic Page & Clause Citations",
+    feature: "Page & Clause Citations",
     free: "100% Attributed",
     pro: "100% Attributed",
     enterprise: "100% Attributed",
@@ -44,10 +36,10 @@ const comparisonRows = [
     enterprise: "Unlimited",
   },
   {
-    feature: "Zero Model Training (ZDR Endpoints)",
-    free: "Enforced",
-    pro: "Enforced",
-    enterprise: "Enforced + Custom KMS",
+    feature: "No Model Training on Customer Data",
+    free: "Included",
+    pro: "Included",
+    enterprise: "Included + Custom KMS",
   },
   {
     feature: "Refund & Cancellation Policy",
@@ -59,19 +51,16 @@ const comparisonRows = [
 
 const refundPolicyPoints = [
   {
-    icon: RefreshCcw,
     title: "14-Day 100% Money-Back Guarantee",
     description:
       "Every new Pro subscription includes a 14-day full refund window. If Salesient doesn't fit your team's workflow, request a 100% refund within 14 calendar days—no questions asked.",
   },
   {
-    icon: CreditCard,
-    title: "Cancel Anytime · Zero Penalties",
+    title: "Cancel Anytime",
     description:
       "No lock-in contracts or cancellation fees. Cancel or adjust seats anytime, and annual plans receive prorated refunds for unused full billing months.",
   },
   {
-    icon: Clock,
     title: "Fast 3–5 Day Refund Settlement",
     description:
       "Submit a request via our Contact page or billing@salesient.com. Refunds are approved within 24 hours and credited back to your original payment method in 3–5 business days.",
@@ -155,27 +144,17 @@ export default function Pricing() {
         className="-top-40 -translate-x-1/2 pointer-events-none absolute left-1/2 h-96 w-[780px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06)_0%,transparent_70%)] blur-2xl"
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl">
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <motion.div
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1 font-mono text-[11px] text-zinc-400 uppercase tracking-wider"
-            initial={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.4 }}
-          >
-            <Layers className="h-3.5 w-3.5 text-zinc-300" />
-            <span>Predictable Licensing</span>
-          </motion.div>
-
           <motion.h1
             animate={{ opacity: 1, y: 0 }}
             className="text-balance font-semibold text-4xl text-white tracking-[-0.03em] sm:text-5xl md:text-6xl"
             initial={{ opacity: 0, y: 14 }}
-            transition={{ duration: 0.5, delay: 0.06 }}
+            transition={{ duration: 0.5 }}
           >
             Transparent pricing for{" "}
-            <span className="text-zinc-500">revenue velocity.</span>
+            <span className="text-zinc-500">revenue teams.</span>
           </motion.h1>
 
           <motion.p
@@ -392,15 +371,11 @@ export default function Pricing() {
         >
           <div className="flex flex-col justify-between gap-4 border-white/[0.07] border-b pb-6 sm:flex-row sm:items-center">
             <div>
-              <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-0.5 font-mono text-[10px] text-emerald-400 uppercase tracking-wider">
-                <ShieldCheck className="h-3 w-3" />
-                <span>Refund &amp; Cancellation Policy</span>
-              </div>
               <h3 className="font-semibold text-lg text-white sm:text-xl">
-                14-Day 100% Money-Back Guarantee &amp; Risk-Free Billing
+                14-Day 100% Money-Back Guarantee
               </h3>
               <p className="mt-1 text-xs text-zinc-400">
-                Simple, transparent terms with zero hidden fees or lock-in
+                Simple, transparent terms with no hidden fees or lock-in
                 commitments.
               </p>
             </div>
@@ -416,27 +391,19 @@ export default function Pricing() {
           </div>
 
           <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
-            {refundPolicyPoints.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  className="rounded-xl border border-white/[0.06] bg-[#060608] p-5"
-                  key={item.title}
-                >
-                  <div className="flex items-center gap-2.5">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-emerald-400">
-                      <Icon className="h-4 w-4" />
-                    </div>
-                    <h4 className="font-semibold text-sm text-white">
-                      {item.title}
-                    </h4>
-                  </div>
-                  <p className="mt-2.5 text-xs text-zinc-400 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
+            {refundPolicyPoints.map((item) => (
+              <div
+                className="rounded-xl border border-white/[0.06] bg-[#060608] p-5"
+                key={item.title}
+              >
+                <h4 className="font-semibold text-sm text-white">
+                  {item.title}
+                </h4>
+                <p className="mt-2 text-xs text-zinc-400 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  ArrowUpRight,
-  HelpCircle,
-  MessageSquare,
-  RefreshCcw,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import {
@@ -30,14 +25,14 @@ const faqs = [
     category: "Integrations",
     question: "Which CRM and cloud integrations are supported?",
     answer:
-      "Salesient supports over 120+ enterprise integrations via OAuth 2.0, including Salesforce, Zoho CRM, Google Drive, Gmail, Slack, Notion, HubSpot, and Microsoft 365. You can connect your stack in under two minutes without custom engineering.",
+      "Salesient supports over 120+ enterprise integrations, including Salesforce, Zoho CRM, Google Drive, Gmail, Slack, Notion, HubSpot, and Microsoft 365. You can connect your stack in minutes without custom engineering.",
   },
   {
     id: "03",
     category: "Use Cases",
     question: "Who is Salesient purpose-built for?",
     answer:
-      "Salesient is engineered for B2B Account Executives, Solutions Engineers, Revenue Operations, and Deal Desk teams who handle complex proposals, security questionnaires, competitive battlecards, and custom MSAs.",
+      "Salesient is built for B2B Account Executives, Solutions Engineers, Revenue Operations, and Deal Desk teams who handle complex proposals, security questionnaires, competitive battlecards, and custom MSAs.",
   },
   {
     id: "04",
@@ -51,7 +46,7 @@ const faqs = [
     category: "Security",
     question: "How is our sensitive deal and customer data protected?",
     answer:
-      "Every workspace operates within a tenant-isolated vector namespace encrypted with AES-256 at rest and TLS 1.3 in transit. We enforce a strict Zero-Data-Retention (ZDR) and Zero-Model-Training policy: your documents and prompts are never used to train foundation models.",
+      "Every workspace is isolated per organization and encrypted at rest and in transit. Your documents, CRM records, and queries are never used to train foundation models.",
   },
   {
     id: "06",
@@ -78,7 +73,7 @@ export default function FAQPage() {
         className="pointer-events-none absolute inset-0 bg-grid-subtle [mask-image:radial-gradient(ellipse_70%_50%_at_50%_0%,#000_25%,transparent_100%)]"
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl">
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left Sticky Header Column */}
           <motion.div
@@ -88,41 +83,25 @@ export default function FAQPage() {
             transition={{ duration: 0.45 }}
           >
             <div>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1 font-mono text-[11px] text-zinc-400 uppercase tracking-wider">
-                <HelpCircle className="h-3.5 w-3.5 text-zinc-300" />
-                <span>Knowledge, Billing &amp; Architecture FAQ</span>
-              </div>
-
               <h1 className="font-semibold text-4xl text-white tracking-[-0.03em] sm:text-5xl">
                 Frequently asked{" "}
                 <span className="text-zinc-500">questions.</span>
               </h1>
 
               <p className="mt-4 text-sm text-zinc-400 leading-relaxed sm:text-base">
-                Everything you need to know about our hybrid RAG pipeline,
-                citation verification, security controls, Pro plan onboarding,
-                and our 14-day refund policy.
+                Everything you need to know about our workspace, citation
+                verification, security controls, Pro plan onboarding, and our
+                14-day refund policy.
               </p>
 
               {/* Support escalation card */}
-              <div className="mt-8 rounded-2xl border border-white/[0.08] bg-[#09090c] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
-                <div className="flex items-center gap-2.5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]">
-                    <MessageSquare className="h-4 w-4 text-zinc-200" />
-                  </div>
-                  <div>
-                    <h2 className="font-semibold text-sm text-white">
-                      Ready to activate Pro or need a security review?
-                    </h2>
-                    <p className="text-xs text-zinc-500">
-                      Average response time &lt; 2 hours
-                    </p>
-                  </div>
-                </div>
-                <p className="mt-3 text-xs text-zinc-400 leading-relaxed">
-                  Our solutions engineering team can provision your Pro team
-                  workspace, walk through custom CRM schemas, or share SOC 2
-                  documentation.
+              <div className="mt-8 rounded-2xl border border-white/[0.08] bg-[#09090c] p-6">
+                <h2 className="font-semibold text-sm text-white">
+                  Ready to activate Pro or need a security review?
+                </h2>
+                <p className="mt-2 text-xs text-zinc-400 leading-relaxed">
+                  Our team can provision your Pro workspace, walk through custom
+                  CRM schemas, or share security documentation.
                 </p>
                 <div className="mt-5 flex flex-wrap items-center gap-2.5">
                   <Link href="/contact?plan=pro">
@@ -140,7 +119,6 @@ export default function FAQPage() {
                       size="sm"
                       variant="outline"
                     >
-                      <RefreshCcw className="mr-1.5 h-3 w-3 text-emerald-400" />
                       <span>14-Day Refund Policy</span>
                     </Button>
                   </Link>

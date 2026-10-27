@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  ArrowLeft,
-  ArrowRight,
-  CheckCircle2,
-  Loader2,
-  Lock,
-  Mail,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Loader2, Mail } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -155,49 +147,45 @@ export default function AuthPage() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-36 left-1/2 h-96 w-[720px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06)_0%,transparent_70%)] blur-2xl"
+        className="-top-36 -translate-x-1/2 pointer-events-none absolute left-1/2 h-96 w-[720px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06)_0%,transparent_70%)] blur-2xl"
       />
 
       {/* Top Navigation Bar */}
-      <div className="relative z-20 mx-auto flex w-full max-w-6xl items-center justify-between">
-        <Link href="/" className="focus:outline-none">
+      <div className="relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between">
+        <Link className="focus:outline-none" href="/">
           <SalesientLogo />
         </Link>
         <Link
+          className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 font-medium text-xs text-zinc-300 transition-colors hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
           href="/"
-          className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium text-zinc-300 transition-colors hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
-          <span>Back to Overview</span>
+          <span>Back</span>
         </Link>
       </div>
 
       {/* Main Centered Auth Portal */}
-      <div className="relative z-10 mx-auto my-12 w-full max-w-[440px]">
+      <div className="relative z-10 mx-auto my-12 w-full max-w-[420px]">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className="overflow-hidden rounded-3xl border border-white/[0.09] bg-[#09090c] p-7 shadow-[0_24px_80px_-16px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-9"
+          initial={{ opacity: 0, y: 16 }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="space-y-6 text-left">
-            {/* Badge + Header */}
-            <div className="space-y-2.5">
-              <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-zinc-400">
-                <Lock className="h-3 w-3 text-emerald-400" />
-                <span>Zero-Trust Workspace Auth</span>
-              </div>
-              <h1 className="font-semibold text-2xl tracking-tight text-white sm:text-3xl">
+            {/* Clean Header */}
+            <div className="space-y-2">
+              <h1 className="font-semibold text-2xl text-white tracking-tight sm:text-3xl">
                 {isNewUser ? "Create your workspace" : "Sign in to Salesient"}
               </h1>
               <p className="text-xs text-zinc-400 leading-relaxed sm:text-sm">
                 {magicLinkSent &&
-                  "We dispatched a one-time verification code and magic link."}
+                  "We sent a verification code and sign-in link to your email."}
                 {isNewUser &&
                   !magicLinkSent &&
-                  "Complete your profile to initialize your isolated knowledge vault."}
+                  "Enter your name to finish setting up your workspace."}
                 {!(isNewUser || magicLinkSent) &&
-                  "Enter your work email for instant passwordless access."}
+                  "Enter your work email to continue."}
               </p>
             </div>
 
@@ -216,15 +204,15 @@ export default function AuthPage() {
                 </div>
 
                 {/* OTP Input */}
-                <div className="space-y-3 border-t border-white/[0.06] pt-4">
+                <div className="space-y-3 border-white/[0.06] border-t pt-4">
                   <label
-                    className="block font-mono text-[11px] uppercase tracking-wider text-zinc-400"
+                    className="block font-mono text-[11px] text-zinc-400 uppercase tracking-wider"
                     htmlFor="otp"
                   >
                     Verification Code
                   </label>
                   <input
-                    className="flex h-11 w-full rounded-xl border border-white/10 bg-[#09090c] px-4 font-mono text-sm tracking-widest text-white transition-colors placeholder:font-sans placeholder:tracking-normal placeholder:text-zinc-600 focus:border-white/25 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex h-11 w-full rounded-xl border border-white/10 bg-[#09090c] px-4 font-mono text-sm text-white tracking-widest transition-colors placeholder:font-sans placeholder:text-zinc-600 placeholder:tracking-normal focus:border-white/25 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                     disabled={verifyingOtp}
                     id="otp"
                     onChange={(e) => setOtp(e.target.value)}
@@ -232,7 +220,7 @@ export default function AuthPage() {
                     value={otp}
                   />
                   <button
-                    className="flex h-11 w-full cursor-pointer items-center justify-center rounded-full bg-white px-4 font-semibold text-xs text-black transition-all hover:bg-zinc-200 disabled:pointer-events-none disabled:opacity-40 sm:text-sm"
+                    className="flex h-11 w-full cursor-pointer items-center justify-center rounded-full bg-white px-4 font-semibold text-black text-xs transition-all hover:bg-zinc-200 disabled:pointer-events-none disabled:opacity-40 sm:text-sm"
                     disabled={verifyingOtp || !otp}
                     onClick={() => handleOtpVerification(otp)}
                     type="button"
@@ -248,7 +236,7 @@ export default function AuthPage() {
                   </button>
                 </div>
 
-                <div className="flex items-center justify-between border-t border-white/[0.06] pt-3 text-xs">
+                <div className="flex items-center justify-between border-white/[0.06] border-t pt-3 text-xs">
                   <button
                     className="cursor-pointer font-medium text-zinc-400 transition-colors hover:text-white"
                     disabled={verifyingOtp}
@@ -302,7 +290,7 @@ export default function AuthPage() {
                   <form className="space-y-4" onSubmit={handleMagicLinkSubmit}>
                     <div className="space-y-2">
                       <label
-                        className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
+                        className="font-mono text-[11px] text-zinc-400 uppercase tracking-wider"
                         htmlFor="email"
                       >
                         Work Email
@@ -317,7 +305,7 @@ export default function AuthPage() {
                     </div>
                     <div className="space-y-2">
                       <label
-                        className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
+                        className="font-mono text-[11px] text-zinc-400 uppercase tracking-wider"
                         htmlFor="name"
                       >
                         Full Name
@@ -334,7 +322,7 @@ export default function AuthPage() {
                       />
                     </div>
                     <button
-                      className="group flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-white font-semibold text-xs text-black shadow-[0_0_24px_rgba(255,255,255,0.14)] transition-all hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50 sm:text-sm"
+                      className="group flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-white font-semibold text-black text-xs shadow-[0_0_24px_rgba(255,255,255,0.14)] transition-all hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50 sm:text-sm"
                       disabled={loading || !mounted}
                       type="submit"
                     >
@@ -369,7 +357,7 @@ export default function AuthPage() {
                   <form className="space-y-4" onSubmit={handleEmailSubmit}>
                     <div className="space-y-2">
                       <label
-                        className="font-mono text-[11px] uppercase tracking-wider text-zinc-400"
+                        className="font-mono text-[11px] text-zinc-400 uppercase tracking-wider"
                         htmlFor="email"
                       >
                         Work Email
@@ -386,7 +374,7 @@ export default function AuthPage() {
                       />
                     </div>
                     <button
-                      className="group flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-white font-semibold text-xs text-black shadow-[0_0_24px_rgba(255,255,255,0.14)] transition-all hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50 sm:text-sm"
+                      className="group flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-white font-semibold text-black text-xs shadow-[0_0_24px_rgba(255,255,255,0.14)] transition-all hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50 sm:text-sm"
                       disabled={loading || !mounted}
                       type="submit"
                     >
@@ -406,17 +394,6 @@ export default function AuthPage() {
                 )}
               </>
             )}
-
-            {/* Security Reassurance */}
-            <div className="border-t border-white/[0.06] pt-5">
-              <div className="flex items-center justify-between text-[11px] text-zinc-500">
-                <span className="inline-flex items-center gap-1.5">
-                  <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
-                  <span>SOC 2 Type II Secured</span>
-                </span>
-                <span>Passwordless OTP</span>
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
@@ -425,8 +402,8 @@ export default function AuthPage() {
       <div className="relative z-10 mx-auto max-w-md text-center text-xs text-zinc-500">
         Need help accessing your organization workspace?{" "}
         <Link
-          href="/contact"
           className="text-zinc-300 underline underline-offset-4 hover:text-white"
+          href="/contact"
         >
           Contact Support
         </Link>

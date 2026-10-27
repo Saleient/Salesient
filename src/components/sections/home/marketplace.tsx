@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Plug, Search, X } from "lucide-react";
+import { ArrowUpRight, Search, X } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -132,21 +132,14 @@ export default function LandingIntegrations() {
       ? sortedCategories
       : sortedCategories.filter((c) => c === selectedCategory);
 
-  const getInitial = (name: string) => name.charAt(0).toUpperCase();
-
   const renderAppCard = (app: ComposioApp) => (
     <div
       className="group hover:-translate-y-0.5 flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-[#09090c] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-200 hover:border-white/16"
       key={app.toolkitSlug}
     >
       <div>
-        <div className="mb-4 flex items-center justify-between gap-3">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] p-2">
-            <AppLogo app={app} />
-          </div>
-          <span className="rounded-full border border-white/15 bg-white/[0.06] px-2 py-0.5 font-mono text-[10px] text-white">
-            OAuth 2.0
-          </span>
+        <div className="mb-4 flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] p-2">
+          <AppLogo app={app} />
         </div>
 
         <h3 className="font-semibold text-sm text-white group-hover:text-zinc-100 sm:text-base">
@@ -178,24 +171,14 @@ export default function LandingIntegrations() {
         className="pointer-events-none absolute inset-0 bg-grid-subtle [mask-image:radial-gradient(ellipse_70%_50%_at_50%_0%,#000_25%,transparent_100%)]"
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl">
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <motion.div
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1 font-mono text-[11px] text-zinc-400 uppercase tracking-wider"
-            initial={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.4 }}
-          >
-            <Plug className="h-3.5 w-3.5 text-zinc-300" />
-            <span>Integration Directory</span>
-          </motion.div>
-
           <motion.h1
             animate={{ opacity: 1, y: 0 }}
             className="font-semibold text-4xl text-white tracking-[-0.03em] sm:text-5xl md:text-6xl"
             initial={{ opacity: 0, y: 14 }}
-            transition={{ duration: 0.45, delay: 0.06 }}
+            transition={{ duration: 0.45 }}
           >
             Connect your entire{" "}
             <span className="text-zinc-500">revenue stack.</span>
@@ -205,10 +188,9 @@ export default function LandingIntegrations() {
             animate={{ opacity: 1, y: 0 }}
             className="mx-auto mt-4 max-w-xl text-sm text-zinc-400 leading-relaxed sm:text-base"
             initial={{ opacity: 0, y: 14 }}
-            transition={{ duration: 0.45, delay: 0.12 }}
+            transition={{ duration: 0.45, delay: 0.06 }}
           >
-            Sync CRMs, cloud repositories, and messaging workspaces into a
-            unified RAG index in minutes.
+            Sync CRMs, cloud storage, and messaging workspaces in minutes.
           </motion.p>
 
           {/* Search & Filter Controls */}
